@@ -1,9 +1,14 @@
 weighted-modularity-LPAwbPLUS
 =============================
 
-LPAb+ and LPAwb+ for finding modularity in bipartite networks.
+Two algorithms for finding modularity in bipartite networks: LPAb+ for binary networks and its analogue for weighted networks LPAwb+.
 
-For details of the LPAb+ algorithm please see [Liu & Murata, 2010](https://www.fujipress.jp/finder/xslt.php?mode=present&inputfile=JACII001400040010.xml)
+
+
+Details
+---------
+
+For details of the LPAb+ algorithm please see [Liu & Murata, 2010](https://www.fujipress.jp/finder/xslt.php?mode=present&inputfile=JACII001400040010.xml) .
 
 Liu X., Murata T. 2010. An Efficient Algorithm for Optimizing Bipartite Modularity in Bipartite Networks. Journal of Advanced Computational Intelligence and Intelligent Informatics (JACIII) 14(4): 408-415.
 
