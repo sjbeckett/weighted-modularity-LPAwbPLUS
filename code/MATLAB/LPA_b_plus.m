@@ -1,12 +1,9 @@
-% LPAwb+ algorithm for finding modularity in weighted bipartite networks
-% S.J. Beckett       @BeckettStephen
-% 15/4/2014
+%LPAb+ ALGORITHM
 
-function [Qb_current,redlabels,bluelabels]=LPA_wb_plus(MATRIX,parallel)
+function [Qb_current,redlabels,bluelabels]=LPA_b_plus(MATRIX,parallel)
 
 flipped=0;
-%Make the rows the shortest dimension and set a marker so can change back
-%later
+%Make the rows the shortest dimension
 if size(MATRIX,1) > size(MATRIX,2)
     MATRIX = MATRIX';
     flipped=1;
@@ -20,13 +17,11 @@ end
 
 
 %Find properties of Matrix
-info.matrix=MATRIX;
+info.matrix=MATRIX>0;
 [info.row_num info.col_num]=size(MATRIX);
-info.edge_weights = sum(MATRIX(:));
-info.row_marginals = sum(MATRIX,2);
-info.col_marginals = sum(MATRIX,1);
-
-
+info.edge_num = sum(sum(MATRIX>0));
+info.row_degrees = sum(MATRIX>0,2);
+info.col_degrees = sum(MATRIX>0,1);
 
 
 %Initialise red(row) and blue(column) labels
@@ -62,10 +57,10 @@ end
 
 end
 
-function [WeightedModularity]=WEIGHTEDMODULARITY(info,redlabels,bluelabels)
+function [BarbersModularity]=BARBERSMODULARITY(info,redlabels,bluelabels)
 
 
-ProbMatrix = (info.row_marginals * info.col_marginals)./info.edge_weights; %initialise probability matrix
+ProbMatrix = (info.row_degrees * info.col_degrees)./info.edge_num; %initialise probability matrix
 
 
 BarbersMatrix = info.matrix - ProbMatrix;
@@ -85,13 +80,13 @@ for rr = 1:info.row_num
 end
 
 
-WeightedModularity = holdsum / info.edge_weights;
+BarbersModularity = holdsum / info.edge_num;
 
 end
 
 function [redlabels,bluelabels,Qb_current]=StageOne_LPAbdash(info,redlabels,bluelabels)
 
-%Create storage containers for total marginals attached to each red(row)
+%Create storage containers for total degrees attached to each red(row)
 %label and blue(column) label
 
 TotalRedDegrees = nan(max(redlabels),1);
@@ -105,9 +100,9 @@ end
 %Red
 for aa = 1:info.row_num
     if isnan(TotalRedDegrees(redlabels(aa)))
-        TotalRedDegrees(redlabels(aa)) = info.row_marginals(aa);
+        TotalRedDegrees(redlabels(aa)) = info.row_degrees(aa);
     else
-        TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) + info.row_marginals(aa);
+        TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) + info.row_degrees(aa);
     end
 end
 
@@ -115,9 +110,9 @@ end
 if sum(isnan(bluelabels)) ~= length(bluelabels) %occurs first time through as blue nodes unlabelled
     for bb = 1:info.col_num
         if isnan(TotalBlueDegrees(bluelabels(bb)))
-            TotalBlueDegrees(bluelabels(bb)) = info.col_marginals(bb);
+            TotalBlueDegrees(bluelabels(bb)) = info.col_degrees(bb);
         else
-            TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) + info.col_marginals(bb);
+            TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) + info.col_degrees(bb);
         end
     end
 else
@@ -134,7 +129,7 @@ end
 
 function [redlabels,bluelabels,Qb_current]=StageOne_LPAbdashPARALLEL(info,redlabels,bluelabels)
 
-%Create storage containers for total marginals attached to each red(row)
+%Create storage containers for total degrees attached to each red(row)
 %label and blue(column) label
 
 TotalRedDegrees = nan(max(redlabels),1);
@@ -148,9 +143,9 @@ end
 %Red
 for aa = 1:info.row_num
     if isnan(TotalRedDegrees(redlabels(aa)))
-        TotalRedDegrees(redlabels(aa)) = info.row_marginals(aa);
+        TotalRedDegrees(redlabels(aa)) = info.row_degrees(aa);
     else
-        TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) + info.row_marginals(aa);
+        TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) + info.row_degrees(aa);
     end
 end
 
@@ -158,9 +153,9 @@ end
 if sum(isnan(bluelabels)) ~= length(bluelabels) %occurs first time through as blue nodes unlabelled
     for bb = 1:info.col_num
         if isnan(TotalBlueDegrees(bluelabels(bb)))
-            TotalBlueDegrees(bluelabels(bb)) = info.col_marginals(bb);
+            TotalBlueDegrees(bluelabels(bb)) = info.col_degrees(bb);
         else
-            TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) + info.col_marginals(bb);
+            TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) + info.col_degrees(bb);
         end
     end
 else
@@ -178,7 +173,7 @@ end
 function [redlabels,bluelabels,Qb_current]=LOCALMAXIMISATION(info,redlabels,bluelabels,TotalRedDegrees,TotalBlueDegrees)
 
 %Find score for current partition
-QbAfter = WEIGHTEDMODULARITY(info,redlabels,bluelabels);
+QbAfter = BARBERSMODULARITY(info,redlabels,bluelabels);
 
 
 
@@ -201,13 +196,13 @@ while IterateFlag == 1
         for bb = 1:info.col_num
             
             if isnan(bluelabels(bb))==0 %If node is labelled - reduce degree for that label so it can be reassigned
-                TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) - info.col_marginals(bb);
+                TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) - info.col_degrees(bb);
             end
                 
             changebluelabeltest=[];
             %check all possible label choices
             for ww = 1:length(bluelabelchoices)
-                changebluelabeltest(ww) = sum((redlabels == bluelabelchoices(ww)).*info.matrix(:,bb)') - (info.col_marginals(bb)*TotalRedDegrees(bluelabelchoices(ww)) / info.edge_weights);
+                changebluelabeltest(ww) = sum((redlabels == bluelabelchoices(ww)).*info.matrix(:,bb)') - (info.col_degrees(bb)*TotalRedDegrees(bluelabelchoices(ww)) / info.edge_num);
             end
             
             %assign new label based on maximisation of above condition            
@@ -222,8 +217,8 @@ while IterateFlag == 1
                 TotalBlueDegrees(bluelabels(bb)) = 0;
             end
             
-            %Update total marginals on new labelling
-            TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) + info.col_marginals(bb);
+            %Update total degrees on new labelling
+            TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) + info.col_degrees(bb);
 
         end
 
@@ -232,12 +227,12 @@ while IterateFlag == 1
         
         for aa = 1:info.row_num
             
-           TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) - info.row_marginals(aa);
+           TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) - info.row_degrees(aa);
            
            changeredlabeltest=[];
            
            for ww = 1:length(redlabelchoices)
-               changeredlabeltest(ww) = sum((bluelabels == redlabelchoices(ww)).*info.matrix(aa,:)) - (info.row_marginals(aa)*TotalBlueDegrees(redlabelchoices(ww)) / info.edge_weights);
+               changeredlabeltest(ww) = sum((bluelabels == redlabelchoices(ww)).*info.matrix(aa,:)) - (info.row_degrees(aa)*TotalBlueDegrees(redlabelchoices(ww)) / info.edge_num);
            end
             
            %assign new label based on maximisation of above condition 
@@ -250,12 +245,12 @@ while IterateFlag == 1
                 TotalRedDegrees(redlabels(aa)) = 0;
            end
            
-           TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) + info.row_marginals(aa);
+           TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) + info.row_degrees(aa);
           
         end
     
         %Find the new modularity score based on node label updates.
-        QbAfter = WEIGHTEDMODULARITY(info,redlabels,bluelabels);
+        QbAfter = BARBERSMODULARITY(info,redlabels,bluelabels);
         
         %If this modularity is not as good as previous stop iterating and
         %use that previous best information
@@ -279,7 +274,7 @@ end
 function [redlabels,bluelabels,Qb_current]=LOCALMAXIMISATIONPARALLEL(info,redlabels,bluelabels,TotalRedDegrees,TotalBlueDegrees)
 
 %Find score for current partition
-QbAfter = WEIGHTEDMODULARITY(info,redlabels,bluelabels);
+QbAfter = BARBERSMODULARITY(info,redlabels,bluelabels);
 
 
 
@@ -302,13 +297,13 @@ while IterateFlag == 1
         for bb = 1:info.col_num
             
             if isnan(bluelabels(bb))==0 %If node is labelled - reduce degree for that label so it can be reassigned
-                TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) - info.col_marginals(bb);
+                TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) - info.col_degrees(bb);
             end
                 
             changebluelabeltest=[];
             %check all possible label choices
             parfor ww = 1:length(bluelabelchoices)
-                changebluelabeltest(ww) = sum((redlabels == bluelabelchoices(ww)).*info.matrix(:,bb)') - (info.col_marginals(bb)*TotalRedDegrees(bluelabelchoices(ww)) / info.edge_weights);
+                changebluelabeltest(ww) = sum((redlabels == bluelabelchoices(ww)).*info.matrix(:,bb)') - (info.col_degrees(bb)*TotalRedDegrees(bluelabelchoices(ww)) / info.edge_num);
             end
             
             %assign new label based on maximisation of above condition            
@@ -323,8 +318,8 @@ while IterateFlag == 1
                 TotalBlueDegrees(bluelabels(bb)) = 0;
             end
             
-            %Update total marginals on new labelling
-            TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) + info.col_marginals(bb);
+            %Update total degrees on new labelling
+            TotalBlueDegrees(bluelabels(bb)) = TotalBlueDegrees(bluelabels(bb)) + info.col_degrees(bb);
 
         end
 
@@ -333,14 +328,14 @@ while IterateFlag == 1
         
         for aa = 1:info.row_num
             
-           TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) - info.row_marginals(aa);
+           TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) - info.row_degrees(aa);
            
            changeredlabeltest=[];
            
 
            
            parfor ww = 1:length(redlabelchoices)
-               changeredlabeltest(ww) = sum((bluelabels == redlabelchoices(ww)).*info.matrix(aa,:)) - (info.row_marginals(aa)*TotalBlueDegrees(redlabelchoices(ww)) / info.edge_weights);
+               changeredlabeltest(ww) = sum((bluelabels == redlabelchoices(ww)).*info.matrix(aa,:)) - (info.row_degrees(aa)*TotalBlueDegrees(redlabelchoices(ww)) / info.edge_num);
            end
             
            %assign new label based on maximisation of above condition 
@@ -353,12 +348,12 @@ while IterateFlag == 1
                 TotalRedDegrees(redlabels(aa)) = 0;
            end
            
-           TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) + info.row_marginals(aa);
+           TotalRedDegrees(redlabels(aa)) = TotalRedDegrees(redlabels(aa)) + info.row_degrees(aa);
           
         end
     
         %Find the new modularity score based on node label updates.
-        QbAfter = WEIGHTEDMODULARITY(info,redlabels,bluelabels);
+        QbAfter = BARBERSMODULARITY(info,redlabels,bluelabels);
         
         %If this modularity is not as good as previous stop iterating and
         %use that previous best information
@@ -420,7 +415,7 @@ while IterateFlag == 1
                 CHECK_BLUE(bluelabels == divisionsFound(div1check)) = divisionsFound(div2check);
                 
                 
-                QQ = WEIGHTEDMODULARITY(info,CHECK_RED,CHECK_BLUE);
+                QQ = BARBERSMODULARITY(info,CHECK_RED,CHECK_BLUE);
                 
                 if QQ > Qb_current %If this arrangement looks good
                     FoundBetter = 0;
@@ -431,7 +426,7 @@ while IterateFlag == 1
                         CHECK_BLUE2 = bluelabels;
                         CHECK_BLUE2(bluelabels == divisionsFound(aa)) = divisionsFound(div1check);
                         
-                        if WEIGHTEDMODULARITY(info,CHECK_RED2,CHECK_BLUE2) > QQ
+                        if BARBERSMODULARITY(info,CHECK_RED2,CHECK_BLUE2) > QQ
                             FoundBetter = 1;
                         end
                         
@@ -440,7 +435,7 @@ while IterateFlag == 1
                         CHECK_BLUE2 = bluelabels;
                         CHECK_BLUE2(bluelabels == divisionsFound(aa)) = divisionsFound(div2check);
                         
-                        if WEIGHTEDMODULARITY(info,CHECK_RED2,CHECK_BLUE2) > QQ
+                        if BARBERSMODULARITY(info,CHECK_RED2,CHECK_BLUE2) > QQ
                             FoundBetter = 1;
                         end
                         
