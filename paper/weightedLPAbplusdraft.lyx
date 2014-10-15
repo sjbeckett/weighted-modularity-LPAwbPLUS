@@ -1,0 +1,919 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Weighted bipartite modularity
+\end_layout
+
+\begin_layout Author
+Stephen Beckett
+\end_layout
+
+\begin_layout Address
+Biosciences, College of Life and Environmental Sciences, University of Exeter,
+ EX4 4QE
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+\color red
+Note this document is currently a draft.
+ It is not yet finished!
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+networks important across sciences.
+ Bipartite networks also widely used and interesting and now need methods
+ for finding modules in weighted networks.
+ different methods - simulated annealing...
+ Here we focus on a fast method of finding modularity - label propogation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "barber2009detecting"
+
+\end_inset
+
+ introduced the bipartite modularity-specialising label propogation algorithm
+ (LPAb) as a method to efficiently find high modularity scores - however
+ prone to falling into suboptimal solutions.
+ Indeed the landscape of modularity tends to be weird...flat smooth etc.
+ Later 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "liu2010efficient"
+
+\end_inset
+
+ introduced a modification of the LPAb algorithm known as the LPAb+ algorithm
+ which combines label propagation with a greedy multi-step agglomerator
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "schuetz2008efficient,schuetz2008multistep"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "liu2010efficient"
+
+\end_inset
+
+ use a two step method that reduces the ability to fall into suboptimal
+ solutions, whilst still retaining a fast algorithmic time complexity.
+ This is done by using a top down...followed by a bottom up step.
+ Additionally LPAb+ has performed well in comparison tests against other
+ methods of finding bipartite modularity in binary networks.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dormann2014method"
+
+\end_inset
+
+ recently modified a simulated annealing algorithm to investigate bipartite
+ modularity of weighted networks.
+ Here I show how the LPAb+ algorithm can be modified for analysing modularity
+ in weighted bipartite networks and test this algorithm against that of
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dormann2014method"
+
+\end_inset
+
+.
+ Due to good performance in binary bipartite networks it is expected that
+ LPAb+ may provide a good algorithmic procedure for finding modularity in
+ weighted networks.
+ 
+\end_layout
+
+\begin_layout Section*
+Methods
+\end_layout
+
+\begin_layout Standard
+We first outline the LPAb+ algorithm
+\begin_inset CommandInset citation
+LatexCommand citep
+key "liu2010efficient"
+
+\end_inset
+
+ then show how it can be extended to weighted networks.
+\end_layout
+
+\begin_layout Subsection*
+Barbers modularity
+\end_layout
+
+\begin_layout Standard
+Modularity in binary unipartite networks is defined as
+\begin_inset CommandInset citation
+LatexCommand citep
+key "newman2006modularity"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q=\frac{1}{2m}\sum_{u=1}^{n}\sum_{v=1}^{n}\left(A_{uv}-P_{uv}\right)\delta\left(l_{u},l_{v}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $A$
+\end_inset
+
+ is the adjacency matrix of the network with 
+\begin_inset Formula $n$
+\end_inset
+
+ nodes, 
+\begin_inset Formula $P$
+\end_inset
+
+ is the probability matrix associated with the network describing the probabilit
+y of a connection occuring between two nodes if the total number of edges
+ between nodes (
+\begin_inset Formula $m$
+\end_inset
+
+) is constrained.
+ Each element is calculated as 
+\begin_inset Formula $P_{uv}=\frac{k_{u}k_{v}}{m}$
+\end_inset
+
+ where 
+\begin_inset Formula $k$
+\end_inset
+
+ is the node degree of the network and 
+\begin_inset Formula $k_{u}$
+\end_inset
+
+ is the number of nodes that connect to node 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ The Kronecker delta 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is equal to one if two nodes are classified as being in the same module,
+ hence having the same label 
+\begin_inset Formula $l$
+\end_inset
+
+, or zero otherwise.
+ If the network is bipartite, for example describing the visitations of
+ 
+\begin_inset Formula $r$
+\end_inset
+
+ pollinator species to 
+\begin_inset Formula $c$
+\end_inset
+
+ different plant species (
+\begin_inset Formula $n=r+c$
+\end_inset
+
+), then there are no connections between the nodes of the same type e.g.
+ pollinators don't pollinate other pollinators and plants cannot visit each
+ other.
+ As such 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $P$
+\end_inset
+
+ can be described in block diagonal form as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+A=\left(\begin{array}{cc}
+0_{r\times r} & \tilde{A}_{r\times c}\\
+\tilde{A}_{c\times r}^{T} & 0_{c\times c}
+\end{array}\right)\\
+P=\left(\begin{array}{cc}
+0_{r\times r} & \tilde{P}_{r\times c}\\
+\tilde{P}_{c\times r}^{T} & 0_{c\times c}
+\end{array}\right)
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\tilde{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{P}$
+\end_inset
+
+ are the biadjacency matrices describing the connections between nodes of
+ one type (pollinators) and nodes of the other type (plants) and the interaction
+ probabilities between these nodes respctively; and 
+\begin_inset Formula $T$
+\end_inset
+
+ indicates the matrix transpose.
+ This formulation allowed Barber to quantify bipartite modularity as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{B}=\frac{1}{m}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{A}_{uv}-\tilde{P}_{uv}\right)\delta\left(g_{u},h_{v}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $g$
+\end_inset
+
+ is the labels for pollinator nodes and 
+\begin_inset Formula $h$
+\end_inset
+
+ are the labels for plant nodes.
+ I will leave this equation in the form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{B}=\frac{1}{m}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{A}_{uv}-\frac{k_{u}d_{v}}{m}\right)\delta\left(g_{u},h_{v}\right)\label{eq:Barbers}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $k$
+\end_inset
+
+ describes row degree (number of plant species each pollinator type is connected
+ to) and 
+\begin_inset Formula $d$
+\end_inset
+
+ describes column degree (number of pollinator species each type of plant
+ is visited by).
+\end_layout
+
+\begin_layout Subsection*
+LPAb+
+\end_layout
+
+\begin_layout Standard
+We first use the dimensions of the network to decide how to run the algorithm;
+ this is because a bipartite community can have at most 
+\begin_inset Formula $F=min(r,c)$
+\end_inset
+
+ communities.
+ We then initialise the LPAb+ algorithm by giving a unique label to each
+ of the nodes in the smallest of the two sets.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Stage 1 - label propagation stage -bottom up
+\end_layout
+
+\begin_layout Standard
+Iterating the update of labels on the network is performed to locally maximise
+ modularity.
+ This means that for each node we essentially want to maximise the condition
+ given by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:Barbers"
+
+\end_inset
+
+.
+ For a particular plant node 
+\begin_inset Formula $x$
+\end_inset
+
+ this can be written as choosing a new label 
+\begin_inset Formula $g_{x}$
+\end_inset
+
+ by trying to maximise the condition:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+g_{x}=\left(\sum_{v=1}^{c}\left(\tilde{A}_{xv}-\frac{k_{x}d_{v}}{m}\right)\right)\delta\left(g,h_{v}\right)=\left(\sum_{v=1}^{c}\tilde{A}_{xv}\delta\left(g,h_{v}\right)-\sum_{v=1}^{c}\left(\frac{k_{x}d_{v}}{m}\right)\delta\left(g,h_{v}\right)\right)\label{eq:gmax}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As the network is bipartite pollinator nodes only use information about
+ plant nodes in order to update their labels (
+\begin_inset Formula $g$
+\end_inset
+
+) and similarly plant node labels (
+\begin_inset Formula $h$
+\end_inset
+
+) are updated only using information about the pollinator nodes an are thus
+ mutually exclusive of one another.
+ Simplifying 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:gmax"
+
+\end_inset
+
+ and creating an analogue for the updating rules for plant node labels leads
+ to the following set of conditions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+g_{x}^{new}=\underset{g}{\arg\max}\left(N_{xg}-\frac{k_{x}D_{g}}{m}\right)\\
+h_{x}^{new}=\underset{h}{\arg\max}\left(N_{xh}-\frac{K_{h}d_{x}}{m}\right)
+\end{cases}\label{eq:binaryupdate}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the new label assigned to nodes 
+\begin_inset Formula $x$
+\end_inset
+
+ of type 
+\begin_inset Formula $g$
+\end_inset
+
+ (pollinators) or 
+\begin_inset Formula $h$
+\end_inset
+
+ (plants) is that which maximises 
+\begin_inset Formula $g$
+\end_inset
+
+ or 
+\begin_inset Formula $h$
+\end_inset
+
+ on the right-hand side (If the statement can be maximised in more than
+ one way, one of these solutions is chosen at random).
+ Here 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $N_{xg}$
+\end_inset
+
+ is the number of 
+\begin_inset Formula $x$
+\end_inset
+
+'s neighbours labelled 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color red
+UPDATE - min->max, max->...
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+These updating rules are applied iteratively such that pollinator labels
+ are updated, then plant nodes are updated, then pollinator nodes are updated
+ and so on until 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:Barbers"
+
+\end_inset
+
+ stops increasing.
+\end_layout
+
+\begin_layout Subsubsection*
+Stage 2 - agglomeration stage -top down
+\end_layout
+
+\begin_layout Standard
+When Barber's modularity can no longer be increased via stage 1's bottom
+ up steps, a localised maximum of modularity for the network is reached,
+ though this may not be the global maximum.
+ The second stage seeks to prevent the algorithm getting stuck at a local
+ maximum by merging communities using MSG 
+\color red
+(define)
+\color inherit
+.
+ Specifically communities are formed from the unique labels in a network,
+ such that pollinator nodes and plant nodes are in the same community 
+\begin_inset Formula $t$
+\end_inset
+
+ when 
+\begin_inset Formula $g_{u}=h_{v}$
+\end_inset
+
+ .
+ If there are 
+\begin_inset Formula $F$
+\end_inset
+
+ communities in total, then the merging of two communities 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $t_{j}$
+\end_inset
+
+ (
+\begin_inset Formula $1<i<j<=F$
+\end_inset
+
+, 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ ) can only occur if this would result in an increase in network modularity
+ and if there is no third community 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ (
+\begin_inset Formula $1<k<=F$
+\end_inset
+
+, 
+\begin_inset Formula $i\neq j\neq k$
+\end_inset
+
+ ) whose merger with 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ or 
+\begin_inset Formula $t_{j}$
+\end_inset
+
+ would result in a larger increase to modularity.
+\end_layout
+
+\begin_layout Standard
+Once the division of communities has been completed the algorithm is repeated,
+ by going through stages 1 and 2 repeatedly until the networks communities
+ can no longer be subdivided - which occurs when are no combination of two
+ communities in the network that would result in increased network modularity
+ if they were joined together.
+ The communities in the network correspond to the modules found by the LPAb+
+ algorithm which has maximised bipartite modularity in the network based
+ on the initial conditions - the way in which the initial set of nodes are
+ labelled.
+\end_layout
+
+\begin_layout Subsection*
+Weighted bipartite modularity
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dormann2014method"
+
+\end_inset
+
+ follow Newmann 2004 and define weighted bipartite modularity similarly
+ to before as:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+Q=\frac{1}{2M}\sum_{u=1}^{n}\sum_{v=1}^{n}\left(W_{uv}-K_{uv}\right)\delta\left(l_{u},l_{v}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $W$
+\end_inset
+
+ is the weighted adjacency matrix, 
+\begin_inset Formula $M$
+\end_inset
+
+ is the sum of all the edge weights in 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ is a probability matrix defined as 
+\begin_inset Formula $K_{uv}=\frac{T_{u}T_{v}}{M}$
+\end_inset
+
+ with 
+\begin_inset Formula $T_{u}$
+\end_inset
+
+ being the marginal total of nodes connected to node 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ As before this can be rewritten in biadjacency matrix form, simplifying
+ to:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{W}=\frac{1}{M}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{W}_{uv}-\tilde{K}_{uv}\right)\delta\left(g_{u},h_{v}\right)=\frac{1}{M}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{W}_{uv}-\frac{y_{u}z_{v}}{M}\right)\delta\left(g_{u},h_{v}\right)\label{eq:weightedMod}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $y$
+\end_inset
+
+ is the row marginal totals and 
+\begin_inset Formula $z$
+\end_inset
+
+ is the column marginal totals of 
+\begin_inset Formula $\tilde{W}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Q_{W}$
+\end_inset
+
+ is the quantity that we wish to maximise with this algorithm for our observed
+ networks.
+ For a binary network 
+\begin_inset Formula $W$
+\end_inset
+
+ will become the adjacency matrix, the marginal totals will equal the node
+ degrees and 
+\begin_inset Formula $M$
+\end_inset
+
+ will equal the fill - thus 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:weightedMod"
+
+\end_inset
+
+ will be reduced to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:Barbers"
+
+\end_inset
+
+ for a binary network.
+ We can now use this definition of weighted bipartite modularity in the
+ modified framework of 
+\begin_inset CommandInset citation
+LatexCommand citeauthor
+key "liu2010efficient"
+
+\end_inset
+
+'s LPAb+ algorithm.
+\end_layout
+
+\begin_layout Subsection*
+LPAwb+
+\end_layout
+
+\begin_layout Standard
+As before I follow 
+\begin_inset CommandInset citation
+LatexCommand citeauthor
+key "liu2010efficient"
+
+\end_inset
+
+ in defining two stages for the new algorithm.
+ As the definition of modularity has altered it is now necessary to modify
+ the node label updating rules in the first stage of the algorithm.
+ The updating rules instead are defined as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+g_{x}^{new}=\underset{g}{\arg\max}\left(\Omega_{xg}-\frac{y_{x}Z_{g}}{M}\right)\\
+h_{x}^{new}=\underset{h}{\arg\max}\left(\Omega_{xh}-\frac{Y_{h}z_{x}}{M}\right)
+\end{cases}\label{eq:weightedupdate}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $Z_{g}$
+\end_inset
+
+ is the sum of the values in 
+\begin_inset Formula $z$
+\end_inset
+
+ (column marginal totals) whose plant nodes are labelled by 
+\begin_inset Formula $g$
+\end_inset
+
+, whilst 
+\begin_inset Formula $Y_{h}$
+\end_inset
+
+ is the sum of the values in 
+\begin_inset Formula $y$
+\end_inset
+
+ (row marginal totals) for the pollinator nodes labelled 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Omega_{xg}$
+\end_inset
+
+ is the sum of the weighted interactions between node 
+\begin_inset Formula $x$
+\end_inset
+
+ and it's neighbours labelled 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Note as before that 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:weightedupdate"
+
+\end_inset
+
+ will reduce to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:binaryupdate"
+
+\end_inset
+
+ for a binary network.
+\end_layout
+
+\begin_layout Standard
+The second stage of the LPAwb+ algorithm is as before, but hinges on the
+ new definition of weighted modularity, such that communities are merged
+ together only if it results in the best (positive) of the possible changes
+ to the networks modularity.
+\end_layout
+
+\begin_layout Section*
+Discussion
+\end_layout
+
+\begin_layout Standard
+Null models...are the traditional thing...need a meaningfull null model...not an
+ easy choice.
+ But can evaluate the pattern in other ways.[strength of pattern] - this
+ allows us to say something about members within different modules.
+\end_layout
+
+\begin_layout Standard
+NP-hard problem in bipartite binary networks -- hard! Assume it is also
+ NP hard in weighted binary networks, as binary is just a special case of
+ the formulation displayed here.
+ However, depending on the edge distribution surfaces may be substantially
+ less 'glassy' than in binary networks where the edge weight distribution
+ is completely homogeneous.
+\end_layout
+
+\begin_layout Standard
+Dormann's approach was novel - but we show here that it can be very slow
+ and return far from optimal solutions when compared to the LPAwb+ algorithm.
+ We chose to modify the LPAb+ algorithm to deal with weighted modularity
+ due to its performance (both in time and accuracy) in binary bipartite
+ networks.
+ There are a large number of other approaches to maximising the modularity
+ of a network however which have been applied to binary but not weighted
+ networks; several of these could in principal be altered to work in weighted
+ cases by using the modularity formulation of Dormann as shown here - and
+ some of these may potentially perform better than either of these methods.
+ However, we recommend using LPAwb+ in preference to the algorithm of Dormann
+ due to improvements in speed and modularity scores obtained.
+ As Dormann and Strauss highlight in their paper - it is not the precise
+ measurement of modularity that is important, but rather the interpretation
+ and explanation of modularity in the network and why certain nodes are
+ placed into which groups with certain other nodes which is important in
+ modularity analysis.
+\end_layout
+
+\begin_layout Section*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+I thank Xin Liu for hints and nudges that helped me to setup my version
+ of the LPAb+ algorithm.
+ I acknowledge funding from the University of Exeter that supported this
+ research.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "modularity"
+options "biochem"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
