@@ -29,7 +29,7 @@ function DIVISION(redlabels,bluelabels)
 			push!(divisionsFound,aa)
 		end
 	end
-
+	
 	return divisionsFound;
 end
 
