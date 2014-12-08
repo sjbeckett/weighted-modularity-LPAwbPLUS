@@ -7,7 +7,7 @@ LPAwb+ in MATLAB
 
 MAT = randi(4,20,20)-1 % create an example matrix
 
-#example scripts
+%example scripts
 
 MOD1 = LPA_wb_plus(MAT) % find labels and weighted modularity using LPAwb+
 
