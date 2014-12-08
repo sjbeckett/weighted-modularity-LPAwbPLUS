@@ -14,10 +14,13 @@ Usage
 Language specific instructions are included with the code.
 Source the relevant code in your favourite language; then run
 
-	```julia
-		LPA_wb_plus(MATRIX)
-	```
 
+```julia
+
+LPA_wb_plus(MAT) # find labels and weighted modularity using LPAwb+
+
+
+```
 where MATRIX is the incidence/biadjacency matrix describing the input network. Three outputs are returned: `redlabels` - the module labels for each row in the input matrix, `bluelabels` - the module labels for each row in the input matrix and `Q` - the modularity score.
 
 
