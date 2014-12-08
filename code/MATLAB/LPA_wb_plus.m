@@ -1,6 +1,18 @@
-%LPAwb+ ALGORITHM
+% LPA_wb_plus.m
+% Label propagation algorithm for weighted bipartite networks that finds modularity.
+% Contains the LPAwb+ algorithm
+% Author :  Stephen Beckett ( https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS )
+% MIT License
 
-function [Qb_current,redlabels,bluelabels]=LPA_wb_plus(MATRIX,parallel)
+function [Qb_current,redlabels,bluelabels]=LPA_wb_plus(MATRIX,parallel,initialmoduleguess)
+
+%Default settings invoked when not all input arguments supplied
+if nargin < 3
+    initialmoduleguess = NaN;
+    if nargin < 2
+        parallel = 0;
+    end
+end
 
 flipped=0;
 %Make the rows the shortest dimension - as this is maximum number of
@@ -31,7 +43,11 @@ info.Barbers = info.matrix - ProbMatrix;
 
 
 %Initialise red(row) and blue(column) labels
-redlabels = 1:info.row_num;
+if isnan(initialmoduleguess)
+    redlabels = 1:info.row_num;
+else
+    redlabels = randi(initialmoduleguess+1,1,info.row_num);
+end
 
 bluelabels = nan(1,info.col_num);
 
@@ -65,7 +81,35 @@ end
 
 end
 
-function [WeightedModularity]=WEIGHTEDMODULARITY(info,redlabels,bluelabels)
+function [out] = TRACE(MATRIX)
+
+    out = sum(diag(MATRIX));
+
+end
+
+function[WeightedModularity]=WEIGHTEDMODULARITY(info,redlabels,bluelabels)
+
+
+    UNIred = unique(redlabels);
+    Lred = length(UNIred);
+    UNIblu = unique(bluelabels);
+    Lblu = length(bluelabels);
+    LABELMAT1 = zeros(Lred,length(redlabels));
+    LABELMAT2 = zeros(length(bluelabels),Lblu);
+
+    for aa = 1:length(redlabels)
+        LABELMAT1((UNIred==redlabels(aa)),aa) = 1;
+    end
+    
+    for aa = 1:length(bluelabels)
+        LABELMAT2(aa,(UNIblu == bluelabels(aa))) = 1;
+    end
+    
+    WeightedModularity = TRACE(LABELMAT1 * info.Barbers * LABELMAT2)/info.edge_weights;
+
+end
+
+function [WeightedModularity]=WEIGHTEDMODULARITY2(info,redlabels,bluelabels)
 % info.row_marginals
 % info.col_marginals
 % ProbMatrix = (info.row_marginals * info.col_marginals)./info.edge_weights; %initialise probability matrix

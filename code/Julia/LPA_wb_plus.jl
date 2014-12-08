@@ -1,3 +1,9 @@
+# LPA_wb_plus.jl
+# Label propagation algorithm for weighted bipartite networks that finds modularity.
+# Contains the LPAwb+ and the Exhaustive LPAwb+ algorithms
+# Author :  Stephen Beckett ( https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS )
+# MIT License
+
 ###############################################
 
 function BarbersMatrix(MATRIX)
@@ -6,8 +12,8 @@ end
 
 ###############################################
 
-function WEIGHTEDMODULARITY(BMatrix,Matsum,redlabels,bluelabels)
-
+function WEIGHTEDMODULARITY(BMatrix,Matsum,redlabels::Array{Int64,1},bluelabels::Array{Float64,2})
+	#see equation 8
 	holdsum = 0;
 
 	for rr = 1:length(redlabels)
@@ -19,10 +25,40 @@ function WEIGHTEDMODULARITY(BMatrix,Matsum,redlabels,bluelabels)
 	return holdsum/Matsum;
 end
 
+
+###############################################
+function TRACE(MATRIX)
+	return sum(diag(MATRIX))
+end
+
 ###############################################
 
-function DIVISION(redlabels,bluelabels)
-	divisionsFound= Float64[];
+
+function WEIGHTEDMODULARITY2(BMatrix,Matsum,redlabels,bluelabels)
+	#see equation 9
+	UNIred = unique(redlabels)
+	Lred = length(redlabels)
+	UNIblu = unique(bluelabels)
+	Lblu = length(bluelabels)
+	LABELMAT1 = zeros(length(UNIred),Lred)
+	LABELMAT2 = zeros(Lblu,length(UNIblu))
+
+
+	for aa = 1:Lred
+		LABELMAT1[findin(UNIred,redlabels[aa]),aa] = 1
+	end
+
+	for aa = 1:Lblu
+		LABELMAT2[aa,findin(UNIblu,bluelabels[aa])] = 1
+	end
+
+	return TRACE(LABELMAT1 * BMatrix * LABELMAT2)/Matsum
+
+end
+
+###############################################
+function DIVISION(redlabels::Array{Int64,1},bluelabels::Array{Float64,2})
+	divisionsFound= Int64[];
 
 	for aa = 1:min(maximum(redlabels),maximum(bluelabels))
 		if( (isempty(findin(redlabels,aa))==false) && (isempty(findin(bluelabels,aa))==false) )
@@ -38,32 +74,34 @@ end
 function StageTwo_LPAwbdash(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,redlabels,bluelabels, Qb_now)
 
 	divisionsFound = DIVISION(redlabels,bluelabels);
+	NUMdiv = length(divisionsFound);
 	IterateFlag = 1;
 	while IterateFlag == 1
 		CombinedDivisionsThisTime = 0;
-		if length(divisionsFound) > 1
-			for div1check = 1:length(divisionsFound)-1
-				for div2check = div1check+1:length(divisionsFound)
+		if NUMdiv > 1
+			for div1check = 1:NUMdiv-1
+				Mod1 = divisionsFound[div1check]
+				for div2check = div1check+1:NUMdiv
 					CHECK_RED = copy(redlabels);
-					CHECK_RED[findin(redlabels,divisionsFound[div1check])] = divisionsFound[div2check];
+					CHECK_RED[findin(redlabels,Mod1)] = divisionsFound[div2check];
 					CHECK_BLUE = copy(bluelabels);
-					CHECK_BLUE[findin(bluelabels,divisionsFound[div1check])] = divisionsFound[div2check];
-					QQ = WEIGHTEDMODULARITY(BMatrix,Matsum,redlabels,bluelabels);			
-					if QQ > Qb_now #If this arrangement looks good
+					CHECK_BLUE[findin(bluelabels,Mod1)] = divisionsFound[div2check];
+					QQ = WEIGHTEDMODULARITY2(BMatrix,Matsum,redlabels,bluelabels);			
+					if QQ > Qb_now #If a division will improve modularity - find the best way to do this
                     				FoundBetter = 0;
-                    				for aa = 1:length(divisionsFound)
+                    				for aa = 1:NUMdiv
                         				CHECK_RED2 = copy(redlabels);
-                        				CHECK_RED2[findin(redlabels,divisionsFound[aa])] = divisionsFound[div1check];
+                        				CHECK_RED2[findin(redlabels,divisionsFound[aa])] = Mod1;
                         				CHECK_BLUE2 = copy(bluelabels);
-                        				CHECK_BLUE2[findin(bluelabels,divisionsFound[aa])] = divisionsFound[div1check];
-                        				if WEIGHTEDMODULARITY(BMatrix,Matsum,CHECK_RED2,CHECK_BLUE2) > QQ
+                        				CHECK_BLUE2[findin(bluelabels,divisionsFound[aa])] = Mod1;
+                        				if WEIGHTEDMODULARITY2(BMatrix,Matsum,CHECK_RED2,CHECK_BLUE2) > QQ
                             					FoundBetter = 1;
                         				end
                         				CHECK_RED2 = copy(redlabels);
                         				CHECK_RED2[findin(redlabels,divisionsFound[aa])] = divisionsFound[div2check];
                         				CHECK_BLUE2 = copy(bluelabels);
                         				CHECK_BLUE2[findin(bluelabels,divisionsFound[aa])] = divisionsFound[div2check];
-                        				if WEIGHTEDMODULARITY(BMatrix,Matsum,CHECK_RED2,CHECK_BLUE2) > QQ
+                        				if WEIGHTEDMODULARITY2(BMatrix,Matsum,CHECK_RED2,CHECK_BLUE2) > QQ
                             					FoundBetter = 1;
                         				end
                     				end
@@ -84,6 +122,7 @@ function StageTwo_LPAwbdash(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,re
 		
 		(redlabels,bluelabels,Qb_now) = StageOne_LPAwbdash(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,redlabels,bluelabels);
 		divisionsFound = DIVISION(redlabels,bluelabels);
+		NUMdiv = length(divisionsFound);
 	end
 
 return redlabels, bluelabels, Qb_now;
@@ -97,14 +136,15 @@ function StageOne_LPAwbdash(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,re
 	#Create storage containers for total marginals attached to each red(row)
 	#label and blue(column) label
 
-	BLUELABELLENGTH=length(bluelabels);
+	BLUELABELLENGTH = length(bluelabels);
+	REDLABELLENGTH = length(redlabels);
 	TotalRedDegrees = NaN*ones(maximum(redlabels),1);
 	
-	TotalBlueDegrees = NaN*ones(max(length(bluelabels),length(redlabels)),1);
+	TotalBlueDegrees = NaN*ones(max(BLUELABELLENGTH,REDLABELLENGTH),1);
 
 	#Fill up these containers according to current labels
 	#Red
-	for aa = 1:length(redlabels)
+	for aa = 1:REDLABELLENGTH
 	    if isnan(TotalRedDegrees[redlabels[aa]])
         	TotalRedDegrees[redlabels[aa]] = row_marginals[aa];
 	    else
@@ -122,7 +162,7 @@ function StageOne_LPAwbdash(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,re
         	end
 	    end
 	else
-	    TotalBlueDegrees = zeros(max(length(bluelabels),length(redlabels)),1); #####
+	    TotalBlueDegrees = zeros(max(BLUELABELLENGTH,REDLABELLENGTH),1);
 	end
 	
 	
@@ -140,7 +180,7 @@ end
 function LOCALMAXIMISATION(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,redlabels,bluelabels,TotalRedDegrees,TotalBlueDegrees)
 
 	#Find score for current partition
-	QbAfter = WEIGHTEDMODULARITY(BMatrix,Matsum,redlabels,bluelabels);
+	QbAfter = WEIGHTEDMODULARITY2(BMatrix,Matsum,redlabels,bluelabels);
 
 	IterateFlag = 1;
 	while IterateFlag == 1
@@ -151,12 +191,12 @@ function LOCALMAXIMISATION(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,red
 		old_TRD = copy(TotalRedDegrees);
 		old_TBD = copy(TotalBlueDegrees); #13
 
-		#Update Blue Nodes (using red node info.)
+		#Update Blue Nodes using red node information (see equation 10)
 		bluelabelchoices = 1:maximum(redlabels);
 
 		for bb = 1:length(bluelabels)
 			if isnan(bluelabels[bb]) == false
-				TotalBlueDegrees[bluelabels[bb]] -= col_marginals[bb]; #20
+				TotalBlueDegrees[bluelabels[bb]] -= col_marginals[bb]; 
 			end
 			changebluelabeltest = NaN*ones(1,length(bluelabelchoices));
 
@@ -166,7 +206,7 @@ function LOCALMAXIMISATION(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,red
 
 			#assign new label based on maximisation of above condition  
 
-			labels = findin(changebluelabeltest, maximum(changebluelabeltest));#30
+			labels = findin(changebluelabeltest, maximum(changebluelabeltest));
 			newlabelindex = labels[rand(1:length(labels),1)];
 			bluelabels[bb] = bluelabelchoices[newlabelindex[1]];
 			
@@ -178,7 +218,7 @@ function LOCALMAXIMISATION(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,red
             		TotalBlueDegrees[bluelabels[bb]] += col_marginals[bb];
         	end#40
 
-		#Now update red node labels based on blue node information
+		#Now update red node labels based on blue node information (see equation 10)
 		redlabelchoices = 1:maximum(bluelabels);
 
 		for aa = 1:length(redlabels)
@@ -186,7 +226,7 @@ function LOCALMAXIMISATION(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,red
 			changeredlabeltest = NaN*ones(1,length(redlabelchoices));
 
 			for ww = 1:length(redlabelchoices)
-				changeredlabeltest[ww] = sum( (bluelabels .== redlabelchoices[ww]) .* MATRIX[aa,:])  -  row_marginals[aa]*TotalBlueDegrees[redlabelchoices[ww]]/Matsum ; #49
+				changeredlabeltest[ww] = sum( (bluelabels .== redlabelchoices[ww]) .* MATRIX[aa,:])  -  row_marginals[aa]*TotalBlueDegrees[redlabelchoices[ww]]/Matsum ;
 			end
 			
 			#assign new label based on maximisation of above condition
@@ -224,8 +264,9 @@ end
 
 ###############################################
 
-function LPA_wb_plus(MATRIX)
+function LPA_wb_plus(MATRIX, initialmoduleguess = NaN)
 
+	#Make sure the smallest matrix dimension represent the red labels by making them the rows (If matrix is transposed here, will be transposed back at the end)
 	flipped = 0;
 	if size(MATRIX,1) > size(MATRIX,2)
 		MATRIX = MATRIX';
@@ -238,8 +279,13 @@ function LPA_wb_plus(MATRIX)
 	BMatrix = BarbersMatrix(MATRIX);
 
 	#initiliase labels
-	redlabels = [1:size(MATRIX,1)];
 	bluelabels = [NaN*ones(1,size(MATRIX,2))];
+	if isnan(initialmoduleguess)
+		redlabels = [1:size(MATRIX,1)];
+	else
+		redlabels = rand(1:(initialmoduleguess+1),size(MATRIX,1));
+	end
+
 
 	#Run Phase 1: Locally update lables to maximise Qb
 	(redlabels,bluelabels,Qb_now) = StageOne_LPAwbdash(row_marginals,col_marginals,MATRIX,BMatrix,Matsum,redlabels,bluelabels);
@@ -260,4 +306,26 @@ end
 ###############################################
 
 
+
+function Exhaustive_LPA_wb_plus(MATRIX, mini = 4, reps = 10)
+
+
+	A = LPA_wb_plus(MATRIX);
+
+	mods = length(unique(A[1]));
+	
+	if (mods-mini) > 0 
+		for aa = mini:mods
+			for bb = 1:reps
+				B = LPA_wb_plus(MATRIX,aa)
+				if B[3] > A[3]
+					A = B
+				end
+			end
+		end
+	end
+
+
+	return A[1], A[2], A[3];
+end
 
