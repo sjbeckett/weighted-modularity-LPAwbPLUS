@@ -41,9 +41,9 @@ source("PLOTTINGNETWORKMODULES.R")
 NETWORK_TO_DO = 13 # Row number of olesen2002flores dataset
 PLOTTINGNETWORKMODULES(NETWORK_TO_DO)
 
-#Fig 5a and calculates NMI between binary and quantitative partitions for each network with the highest modularity score. (saved to output/summary)
+#Fig 5a and calculates NMI between binary and quantitative partitions for each network with the highest modularity score (and the maximum modularity attainable). (saved to output/summary)
 source("NMICHANGEQPLOT.R")
-#Fig 5b
+#Fig 5b and 5c (Modularity vs. Realised Modularity)
 source("QrvsQw.R")
 
 #Complementary specialisation

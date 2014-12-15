@@ -1,4 +1,9 @@
 source("NormalisedMutualInformation.R")
+source("MaximumBipartiteModularity.R")
+
+
+DATALIST = list(Safariland,barrett1987,bezerra2009,elberling1999,inouye1988,junker2013,kato1990,kevan1970,memmott1999,mosquin1967,motten1982,olesen2002aigrettes,olesen2002flores,ollerton2003,schemske1978,small1976,vazarr,vazcer,vazllao,vazmasc,vazmasnc,vazquec,vazquenc)
+
 
 Networks =c("Safariland","barrett1987","bezerra2009","elberling1999","inouye1988","junker2013","kato1990","kevan1970","memmott1999","mosquin1967","motten1982","olesen2002aigrettes","olesen2002flores","ollerton2003","schemske1978","small1976","vazarr","vazcer","vazllao","vazmasc","vazmasnc","vazquec","vazquenc")
 
@@ -62,8 +67,25 @@ QB = apply(maxesBin,1,max) #Best binary Modularity
 
 
 
-NMI=c()
+NMI=c() # to store NMI scores
+MBM_B=c() # to store maximum binary bipartite modularity
+MBM_Q=c() # to store maximum weighted bipartite modularity
+
 for(data in 1:dim(A)[1]) {
+
+	aa=as.matrix(DATALIST[[data]])
+	Q <- as.matrix(aa) #network
+	#convert to binary network
+	A = 1*(Q>0)
+	#Remove empty Rows/Columns from analysis
+	if(length(which(rowSums(A)==0))>0) {
+		Q = Q[-which(rowSums(A)==0),]
+		A = A[-which(rowSums(A)==0),] }
+	if(length(which(colSums(A)==0))>0) {
+		Q = Q[,-which(colSums(A)==0)]
+		A = A[,-which(colSums(A)==0)] }
+
+
 
 	DIREFRONT = "output/"
 	
@@ -87,6 +109,8 @@ for(data in 1:dim(A)[1]) {
 	}
 
 	QuanList = c(Rchoice,Cchoice)
+
+	MBM_Q[data] = MAXIMUM_BIP_MOD( Q,Rchoice,Cchoice)
 	
 	Algorithm_b = which(maxesBin[data,] == QB[data])[1]
 	if(Algorithm_b == 1) {
@@ -107,6 +131,8 @@ for(data in 1:dim(A)[1]) {
 	}
 
 	BinList = c(Rchoice,Cchoice)
+
+	MBM_B[data] = MAXIMUM_BIP_MOD(A,Rchoice,Cchoice)
 	
 	NMI[data] = NormalisedMutualInformation(QuanList,BinList)	
 }
@@ -116,6 +142,11 @@ rownames(NMIout) = Networks
 
 write.csv(NMIout,paste(FRONT,"NMIoutput.csv",sep=""))
 
+
+MaxModularityOut = as.matrix(cbind(MBM_B,MBM_Q))
+rownames(MaxModularityOut) = Networks
+
+write.csv(MaxModularityOut,paste(FRONT,"MAXMODoutput.csv",sep=""))
 
 changeQ = QW-QB
 

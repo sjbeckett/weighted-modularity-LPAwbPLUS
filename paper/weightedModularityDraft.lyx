@@ -69,25 +69,8 @@
 
 \begin_layout Title
 Do presence-absence bipartite networks share the same communities as their
- quantitative counterparts? New methods for detecting modularity in weighted
+ quantitative counterparts? Methods for detecting modularity in weighted
  networks
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Title
-Where dost thou belong? Different organisational levels revealed by two
- weighted modularity algorithms in plant-pollinator networks / How many
- ways to organise a community? Modularity at multiple scales in weighted
- plant-pollinator interaction networks/ Efficient algorithm for finding
- weighted modular community
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Author
@@ -150,7 +133,7 @@ key "newman2010networks"
 
 \begin_layout Standard
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Finding organisational structures; identifying and classifying communities
@@ -223,7 +206,7 @@ key "dormann2014method"
  with quantitative data.
  Previously (with the exception of 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "newman2004analysis"
 
 \end_inset
@@ -360,7 +343,7 @@ y of a connection occurring between two nodes when the total number of edges
 \end_inset
 
  is calculated as 
-\begin_inset Formula $P_{uv}=\frac{k_{u}k_{v}}{m}$
+\begin_inset Formula $P_{uv}=\frac{k_{u}k_{v}}{2m}$
 \end_inset
 
  where 
@@ -639,7 +622,7 @@ where
 \begin_inset Formula $\tilde{P}$
 \end_inset
 
- are the interaction(biadjacency) matrices describing the connections between
+ are the incidence(biadjacency) matrices describing the connections between
  the different types of nodes (here 
 \begin_inset Formula $T$
 \end_inset
@@ -1218,7 +1201,7 @@ Weighted bipartite modularity
 \end_layout
 
 \begin_layout Standard
-Weighted bipartite modularity can be defined as 
+Weighted modularity can be defined as 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "newman2004analysis,dormann2014method"
@@ -1269,7 +1252,7 @@ where
 \end_inset
 
  is a probability matrix defined as 
-\begin_inset Formula $E_{uv}=\frac{T_{u}T_{v}}{M}$
+\begin_inset Formula $E_{uv}=\frac{T_{u}T_{v}}{2M}$
 \end_inset
 
  with 
@@ -1282,7 +1265,14 @@ where
 
 .
  As before this can be rewritten in biadjacency matrix form, simplifying
- to:
+ to 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dormann2014method"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -1415,7 +1405,7 @@ where for a network with
  This definition of weighted bipartite modularity can now be used in the
  modified framework of 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "liu2010efficient"
 
 \end_inset
@@ -1517,7 +1507,7 @@ QuanBiMo
 \begin_layout Standard
 The quantitative bipartite modularity algorithm (QuanBiMo) of 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "dormann2014method"
 
 \end_inset
@@ -1827,6 +1817,94 @@ Comparing Modularity
 \end_layout
 
 \begin_layout Subsubsection*
+Normalised Modularity
+\end_layout
+
+\begin_layout Standard
+The modularity values of 
+\begin_inset Formula $Q_{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $Q_{W}$
+\end_inset
+
+ found above are network specific - properties such as the size and number
+ of links in a network effect the magnitude of the modularity found 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "newman2010networks,thebault2013identifying,dormann2014method"
+
+\end_inset
+
+.
+ In order to assess the strength of assortative mixing across different
+ networks it is neccessary to account for the possibility of these effects.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dormann2014method"
+
+\end_inset
+
+ recommend using a null model to generate an ensemble of networks from wich
+ the standardised effect size of modularity can be assessed as a z-score.
+ However, it is unclear what would make an appropriate null model for weighted
+ networks.
+ An alternative method is to normalise the modularity values by the maximum
+ value that modularity can take, found in the perfectly mixed network, where
+ all edges are assigned to a module and there are no between module links
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "newman2010networks"
+
+\end_inset
+
+.
+ For bipartite networks this is given as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{max}=\frac{1}{M}\left(M-\sum_{u=1}^{r}\sum_{v=1}^{c}\frac{y_{u}z_{v}}{M}\right)\delta\left(g_{u},h_{v}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+, where as before 
+\begin_inset Formula $M$
+\end_inset
+
+ is the sum of the edges in the incidence matrix with 
+\begin_inset Formula $y$
+\end_inset
+
+, the marginal row totals and 
+\begin_inset Formula $z$
+\end_inset
+
+, the marginal column totals.
+ Then normalised modularity is found as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{norm}=\frac{Q}{Q_{max}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
 Normalised Mutual Information
 \end_layout
 
@@ -1873,7 +1951,7 @@ key "danon2005comparing,thebault2013identifying"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-I(A,B)=\frac{-2\sum_{i=1}^{C_{A}}\sum_{j=1}^{C_{B}}N_{ij}\log\left(\frac{N_{ij}n}{N_{i}N_{j}}\right)}{\sum_{i=1}^{C_{A}}N_{i}\log\left(\frac{N_{i}}{n}\right)+\sum_{j=1}^{C_{B}}N_{j}\log\left(\frac{N_{j}}{n}\right)}
+NMI(A;B)=\frac{-2\sum_{i=1}^{C_{A}}\sum_{j=1}^{C_{B}}N_{ij}\log\left(\frac{N_{ij}n}{N_{i}N_{j}}\right)}{\sum_{i=1}^{C_{A}}N_{i}\log\left(\frac{N_{i}}{n}\right)+\sum_{j=1}^{C_{B}}N_{j}\log\left(\frac{N_{j}}{n}\right)}
 \end{equation}
 
 \end_inset
@@ -1944,7 +2022,7 @@ where
 \noun off
 \color none
 
-\begin_inset Formula $I(A,B)=0$
+\begin_inset Formula $NMI(A;B)=0$
 \end_inset
 
  there is no shared information between partitions 
@@ -1957,7 +2035,7 @@ where
 
  - they each have identified very different community structures; whilst
  if 
-\begin_inset Formula $I(A,B)=1$
+\begin_inset Formula $NMI(A;B)=1$
 \end_inset
 
  the information given by partitions A and B is identical - the same community
@@ -2066,7 +2144,7 @@ Data
 We used the 23 plant-pollinator networks available in the bipartite R package
  (22 of which were used in 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "dormann2014method"
 
 \end_inset
@@ -11887,7 +11965,7 @@ Numbers have been rounded to 3 d.p.
 \begin_inset Formula $Q_{W}$
 \end_inset
 
- score or fastest time across the algorithms.
+ score.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:weighted-Mod"
@@ -27665,7 +27743,11 @@ a
 \begin_inset Formula $Q_{B}=0.444$
 \end_inset
 
- , 4 modules) and (
+ , 4 modules, 
+\begin_inset Formula $Q_{norm}^{B}=0.625$
+\end_inset
+
+) and (
 \shape italic
 b
 \shape default
@@ -27673,10 +27755,14 @@ b
 \begin_inset Formula $Q_{w}=0.497$
 \end_inset
 
- , 5 modules) network.
+ , 5 modules, 
+\begin_inset Formula $Q_{norm}^{W}=0.625$
+\end_inset
+
+) network.
  The normalised mutual information shared between these two modular compositions
  is 
-\begin_inset Formula $I=0.619$
+\begin_inset Formula $NMI=0.619$
 \end_inset
 
  indicating a qualitative difference in the revealed modular structure.
@@ -27710,14 +27796,21 @@ status open
 \align center
 \begin_inset Graphics
 	filename papercode/changeQ_NMI.eps
-	width 45text%
+	width 33text%
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename papercode/RealisedModularity.eps
-	width 45text%
+	filename papercode/ModRealisedModularity.eps
+	width 33text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename papercode/NormQvsRealisedModularity.eps
+	width 33text%
 
 \end_inset
 
@@ -27756,6 +27849,12 @@ b
 \end_inset
 
 ).
+ (
+\shape italic
+c
+\shape default
+) The normalised modulariy scores of each of the greatest modularity scores
+ plotted against their corresponding realised modularity scores.
  Red lines join together the binary and quantitative scores of the same
  network.
 \begin_inset CommandInset label
@@ -27859,7 +27958,7 @@ key "murataMod,thebault2013identifying"
 .
  
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "thebault2013identifying"
 
 \end_inset
@@ -27884,7 +27983,7 @@ key "newman2004finding"
  - and is well suited for identifying densely connected modules.
  
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "murataMod"
 
 \end_inset
@@ -27908,7 +28007,7 @@ key "dormann2014method"
 .
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "staniczenko2013ghost"
 
 \end_inset
@@ -27999,7 +28098,7 @@ We found that QuanBiMo performed particularly poorly on the larger networks
  for these networks.
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "dormann2014method"
 
 \end_inset
@@ -28554,6 +28653,9 @@ options "biochem"
 \end_layout
 
 \begin_layout Section*
+\begin_inset Newpage newpage
+\end_inset
+
 Appendix
 \end_layout
 
@@ -28561,7 +28663,7 @@ Appendix
 \begin_inset Float table
 placement H
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
@@ -30346,8 +30448,7 @@ key "vazquez2002ecological,vazquez2002interactions,vazquez2003changes"
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Network properties of the datasets used in this study .
- Numbers rounded to 3 d.p.
+Network properties of the datasets used in this study.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -38180,6 +38281,32 @@ Extra results from the evaluations of the binary version of these networks.
 \end_inset
 
  score (for each method).
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Numbers have been rounded to 3 d.p.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Extra-results-Bin"
@@ -46348,6 +46475,32 @@ Extra results from the evaluations of the weighted version of these networks.
 \end_inset
 
  score (for each method).
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Numbers have been rounded to 3 d.p.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Extra-results-Quant"
@@ -46355,6 +46508,1288 @@ name "tab:Extra-results-Quant"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="25" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Network
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q_{norm}^{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q_{norm}^{W}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $NMI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Safariland
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.707
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.976
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.704
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+barrett1987
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.587
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.710
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.720
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+bezerra2009
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.353
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.281
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.452
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+elberling1999
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.580
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.600
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.640
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+inouye1988
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.530
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.745
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.348
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+junker2013
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.523
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.733
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.569
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+kato1990
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.617
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.689
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.657
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+kevan1970
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.545
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.767
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.495
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+memmott1999
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.431
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.468
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.517
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+mosquin1967
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.602
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.630
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.709
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+motten1982
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.373
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.542
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.395
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+olesen2002aigrettes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.482
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.379
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.676
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+olesen2002flores
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.625
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.625
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.619
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ollerton2003
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.534
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.622
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.650
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+schemske1978
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.456
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.507
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.512
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+small1976
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.349
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.630
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.421
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+vazarr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.700
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.619
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.674
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+vazcer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.777
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.902
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.816
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+vazllao
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.751
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.750
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.679
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+vazmasc
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.711
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.852
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.746
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+vazmasnc
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.658
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.616
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.829
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+vazquec
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.709
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.773
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+vazquenc
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.773
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.961
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.928
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Normalised modularity and normalised mutual information scores for the partition
+s with greatest modularity.
+ Numbers have been rounded to 3 d.p.
+ 
 \end_layout
 
 \end_inset
