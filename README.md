@@ -17,7 +17,7 @@ Source the relevant code in your favourite language; then run
 
 ```julia
 
-LPA_wb_plus(MAT) # find labels and weighted modularity using LPAwb+
+LPA_wb_plus(MATRIX) # find labels and weighted modularity using LPAwb+
 
 
 ```

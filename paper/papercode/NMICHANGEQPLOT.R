@@ -71,6 +71,7 @@ NMI=c() # to store NMI scores
 MBM_B=c() # to store maximum binary bipartite modularity
 MBM_Q=c() # to store maximum weighted bipartite modularity
 
+
 for(data in 1:dim(A)[1]) {
 
 	aa=as.matrix(DATALIST[[data]])
@@ -150,21 +151,30 @@ write.csv(MaxModularityOut,paste(FRONT,"MAXMODoutput.csv",sep=""))
 
 changeQ = QW-QB
 
+NQB = QB/MBM_B #normalised binary modularity
+NQW = QW/MBM_Q #normalised weighted modularity
+
+changeQnorm = NQW - NQB
+
+
 colw = "grey"
 
-plot(NMI,changeQ,xlab="NMI",ylab=expression(paste(Delta, "Q")),bty="n",ylim=c(min(changeQ),max(changeQ)),xlim=c(0,1))
+plot(0,0,type='n',xlab="NMI",ylab=expression(paste(Delta, "Q"^norm)),bty="n",ylim=c(min(changeQ2),0.3),xlim=c(0,1))
 lines(0:1,rep(0,2),lty=3,lwd=4,col="grey80")
+points(NMI,changeQnorm)
 axis(1,col=colw,labels=FALSE,lwd=2)
 axis(2,col=colw,labels=FALSE,lwd=2)
 
-subset = c(6,8,9,13,14,19) # labels to put above point
+subset = c(10,14,15)#6,8,9,13,14,19) # labels to put above point
+subset2 = c(19)
 
-text(NMI[subset], changeQ[subset], labels = Networks[subset], cex= 0.7, pos=3, offset = 0.4)  #above
-text(NMI[-subset], changeQ[-subset], labels = Networks[-subset], cex= 0.7, pos=1, offset = 0.4)  #below
+text(NMI[subset], changeQnorm[subset], labels = Networks[subset], cex= 0.7, pos=3, offset = 0.4)  #above
+text(NMI[subset2], changeQnorm[subset2], labels = Networks[subset2], cex= 0.7, pos=4, offset = 0.4)  #above
+text(NMI[-c(subset,subset2)], changeQnorm[-c(subset,subset2)], labels = Networks[-c(subset,subset2)], cex= 0.7, pos=1, offset = 0.4)  #below
 
 
 
-dev.copy2eps(file="changeQ_NMI.eps")
+dev.copy2eps(file="changeQnorm_NMI.eps")
 dev.off()
 
 

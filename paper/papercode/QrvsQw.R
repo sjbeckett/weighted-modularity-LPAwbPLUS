@@ -48,6 +48,8 @@ for(each in 1:23) {
 	}
 }
 
+#### Modularity vs. Realised Modularity
+
 plot(0,0,type='n',xlim=c(0.2,1),ylim=c(-0.2,1),ylab=expression("Q'"[R]),xlab="Modularity",bty="n")
 axis(1,col="grey",labels=FALSE,lwd=2)
 axis(2,col="grey",labels=FALSE,lwd=2)
@@ -57,7 +59,7 @@ for( aa in 1:23 ) {
 lines(c(BQW[aa],QQW[aa]),c(BQR[aa],QQR[aa]),col="indianred1")
 }
 points(QQW,QQR,pch=4)
-legend(0.2,0.95,c("Binary","Quantitative"),pch=c(1,4),bty='n')
+legend(0.2,0.95,c(expression("Binary Q"[B]),expression("Quantitative Q"[W])),pch=c(1,4),bty='n')
 
 dev.copy2eps(file="ModRealisedModularity.eps")
 dev.off()
@@ -88,7 +90,7 @@ points(NQB,BQR)
 points(NQW,QQR,pch=4)
 
 
-legend(0.25,0.95,c("Binary","Quantitative"),pch=c(1,4),bty='n')
+legend(0.25,0.95,c(expression("Binary Q"[B]^norm),expression("Quantitative Q"[W]^norm)),pch=c(1,4),bty='n')
 
 
 dev.copy2eps(file="NormQvsRealisedModularity.eps")
