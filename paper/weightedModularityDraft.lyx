@@ -52,8 +52,8 @@
 \bottommargin 20mm
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip bigskip
 \quotes_language english
 \papercolumns 1
 \papersides 1
@@ -68,9 +68,7 @@
 \begin_body
 
 \begin_layout Title
-Do presence-absence bipartite networks share the same communities as their
- quantitative counterparts? Methods for detecting modularity in weighted
- networks
+Improved community detection in weighted bipartite networks
 \end_layout
 
 \begin_layout Author
@@ -83,18 +81,26 @@ Biosciences, College of Life and Environmental Sciences, University of Exeter,
 \end_layout
 
 \begin_layout Standard
-Key words: matrices, plant-pollinator, modular structure, network ecology,
- community detection, two-mode networks, compartments
+Key words: modular structure, network ecology, two-mode networks, compartments
 \end_layout
 
-\begin_layout Standard
-\align center
-
-\series bold
-\size larger
-\color red
-Note this document is currently a draft.
- It is not yet finished!
+\begin_layout Abstract
+Real-world complex networks are composed of non-random quantitative interactions
+, yet many community detection algorithms only use the presence or absence
+ of interactions between nodes.
+ Weighted modularity is a potential method for evaluating the quality of
+ communities in quantitative networks.
+ Modularity optimisation is a method for finding communities in a network.
+ QuanBiMo has been proposed to maximise weighted modularity in bipartite
+ networks.
+ This paper introduces two new algorithms, LPAwb+ and Exhaustive LPAwb+,
+ for maximising weighted modularity in bipartite networks.
+ These algorithms robustly identify partitions with high modularity scores.
+ Exhaustive LPAwb+ consistently matched or outperformed QuanBiMo, whilst
+ the speed of LPAwb+ makes it an attractive choice for detecting the modularity
+ of larger networks.
+ Searching for modules using weighted data (rather than binary data) provides
+ a different and potentially insightful method for evaluating network partitions.
 \end_layout
 
 \begin_layout Section*
@@ -102,26 +108,38 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Bipartite (two-mode) networks are composed of interactions between two distinct
- sets of nodes.
- Identifying structure within these networks is a first step to understanding
- their formation, function and behaviour.
+Bipartite networks are the representation of interactions between two distinct
+ classes of nodes.
+ Identifying structure within these networks is useful in explaining their
+ formation, function and behaviour.
  Modularity is an evaluation of the partitioning of nodes into separate
- subsets, forming modules (also known as groups, compartments, communities,
- subgraphs) which in bipartite networks are composed of both types of nodes.
- This property is important in networks across a diverse set of fields including
- sociology, ecology and the physical sciences.
+ subsets, forming modules.
+ These are also known as groups, compartments, communities or subgraphs.
+ Determining functional groups of networks is an important challenge for
+ a diverse set of fields including sociology, ecology and the physical sciences.
 \end_layout
 
 \begin_layout Standard
-Modularity is highest when modules are isolated from the rest of the network
- i.e.
- nodes in each module highly interact amongst themselves, but between module
- interactions are limited.
- A negative modularity score indicates there are fewer edges between nodes
- within the same module than expected; whilst a positive score indicates
- that within module connectivity is higher than expected (there is a strict
- upper limit of 1, though this often cannot be reached) 
+Maximising the modularity of a network is one method for detecting communities
+ originally developed for unipartite (in which all nodes are allowed to
+ interact with one another) networks 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "newman2004finding"
+
+\end_inset
+
+.
+ Modularity is highest when each module appears isolated from the rest of
+ the network.
+ This occurs when nodes interact often with nodes in the same module, but
+ there are few between module interactions.
+ Negative modularity scores imply fewer interactions occur within modules
+ than expected in a random network.
+ But, positive modularity indicates that within module connectivity is higher
+ than expected.
+ The smallest and largest possible modularity scores that can be found are
+ network dependent 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "newman2010networks"
@@ -129,263 +147,11 @@ key "newman2010networks"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-Finding organisational structures; identifying and classifying communities
- are an important challenge in network science.
- This is equally true in bipartite or two-mode networks; which are made
- up of two sets of interacting nodes.
- Examples of bipartite networks include people and the events they attend
- (southern women) or the hashtags they use on twitter (Williams et al.2014),
- but they are also important in the ecological sciences where they can be
- used for example to describe the mutualistic interactions between plants
- and pollinators 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "dormann2014method"
-
-\end_inset
-
- or antagonistic relationships between parasites and their hosts 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "flores2012multi,pilosof2014host"
-
-\end_inset
-
-.
- Many other such examples of bipartite networks exist across the biological,
- social and physical sciences; several of which have been shown to have
- a modular structure.
- Modularity is a measure of how well a network associates into different
- groups, or modules, taking negative values when there are fewer edges between
- nodes within the same group than expected and positive values when more
- edges than expected are found between nodes in the same group with an upper
- limit of 1 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "newman2010networks"
-
-\end_inset
-
-.
- ....
- and has been associated with....
-\end_layout
-
-\begin_layout Plain Layout
-Modularity landscape is rugged - glassy 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "good2010performance"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-QuanBiMo 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "dormann2014method"
-
-\end_inset
-
- is the first algorithm to maximise weighted modularity in bipartite networks
- with quantitative data.
- Previously (with the exception of 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "newman2004analysis"
-
-\end_inset
-
-) modularity algorithms (and community detection methods in general) have
- only been designed and tested on networks of binary data 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "fortunato2010community"
-
-\end_inset
-
- i.e.
- focussing only on whether two nodes have associations regardless of the
- strength of those associations.
- It may be possible to adapt some of the methods available for binary data
- to deal with quantitative information, rather than having to discard this
- important data dimension.
-\end_layout
-
-\begin_layout Standard
-The LPAb+ algorithm 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "liu2010efficient"
-
-\end_inset
-
- for maximising modularity in binary bipartite networks has been shown to
- outperform seven other available methods for binary networks 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "liu2010efficient,costa2014locally"
-
-\end_inset
-
- whilst retaining a fast time complexity.
- These qualities made it a good candidate choice to see if this algorithm
- could be extended for dealing with weighted networks.
- 
-\end_layout
-
-\begin_layout Standard
-I show how the LPAb+ algorithm can be modified so it can detect weighted
- modularity and denote this algorithm LPAwb+.
- A further modification to allow a more thorough search of modularity space
- called Exhaustive LPAwb+ is also presented.
- I compare the three weighted modularity algorithms using a dataset of 23
- plant-pollinator networks.
- These experiments show that Exhaustive LPAwb+ and QuanBiMo perform well
- on smaller networks and that the speed of LPAwb+ makes it suitable for
- usage on larger datasets.
- We also reveal how the inclusion of quantitative information in the network
- can alter identified modular structure and discuss the implications of
- this.
-\end_layout
-
-\begin_layout Standard
-
-\end_layout
-
-\begin_layout Section*
-Methods
-\end_layout
-
-\begin_layout Subsection*
-Finding Modules
-\end_layout
-
-\begin_layout Standard
-We first outline the LPAb+ algorithm
-\begin_inset CommandInset citation
-LatexCommand citep
-key "liu2010efficient"
-
-\end_inset
-
- for binary networks then show how it can be extended to weighted networks.
-\end_layout
-
-\begin_layout Subsubsection*
-Binary bipartite modularity
-\end_layout
-
-\begin_layout Standard
-For an undirected binary network (showing presence or absence of a connection)
- of 
-\begin_inset Formula $n$
-\end_inset
-
- nodes with 
-\begin_inset Formula $m$
-\end_inset
-
- edges, described by the adjacency matrix 
-\begin_inset Formula $A$
-\end_inset
-
-; modularity can be defined as 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "newman2006modularity"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-Q=\frac{1}{2m}\sum_{u=1}^{n}\sum_{v=1}^{n}\left(A_{uv}-P_{uv}\right)\delta\left(L_{u},L_{v}\right)
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where 
-\begin_inset Formula $P$
-\end_inset
-
- is the probability matrix associated with the network describing the probabilit
-y of a connection occurring between two nodes when the total number of edges
- between nodes is constrained.
- The connection probability between two nodes 
-\begin_inset Formula $u$
-\end_inset
-
- and 
-\begin_inset Formula $v$
-\end_inset
-
- is calculated as 
-\begin_inset Formula $P_{uv}=\frac{k_{u}k_{v}}{2m}$
-\end_inset
-
- where 
-\begin_inset Formula $k_{u}$
-\end_inset
-
- is the number of nodes that connect to node 
-\begin_inset Formula $u$
-\end_inset
-
- and 
-\begin_inset Formula $k_{v}$
-\end_inset
-
- is the number of nodes that connect to node 
-\begin_inset Formula $v$
-\end_inset
-
-.
- Each node in the network is assigned a module label 
-\begin_inset Formula $L$
-\end_inset
-
- - nodes with the same label are in the same module.
- The Kronecker delta function 
-\begin_inset Formula $\delta\left(L_{u},L_{v}\right)$
-\end_inset
-
- is equal to one when nodes 
-\begin_inset Formula $u$
-\end_inset
-
- and 
-\begin_inset Formula $v$
-\end_inset
-
- are classified as being in the same module (i.e.
- they have the same label value) or zero otherwise.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -486,17 +252,31 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-(A) The olesen2002flores bipartite network of 12 species of pollinators
- (blue nodes) visiting 10 plant species (red nodes).
- The width of the edges represents the number of pollinator-plant visitations.
- (B) The same network represented by the interaction matrix denoted 
+(
+\shape italic
+a
+\shape default
+) The olesen2002flores bipartite network of 12 species of pollinators (blue
+ nodes (top)) visiting 10 plant species (red nodes (bottom)).
+ The width of the edges linking the nodes represents the number of pollinator-pl
+ant visitations, whilst the width of the nodes represents the marginal total
+ of visits made by a pollinator species or received by a plant species.
+ (
+\shape italic
+b
+\shape default
+) The same network represented by the incidence matrix denoted 
 \begin_inset Formula $\tilde{A}$
 \end_inset
 
  in the text, where the plant species are represented as rows and the pollinator
  species as columns and the presence of visitations between a pollinator
  and plant species is represented by a 1.
- (C) The incidence matrix 
+ (
+\shape italic
+c
+\shape default
+) The incidence matrix 
 \family roman
 \series medium
 \shape up
@@ -529,8 +309,9 @@ status open
 \end_inset
 
 , the weighted interaction matrix shown here.
- The cell numbers correspond to the number of visitations that occurred
- (where there is no number - there were 0 visitations)
+ The cell numbers correspond to the number of observed pollinator-plant
+ visitations that occurred (where there is no number in a square there were
+ 0 visitations)
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:(A)-The-olesen2002flores"
@@ -545,8 +326,136 @@ name "fig:(A)-The-olesen2002flores"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are several definitions of modularity used in bipartite networks.
+ Guimerà's modularity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "guimera2007module"
+
+\end_inset
+
+ and Barber's modularity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "barber2007modularity"
+
+\end_inset
+
+ were recently reviewed 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "thebault2013identifying"
+
+\end_inset
+
+ in the context of ecological networks.
+ Guimerà's modularity uses weighted projections to identify separate communities
+ within each node type.
+ In contrast, Barber's modularity identifies joint communities composed
+ of both types of node.
+ In this paper I concentrate on the modularity definition proposed by Barber
+ and its extension to weighted networks 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dormann2014method"
+
+\end_inset
+
+ to search for communities composed of both node types, which in the context
+ of this study are communities of plants and their respective pollinators.
+\end_layout
+
+\begin_layout Standard
+Modularity is a major feature of plant-pollinator networks 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "olesen2007modularity"
+
+\end_inset
+
+ and may contribute to network stability in these systems.
+ They can be represented as bipartite networks with interactions between
+ pollinators and plants.
+ Pollinating species cannot pollinate other pollinating species, while plants
+ cannot visit each one another -- the only allowed interactions are between
+ different plants and pollinators (an example network is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:(A)-The-olesen2002flores"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+The majority of approaches to community detection only focus on whether
+ two nodes have an association, regardless of the strength of those associations
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fortunato2010community"
+
+\end_inset
+
+.
+ However, there are some exceptions in unipartite networks 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "newman2004analysis"
+
+\end_inset
+
+.
+ QuanBiMo 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dormann2014method"
+
+\end_inset
+
+ is the first algorithm to maximise weighted modularity in bipartite networks
+ with quantitative data.
+ It may be possible to adapt some of the methods available for binary data
+ to deal with quantitative information, rather than having to discard this
+ important data dimension.
+\end_layout
+
+\begin_layout Standard
+The LPAb+ algorithm 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "liu2010efficient"
+
+\end_inset
+
+ for maximising modularity in binary bipartite networks has been shown to
+ outperform seven other available methods for binary networks 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "liu2010efficient,costa2014locally"
+
+\end_inset
+
+ whilst retaining fast time complexity.
+ These qualities make it a good candidate for extension to the case of weighted
+ networks.
+ 
+\color red
+
+\begin_inset Note Comment
+status open
+
 \begin_layout Plain Layout
 
+\color red
+BADNESS OF SA methods??
 \end_layout
 
 \end_inset
@@ -555,22 +464,44 @@ name "fig:(A)-The-olesen2002flores"
 \end_layout
 
 \begin_layout Standard
-Bipartite or two-mode networks are made of two types of distinctive nodes
- such that interactions only occur between nodes of the opposite type.
- For example in plant-pollinator networks pollinating species cannot pollinate
- other pollinating species and plants cannot visit each one another; the
- only interactions are between different plants and pollinators as shown
- in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:(A)-The-olesen2002flores"
+The definitions of binary and weighted modularity are presented.
+ I show how to alter the LPAb+ algorithm so it can detect weighted modularity
+ and denote this algorithm LPAwb+.
+ A further modification allowing a more thorough search of modularity space
+ is also presented.
+ I call this Exhaustive LPAwb+.
+ The three algorithms for maximising weighted modularity are compared on
+ a dataset of 23 plant-pollinator networks.
+ I find that QuanBiMo is highly sensitive to its input parameters, which
+ may lead to reporting of modularity far below the optimal value in a given
+ network.
+ QuanBiMo reported less consistent modularity scores than either LPAwb+
+ or Exhautive LPAwb+.
+ These experiments show that Exhaustive LPAwb+ and QuanBiMo performed well
+ on smaller networks, whilst the speed of LPAwb+ makes it particularly suitable
+ for use on larger datasets.
+ The inclusion of quantitative information in networks alters the structure
+ of detected modules.
+\end_layout
 
-\end_inset
+\begin_layout Section*
+Methods
+\end_layout
 
-.
- To generalise we can say that we have two node types: red and blue - and
- that interactions are only allowed between red and blue nodes.
- If we say there are 
+\begin_layout Subsection*
+Modularity
+\end_layout
+
+\begin_layout Subsubsection*
+Barber's modularity
+\end_layout
+
+\begin_layout Standard
+Bipartite or two-mode networks are made of two disjoint sets of nodes such
+ that interactions only occur between nodes of opposite types.
+ To generalise we say there are two node types: red and blue - and that
+ interactions are only allowed between red and blue nodes.
+ If there are 
 \begin_inset Formula $r$
 \end_inset
 
@@ -578,35 +509,21 @@ reference "fig:(A)-The-olesen2002flores"
 \begin_inset Formula $c$
 \end_inset
 
- nodes of the blue type such that 
-\begin_inset Formula $n=r+c$
-\end_inset
-
-, we can rewrite 
+ nodes of the blue type, the adjacency matrix 
 \begin_inset Formula $A$
 \end_inset
 
- and 
-\begin_inset Formula $P$
-\end_inset
-
- in block diagonal form as:
+ is given in block diagonal form as:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\begin{cases}
+\[
 A=\left(\begin{array}{cc}
 0_{r\times r} & \tilde{A}_{r\times c}\\
 \tilde{A}_{c\times r}^{T} & 0_{c\times c}
-\end{array}\right)\\
-P=\left(\begin{array}{cc}
-0_{r\times r} & \tilde{P}_{r\times c}\\
-\tilde{P}_{c\times r}^{T} & 0_{c\times c}
 \end{array}\right)
-\end{cases}
-\end{equation}
+\]
 
 \end_inset
 
@@ -618,17 +535,13 @@ where
 \begin_inset Formula $\tilde{A}$
 \end_inset
 
- and 
-\begin_inset Formula $\tilde{P}$
-\end_inset
-
- are the incidence(biadjacency) matrices describing the connections between
- the different types of nodes (here 
+ is the incidence matrix describing the connections between the different
+ types of nodes (here 
 \begin_inset Formula $T$
 \end_inset
 
  indicates the matrix transpose).
- This formulation allows bipartite modularity to be written as
+ This formulation allows bipartite modularity to be written as 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "barber2007modularity"
@@ -636,30 +549,6 @@ key "barber2007modularity"
 \end_inset
 
 :
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-Q_{B}=\frac{1}{m}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{A}_{uv}-\tilde{P}_{uv}\right)\delta\left(g_{u},h_{v}\right)
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where 
-\begin_inset Formula $g$
-\end_inset
-
- are the labels for red nodes and 
-\begin_inset Formula $h$
-\end_inset
-
- are the labels for blue nodes.
- I will leave this equation in the form:
 \end_layout
 
 \begin_layout Standard
@@ -675,6 +564,14 @@ Q_{B}=\frac{1}{m}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{A}_{uv}-\frac{k_{u}d_{
 
 \begin_layout Standard
 where 
+\begin_inset Formula $m$
+\end_inset
+
+ is matrix fill - the number of edges in 
+\begin_inset Formula $\tilde{A}$
+\end_inset
+
+, 
 \begin_inset Formula $k$
 \end_inset
 
@@ -685,31 +582,309 @@ where
 
  describes the node degree for blue nodes (the number of red nodes each
  blue node associates with).
+ Red node labels are denoted 
+\begin_inset Formula $g$
+\end_inset
+
+ , whilst 
+\begin_inset Formula $h$
+\end_inset
+
+ are the labels for blue nodes and the Kronecker delta function 
+\begin_inset Formula $\delta\left(g_{u},h_{v}\right)$
+\end_inset
+
+ is equal to one when nodes 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are classified as being in the same module (i.e.
+ they have the same label value) or zero otherwise.
 \end_layout
 
 \begin_layout Subsubsection*
-LPAb+
+Weighted bipartite modularity
 \end_layout
 
 \begin_layout Standard
-We first use the dimensions of the network to decide how to run the algorithm;
- this is because a bipartite community can have at the most 
+Weighted bipartite modularity, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $Q_{W}$
+\end_inset
+
+ ,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ can be defined as 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dormann2014method"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q_{W}=\frac{1}{M}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{W}_{uv}-\tilde{E}_{uv}\right)\delta\left(g_{u},h_{v}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\;\quad\;=\frac{1}{M}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{W}_{uv}-\frac{y_{u}z_{v}}{M}\right)\delta\left(g_{u},h_{v}\right)\label{eq:weightedMod}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tilde{E}$
+\end_inset
+
+ is the matrix of the null expectations of interaction between two nodes,
+ where 
+\begin_inset Formula $y$
+\end_inset
+
+ is the row marginal totals and 
+\begin_inset Formula $z$
+\end_inset
+
+ is the column marginal totals of 
+\begin_inset Formula $\tilde{W}$
+\end_inset
+
+, the weighted incidence matrix.
+ In a binary network 
+\begin_inset Formula $\tilde{W}$
+\end_inset
+
+ is equivalent to the binary incidence matrix 
+\begin_inset Formula $\tilde{A}$
+\end_inset
+
+, the marginal totals will equal the node degrees (
+\begin_inset Formula $y=k$
+\end_inset
+
+ and 
+\begin_inset Formula $z=d$
+\end_inset
+
+) and 
+\begin_inset Formula $M$
+\end_inset
+
+, the sum of edge weights will equal 
+\begin_inset Formula $m$
+\end_inset
+
+, the fill.
+ Thus 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:weightedMod"
+
+\end_inset
+
+ will reduce to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:Barbers"
+
+\end_inset
+
+ for a binary network.
+ Furthermore 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:weightedMod"
+
+\end_inset
+
+ can be reformulated into its matrical form 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "barber2007modularity,flores2014bimat"
+
+\end_inset
+
+ to allow for vectorised computation as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{W}=\frac{1}{M}tr\left(R\left(\tilde{W}-\tilde{E}\right)C\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where for a network with 
+\begin_inset Formula $F$
+\end_inset
+
+ communities, 
+\begin_inset Formula $R$
+\end_inset
+
+ is the 
+\begin_inset Formula $F\text{×}r$
+\end_inset
+
+ red label matrix and 
+\begin_inset Formula $C$
+\end_inset
+
+ is the 
+\begin_inset Formula $c\text{×}F$
+\end_inset
+
+ blue label matrix.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ (and 
+\begin_inset Formula $C$
+\end_inset
+
+) are binary matrices with a single 1 in each row (column) indicating which
+ community each red (blue) node belongs to (this information is held by
+ the red and blue labels).
+ These definitions of weighted bipartite modularity can now be used in the
+ modified framework of the LPAb+ algorithm.
+\end_layout
+
+\begin_layout Subsection*
+Weighted modularity maximising algorithms
+\end_layout
+
+\begin_layout Subsubsection*
+QuanBiMo
+\end_layout
+
+\begin_layout Standard
+The quantitative bipartite modularity algorithm (QuanBiMo) of 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dormann2014method"
+
+\end_inset
+
+, based on the heirarchical random graph algorithm 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "clauset2008hierarchical"
+
+\end_inset
+
+, uses a simulated annealing method to attempt to maximise weighted bipartite
+ modularity.
+ It is a C++ routine that is available in the R package bipartite 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bipartite"
+
+\end_inset
+
+ through the function 
+\family typewriter
+computeModules
+\family default
+.
+ The default settings available in bipartite version 2.04 were used (steps
+\begin_inset Formula $=10^{6}$
+\end_inset
+
+, tolerance
+\begin_inset Formula $=1^{-10}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsubsection*
+LPAwb+
+\end_layout
+
+\begin_layout Standard
+A key feature of the LPAwb+ algorithm is that it simplifies to the LPAb+
+ algorithm when a binary network is used as input.
+ The algorithm is made from two stages - a `bottom up' step that maximises
+ modularity on a node-by-node basis using label propagation; and a `top
+ down' step that joins modules together when it results in increased network
+ modularity.
+ First the dimensions of the network are used to decide how to run the algorithm
+ (whose pseudocode is given in Algorithm 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "alg:LPAwb+-pseudo-code"
+
+\end_inset
+
+); this is because a bipartite network can have at the most 
 \begin_inset Formula $F=min(r,c)$
 \end_inset
 
- communities.
- The LPAb+ algorithm is then initialised by giving a unique label to each
- of the nodes in the smallest of the two sets.
- The LPAb+ algorithm is sensitive to the initial labelling of nodes - this
+ communities with our chosen definition of modularity.
+ The LPAwb+ algorithm is initialised by giving a unique label to each of
+ the nodes in the smallest of the two sets.
+ The LPAwb+ algorithm is sensitive to the initial labelling of nodes - this
  can lead to different values of modularity being reported.
- To combat this issue we randomly assign these initial node labels and suggest
- running the LPAb+ algorithm multiple times on a given network to find the
- greatest modularity score.
+ To combat this issue the initial node labels are randomly assigned and
+ it is suggested that the LPAb+ algorithm is run multiple times on a given
+ network to find the greatest modularity score 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "liu2010efficient"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float algorithm
-placement H
+placement th
 wide false
 sideways false
 status open
@@ -717,7 +892,7 @@ status open
 \begin_layout Plain Layout
 
 \family typewriter
-Inputs : an interaction matrix
+Inputs : an incidence matrix
 \end_layout
 
 \begin_layout Plain Layout
@@ -921,9 +1096,9 @@ return row labels, column labels and modularity
 
 \begin_layout Plain Layout
 LPAwb+ pseudo-code 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "liu2010efficient"
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:LPAwb+-pseudo-code"
 
 \end_inset
 
@@ -944,7 +1119,7 @@ key "liu2010efficient"
 
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Paragraph*
 Stage 1 - label propagation stage - bottom up
 \end_layout
 
@@ -952,11 +1127,10 @@ Stage 1 - label propagation stage - bottom up
 
 \color black
 Asynchronous updating of red, then blue labels on the network is performed
- to locally maximise modularity.
- For each node we try to maximise modularity (
+ to locally maximise modularity (
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "eq:Barbers"
+reference "eq:weightedMod"
 
 \end_inset
 
@@ -978,8 +1152,8 @@ reference "eq:Barbers"
 \begin_inset Formula 
 \begin{equation}
 \begin{array}{c}
-g_{x}=\left(\sum_{v=1}^{c}\left(\tilde{A}_{xv}-\frac{k_{x}d_{v}}{m}\right)\right)\delta\left(g,h_{v}\right)\\
-\qquad\quad=\left(\sum_{v=1}^{c}\tilde{A}_{xv}\delta\left(g,h_{v}\right)-\sum_{v=1}^{c}\left(\frac{k_{x}d_{v}}{m}\right)\delta\left(g,h_{v}\right)\right)
+g_{x}=\left(\sum_{v=1}^{c}\left(\tilde{W}_{xv}-\frac{y_{x}z_{v}}{M}\right)\right)\delta\left(g,h_{v}\right)\\
+\qquad\quad=\left(\sum_{v=1}^{c}\tilde{W}_{xv}\delta\left(g,h_{v}\right)-\sum_{v=1}^{c}\left(\frac{y_{x}z_{v}}{M}\right)\delta\left(g,h_{v}\right)\right)
 \end{array}\label{eq:gmax}
 \end{equation}
 
@@ -1014,9 +1188,9 @@ reference "eq:gmax"
 \begin_inset Formula 
 \begin{equation}
 \begin{cases}
-g_{x}^{new}=\underset{g}{\arg\max}\left(N_{xg}-\frac{k_{x}D_{g}}{m}\right)\\
-h_{x}^{new}=\underset{h}{\arg\max}\left(N_{xh}-\frac{K_{h}d_{x}}{m}\right)
-\end{cases}\label{eq:binaryupdate}
+g_{x}^{new}=\underset{g}{\arg\max}\left(N_{xg}-\frac{y_{x}Z_{g}}{M}\right)\\
+h_{x}^{new}=\underset{h}{\arg\max}\left(N_{xh}-\frac{Y_{h}z_{x}}{M}\right)
+\end{cases}\label{eq:weightedupdate}
 \end{equation}
 
 \end_inset
@@ -1075,7 +1249,7 @@ where the new label assigned to node
 \uwave default
 \noun default
 \color inherit
-nodes that connect to 
+nodes connecting to 
 \begin_inset Formula $x$
 \end_inset
 
@@ -1096,7 +1270,7 @@ nodes that connect to
 \end_inset
 
 , while 
-\begin_inset Formula $D_{g}$
+\begin_inset Formula $Z_{g}$
 \end_inset
 
  is the sum of blue node degrees labelled 
@@ -1104,7 +1278,7 @@ nodes that connect to
 \end_inset
 
  and 
-\begin_inset Formula $K_{h}$
+\begin_inset Formula $Y_{h}$
 \end_inset
 
  is the sum of red node degrees labelled 
@@ -1115,23 +1289,23 @@ nodes that connect to
  As these `bottom-up' updating rules (
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "eq:binaryupdate"
+reference "eq:weightedupdate"
 
 \end_inset
 
-) are mutually exclusive of one another they can be applied asynchronously
+) are mutually exclusive of one another they are applied asynchronously
  such that blue labels are updated, then red nodes are updated, then blue
- nodes are updated and so on until modularity ( 
+ nodes are updated and so on until modularity (
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "eq:Barbers"
+reference "eq:weightedMod"
 
 \end_inset
 
- ) can no longer be increased.
+) can no longer be increased.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Paragraph*
 Stage 2 - agglomeration stage - top down
 \end_layout
 
@@ -1189,347 +1363,10 @@ When modularity can no longer be increased via stage 1's `bottom-up' steps,
 
 \begin_layout Standard
 Once this merger of communities is completed, stages 1 and then stage 2
- are repetitively repeated until the networks communities can no longer
- be combined - this occurs when it is no longer possible to increase network
+ are repetitively performed until it is no longer possible to increase network
  modularity by merging any of the possible communities together.
  These modules (communities) and the modularity of this partition are the
- solution provided by the LPAb+ algorithm.
-\end_layout
-
-\begin_layout Subsection*
-Weighted bipartite modularity
-\end_layout
-
-\begin_layout Standard
-Weighted modularity can be defined as 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "newman2004analysis,dormann2014method"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula 
-\begin{equation}
-Q=\frac{1}{2M}\sum_{u=1}^{n}\sum_{v=1}^{n}\left(W_{uv}-E_{uv}\right)\delta\left(L_{u},L_{v}\right)\label{eq:WeightedModularity}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where 
-\begin_inset Formula $W$
-\end_inset
-
- is the weighted adjacency matrix, 
-\begin_inset Formula $M$
-\end_inset
-
- is the sum of all the edge weights in 
-\begin_inset Formula $W$
-\end_inset
-
- and 
-\begin_inset Formula $E$
-\end_inset
-
- is a probability matrix defined as 
-\begin_inset Formula $E_{uv}=\frac{T_{u}T_{v}}{2M}$
-\end_inset
-
- with 
-\begin_inset Formula $T_{u}$
-\end_inset
-
- being the marginal total of nodes connected to node 
-\begin_inset Formula $u$
-\end_inset
-
-.
- As before this can be rewritten in biadjacency matrix form, simplifying
- to 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "dormann2014method"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-Q_{W}=\frac{1}{M}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{W}_{uv}-\tilde{E}_{uv}\right)\delta\left(g_{u},h_{v}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\;\quad\;=\frac{1}{M}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{W}_{uv}-\frac{y_{u}z_{v}}{M}\right)\delta\left(g_{u},h_{v}\right)\label{eq:weightedMod}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where 
-\begin_inset Formula $y$
-\end_inset
-
- is the row marginal totals and 
-\begin_inset Formula $z$
-\end_inset
-
- is the column marginal totals of 
-\begin_inset Formula $\tilde{W}$
-\end_inset
-
-.
- 
-\begin_inset Formula $Q_{W}$
-\end_inset
-
- is the quantity that we wish to maximise with this algorithm for our observed
- networks.
- For a binary network 
-\begin_inset Formula $W$
-\end_inset
-
- will be equivalent to the adjacency matrix, the marginal totals will equal
- the node degrees and 
-\begin_inset Formula $M$
-\end_inset
-
- will equal the fill - thus 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:weightedMod"
-
-\end_inset
-
- will reduce to 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:Barbers"
-
-\end_inset
-
- for a binary network.
- Furthermore we can reformulate 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:weightedMod"
-
-\end_inset
-
- into its matrical form 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "barber2007modularity,flores2014bimat"
-
-\end_inset
-
- to allow for vectorised computation as:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-Q_{W}=\frac{1}{M}tr\left(R\left(\tilde{W}-\tilde{E}\right)C\right)
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where for a network with 
-\begin_inset Formula $F$
-\end_inset
-
- communities, 
-\begin_inset Formula $R$
-\end_inset
-
- is the 
-\begin_inset Formula $F\text{×}r$
-\end_inset
-
- red label matrix and 
-\begin_inset Formula $C$
-\end_inset
-
- is the 
-\begin_inset Formula $c\text{×}F$
-\end_inset
-
- blue label matrix.
- 
-\begin_inset Formula $R$
-\end_inset
-
- and 
-\begin_inset Formula $C$
-\end_inset
-
- are binary matrices with a single 1 in each row (column) indicating which
- community each row (column) node belongs to (this information is held by
- the red and blue labels).
- This definition of weighted bipartite modularity can now be used in the
- modified framework of 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "liu2010efficient"
-
-\end_inset
-
-'s LPAb+ algorithm.
-\end_layout
-
-\begin_layout Subsubsection*
-LPAwb+
-\end_layout
-
-\begin_layout Standard
-To maximise weighted modularity alterations are needed so that quantitative
- information rather than the binary features of the network are utilised.
- The node label updating rules in stage 1 are redefined as:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\begin{cases}
-g_{x}^{new}=\underset{g}{\arg\max}\left(\Omega_{xg}-\frac{y_{x}Z_{g}}{M}\right)\\
-h_{x}^{new}=\underset{h}{\arg\max}\left(\Omega_{xh}-\frac{Y_{h}z_{x}}{M}\right)
-\end{cases}\label{eq:weightedupdate}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where 
-\begin_inset Formula $Z_{g}$
-\end_inset
-
- is the sum of the values in 
-\begin_inset Formula $z$
-\end_inset
-
- (column marginal totals) whose red nodes are labelled by 
-\begin_inset Formula $g$
-\end_inset
-
-, whilst 
-\begin_inset Formula $Y_{h}$
-\end_inset
-
- is the sum of the values in 
-\begin_inset Formula $y$
-\end_inset
-
- (row marginal totals) for the blue nodes labelled 
-\begin_inset Formula $h$
-\end_inset
-
-.
- 
-\begin_inset Formula $\Omega_{xg}$
-\end_inset
-
- is the sum of the weighted interactions between node 
-\begin_inset Formula $x$
-\end_inset
-
- and all of its neighbours with the label 
-\begin_inset Formula $g$
-\end_inset
-
-.
- Note that 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:weightedupdate"
-
-\end_inset
-
- will reduce to 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:binaryupdate"
-
-\end_inset
-
- for a binary network.
-\end_layout
-
-\begin_layout Standard
-The second stage of the LPAwb+ algorithm is as before, but hinges on the
- new definition of weighted modularity, such that communities are merged
- together only when this results in the greatest of the possible changes
- to the networks weighted modularity score.
-\end_layout
-
-\begin_layout Subsubsection*
-QuanBiMo
-\end_layout
-
-\begin_layout Standard
-The quantitative bipartite modularity algorithm (QuanBiMo) of 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "dormann2014method"
-
-\end_inset
-
- uses a simulated annealing method to attempt to maximise weighted bipartite
- modularity.
- It is a C++ routine that is available in the R package bipartite
-\begin_inset CommandInset citation
-LatexCommand citep
-key "bipartite"
-
-\end_inset
-
- through the function 
-\family typewriter
-computeModules
-\family default
-.
- We used the default settings in bipartite version 2.04.
- QuanBiMo is stochastic and can also find different modular configurations
- for the same network - we suggest running it multiple times to find the
- partition with the greatest modularity score.
+ solution provided by the LPAwb+ algorithm.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1564,8 +1401,8 @@ reference "alg:ExLPAwb+-pseudo"
 \end_inset
 
 ).
- Exhaustive LPAwb+ essentially computes LPAwb+ multiple times with different
- random initialisations of node labels chosen from 
+ Exhaustive LPAwb+ computes LPAwb+ multiple times with different random
+ initialisations of node labels chosen from 
 \color inherit
 
 \begin_inset Formula $\mu$
@@ -1609,7 +1446,7 @@ Exhaustive LPAwb+ takes three inputs; the incidence matrix for the network
 
 \family typewriter
 \begin_inset Float algorithm
-placement H
+placement th
 wide false
 sideways false
 status open
@@ -1617,7 +1454,7 @@ status open
 \begin_layout Plain Layout
 
 \family typewriter
-Inputs : an interaction matrix, minimum number of modules, repititions
+Inputs : an incidence matrix, minimum number of modules, repititions
 \end_layout
 
 \begin_layout Plain Layout
@@ -1686,7 +1523,7 @@ M = number of modules found in Sol1
 \begin_inset Formula $6\qquad\,\qquad$
 \end_inset
 
-for A from minimum number of modules up to M: {
+for each value A from minimum number of modules up to M: {
 \end_layout
 
 \begin_layout Plain Layout
@@ -1797,8 +1634,8 @@ name "alg:ExLPAwb+-pseudo"
 Setting the minimum number of modules to search for small, and the number
  of repetitions high will increase the chance of detecting the global modularity
  optimum for a network; but is likely to be computationally costly.
- We choose to give Exhaustive LPAwb+ default settings of ten repetitions
- for each value of
+ I chose to give Exhaustive LPAwb+ default settings of ten repetitions for
+ each value of
 \color inherit
  
 \begin_inset Formula $\mu$
@@ -1830,7 +1667,8 @@ The modularity values of
 \end_inset
 
  found above are network specific - properties such as the size and number
- of links in a network effect the magnitude of the modularity found 
+ of links in a network affect the magnitude of modularity that can be found
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "newman2010networks,thebault2013identifying,dormann2014method"
@@ -1838,23 +1676,24 @@ key "newman2010networks,thebault2013identifying,dormann2014method"
 \end_inset
 
 .
- In order to assess the strength of assortative mixing across different
- networks it is neccessary to account for the possibility of these effects.
+ In order to compare the strength of assortative mixing across different
+ network studies it is neccessary to account for the possibility of these
+ effects.
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "dormann2014method"
 
 \end_inset
 
- recommend using a null model to generate an ensemble of networks from wich
+ recommend using a null model to generate an ensemble of networks from which
  the standardised effect size of modularity can be assessed as a z-score.
  However, it is unclear what would make an appropriate null model for weighted
  networks.
  An alternative method is to normalise the modularity values by the maximum
- value that modularity can take, found in the perfectly mixed network, where
- all edges are assigned to a module and there are no between module links
- 
+ value that modularity can take, found in the `perfectly mixed' network,
+ in which all edges are assigned to a module and there are no links between
+ different modules 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "newman2010networks"
@@ -1862,13 +1701,13 @@ key "newman2010networks"
 \end_inset
 
 .
- For bipartite networks this is given as:
+ Extending this for weighted bipartite networks gives:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-Q_{max}=\frac{1}{M}\left(M-\sum_{u=1}^{r}\sum_{v=1}^{c}\frac{y_{u}z_{v}}{M}\right)\delta\left(g_{u},h_{v}\right)
+Q^{max}=\frac{1}{M}\left(M-\sum_{u=1}^{r}\sum_{v=1}^{c}\frac{y_{u}z_{v}}{M}\right)\delta\left(g_{u},h_{v}\right)
 \end{equation}
 
 \end_inset
@@ -1877,26 +1716,27 @@ Q_{max}=\frac{1}{M}\left(M-\sum_{u=1}^{r}\sum_{v=1}^{c}\frac{y_{u}z_{v}}{M}\righ
 \end_layout
 
 \begin_layout Standard
-, where as before 
+where as before 
 \begin_inset Formula $M$
 \end_inset
 
- is the sum of the edges in the incidence matrix with 
+ is the sum of the edges in the incidence matrix with marginal row totals,
+ 
 \begin_inset Formula $y$
 \end_inset
 
-, the marginal row totals and 
+ and marginal column totals 
 \begin_inset Formula $z$
 \end_inset
 
-, the marginal column totals.
+.
  Then normalised modularity is found as:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-Q_{norm}=\frac{Q}{Q_{max}}
+Q^{norm}=\frac{Q}{Q^{max}}
 \end{equation}
 
 \end_inset
@@ -1905,19 +1745,99 @@ Q_{norm}=\frac{Q}{Q_{max}}
 \end_layout
 
 \begin_layout Subsubsection*
+Realised Modularity
+\end_layout
+
+\begin_layout Standard
+Realised modularity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "poisot2013posteriori"
+
+\end_inset
+
+ has been suggested as a posterior measure of modularity that classifies
+ the proportion of links in a network that are within, rather than between
+ modules.
+ Here I extend this measure so it can be applied to weighted as well as
+ binary networks.
+ If 
+\begin_inset Formula $M$
+\end_inset
+
+ is the sum of all edge weights in a network and 
+\begin_inset Formula $H$
+\end_inset
+
+ is the sum of all within-module edge weights, then realised weighted modularity
+ is expressed as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{R}^{'}=2\left(\frac{H}{M}\right)-1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q_{R}^{'}$
+\end_inset
+
+
+\color black
+ takes values between 
+\color inherit
+
+\begin_inset Formula $-1$
+\end_inset
+
+
+\color black
+, indicating that no edges exist between nodes in the same module, and
+\color inherit
+ 
+\begin_inset Formula $1$
+\end_inset
+
+, when all edges are interactions
+\color black
+ within-modules.
+ If
+\color inherit
+ 
+\begin_inset Formula $Q_{R}^{'}=0$
+\end_inset
+
+ 
+\color black
+half of the edge weights in the network are found connecting nodes within
+ the same module and the remaining edge weights are node connections between
+ different modules.
+ Note that in a weighted network
+\color inherit
+ 
+\begin_inset Formula $Q_{R}^{'}$
+\end_inset
+
+ 
+\color black
+says nothing about the actual number of edges between or within modules,
+ only the strength of the connecting edges.
+\end_layout
+
+\begin_layout Subsubsection*
 Normalised Mutual Information
 \end_layout
 
 \begin_layout Standard
-The normalised mutual information criterion
-\begin_inset CommandInset citation
-LatexCommand citep
-key "NMI"
-
-\end_inset
-
- is used as a way to compare the similarity of network structures found
- by different community detection methods 
+The normalised mutual information criterion is used as a way to compare
+ the similarity of network structures found by different community detection
+ methods 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "danon2005comparing,thebault2013identifying"
@@ -1969,18 +1889,18 @@ where
 \end_inset
 
  which indicate the number of nodes that appear in the 
-\begin_inset Formula $ith$
+\begin_inset Formula $i$
 \end_inset
 
- module of partition 
+th module of partition 
 \begin_inset Formula $A$
 \end_inset
 
  and the 
-\begin_inset Formula $jth$
+\begin_inset Formula $j$
 \end_inset
 
- module of partition 
+th module of partition 
 \begin_inset Formula $B$
 \end_inset
 
@@ -2050,98 +1970,12 @@ where
 .
 \end_layout
 
-\begin_layout Subsubsection*
-Realised Modularity
-\end_layout
-
-\begin_layout Standard
-Realised modularity has been suggested as a posterior measure of modularity
-\begin_inset CommandInset citation
-LatexCommand citep
-key "poisot2013posteriori"
-
-\end_inset
-
- to classify the proportion of links in a network that are within rather
- than between modules.
- Here we extend this measure so it can be applied to weighted as well as
- binary networks.
- If 
-\begin_inset Formula $M$
-\end_inset
-
- is the sum of all edge weights in a network and 
-\begin_inset Formula $H$
-\end_inset
-
- is the sum of all within-module edge weights realised weighted modularity
- is expressed as:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-Q_{R}^{'}=2\left(\frac{H}{M}\right)-1
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $Q_{R}^{'}$
-\end_inset
-
-
-\color black
- takes values between 
-\color inherit
-
-\begin_inset Formula $-1$
-\end_inset
-
-
-\color black
-, indicating that no edges exist between nodes in the same module, and
-\color inherit
- 
-\begin_inset Formula $1$
-\end_inset
-
- 
-\color black
-in which case all edges in the network are contained within-modules and
- no interactions exist between different modules.
- If
-\color inherit
- 
-\begin_inset Formula $Q_{R}^{'}=0$
-\end_inset
-
- 
-\color black
-half of the edge weights in the network are found connecting nodes within
- the same module and the remaining edge weights are node connections between
- different modules.
- Note that in a weighted network
-\color inherit
- 
-\begin_inset Formula $Q_{R}^{'}$
-\end_inset
-
- 
-\color black
-says nothing about the actual number of edges between/within modules, only
- the strength of the connecting edges.
-\end_layout
-
 \begin_layout Subsection*
 Data
 \end_layout
 
 \begin_layout Standard
-We used the 23 plant-pollinator networks available in the bipartite R package
+I used the 23 plant-pollinator networks available in the bipartite R package
  (22 of which were used in 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2149,8 +1983,13 @@ key "dormann2014method"
 
 \end_inset
 
- and the junker2013 network) taken from the NCEAS dataset ( https://www.nceas.ucsb.
-edu/interactionweb/resources.html ).
+ and the additional junker2013 network) taken from the NCEAS dataset (
+\bar under
+\color blue
+https://www.nceas.ucsb.edu/interactionweb/resources.html
+\bar default
+\color inherit
+).
 
 \color black
  These networks show the number of observed visitations by each recorded
@@ -2160,7 +1999,7 @@ edu/interactionweb/resources.html ).
 \color red
  
 \color black
-Network properties are shown in 
+Some network properties are shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "tab:Network-properties"
@@ -2177,25 +2016,50 @@ Computing Modularity
 \end_layout
 
 \begin_layout Standard
-We computed the binary and quantitative networks for each of the datasets,
+I computed the binary and quantitative networks for each of the datasets,
  removing rows and columns that contained no interaction data from the analysis.
  QuanBiMo, LPAwb+ and Exhaustive LPAwb+ were run 100 times for each binary
  and each weighted network in order to assess the modular structures found
  and the fidelity of the algorithms.
- We then quantified the differences between the modular structures found
+ I then quantified the differences between the modular structures found
  by the binary and weighted algorithms using the normalised mutual information
- criterion.
+ criterion and investigated the differences in normalised and realised modularit
+y.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
+\noindent
 Code implementations for the LPAwb+ algorithm are currently available online
  for the Julia, MATLAB/Octave and R programming languages.
  This and the R code used to create the figures and perform the analysis
- presented in this paper is available online ( https://github.com/sjbeckett/weigh
-ted-modularity-LPAwbPLUS ).
- For fair comparison all computations were performed in R version 3.1.1 using
- version 2.04 of the bipartite package on an Intel(R) Core(TM) i5-4570 CPU
- @ 3.20GHz desktop computer.
+ presented in this paper is available online
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{white}{
+\backslash
+rule{
+\backslash
+linewidth}{1pt}}
+\end_layout
+
+\end_inset
+
+ (
+\bar under
+\color blue
+https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS
+\bar default
+\color inherit
+ ).
+ For fair comparison in timing the algorithms all computations were performed
+ in R version 3.1.1 using version 2.04 of the bipartite package on an Intel(R)
+ Core(TM) i5-4570 CPU @ 3.20GHz desktop computer.
 \end_layout
 
 \begin_layout Section*
@@ -2227,8 +2091,8 @@ reference "tab:weighted-Mod"
 \end_inset
 
  for weighted networks.
- As expected by definition Exhaustive LPAwb+ scores were always equal or
- greater than those detected by LPAwb+.
+ As expected (by definition) Exhaustive LPAwb+ scores were always equal
+ or greater than those detected by LPAwb+.
  Each algorithm detected similar maximum modularity scores for each network,
  with the exception of the datasets of kato1990, junker2013, barrett1987
  and elberling 1999 in binary networks (
@@ -2254,7 +2118,8 @@ reference "fig:Comparing-modularity"
 \shape italic
 b
 \shape default
-) in which LPAwb+ and Exhaustive LPAwb+ detected much better than QuanBiMo.
+) in which LPAwb+ and Exhaustive LPAwb+ detected much greater modularity
+ scores than QuanBiMo.
  
 \end_layout
 
@@ -2282,7 +2147,7 @@ status open
 \begin_layout Plain Layout
 Comparing the maximum detected modularity scores by each algorithm (from
  100 repetitions on each of the 23 plant-pollinator networks).
- The dotted line indicates unity i.e.
+ The dotted line indicates a consensus i.e.
  QuanBiMo and the other algorithms are in perfect correspondence.
  Points below the dotted line indicate QuanBiMo maximises modularity more
  effectively; whilst points above the dotted line show that LPAwb+ ( 
@@ -2298,19 +2163,19 @@ Comparing the maximum detected modularity scores by each algorithm (from
 \shape italic
 a
 \shape default
-) shows a comparison of 
+) shows a comparison of binary modularity scores,
 \begin_inset Formula $Q_{B}$
 \end_inset
 
-, binary modularity scores, whilst (
+, whilst (
 \shape italic
 b
 \shape default
-) shows 
+) shows the weighted modularity scores, 
 \begin_inset Formula $Q_{W}$
 \end_inset
 
-, weighted modularity scores.
+.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Comparing-modularity"
@@ -2343,8 +2208,8 @@ reference "tab:binary-Mod"
 \end_inset
 
  shows the greatest modularity scores detected by each algorithm, the number
- of modules in this particular partition and the average execution time
- for each algorithm in the analysis of binary networks.
+ of modules in these partitions and the average execution time for each
+ algorithm in the analysis of binary networks.
  The same partition was found by all three algorithms in only the schemske1978
  network; both QuanBiMo and Exhaustive LPAwb+ found the same partitions
  for another 15 networks; whilst Exhaustive LPAwb+ found the greatest modularity
@@ -2367,7 +2232,7 @@ reference "tab:weighted-Mod"
 \end_inset
 
  shows there were 5 networks for which the same maximum modularity was detected
- by all 3 algorithms, 10 networks in which QuanBiMo and Exhaustive LPAwb+
+ by all three algorithms, 10 networks in which QuanBiMo and Exhaustive LPAwb+
  found the greatest modularity, 7 networks for which Exhaustive LPAwb+ found
  the greatest modularity and a single network, small1976, that was maximised
  by QuanBiMo.
@@ -2381,6 +2246,59 @@ reference "tab:weighted-Mod"
  LPAwb+ detects partitions which generally have more modules than that with
  the greatest modularity, while QuanBiMo generally finds partitions with
  fewer modules than the solution found with greatest modularity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename papercode/MedianMaximum.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Comparison of median modularity scores found by each algorithm (from 100
+ repetitions on each of the 23 plant-pollinator networks) to the maximum
+ of the modularity scores found across the algorithms - the consensus maximum
+ modularity.
+ (
+\shape italic
+a
+\shape default
+) shows results for binary networks, whilst (
+\shape italic
+b
+\shape default
+) shows the results for weighted networks.
+ The dotted line represents algorithm efficacy, where median modularity
+ score is equal to the maximum consensus modularity score that was detected.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:median"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2423,66 +2341,6 @@ b
  Exhaustive LPAwb+ shows high consistency as does LPAwb+ (more so than for
  binary networks), whilst QuanBiMo in general performs less consistently
  for weighted networks than binary networks.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename papercode/MedianMaximum.eps
-	width 100text%
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Comparison of median modularity scores found by each algorithm (from 100
- repetitions on each of the 23 plant-pollinator networks) to the maximum
- of the modularity scores found across the algorithms.
- (
-\shape italic
-a
-\shape default
-) shows results for binary networks, whilst (
-\shape italic
-b
-\shape default
-) shows the results for weighted networks.
- The dotted line represents unity, where median modularity score is equal
- to the maximum modularity score that was detected.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:median"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -11985,13 +11843,117 @@ name "tab:weighted-Mod"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename papercode/Timings.eps
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Average computational time for each algorithm (measured over 100 replicates)
+ on the (
+\shape italic
+a
+\shape default
+) binary and (
+\shape italic
+b
+\shape default
+) quantitative representations of each plant-pollinator network.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Average-computational-time"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The average time to run each algorithm is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Average-computational-time"
+
+\end_inset
+
+.
+ Performance time is network dependent; where it takes longer to report
+ modularity for larger networks.
+ LPAwb+ performed quickest on all networks by roughly 2 orders of magnitude.
+ Performance on the binary (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Average-computational-time"
+
+\end_inset
+
+
+\shape italic
+\color black
+a
+\shape default
+\color inherit
+) and quantitative (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Average-computational-time"
+
+\end_inset
+
+
+\shape italic
+\color black
+b
+\shape default
+\color inherit
+) network representations was similar.
+ However, QuanBiMo performed faster for binary (rather than quantitative)
+ inputs on 20 of the 23 networks.
+ On the other hand, LPAwb+ ran quicker with quantitative network representations
+ (20 out of 23), as did Exhaustive LPAwb+ (18 out of 23).
+ For the ten cases where Exhaustive LPAwb+ took longer than QuanBiMo, Exhaustive
+ LPAwb+ found a partition with greater modularity seven times, both QuanBiMo
+ and Exhaustive LPAwb+ found greatest modularity twice and QuanBiMo found
+ the greatest modualrity score once (the binary representation of inouye1988).
+\end_layout
+
 \begin_layout Subsection*
 Contrasting Binary and Quantitative Modular Structure
 \end_layout
 
 \begin_layout Standard
-Different modular network representations were found for binary and weighted
- networks.
+Maximising binary modularity and maximising weighted modularity results
+ in different identified modular structures.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12003,7 +11965,7 @@ reference "fig:olesen2002flores-modular-structure"
 \shape italic
 a
 \shape default
- shows the partition with the greatest bianry modularity for the olesen2002flore
+ shows the partition with the greatest binary modularity for the olesen2002flore
 s network, whilst 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -12016,12 +11978,13 @@ reference "fig:olesen2002flores-modular-structure"
 b
 \shape default
  shows the partition with the greatest weighted modularity.
- They show that the same dataset is qualitatively and quantitatively differently
- (the shared normalised mutual information for these two partitions is 
-\begin_inset Formula $I=0.619$
+ The same dataset has qualitatively different structure between its weighted
+ and binary representations.
+ The shared normalised mutual information for these two partitions is 
+\begin_inset Formula $NMI=0.619$
 \end_inset
 
-) structured using weighted and binary representations.
+, quantifying this difference.
 \end_layout
 
 \begin_layout Standard
@@ -12036,32 +11999,61 @@ reference "fig:deltaQ-NMI"
 \shape italic
 a
 \shape default
- shows the differences in modularity and normalised mutual information between
- the binary and weighted network representations.
- 11 networks have greater weighted modularity; and 12 networks have greater
- binary modularity.
- In general it appears that networks that have greater binary modularity
- than weighted modularity also have more similar partitions; though it would
- be expected that normalised mutual information would equal 1 when binary
- and weighted modularity is equal - which would occur when every edge in
- the network has the same interaction strength.
+ shows the differences in normalised modularity and normalised mutual informatio
+n between the binary and weighted network representations.
+ Only 3 of the networks (vazquenc, vazmasnc and vazcer) have a normalised
+ mutual information greater than 0.8 - indicating major differences in identified
+ binary and quantitative modular structures.
+ The strength of assortative mixing, measured by normalised modularity,
+ was generally greater in weighted than binary networks.
+ However, 4 networks (olesen2002aigrettes, vazarr, bezerra2009, vazmasnc)
+ showed greater assortative mixing in their binary representations and for
+ 2 networks (olesen2002flores, vazllao) the assortative mixing strength
+ was nearly the same in both binary and weighted networks - though the community
+ partitions are very different.
 \end_layout
 
 \begin_layout Standard
 Not only were the detected modularity scores different between the binary
- and weighted networks - but the modular configurations of these networks
- also differed.
+ and weighted networks - but the number of modules found in each partition
+ of these networks also differed.
  Only 8 of the networks had the same number of modules under binary and
  weighted conditions; whilst 8 had more modules in the weighted networks
- and 7 had more modules in the binary network representation.
+ and 7 had more modules in the binary network representation (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:binary-Mod"
+
+\end_inset
+
+,
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:weighted-Mod"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
-There appears to be a positive relationship between realised modularity
+There appears to be a weak positive relationship between realised modularity
  and modularity (
 \begin_inset CommandInset ref
 LatexCommand formatted
-reference "fig:deltaQ-NMI"
+reference "fig:RealisedNormModularity"
+
+\end_inset
+
+
+\shape italic
+a
+\shape default
+), however normalised and realised modularity appear to be much more strongly
+ correlated (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:RealisedNormModularity"
 
 \end_inset
 
@@ -12069,8 +12061,9 @@ reference "fig:deltaQ-NMI"
 \shape italic
 b
 \shape default
-), however there does not appear to be a relationship between the binary
- and quantitative versions of these measures.
+).
+ There does not appear to be a relationship between the binary and quantitative
+ measures for each network.
 \end_layout
 
 \begin_layout Standard
@@ -27735,7 +27728,7 @@ status open
 
 \begin_layout Plain Layout
 A visual comparison of the modular structures identified for the olesen2002flore
-s dataset as a (
+s dataset of plant-pollinator visitations as a (
 \shape italic
 a
 \shape default
@@ -27744,7 +27737,7 @@ a
 \end_inset
 
  , 4 modules, 
-\begin_inset Formula $Q_{norm}^{B}=0.625$
+\begin_inset Formula $Q_{B}^{norm}=0.625$
 \end_inset
 
 ) and (
@@ -27756,10 +27749,11 @@ b
 \end_inset
 
  , 5 modules, 
-\begin_inset Formula $Q_{norm}^{W}=0.625$
+\begin_inset Formula $Q_{W}^{norm}=0.625$
 \end_inset
 
 ) network.
+ Modules are identified in red.
  The normalised mutual information shared between these two modular compositions
  is 
 \begin_inset Formula $NMI=0.619$
@@ -27795,22 +27789,63 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename papercode/changeQ_NMI.eps
-	width 33text%
+	filename papercode/changeQnorm_NMI.eps
+	width 60text%
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The change in normalised modularity scores found between the weighted and
+ binary networks (
+\begin_inset Formula $\Delta Q^{norm}=Q_{W}^{norm}-Q_{B}^{norm}$
+\end_inset
+
+ ) against the normalised mutual information between the weighted and binary
+ partitions for each network.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:deltaQ-NMI"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename papercode/ModRealisedModularity.eps
-	width 33text%
+	width 50text%
 
 \end_inset
 
 
 \begin_inset Graphics
 	filename papercode/NormQvsRealisedModularity.eps
-	width 33text%
+	width 50text%
 
 \end_inset
 
@@ -27824,17 +27859,6 @@ status open
 (
 \shape italic
 a
-\shape default
-) The change in greatest modularity scores found between the weighted and
- binary networks (
-\begin_inset Formula $\Delta Q=Q_{W}-Q_{B}$
-\end_inset
-
- ) against NMI scores found by comparing the corresponding weighted and
- binary partitions for each network.
- (
-\shape italic
-b
 \shape default
 ) The greatest modularity scores (
 \begin_inset Formula $Q_{B}$
@@ -27851,15 +27875,23 @@ b
 ).
  (
 \shape italic
-c
+b
 \shape default
-) The normalised modulariy scores of each of the greatest modularity scores
- plotted against their corresponding realised modularity scores.
- Red lines join together the binary and quantitative scores of the same
- network.
+) The normalised modularity scores (
+\begin_inset Formula $Q_{B}^{norm}$
+\end_inset
+
+ and 
+\begin_inset Formula $Q_{w}^{norm}$
+\end_inset
+
+) calculated using the partitions with greatest modularity scores plotted
+ against their corresponding realised modularity scores.
+ Each red line joins together the binary and quantitative scores of the
+ same network.
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:deltaQ-NMI"
+name "fig:RealisedNormModularity"
 
 \end_inset
 
@@ -27884,11 +27916,260 @@ name "fig:deltaQ-NMI"
 Discussion
 \end_layout
 
+\begin_layout Standard
+I tested the efficacy of three algorithms maximising Dormann's bipartite
+ modularity in plant-pollinator networks.
+ LPAwb+ and Exhaustive LPAwb+ gave more consistent modularity scores than
+ those found by QuanBiMo across the test networks.
+ The robustness of modularity maximisation algorithms is important when
+ considering the reproducibility of results.
+ QuanBiMo struggled to report 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ modularity scores in the larger datasets.
+ All three algorithms were able to detect greater modularity than previously
+ reported (figure 6 in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dormann2014method"
+
+\end_inset
+
+) and were generally performed well on the binary and quantitative test
+ networks (a binary network can be seen as a special case of a quantitative
+ network).
+ But, QuanBiMo has the potential to fall into below par solutions and there
+ is no diagnostic to show when this occurs.
+\end_layout
+
+\begin_layout Standard
+Different modular structures were found for each of the binary and weighted
+ representations of plant-pollinator networks.
+ In binary networks modules are formed by attempting the maximise the density
+ of edges; whilst in quantitative networks modules are formed that maximise
+ the density of edge weights.
+ In the former, strongly interacting nodes are just as important as nodes
+ that only rarely interact; whilst in the latter modules are likely to form
+ around the strongest node-node interactions.
+ 
+\end_layout
+
+\begin_layout Standard
+Normalised modularity measures the strength of assortative mixing and is
+ a useful network index that can be used as a comparison indicator across
+ different network studies.
+ Modularity by itself is often used as a network indicator - but this is
+ not appropriate when comparing different networks whose theoretical modularity
+ maximums may differ.
+
+\color black
+ I find normalised modularity is strongly correlated with the proportion
+ of within module interactions (realised modularity) which is an intuitive
+ way for understanding modularity.
+\end_layout
+
+\begin_layout Standard
+LPAwb+ was not able to maximise modularity so well as Exhaustive LPAwb+
+ or QuanBiMo on the majority of datasets (though the modularity found was
+ near the maximal value found here), but its fast performance makes it an
+ ideal algorithm for exploratory research and for investigating modularity
+ in larger networks, where parallelisation of the algorithm 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "liu2010efficient"
+
+\end_inset
+
+ may become useful.
+\end_layout
+
+\begin_layout Standard
+There is no guarantee that the greatest possible modularity was found in
+ any of the test networks here; indeed maximising bipartite modularity is
+ an NP-hard problem 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "miyauchi2013maximizing"
+
+\end_inset
+
+ and it may be difficult to find an algorithm which performs well on this
+ problem for any possible network.
+\end_layout
+
+\begin_layout Standard
+The QuanBiMo algorithm takes two input values; the number of algorithmic
+ steps that should be performed to attempt to find greater modularity than
+ the current partitions modularity; and the tolerance threshold for greater
+ modularity scores.
+ Clearly the default values were not appropriate for some of the networks
+ assessed here; where much greater modularity was detected by the new algorithms.
+ However, there is no diagnostic to tell that QuanBiMo has returned a sub-par
+ modularity value without comparisons (which may be a lengthy process);
+ or what suitable input parameters may be for a particular network.
+ There is a strong tradeoff between computational effort and the accuracy
+ of the returned modularity.
+ On the other hand LPAwb+ takes no input parameters and was able to quickly
+ find modularity scores near to the consensus maximum modularity.
+ Exhaustive LPAwb+ has two input parameters; the minimum number of modules
+ to search for and the number of times that LPAwb+ should be initialised
+ for each module number.
+ Unlike QuanBiMo, these parameters have physical meaning in the context
+ of the network – and the time complexity of this algorithm can be estimated
+ from the number of calls that will be made to the LPAwb+ algorithm (as
+ LPAb+'s time complexity is known 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "liu2010efficient"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+There are four challenges to address when attempting to maximise modularity
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "good2010performance"
+
+\end_inset
+
+ which are also relevant to weighted modularity.
+ Any modularity maximisation algorithm only uses information within the
+ incidence matrix and is thus agnostic to hierarchies within the dataset
+ - the algorithm will find communities at the resolution that has the greatest
+ modularity it can compute; which may be different to the resolution which
+ corresponds best with any additional information known about the network.
+ This is further complicated as several hierarchical levels may exist within
+ an individual network.
+ Some work has started to address this problem in terms of visualising the
+ network as a multiscale structure 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "flores2012multi,flores2014bimat,dormann2014method"
+
+\end_inset
+
+, but this requires finding a suitable starting resolution.
+ As found with QuanBiMo, the ability of algorithms to maximise modularity
+ can be highly dependent on network properties such as size.
+ Finally it is recognised that the modularity landscape is “glassy” - there
+ are many local modularity maxima; but detecting the global peak is extremely
+ difficult and finding an algorithm that can capably traverse this “glassy”
+ landscape is a challenge.
+\end_layout
+
+\begin_layout Standard
+A further challenge will be to find appropriate null models to test weighted
+ modularity against in order to standardise the effect size of modularity
+ in different networks 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dormann2014method"
+
+\end_inset
+
+.
+ In principle it would be good to test against a null ensemble in which
+ both the allowed interactions and the strength of these interactions are
+ allowed to vary.
+ However, in this paper I have only focussed on the optimisation of weighted
+ modularity.
+\end_layout
+
+\begin_layout Standard
+Another limitation of the weighted modularity definition explored here is
+ that it is only valid on networks where all connections are positive.
+ However, methods have been created to search for modules in weighted networks
+ with positive and negative link strengths in unipartite networks that could
+ easily be extended for bipartite networks 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gomez2009analysis"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+I focussed on a specific definition of modularity in this paper - but note
+ that others do exist 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "guimera2007module,murataMod"
+
+\end_inset
+
+.
+ Thébault 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "thebault2013identifying"
+
+\end_inset
+
+ compared two binary bipartite modularity based measures that have been
+ applied in ecology and concluded that different forms of modularity may
+ be useful in different contexts; but that the form of modularity used here
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "barber2007modularity,dormann2014method"
+
+\end_inset
+
+ corresponded well with that for unipartite networks 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "newman2004finding,newman2004analysis"
+
+\end_inset
+
+ - and is well suited for identifying densely connected modules.
+ Other modularity measures 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "guimera2007module,murataMod"
+
+\end_inset
+
+ do not identify joint communities made of both types of nodes – but rather
+ identify communities within each type of node, though neither of these
+ approaches has yet been extended to weighted networks to my knowledge.
+\end_layout
+
+\begin_layout Standard
+The major advantage in a definition of weighted modularity is that it allows
+ for much more information about a network to be used to detect communities.
+ Both binary and weighted measurements contain different information about
+ a network and may be useful - though I expect weighted measurements may
+ in general contain more relevance for the analysis of real world networks
+ -- the strength of interactions is undoubtedly an important component of
+ network structure.
+ 
+\color black
+Other modularity definitions and their weighted extensions are also in need
+ of further investigation to consider communities within each type of node
+ and how these may overlap with the joint communities considered here.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
 \begin_layout Subsection*
 Weighted modularity challenges
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Maximising bipartite modularity is an NP-hard problem 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -27946,7 +28227,7 @@ glassy
  landscape is a challenge.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 We focussed on specific definitions of modularity in this paper - but note
  that others do exist 
 \begin_inset CommandInset citation
@@ -27958,7 +28239,7 @@ key "murataMod,thebault2013identifying"
 .
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "thebault2013identifying"
 
 \end_inset
@@ -27983,7 +28264,7 @@ key "newman2004finding"
  - and is well suited for identifying densely connected modules.
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "murataMod"
 
 \end_inset
@@ -27994,7 +28275,7 @@ key "murataMod"
  investigation.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 A further challenge will be to find appropriate null models to test weighted
  modularity against in order to standardise the effect size of modularity
  in different networks 
@@ -28007,7 +28288,7 @@ key "dormann2014method"
 .
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "staniczenko2013ghost"
 
 \end_inset
@@ -28023,7 +28304,7 @@ key "staniczenko2013ghost"
 Algorithmic comments
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 In this paper we introduced two new algorithms LPAwb+ and Exhaustive LPAwb+,
  which we compared to the existing QuanBiMo algorithm.
  We found all three algorithms were able to detect greater modularity than
@@ -28038,13 +28319,13 @@ key "dormann2014method"
  networks (a binary network is a special case of a quantitative network).
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 QuanBiMo found fewer modules and LPAwb+ found too many modules when compared
  to Exhaustive LPAwb+, which can be regarded as the goldilocks case of the
  three algorithms examined here.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The input values for the minimum number of modules and the number of repetitions
  to use in Exhaustive LPAwb+ were set to default values for comparison with
  QuanBiMo's default values here.
@@ -28057,7 +28338,7 @@ The input values for the minimum number of modules and the number of repetitions
  of how many modules it is likely to have.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 We performed experiments for all algorithms in R to make a fair comparison
  in terms of timings - however as QuanBiMo calls an executable written natively
  in C++, whilst the LPAwb+ algorithms are written natively in R - it may
@@ -28074,7 +28355,7 @@ key "liu2010efficient"
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 It can be argued that small disagreements in modularity scores are not worth
  quibbling over.
  However, we found major deficiencies with the QuanBiMo algorithm in its
@@ -28091,14 +28372,14 @@ It can be argued that small disagreements in modularity scores are not worth
  the best solution.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 We found that QuanBiMo performed particularly poorly on the larger networks
  of junker2013 and kato1990 in comparison to the approaches introduced here.
  This indicates that the default settings of QuanBiMo are not appropriate
  for these networks.
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "dormann2014method"
 
 \end_inset
@@ -28115,7 +28396,7 @@ key "dormann2014method"
  to the user).
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The stochasticity present in all three of the modularity maximising algorithms
  discussed here necessitates that they should by run multiple times.
  This is an underdiscussed issue and potential source of bias - especially
@@ -28153,7 +28434,7 @@ reference "tab:Extra-results-Quant"
 Plant-pollinator networks and quantitative information
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Binary and weighted modularity appear positively correlated to complementary
  specialisation
 \begin_inset CommandInset citation
@@ -28175,37 +28456,46 @@ key "dormann2014method"
  is undoubtably an important feature of a network is structured.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 Conclusions
 \end_layout
 
 \begin_layout Standard
 Real world networks are not formed of binary interactions.
- We encourage researchers to apply weighted modularity measures to their
+ I encourage researchers to apply weighted modularity measures to their
  datasets and evaluate the community partitions that are identified.
 \end_layout
 
 \begin_layout Standard
 LPAwb+ is an algorithm that would be well suited for exploratory analysis
- and useage on large networks - as it is fast and whilst it did not return
+ and use on large networks - as it is fast and, whilst it did not return
  the best modularity values of the methods tested here, the solutions it
  did find were consistently high.
  Care has to be taken with both QuanBiMo and Exhaustive LPAwb+ in setting
  appropriate input parameter settings such that the analysis is not computationa
 lly infeasible.
- We would recommend using Exhaustive LPAwb+ over QuanBiMo; as Exhaustive
+ I would recommend using Exhaustive LPAwb+ over QuanBiMo; as Exhaustive
  LPAwb+ has more meaningful input parameters, can perform no worse than
- LPAwb+ and it's performance was less variable than QuanBiMo on the networks
+ LPAwb+ and its performance was less variable than QuanBiMo on the networks
  tested in this study.
 \end_layout
 
 \begin_layout Standard
-We have made the code for our algorithms and analysis available online (
- https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS
+I have made the code for the LPAwb+ and Exhaustive LPAwb+ algorithms; as
+ well as the analysis performed in this paper available online ( 
+\bar under
+\color blue
+https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS
+\bar default
 \color black
  
 \color inherit
-) to allow researchers to replicate our findings and encourage those with
+) to allow researchers to replicate my findings and encourage those with
  access to potentially interesting weighted bipartite datasets to analyse
  them using these methods.
 \end_layout
@@ -28290,15 +28580,9 @@ reference "tab:Extra-results-Quant"
 
 \begin_layout Plain Layout
 Whether one wishes to perform significance testing is an interesting question;
- as the calculation of modularity (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:WeightedModularity"
-
-\end_inset
-
-) inherently measures how likely or not a partition is in comparison to
- random - which is the usual basis upon which a null model is chosen.
+ as the calculation of modularity inherently measures how likely or not
+ a partition is in comparison to random - which is the usual basis upon
+ which a null model is chosen.
 \end_layout
 
 \begin_layout Plain Layout
@@ -28636,7 +28920,7 @@ Acknowledgements
 
 \begin_layout Standard
 I thank Xin Liu for the hints and nudges that helped me setup the LPAb+
- algorithm - eventually leading to the weighted counterpart presented here.
+ algorithm - leading to the weighted counterpart presented here.
  I thank Timothée Poisot and Hywel Williams for comments that improved the
  manuscript.
 \end_layout
@@ -28653,9 +28937,6 @@ options "biochem"
 \end_layout
 
 \begin_layout Section*
-\begin_inset Newpage newpage
-\end_inset
-
 Appendix
 \end_layout
 
@@ -38267,7 +38548,8 @@ Extra results from the evaluations of the binary version of these networks.
 \begin_inset Formula $Q_{B}$
 \end_inset
 
- score (for each method), 
+ score (for each method) judged by comparing the normalised mutual information
+ of partitions sharing this value, 
 \begin_inset Formula $F$
 \end_inset
 
@@ -46461,7 +46743,8 @@ Extra results from the evaluations of the weighted version of these networks.
 \begin_inset Formula $Q_{W}$
 \end_inset
 
- score (for each method), 
+ score (for each method) judged by comparing the normalised mutual information
+ of partitions sharing this value, 
 \begin_inset Formula $F$
 \end_inset
 
@@ -46525,14 +46808,14 @@ name "tab:Extra-results-Quant"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float table
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -47797,7 +48080,8 @@ s with greatest modularity.
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
