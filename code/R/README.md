@@ -21,5 +21,14 @@ source("MODULARPLOT.R") #read in plotting function
 MODULARPLOT(MAT,MOD1) # show the modular network configuration found in MOD1. Row and column numbering indicates the ordering of rows and columns in MAT. Modules are highlighted in red rectangles.
 
 
+
+#use with R library 'bipartite'
+library("bipartite")
+source("convert2moduleWeb.R") # read in conversion function 
+
+MOD1modWeb = convert2moduleWeb(MAT,MOD1) # converts the configuration found in MOD1 to a moduleWeb object
+plotModuleWeb(MOD1modWeb) # plot the corresponding moduleWeb object using plotModuleWeb in library bipartite
+
+
 ```
 
