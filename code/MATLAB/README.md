@@ -9,11 +9,16 @@ MAT = randi(4,20,20)-1 % create an example matrix
 
 %example scripts
 
-MOD1 = LPA_wb_plus(MAT) % find labels and weighted modularity using LPAwb+
+[MOD1, R1, C1] = LPA_wb_plus(MAT) % find labels and weighted modularity using LPAwb+
 
-MOD2 = Exhaustive_LPA_wb_plus(MAT) % find labels and weighted modularity using Exhaustive LPAwb+
+[MOD2, R2, C2] = Exhaustive_LPA_wb_plus(MAT) % find labels and weighted modularity using Exhaustive LPAwb+
 
-MOD3 = Exhaustive_LPA_wb_plus(MAT>0, 2, 20) % find labels and binary modularity using Exhaustive LPAwb+ checking from a minimum of 2 modules and 20 replicates
+[MOD3, R3, C3] = Exhaustive_LPA_wb_plus(MAT>0, 2, 20) % find labels and binary modularity using Exhaustive LPAwb+ checking from a minimum of 2 modules and 20 replicates
+
+%plotting
+
+MODULARPLOT(MAT,R1,C1) % show the modular network configuration found in MOD1. Row and column numbering indicates the ordering of rows and columns in MAT. Modules are highlighted in red rectangles.
+
 
 ```
 
