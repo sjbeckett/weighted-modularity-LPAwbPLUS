@@ -1,0 +1,171 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Alstroemeria aurea
+	Schinus patagonicus
+	Berberis darwinii
+	Vicia nigricans
+	Rosa eglanteria
+	Digitalis purpurea
+	Berberis buxifolia
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Bombus dahlbomii
+	Ruizantheda mutabilis
+	Trichophthalma amoena
+	Bombus ruderatus
+	Colletes seminitidus
+	Syrphus octomaculatus
+	Manuelia gayi
+	Allograpta.Toxomerus
+	Trichophthalma jaffueli
+	Caenohalictus1
+	Phthiria
+	Platycheirus1
+	Heterosarus
+	Chalepogenus caeruleus
+	Vespula germanica
+	Ocyptamus melanorrhinus
+	Ruizantheda nigrocaerulea
+	Evylaeus
+	Thomisidae
+	Corynura prothysteres
+	Salpingidae
+	Mordellidae
+	Platycherius fenestratus
+	Acroceridae
+	Bombilidae
+	Allograpta exotica
+	Diptera2
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Alstroemeria aurea
+
+Colnames: 
+
+	Manuelia gayi
+	Phthiria
+	Heterosarus
+	Evylaeus
+	Bombilidae
+	Diptera2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Schinus patagonicus
+
+Colnames: 
+
+	Ruizantheda mutabilis
+	Platycheirus1
+	Salpingidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Rosa eglanteria
+
+Colnames: 
+
+	Syrphus octomaculatus
+	Trichophthalma jaffueli
+	Ocyptamus melanorrhinus
+	Ruizantheda nigrocaerulea
+	Mordellidae
+	Platycherius fenestratus
+	Acroceridae
+	Allograpta exotica
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Digitalis purpurea
+
+Colnames: 
+
+	Bombus ruderatus
+	Vespula germanica
+	Thomisidae
+	Corynura prothysteres
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Berberis darwinii
+	Berberis buxifolia
+
+Colnames: 
+
+	Trichophthalma amoena
+	Colletes seminitidus
+	Caenohalictus1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Allograpta.Toxomerus
+	Chalepogenus caeruleus
+
+__________________________
+
+__________________________
+

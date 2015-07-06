@@ -1,0 +1,231 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Asclepias.cucullata
+	Asclepias.woodii
+	Aspidonepsis.diploglossa
+	Miraglossum.verticillare
+	Miraglossum.pilosum
+	Pachycarpus.natalensis
+	Sisyranthus.trichostomus
+	Xysmalobium.gerrardii
+	Xysmalobium.involucratum
+
+Colnames: 
+
+	Hemipepsis.hilaris
+	Pompilidaesp2
+	Tiphia.sp
+	Arge.sp
+	Apis.mellifera
+	Halictidaesp1
+	Halictidaesp2
+	Other.wasps
+	Other.bees
+	Other.solitary.bees
+	Atrichelaphinis.tigrina
+	Cyrtothyrea.marginalis
+	Lycidae.sp
+	Cantharidae.sp
+	Elateridae.sp
+	Chrysomelidae.sp1
+	Chrysomelidae.sp2
+	Scarabaeinae.sp1
+	Scarabaeinae.sp2
+	Scarabaeinae.sp3
+	Curculionidae.sp1
+	Curculionidae.sp2
+	Coleoptera.sp3
+	Coleoptera.sp8
+	Other.Coleoptera
+	Aspilocoryphus.fasciativentris
+	Lygaeidae.sp2
+	Coreidae.sp
+	Spilostethus.rivularis
+	Homoecerus.annulatus
+	Pentatomoidea.sp
+	Other.Heteroptera
+	Calliphoridae.genus1
+	Calliphoridae.genus2
+	Calliphoridae.genus3
+	Sarcophaga.sp
+	Musca.domestica
+	Muscidae.genus2
+	Empididae.sp1
+	Empididae.sp2
+	Chloropidae
+	Microphthalma.sp1
+	Microphthalma.sp2
+	Tachinidae.subf.Goniinae
+	Tachinidae.genus2
+	Actea.sp
+	Sepsidae.sp1
+	Sepsidae.sp2
+	Sepsidae.sp3
+	Dacus.sp
+	Bibionidae
+	Diptera.sp3
+	Diptera.sp22
+	Other.Diptera
+	Unident.butterfly
+	Unident.micromoth
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Asclepias.cucullata
+
+Colnames: 
+
+	Halictidaesp2
+	Empididae.sp1
+	Unident.micromoth
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Aspidonepsis.diploglossa
+
+Colnames: 
+
+	Apis.mellifera
+	Halictidaesp1
+	Musca.domestica
+	Muscidae.genus2
+	Chloropidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Miraglossum.verticillare
+	Miraglossum.pilosum
+
+Colnames: 
+
+	Hemipepsis.hilaris
+	Sepsidae.sp3
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Pachycarpus.natalensis
+
+Colnames: 
+
+	Other.solitary.bees
+	Spilostethus.rivularis
+	Homoecerus.annulatus
+	Microphthalma.sp1
+	Dacus.sp
+	Diptera.sp22
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Asclepias.woodii
+	Sisyranthus.trichostomus
+
+Colnames: 
+
+	Tiphia.sp
+	Arge.sp
+	Atrichelaphinis.tigrina
+	Cyrtothyrea.marginalis
+	Curculionidae.sp1
+	Curculionidae.sp2
+	Coleoptera.sp8
+	Diptera.sp3
+	Unident.butterfly
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Xysmalobium.gerrardii
+
+Colnames: 
+
+	Pompilidaesp2
+	Lycidae.sp
+	Cantharidae.sp
+	Scarabaeinae.sp1
+	Scarabaeinae.sp3
+	Coleoptera.sp3
+	Aspilocoryphus.fasciativentris
+	Coreidae.sp
+	Pentatomoidea.sp
+	Other.Heteroptera
+	Calliphoridae.genus1
+	Calliphoridae.genus2
+	Calliphoridae.genus3
+	Sarcophaga.sp
+	Empididae.sp2
+	Microphthalma.sp2
+	Tachinidae.subf.Goniinae
+	Tachinidae.genus2
+	Actea.sp
+	Bibionidae
+	Other.Diptera
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Xysmalobium.involucratum
+
+Colnames: 
+
+	Other.wasps
+	Other.bees
+	Elateridae.sp
+	Chrysomelidae.sp1
+	Chrysomelidae.sp2
+	Scarabaeinae.sp2
+	Other.Coleoptera
+	Lygaeidae.sp2
+	Sepsidae.sp1
+	Sepsidae.sp2
+
+__________________________
+
+__________________________
+

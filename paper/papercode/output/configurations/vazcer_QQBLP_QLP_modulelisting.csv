@@ -1,0 +1,185 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Aristotelia chilensis
+	Alstroemeria aurea
+	Schinus patagonicus
+	Berberis darwinii
+	Vicia nigricans
+	Rosa eglanteria
+	Cynanchum diemii
+	Berberis buxifolia
+	Mutisia decurrens
+
+Colnames: 
+
+	Policana albopilosa
+	Bombus dahlbomii
+	Ruizantheda mutabilis
+	Trichophthalma amoena
+	Colletes seminitidus
+	Syrphus octomaculatus
+	Manuelia gayi
+	Allograpta.Toxomerus
+	Trichophthalma jaffueli
+	Anthaxia
+	Caenohalictus1
+	Phthiria
+	Platycheirus1
+	Manuelia postica
+	Heterosarus
+	Sapromyza.Minettia
+	Vespula germanica
+	Phthiria1
+	Ocyptamus melanorrhinus
+	Formicidae1
+	Svastrides melanura
+	Ruizantheda nigrocaerulea
+	Chilicola2
+	Evylaeus
+	Sphecidae
+	Sephanoides galeritus
+	Mordellidae
+	Coleoptera8
+	Bombilidae
+	Coleoptera2
+	Caenohalictus2
+	Corynura
+	Halictidae
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Alstroemeria aurea
+
+Colnames: 
+
+	Manuelia gayi
+	Trichophthalma jaffueli
+	Phthiria
+	Phthiria1
+	Svastrides melanura
+	Ruizantheda nigrocaerulea
+	Chilicola2
+	Evylaeus
+	Sphecidae
+	Bombilidae
+	Coleoptera2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Aristotelia chilensis
+	Schinus patagonicus
+
+Colnames: 
+
+	Policana albopilosa
+	Ruizantheda mutabilis
+	Syrphus octomaculatus
+	Platycheirus1
+	Manuelia postica
+	Formicidae1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Berberis darwinii
+	Berberis buxifolia
+
+Colnames: 
+
+	Trichophthalma amoena
+	Caenohalictus1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Rosa eglanteria
+
+Colnames: 
+
+	Allograpta.Toxomerus
+	Mordellidae
+	Corynura
+	Halictidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Cynanchum diemii
+
+Colnames: 
+
+	Colletes seminitidus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Mutisia decurrens
+
+Colnames: 
+
+	Anthaxia
+	Heterosarus
+	Sapromyza.Minettia
+	Vespula germanica
+	Ocyptamus melanorrhinus
+	Sephanoides galeritus
+	Coleoptera8
+	Caenohalictus2
+
+__________________________
+
+__________________________
+

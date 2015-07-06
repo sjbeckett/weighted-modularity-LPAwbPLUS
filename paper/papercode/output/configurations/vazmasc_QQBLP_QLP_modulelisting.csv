@@ -1,0 +1,169 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Aristotelia chilensis
+	Alstroemeria aurea
+	Schinus patagonicus
+	Berberis darwinii
+	Vicia nigricans
+	Rosa eglanteria
+	Berberis buxifolia
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Policana albopilosa
+	Bombus dahlbomii
+	Ruizantheda mutabilis
+	Trichophthalma amoena
+	Colletes seminitidus
+	Syrphus octomaculatus
+	Manuelia gayi
+	Allograpta.Toxomerus
+	Trichophthalma jaffueli
+	Platycheirus1
+	Heterosarus
+	Sapromyza.Minettia
+	Nitidulidae
+	Staphilinidae
+	Chalepogenus caeruleus
+	Phoridae2
+	Unknown1
+	Cantharidae
+	Coleoptera8
+	Curculionidae3
+	Coleoptera7
+	Coleoptera6
+	Phoridae3
+	Tachinidae
+	Diptera9
+	Diapriidae
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Aristotelia chilensis
+
+Colnames: 
+
+	Policana albopilosa
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Alstroemeria aurea
+
+Colnames: 
+
+	Manuelia gayi
+	Trichophthalma jaffueli
+	Heterosarus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Schinus patagonicus
+
+Colnames: 
+
+	Ruizantheda mutabilis
+	Syrphus octomaculatus
+	Allograpta.Toxomerus
+	Phoridae2
+	Unknown1
+	Coleoptera8
+	Curculionidae3
+	Coleoptera7
+	Coleoptera6
+	Phoridae3
+	Tachinidae
+	Diapriidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Berberis darwinii
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Rosa eglanteria
+
+Colnames: 
+
+	Platycheirus1
+	Sapromyza.Minettia
+	Nitidulidae
+	Staphilinidae
+	Cantharidae
+	Diptera9
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Berberis buxifolia
+
+Colnames: 
+
+	Trichophthalma amoena
+	Colletes seminitidus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Chalepogenus caeruleus
+
+__________________________
+
+__________________________
+

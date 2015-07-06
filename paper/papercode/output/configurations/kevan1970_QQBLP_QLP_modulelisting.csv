@@ -1,0 +1,425 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Salix.arctica
+	Oxyoria.digyna
+	Polygonum.viviparum
+	Stellaria.longipes
+	Cerastium.alpinum
+	Melandrium.triflorum
+	Ranumculus.sulphureus
+	Papaver.radicatum
+	Lesquerella.arctica
+	Draba.sp.
+	Draba.bellii
+	Draba.cinerea
+	Draba.groenlandica
+	Erysimum.pallasii
+	Braya.sp.
+	Braya.purpurescens
+	Saxifraga.hirculus
+	Saxifraga.oppositifolia
+	Saxifraga.tricuspidata
+	Potentilla.nivea
+	Dryas.integrifolia
+	Epilobium.latifolium
+	Cassiope.tetragona
+	Pedicularis.capitata
+	Pedicularis.arctica
+	Erigeron.compositus
+	Erigeron.eriocephalus
+	Chrysanthemum.integrifolium
+	Arnica.alpina
+	Taraxacum.arctogenum
+
+Colnames: 
+
+	Acarina.
+	Pardosa.glacialis
+	Xysticus.deichmanni
+	Byrdia.sp.
+	Noctuidae.
+	Anarta.richardsoni
+	Boloria.polaris
+	Tipula.arctica
+	Limnophyes.sp.
+	Smittia.sp.
+	Smittia.velutina
+	Empididae.
+	Carposcalis.carinata
+	Phalacrodira.nigropilosa
+	Metasyrphus.chillcotti
+	Calliphoridae.
+	Boreellus.atriceps
+	Scatophaga.apicaulis
+	Scatophaga.multisetosa
+	Fucellia.pictipennis
+	Eupogonomyia.groenlandica
+	Nematus.sp.
+	Parasitica.
+	Cryptus.arcticus
+	Oresbius.sp.
+	Bombus.sp.
+	Boloria.chariclea
+	Plebius.aquilo
+	Chironomidae.
+	Paraphaenocladius.despectus
+	Syrphidae.
+	Phormia.terraenovae
+	Pectinarctica.stylata
+	Periscepsia.sp.
+	Crymodes.exulis
+	Lasiestra.leucocycla
+	Lycaena.feildeni
+	Dolichopus.dasyops
+	Rhamphomyia.filicauda
+	Rhamphomyia.nigrita
+	Peleteria.aenea
+	Pogonomyoides.segnis
+	Spilogona.sanctipauli
+	Corynoneura.scutellata
+	Bradysia..sp.
+	Spilogona.melanosoma
+	Chalcidae.
+	Tridymus.sp.
+	Atractodes.sp.
+	Mesoleptus.sp.
+	Stenomacrus.sp.
+	Tetrastichus.sp.
+	Colias.hecla
+	Muscidae.
+	Bryobia..praetiosa.
+	Sympistris.labradoris
+	Trissocladius.
+	Dictyna.borealis
+	Entomobrya.comparata
+	Heterotrissocladius.subpilosus
+	Rhamphomyia.sp.
+	Protanypus.caudatus
+	Xysticus.deichmanni.1
+	Nematocera.
+	Arctoseius.cetratus
+	Eriophyidae.
+	Cecidophyes.sp.
+	Tarentula.exasperans
+	Tarentula.exasperans..prob..
+	Lycaenidae.
+	Metrocnemius.ursinus
+	Scatophaga.sp.
+	Moths.
+	Orthocladiinae.gn.
+	Microspectra.sp.
+	Bradysia.2.sp.
+	Phytomyza.erigerontophaga
+	Tachinidae.
+	Erigone.pyschrophila
+	Apatania.zonella
+	Lepidoptera.
+	Boloria.sp.
+	Procladius.sp.
+	Cricotopus.sp.
+	Psectrocladius.
+	Microspectra.groenlandica
+	Forcipomyia..Thryridomyia..sp.
+	Ceratopogon..Ceratopogon...sp.
+	Ceratopogon..Isohelea...sp.
+	Culicoides.sp.
+	Aedes.sp.
+	Aedes.impiger
+	Aedes.nigripes
+	Rhamphomyia.hoeli
+	Rhamphomyia.ursinella
+	Helophilus.borealis
+	Allopiophila.fulviceps
+	Lasiopiophila.pilosa
+	Pegomyia.sp.
+	Pegomyia.arctica
+	Spilogona.sp.
+	Spilogona.denudata
+	Spilogona.dorsata
+	Spilogona.extensa
+	Spilogona.latilamina
+	Spilogona.obsoleta
+	Spilogona.tornensis
+	Spilogona.tundrae
+	Ichneumonidae.
+	Apanteles.sp.
+	Mesoleius.sp.
+	Saotis.sp.
+	Stenomacnis.sp.
+	Olethreutes.inquietana
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Pedicularis.arctica
+
+Colnames: 
+
+	Limnophyes.sp.
+	Trissocladius.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Stellaria.longipes
+	Saxifraga.hirculus
+
+Colnames: 
+
+	Dolichopus.dasyops
+	Corynoneura.scutellata
+	Chalcidae.
+	Tridymus.sp.
+	Atractodes.sp.
+	Mesoleptus.sp.
+	Stenomacrus.sp.
+	Tetrastichus.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Cerastium.alpinum
+
+Colnames: 
+
+	Chironomidae.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Papaver.radicatum
+	Lesquerella.arctica
+	Draba.sp.
+	Draba.bellii
+	Draba.cinerea
+	Draba.groenlandica
+	Erysimum.pallasii
+	Braya.sp.
+	Braya.purpurescens
+	Potentilla.nivea
+
+Colnames: 
+
+	Bradysia..sp.
+	Bryobia..praetiosa.
+	Dictyna.borealis
+	Entomobrya.comparata
+	Microspectra.sp.
+	Bradysia.2.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Salix.arctica
+	Saxifraga.oppositifolia
+
+Colnames: 
+
+	Acarina.
+	Pardosa.glacialis
+	Xysticus.deichmanni
+	Smittia.velutina
+	Carposcalis.carinata
+	Phalacrodira.nigropilosa
+	Metasyrphus.chillcotti
+	Boreellus.atriceps
+	Scatophaga.apicaulis
+	Scatophaga.multisetosa
+	Fucellia.pictipennis
+	Nematus.sp.
+	Parasitica.
+	Cryptus.arcticus
+	Oresbius.sp.
+	Paraphaenocladius.despectus
+	Syrphidae.
+	Phormia.terraenovae
+	Pectinarctica.stylata
+	Periscepsia.sp.
+	Arctoseius.cetratus
+	Eriophyidae.
+	Cecidophyes.sp.
+	Tarentula.exasperans
+	Tarentula.exasperans..prob..
+	Lycaenidae.
+	Metrocnemius.ursinus
+	Scatophaga.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Dryas.integrifolia
+
+Colnames: 
+
+	Byrdia.sp.
+	Anarta.richardsoni
+	Boloria.polaris
+	Smittia.sp.
+	Empididae.
+	Eupogonomyia.groenlandica
+	Rhamphomyia.filicauda
+	Rhamphomyia.nigrita
+	Pogonomyoides.segnis
+	Spilogona.sanctipauli
+	Spilogona.melanosoma
+	Sympistris.labradoris
+	Nematocera.
+	Orthocladiinae.gn.
+	Erigone.pyschrophila
+	Apatania.zonella
+	Lepidoptera.
+	Procladius.sp.
+	Psectrocladius.
+	Microspectra.groenlandica
+	Forcipomyia..Thryridomyia..sp.
+	Ceratopogon..Ceratopogon...sp.
+	Ceratopogon..Isohelea...sp.
+	Culicoides.sp.
+	Aedes.sp.
+	Aedes.impiger
+	Aedes.nigripes
+	Rhamphomyia.hoeli
+	Rhamphomyia.ursinella
+	Helophilus.borealis
+	Allopiophila.fulviceps
+	Lasiopiophila.pilosa
+	Pegomyia.sp.
+	Pegomyia.arctica
+	Spilogona.sp.
+	Spilogona.denudata
+	Spilogona.dorsata
+	Spilogona.extensa
+	Spilogona.latilamina
+	Spilogona.obsoleta
+	Spilogona.tornensis
+	Spilogona.tundrae
+	Apanteles.sp.
+	Mesoleius.sp.
+	Saotis.sp.
+	Stenomacnis.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Oxyoria.digyna
+	Melandrium.triflorum
+	Ranumculus.sulphureus
+	Saxifraga.tricuspidata
+	Epilobium.latifolium
+	Cassiope.tetragona
+	Pedicularis.capitata
+	Erigeron.eriocephalus
+	Chrysanthemum.integrifolium
+
+Colnames: 
+
+	Tipula.arctica
+	Bombus.sp.
+	Boloria.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 8
+
+Rownames: 
+
+	Erigeron.compositus
+
+Colnames: 
+
+	Rhamphomyia.sp.
+	Phytomyza.erigerontophaga
+
+__________________________
+
+Depth: 1
+
+Nr of module: 9
+
+Rownames: 
+
+	Polygonum.viviparum
+	Arnica.alpina
+
+Colnames: 
+
+	Noctuidae.
+	Calliphoridae.
+	Boloria.chariclea
+	Plebius.aquilo
+	Crymodes.exulis
+	Lasiestra.leucocycla
+	Peleteria.aenea
+	Colias.hecla
+	Muscidae.
+	Heterotrissocladius.subpilosus
+	Protanypus.caudatus
+	Xysticus.deichmanni.1
+	Tachinidae.
+	Cricotopus.sp.
+	Ichneumonidae.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 10
+
+Rownames: 
+
+	Taraxacum.arctogenum
+
+Colnames: 
+
+	Lycaena.feildeni
+	Moths.
+	Olethreutes.inquietana
+
+__________________________
+
+__________________________
+

@@ -1,0 +1,143 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Claytonia.virginica
+	Dentaria.laciniata
+	Dicentra.canadensis
+	Dicentra.cucullaria
+	Erythronium.albidum
+	Isopyrum.biternatum
+	Sanguinaria.canadensis
+
+Colnames: 
+
+	Andrena.carlini
+	Andrena.cressoni
+	Andrena.irgeniae
+	Andrena.erythronii
+	Andrena.forbesii
+	Andrena.mansonii
+	Andrena.miserabilis
+	Andrena.personata
+	Andrena.rugosa
+	Andrena.sp.
+	Ceratina.metallica
+	nomada.luteola
+	Bombus.greseocollis
+	Augochlora.pura
+	Augochlorella.striata
+	Dialictus.coeruleus
+	Dialictus.oblongus
+	Dialictus.obscurus
+	Dialictus.imitatus
+	Dialictus.zephyrus
+	Erylaeus.macroupinensis
+	Halictus.confusus
+	Lasioglossum.forbesii
+	Carposcalis.obscura
+	Eristalis.dimidiatus
+	Helophilus.fasciatus
+	Melanostoma.sp.
+	Mesograpta.marginata
+	Metasyrphus.americanus
+	Surphus.torvus
+	Syrphus.sp.
+	Xylota.nemorum
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Claytonia.virginica
+	Sanguinaria.canadensis
+
+Colnames: 
+
+	Andrena.irgeniae
+	Andrena.miserabilis
+	Andrena.sp.
+	Ceratina.metallica
+	nomada.luteola
+	Dialictus.coeruleus
+	Dialictus.obscurus
+	Lasioglossum.forbesii
+	Carposcalis.obscura
+	Eristalis.dimidiatus
+	Helophilus.fasciatus
+	Mesograpta.marginata
+	Metasyrphus.americanus
+	Syrphus.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Dentaria.laciniata
+	Erythronium.albidum
+
+Colnames: 
+
+	Andrena.carlini
+	Andrena.erythronii
+	Halictus.confusus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Dicentra.canadensis
+	Dicentra.cucullaria
+
+Colnames: 
+
+	Bombus.greseocollis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Isopyrum.biternatum
+
+Colnames: 
+
+	Andrena.cressoni
+	Andrena.forbesii
+	Andrena.mansonii
+	Andrena.personata
+	Andrena.rugosa
+	Augochlora.pura
+	Augochlorella.striata
+	Dialictus.oblongus
+	Dialictus.imitatus
+	Dialictus.zephyrus
+	Erylaeus.macroupinensis
+	Melanostoma.sp.
+	Surphus.torvus
+	Xylota.nemorum
+
+__________________________
+
+__________________________
+

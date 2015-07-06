@@ -1,0 +1,173 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Aristotelia chilensis
+	Alstroemeria aurea
+	Schinus patagonicus
+	Berberis darwinii
+	Rosa eglanteria
+	Cynanchum diemii
+	Ribes magellanicum
+	Mutisia decurrens
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Policana albopilosa
+	Bombus dahlbomii
+	Ruizantheda mutabilis
+	Trichophthalma amoena
+	Syrphus octomaculatus
+	Manuelia gayi
+	Allograpta.Toxomerus
+	Trichophthalma jaffueli
+	Phthiria
+	Platycheirus1
+	Sapromyza.Minettia
+	Formicidae3
+	Nitidulidae
+	Staphilinidae
+	Ichneumonidae4
+	Braconidae3
+	Chalepogenus caeruleus
+	Vespula germanica
+	Torymidae2
+	Phthiria1
+	Svastrides melanura
+	Sphecidae
+	Thomisidae
+	Corynura prothysteres
+	Ichneumonidae2
+	Ruizantheda proxima
+	Braconidae2
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Aristotelia chilensis
+
+Colnames: 
+
+	Policana albopilosa
+	Ruizantheda mutabilis
+	Platycheirus1
+	Braconidae2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Alstroemeria aurea
+	Berberis darwinii
+	Mutisia decurrens
+
+Colnames: 
+
+	Bombus dahlbomii
+	Syrphus octomaculatus
+	Manuelia gayi
+	Trichophthalma jaffueli
+	Phthiria
+	Sapromyza.Minettia
+	Vespula germanica
+	Phthiria1
+	Svastrides melanura
+	Sphecidae
+	Thomisidae
+	Corynura prothysteres
+	Ichneumonidae2
+	Ruizantheda proxima
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Schinus patagonicus
+
+Colnames: 
+
+	Ichneumonidae4
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Rosa eglanteria
+
+Colnames: 
+
+	Staphilinidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Cynanchum diemii
+
+Colnames: 
+
+	Formicidae3
+	Nitidulidae
+	Braconidae3
+	Torymidae2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Ribes magellanicum
+
+Colnames: 
+
+	Trichophthalma amoena
+	Allograpta.Toxomerus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Chalepogenus caeruleus
+
+__________________________
+
+__________________________
+

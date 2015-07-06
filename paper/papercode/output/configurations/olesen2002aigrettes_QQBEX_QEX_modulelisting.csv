@@ -1,0 +1,131 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Gastonia.mauritiana
+	Dracaena.concinna
+	Scaevola.sericea
+	Ipomoea.macrantha
+	Pemphis.acidula
+	Hibiscus.tiliaceus
+	Suriana.maritima
+	Argusia.argentea
+	Thespesia.populnea
+	Morinda.citrifolia
+	Leucaena.leucocephala
+	Passiflora.suberosa
+	Stachytapheta.jamaicencis
+	Turnera.angustifolia
+
+Colnames: 
+
+	Phelsuma.ornata
+	Phalantha.phalantha
+	Stratiomydae.sp.
+	Xylocopa.fenestrata
+	Megachile.sp.
+	Protaetia.aurichalcea
+	Leptotes.pirithous
+	Borbo.borbonica
+	Apis.mellifera
+	Musca.domestica
+	Syrphid.sp.
+	Lucilia.sp.
+	Ornidia.obesa
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Dracaena.concinna
+	Argusia.argentea
+
+Colnames: 
+
+	Phelsuma.ornata
+	Syrphid.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Pemphis.acidula
+	Stachytapheta.jamaicencis
+
+Colnames: 
+
+	Phalantha.phalantha
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Scaevola.sericea
+	Suriana.maritima
+	Turnera.angustifolia
+
+Colnames: 
+
+	Xylocopa.fenestrata
+	Megachile.sp.
+	Borbo.borbonica
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Ipomoea.macrantha
+	Hibiscus.tiliaceus
+	Thespesia.populnea
+	Morinda.citrifolia
+	Leucaena.leucocephala
+	Passiflora.suberosa
+
+Colnames: 
+
+	Apis.mellifera
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Gastonia.mauritiana
+
+Colnames: 
+
+	Stratiomydae.sp.
+	Protaetia.aurichalcea
+	Leptotes.pirithous
+	Musca.domestica
+	Lucilia.sp.
+	Ornidia.obesa
+
+__________________________
+
+__________________________
+

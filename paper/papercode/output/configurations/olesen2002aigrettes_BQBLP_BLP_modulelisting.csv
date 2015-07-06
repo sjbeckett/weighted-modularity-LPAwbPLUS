@@ -1,0 +1,155 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Gastonia.mauritiana
+	Dracaena.concinna
+	Scaevola.sericea
+	Ipomoea.macrantha
+	Pemphis.acidula
+	Hibiscus.tiliaceus
+	Suriana.maritima
+	Argusia.argentea
+	Thespesia.populnea
+	Morinda.citrifolia
+	Leucaena.leucocephala
+	Passiflora.suberosa
+	Stachytapheta.jamaicencis
+	Turnera.angustifolia
+
+Colnames: 
+
+	Phelsuma.ornata
+	Phalantha.phalantha
+	Stratiomydae.sp.
+	Xylocopa.fenestrata
+	Megachile.sp.
+	Protaetia.aurichalcea
+	Leptotes.pirithous
+	Borbo.borbonica
+	Apis.mellifera
+	Musca.domestica
+	Syrphid.sp.
+	Lucilia.sp.
+	Ornidia.obesa
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Ipomoea.macrantha
+	Hibiscus.tiliaceus
+	Morinda.citrifolia
+	Leucaena.leucocephala
+	Passiflora.suberosa
+
+Colnames: 
+
+	Phelsuma.ornata
+	Apis.mellifera
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Pemphis.acidula
+	Stachytapheta.jamaicencis
+
+Colnames: 
+
+	Phalantha.phalantha
+	Stratiomydae.sp.
+	Leptotes.pirithous
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Scaevola.sericea
+	Suriana.maritima
+	Turnera.angustifolia
+
+Colnames: 
+
+	Xylocopa.fenestrata
+	Megachile.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Thespesia.populnea
+
+Colnames: 
+
+	Borbo.borbonica
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Argusia.argentea
+
+Colnames: 
+
+	Musca.domestica
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Dracaena.concinna
+
+Colnames: 
+
+	Syrphid.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Gastonia.mauritiana
+
+Colnames: 
+
+	Protaetia.aurichalcea
+	Lucilia.sp.
+	Ornidia.obesa
+
+__________________________
+
+__________________________
+

@@ -1,0 +1,251 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Hepatica.americana
+	Erythronium.umbilicatum
+	Sangiunaria.canadensis
+	Claytonia.virginica
+	Thalictrum.thalictroides
+	Cardamine.angustata angustata
+	Stellaria.pubera
+	Viola.papilionacea
+	Uvularia.sessilifolia
+	Tiarella.cordifolia collina
+	Podophyllum.peltatum
+	Trillium.catesbei
+	Aesculus.sylvatica
+
+Colnames: 
+
+	Andrena..Scaphandrena..arabis
+	Andrena..Melandrena..carlini
+	Andrena..Trachandrena..ceanothi
+	Andrena..Melandrena..dunningi
+	Andrena..Ptilandrena..erigeniae
+	Andrena..Scrapopteris..imatrix
+	Andrena..Simandrena..nasonii
+	Andrena..Euandrena..nigrihirta
+	Andrena..Micrandrena..personata
+	Andrena..Andrena..tridens
+	Andrena..Tomelissa..violae
+	Andrena..Micrandrena..ziziaeformis
+	Ceratina.calcarata
+	Ephemoropsis.laboriosa
+	Nomada..Heminomada..bishopii
+	Nomada..Heminomada..luteola
+	Nomada..Gnathias..perplexa
+	Nomada..Nomada..pygmaea
+	Nomada..Nomada..sayi
+	Nomada.sp.
+	Xylocopa.virginica.virginica
+	Apis.mellifera
+	Bombus.bimaculatus
+	Bombus.pennsylvanicus
+	Augochlora.pura
+	Augochorella.striata
+	Dialictus.abanci
+	Dialictus.cressonii
+	Evylaeus.macoupinensis
+	Lassioglossum.fuscipenne
+	halictid.sp.
+	Osmia.atriventris
+	Osmia.conjucta
+	Osmia.lignaria
+	Osmia.simillima
+	Osmia.sp.
+	Hylema.platura
+	Bombylius.major
+	Platycheirus.obscurus
+	Toxomerous.geminatus
+	Gonia.sp.
+	unknown.sp.
+	Lycaenopsis.argiolus
+	Euchlo.creusa.lotta
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Erythronium.umbilicatum
+
+Colnames: 
+
+	Nomada..Gnathias..perplexa
+	Augochlora.pura
+	Augochorella.striata
+	Osmia.lignaria
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Sangiunaria.canadensis
+	Tiarella.cordifolia collina
+
+Colnames: 
+
+	Apis.mellifera
+	Dialictus.cressonii
+	Bombylius.major
+	Toxomerous.geminatus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Claytonia.virginica
+
+Colnames: 
+
+	Andrena..Trachandrena..ceanothi
+	Andrena..Scrapopteris..imatrix
+	Lycaenopsis.argiolus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Thalictrum.thalictroides
+
+Colnames: 
+
+	Andrena..Ptilandrena..erigeniae
+	Ceratina.calcarata
+	Nomada.sp.
+	halictid.sp.
+	Osmia.sp.
+	Platycheirus.obscurus
+	Gonia.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Cardamine.angustata angustata
+
+Colnames: 
+
+	Andrena..Scaphandrena..arabis
+	Andrena..Melandrena..dunningi
+	Lassioglossum.fuscipenne
+	unknown.sp.
+	Euchlo.creusa.lotta
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Stellaria.pubera
+
+Colnames: 
+
+	Andrena..Simandrena..nasonii
+	Andrena..Micrandrena..personata
+	Nomada..Heminomada..bishopii
+	Nomada..Heminomada..luteola
+	Nomada..Nomada..pygmaea
+	Nomada..Nomada..sayi
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Viola.papilionacea
+
+Colnames: 
+
+	Andrena..Tomelissa..violae
+	Osmia.atriventris
+	Osmia.conjucta
+	Osmia.simillima
+
+__________________________
+
+Depth: 1
+
+Nr of module: 8
+
+Rownames: 
+
+	Hepatica.americana
+	Uvularia.sessilifolia
+
+Colnames: 
+
+	Andrena..Euandrena..nigrihirta
+	Andrena..Andrena..tridens
+	Andrena..Micrandrena..ziziaeformis
+	Dialictus.abanci
+	Evylaeus.macoupinensis
+	Hylema.platura
+
+__________________________
+
+Depth: 1
+
+Nr of module: 9
+
+Rownames: 
+
+	Podophyllum.peltatum
+	Trillium.catesbei
+
+Colnames: 
+
+	Andrena..Melandrena..carlini
+	Xylocopa.virginica.virginica
+	Bombus.bimaculatus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 10
+
+Rownames: 
+
+	Aesculus.sylvatica
+
+Colnames: 
+
+	Ephemoropsis.laboriosa
+	Bombus.pennsylvanicus
+
+__________________________
+
+__________________________
+

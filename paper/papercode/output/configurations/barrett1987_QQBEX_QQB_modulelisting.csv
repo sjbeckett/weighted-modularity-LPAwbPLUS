@@ -1,0 +1,305 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Aralia.nudicaulis
+	Chimaphila.umbellata
+	Clintonia.borealis
+	Cornus.canadensis
+	Cypripedium.acaule
+	Linnaea.borealis
+	Maianthemum.canadense
+	Medeola.virginiana
+	Oxalis.montana
+	Pyrola.secunda
+	Trientalis.borealis
+	Trillium.undulatum
+
+Colnames: 
+
+	Acmaeopsoides.rufula
+	Agiotes.stabilis
+	Ancistrocerus.sp.
+	Andrena.melanochroa
+	Andrena.miranda
+	Andrena.nivalis
+	Andrena.rufosignata
+	Andrena.sigmundi
+	Andrena.thaspii
+	Andrena.wheeleri
+	Andrena.wilkella
+	Andrena.w.scripta
+	Anthaxia.expansa
+	Anthonomus.sp.
+	Blera.badia
+	Blera.confusa
+	Blera.nigripes
+	Bombus.perplexus
+	Bombus.ternarius
+	Bombus.terricola
+	Bombus.vagans
+	Bombylius.major
+	Bombylius.pigmaeus
+	Cantharis.sp.
+	Carposcalis.confusus
+	Carposcalis.obscura
+	Cateres.pennatus
+	Celastrina.argiolus
+	Chalcosyrphus.curvarius
+	Chalcosyrphus.inarmatus
+	Chalcosyrphus.memorum
+	Chalcosyrphus.nigra
+	Cheilosia.pallipes
+	Cheilosia.sialia
+	Cheilosia.slossonae
+	Cheilosia.tristis
+	Crabro.sp.
+	Dalopius.sp.
+	Dialictus.cressoni
+	Dialictus.imitatus
+	Dialictus.sp.
+	Eclimus.harrisi
+	Ephemerella.sp.
+	Eremomyioides.setosa
+	Eudasyphora.cyanicolor
+	Eupyses.vestris
+	Eusphalerum.convexum
+	Eusphalerum.phothos
+	Eusphalerum.sp.
+	Evodinus.monticola
+	Evylaeus.divergens
+	Evylaeus.quebecensis
+	Fannia.ungulata
+	Halictus.confusus
+	Halictus.rubicundus
+	Hoplitis.producta
+	Hylaeus.basalis
+	Hylaeus.ellipticus
+	Hylaeus.stevensi
+	Judolia.montivagans
+	Lygus.refidorsus
+	Mallota.posticata
+	Melagyna.lasiophthalma
+	Melanostoma.sp.
+	Nomada.cuneata
+	Nomada.sayi
+	Orsodacne.atra
+	Orthoneura.pulchella
+	Osmia.lignaria
+	Osmia.proxima
+	Osmia.pumila
+	Paramyia.nitens
+	Parasyrphus.relictus
+	Passaloecus.sp.
+	Pegohylemyia.fugax
+	Phalaenophana.pyramusalis
+	Phaonia.serva
+	Pidonia.ruficolis
+	Pieris.napi
+	Poanes.hobomok
+	Psithyrus.sp.
+	Pyrophaena.rosarum
+	Rhopalum.sp.
+	Sarcophaga.nearctica
+	Sphaerophoria.bifurcata
+	Sphaerophoria.longipilosa
+	Sphaerophoria.sp.
+	Sphecodes.sp.
+	Syritta.pipiens
+	Syritta.rectus
+	Temnostoma.alternans
+	Temnostoma.balyras
+	Temnostoma.barberi
+	Thamnotettix.confinis
+	Trachysida.aspera
+	Tropidia.quadrata
+	Tychius.stephensi
+	Vespula.arenaria
+	Xylota.bigelowi
+	Xylota.hinei
+	Xylota.sp.
+	Zeraea.americana
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Aralia.nudicaulis
+	Cypripedium.acaule
+	Oxalis.montana
+
+Colnames: 
+
+	Andrena.wheeleri
+	Bombus.perplexus
+	Cateres.pennatus
+	Cheilosia.pallipes
+	Cheilosia.tristis
+	Dialictus.cressoni
+	Dialictus.imitatus
+	Eusphalerum.convexum
+	Eusphalerum.phothos
+	Eusphalerum.sp.
+	Halictus.rubicundus
+	Mallota.posticata
+	Melanostoma.sp.
+	Trachysida.aspera
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Clintonia.borealis
+	Cornus.canadensis
+	Linnaea.borealis
+	Maianthemum.canadense
+	Pyrola.secunda
+	Trillium.undulatum
+
+Colnames: 
+
+	Acmaeopsoides.rufula
+	Agiotes.stabilis
+	Ancistrocerus.sp.
+	Andrena.melanochroa
+	Andrena.miranda
+	Andrena.nivalis
+	Andrena.rufosignata
+	Andrena.sigmundi
+	Andrena.thaspii
+	Andrena.wilkella
+	Andrena.w.scripta
+	Anthaxia.expansa
+	Anthonomus.sp.
+	Blera.badia
+	Blera.confusa
+	Blera.nigripes
+	Bombus.ternarius
+	Bombus.vagans
+	Bombylius.major
+	Bombylius.pigmaeus
+	Cantharis.sp.
+	Carposcalis.confusus
+	Celastrina.argiolus
+	Chalcosyrphus.curvarius
+	Chalcosyrphus.inarmatus
+	Chalcosyrphus.memorum
+	Chalcosyrphus.nigra
+	Cheilosia.sialia
+	Cheilosia.slossonae
+	Crabro.sp.
+	Dalopius.sp.
+	Dialictus.sp.
+	Eclimus.harrisi
+	Eremomyioides.setosa
+	Eudasyphora.cyanicolor
+	Eupyses.vestris
+	Evodinus.monticola
+	Evylaeus.divergens
+	Evylaeus.quebecensis
+	Fannia.ungulata
+	Halictus.confusus
+	Hoplitis.producta
+	Hylaeus.basalis
+	Hylaeus.ellipticus
+	Hylaeus.stevensi
+	Judolia.montivagans
+	Lygus.refidorsus
+	Melagyna.lasiophthalma
+	Nomada.cuneata
+	Nomada.sayi
+	Orsodacne.atra
+	Orthoneura.pulchella
+	Osmia.lignaria
+	Osmia.proxima
+	Osmia.pumila
+	Parasyrphus.relictus
+	Passaloecus.sp.
+	Pegohylemyia.fugax
+	Phalaenophana.pyramusalis
+	Phaonia.serva
+	Pidonia.ruficolis
+	Pieris.napi
+	Poanes.hobomok
+	Psithyrus.sp.
+	Pyrophaena.rosarum
+	Rhopalum.sp.
+	Sarcophaga.nearctica
+	Sphaerophoria.bifurcata
+	Sphaerophoria.longipilosa
+	Sphaerophoria.sp.
+	Sphecodes.sp.
+	Syritta.pipiens
+	Syritta.rectus
+	Temnostoma.alternans
+	Temnostoma.balyras
+	Temnostoma.barberi
+	Thamnotettix.confinis
+	Tropidia.quadrata
+	Tychius.stephensi
+	Vespula.arenaria
+	Xylota.bigelowi
+	Xylota.hinei
+	Xylota.sp.
+	Zeraea.americana
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Trientalis.borealis
+
+Colnames: 
+
+	Carposcalis.obscura
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Chimaphila.umbellata
+
+Colnames: 
+
+	Bombus.terricola
+	Paramyia.nitens
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Medeola.virginiana
+
+Colnames: 
+
+	Ephemerella.sp.
+
+__________________________
+
+__________________________
+

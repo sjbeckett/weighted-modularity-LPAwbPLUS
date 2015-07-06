@@ -1,0 +1,703 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Achillea.millefolium
+	Alliaria.petiolata
+	Bellis.perennis
+	Bunias.orientalis
+	Chaerophyllum.temulum
+	Convolvulaceae
+	Cornus.sanguinea
+	Crataegus.monogyna
+	Erigeron.annuus
+	Euonymus.europaea
+	Galium.aparine
+	Galium.mollugo
+	Galium.pycnotrichum
+	Geranium.pyrenaicum
+	Geranium.robertianum
+	Geum.rivale
+	Geum.urbanum
+	Glechoma.hederacea
+	Knautia.arvensis
+	Lamium.album
+	Leucanthemum.vulgare
+	Lonicera.sp.
+	Lotus.corniculatus
+	Mahonia.aquifolium
+	Malus.sp.
+	Medicago.lupulina
+	Medicago.sativa
+	Melilotus.officinalis
+	Myosotis.arvensis
+	Papaver.rhoeas
+	Plantago.lanceolata
+	Plantago.major
+	Potentilla.argentea
+	Potentilla.reptans
+	Prunus.cf.Mahaleb
+	Prunus.sp.1.Kirsche
+	Prunus.sp.2.Pflaume
+	Prunus.spinosa
+	Ranunculus.arvensis
+	Ribes.cf.Alpinum
+	Rosa.canina
+	Rosacae.sp.
+	Rubus.fruticosus
+	Salvia.pratensis
+	Silene.alba
+	Taraxacum.officinale
+	Thlaspi.sp.
+	Trifolium.pratense
+	Trifolium.repens
+	Tripleurospermum.sp.
+	Valerianella.locusta
+	Verbascum.lychnitis
+	Veronica.chamaedrys
+	Vicia.cracca
+	Vicia.hirsuta
+	Vicia.sativa
+
+Colnames: 
+
+	Agrypnus.murinus
+	Ampedus.pomorum
+	Anaspis.frontalis
+	Anthaxia.nitidula
+	Anthonomus.rubi
+	Anthophora.plumipes
+	Anthrenus.verbasci
+	Aphidoidea.
+	Apidae.sp.1
+	Apidae.sp.2
+	Apidae.sp.10
+	Apidae.sp.11
+	Apidae.sp.12
+	Apidae.sp.13
+	Apidae.sp.14
+	Apidae.sp.15
+	Apidae.sp.17
+	Apidae.sp.4
+	Apidae.sp.6
+	Apidae.sp.7
+	Apidae.sp.8
+	Apidae.sp.9
+	Apis.mellifera
+	Arachnidae.sp.1
+	Arachnidae.sp.10
+	Arachnidae.sp.11
+	Arachnidae.sp.12
+	Arachnidae.sp.2
+	Arachnidae.sp.3
+	Arachnidae.sp.4
+	Arachnidae.sp.5
+	Arachnidae.sp.6
+	Arachnidae.sp.7
+	Arachnidae.sp.8
+	Asilidae.sp.1
+	Atrichopogon.sp.
+	Auchenorrhyncha.sp.1
+	Blattodea
+	Bombus
+	Bombus.hortorum
+	Bombus.lapidarius
+	Bombus.lucorum.Komplex
+	Bombus.pascuorum
+	Bombus.pratorum
+	Bombus.sp.1
+	Bombus.sp.2
+	Bombus.sp.3
+	Bombus.sp.4
+	Bombus.sp.5
+	Bombus.sp.6
+	Bombus.sp.7
+	Bombus.sp.8
+	Bombus.terrestris
+	Bombylius.major
+	Botanophila.fugax
+	Brachycera.sp.1
+	Brachycera.sp.10
+	Brachycera.sp.11
+	Brachycera.sp.13
+	Brachycera.sp.16
+	Brachycera.sp.18
+	Brachycera.sp.19
+	Brachycera.sp.2
+	Brachycera.sp.20
+	Brachycera.sp.21
+	Brachycera.sp.22
+	Brachycera.sp.24
+	Brachycera.sp.25
+	Brachycera.sp.26
+	Brachycera.sp.27
+	Brachycera.sp.4
+	Brachycera.sp.5
+	Brachycera.sp.7
+	Brachycera.sp.8
+	Brachycera.sp.9
+	Bruchus.luteicornis
+	Byrrhidae.sp.1
+	Byturus.tomentosus
+	Cantharidae.sp.1
+	Cantharidae.sp.2
+	Cantharidae.sp.4
+	Cantharis.sp.1
+	Cantharis.sp.2
+	Carabidae.sp.1
+	Cephus.cultratus
+	Cephus.pygmaeus
+	Cerambycidae.sp.1
+	Cerambycidae.sp.2
+	Cerambycidae.sp.3
+	Ceratina.cyanea
+	Cetonia.aurata
+	Chloromyia.formosa
+	Chrysomelidae.sp.1
+	Chrysomelidae.sp.2
+	Chrysomelidae.sp.3
+	Chrysoperla.carnea
+	Chrysotoxum.vernale
+	Cidnopus.aeruginosus
+	Clytra.quadripunctata
+	Coccinella.sp.1
+	Coccinella.sp.2
+	Coccinellidae.larve
+	Coenorhinus.aequatus
+	Coleoptera.sp.12
+	Coleoptera.sp.13
+	Coleoptera.sp.28
+	Coreus.marginatus
+	Curculionidae.sp.2
+	Curculionidae.sp.3
+	Curculionidae.sp.4
+	Curculionidae.sp.5
+	Curculionidae.sp.7
+	Curculionidae.sp.8
+	Curculionidae.sp.9
+	Cynegetis.impunctata
+	Dasytes.caeruleus
+	Dasytes.niger
+	Dasytes.virens
+	Dermaptera.sp.1
+	Dicraeus.vagans
+	Diptera.sp.1
+	Diptera.sp.3
+	Diptera.sp.4
+	Elateridae.sp.1
+	Empis.s.str.anfractuosa
+	Empis.s.str.caudatula
+	Ensifera.sp.1
+	Ensifera.sp.10
+	Ensifera.sp.2
+	Ensifera.sp.3
+	Ensifera.sp.4
+	Ensifera.sp.5
+	Ensifera.sp.6
+	Ensifera.sp.7
+	Ensifera.sp.8
+	Ensifera.sp.9
+	Eucera.nigrescens
+	Euclidia.glyphica
+	Formica.rufibarbis
+	Formica.rufibarbis.
+	Halictus.tumulorum
+	Heteroptera.Nymphen
+	Heteroptera.sp.1
+	Heteroptera.sp.3
+	Hoplitis.leucomelana
+	Hymenoptera.sp.1
+	Hymenoptera.sp.2
+	Hymenoptera.sp.5
+	Hymenoptera.sp.6
+	Ichneumonidae.sp.1
+	Insecta.sp.1
+	Isomira.semiflava
+	Lasioglossum.malachurum
+	Lasioglossum.sp.1
+	Lasius.fuliginosus
+	Lasius.niger
+	Lassioglossum-Komplex
+	Lepidoptera.sp.1
+	Leucopis.armillata
+	Lindenius.albilabris
+	Lygaeidae.sp.1
+	Lygaeidae.sp.2
+	Lygocoris.pabulinus
+	Lygus.wagneri
+	Magdalis.cerasi
+	Magdalis.ruficornis
+	Malachius.bipustulatus
+	Megabombus.ruderarius
+	Megachile.sp.1
+	Megachile.sp.2
+	Melanargia.galatea
+	Melecta.luctuosa
+	Meligethes.sp.
+	Melyridae.sp.1
+	Microlepidoptera.sp.1
+	Miridae.sp.1
+	Miris.striatus
+	Misumena.vatia
+	Mordellidae.sp.1
+	Mordellistena.brevicauda
+	Muscidae.sp.1
+	Myrmica.rubra
+	Nematocera.sp.1
+	Nematocera.sp.10
+	Nematocera.sp.11
+	Nematocera.sp.3
+	Nematocera.sp.4
+	Nematocera.sp.5
+	Nematocera.sp.6
+	Nematocera.sp.7
+	Nematocera.sp.8
+	Nematocera.sp.9
+	Nitidulidae.sp.1
+	Nitidulidae.sp.2
+	Nitidulidae.sp.3
+	Noctuidae.sp.1
+	Noctuidae.sp.2
+	Notoxus.monoceros
+	Oedemera.femorata
+	Oedemera.lurida
+	Oedemera.podagrariae
+	Oedemeridae
+	Oedemeridae.sp.1
+	Oedemeridae.sp.2
+	Oedemeridae.sp.3
+	Olibrus.aeneus
+	Olibrus.bicolor
+	Osmia.bicornis
+	Osmia.sp.1
+	Otites.sp.1
+	Oxystoma.craccae
+	Oxythyrea.funesta
+	Ozirhincus.millefolii
+	Panurginus.sp.1
+	Pentatomidae.sp.1
+	Pentatomidae.sp.2
+	Phoridae.sp.1
+	Phoridae.sp.2
+	Phyllopertha.horticola
+	Plataspidae.sp.
+	Polyommatus.semiargus
+	Proctotrupoidea.sp.1
+	Propylaea.quatuordecimpunctata
+	Pseudovadonia.livida
+	Pteromalidae.sp.1
+	Pyralidae.sp.1
+	Pyralidae.sp.2
+	Pyrrhocoris.apterus
+	Raupe.sp.1
+	Raupe.sp.2
+	Raupe.sp.3
+	Raupe.sp.4
+	Raupe.sp.5
+	Raupe.sp.6
+	Raupe.sp.7
+	Rhinophora.lepida.
+	Rhinusa.tetra
+	Rhynchaenus.populi
+	Sicus.ferrugineus
+	Spermaphagus.sericeus
+	Stenopterus.rufus
+	Strangalia.melanura
+	Strangalia.nigra
+	Syrphidae.sp.1
+	Syrphidae.sp.2
+	Syrphidae.sp.3
+	Syrphidae.sp.4
+	Syrphidae.sp.5
+	Syrphidae.sp.6
+	Syrphidae.sp.7
+	Tachina.fera
+	Thomisidae.sp.1.
+	Thysanoptera
+	Trachysiphonella.pygmaea
+	Vespidae.sp.2
+	Volucella.bombylans
+	Xylophagidae.sp.1
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Alliaria.petiolata
+	Bellis.perennis
+	Erigeron.annuus
+	Geranium.pyrenaicum
+	Geranium.robertianum
+	Potentilla.reptans
+	Verbascum.lychnitis
+
+Colnames: 
+
+	Anthaxia.nitidula
+	Anthonomus.rubi
+	Anthrenus.verbasci
+	Apidae.sp.13
+	Apidae.sp.15
+	Atrichopogon.sp.
+	Bombus.lucorum.Komplex
+	Brachycera.sp.10
+	Brachycera.sp.18
+	Brachycera.sp.20
+	Brachycera.sp.26
+	Brachycera.sp.5
+	Byturus.tomentosus
+	Carabidae.sp.1
+	Curculionidae.sp.4
+	Diptera.sp.4
+	Hoplitis.leucomelana
+	Lassioglossum-Komplex
+	Lygaeidae.sp.1
+	Lygus.wagneri
+	Noctuidae.sp.1
+	Noctuidae.sp.2
+	Oedemera.lurida
+	Osmia.sp.1
+	Panurginus.sp.1
+	Pentatomidae.sp.1
+	Rhinophora.lepida.
+	Rhinusa.tetra
+	Stenopterus.rufus
+	Vespidae.sp.2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Achillea.millefolium
+	Bunias.orientalis
+	Chaerophyllum.temulum
+	Convolvulaceae
+	Cornus.sanguinea
+	Crataegus.monogyna
+	Euonymus.europaea
+	Galium.aparine
+	Galium.mollugo
+	Galium.pycnotrichum
+	Geum.rivale
+	Geum.urbanum
+	Glechoma.hederacea
+	Knautia.arvensis
+	Lamium.album
+	Leucanthemum.vulgare
+	Lonicera.sp.
+	Lotus.corniculatus
+	Mahonia.aquifolium
+	Malus.sp.
+	Medicago.lupulina
+	Medicago.sativa
+	Melilotus.officinalis
+	Myosotis.arvensis
+	Papaver.rhoeas
+	Plantago.lanceolata
+	Plantago.major
+	Potentilla.argentea
+	Prunus.cf.Mahaleb
+	Prunus.sp.1.Kirsche
+	Prunus.sp.2.Pflaume
+	Prunus.spinosa
+	Ranunculus.arvensis
+	Ribes.cf.Alpinum
+	Rosa.canina
+	Rosacae.sp.
+	Rubus.fruticosus
+	Salvia.pratensis
+	Silene.alba
+	Taraxacum.officinale
+	Trifolium.repens
+	Tripleurospermum.sp.
+	Valerianella.locusta
+	Veronica.chamaedrys
+	Vicia.cracca
+	Vicia.hirsuta
+
+Colnames: 
+
+	Agrypnus.murinus
+	Ampedus.pomorum
+	Anaspis.frontalis
+	Anthophora.plumipes
+	Aphidoidea.
+	Apidae.sp.1
+	Apidae.sp.2
+	Apidae.sp.10
+	Apidae.sp.11
+	Apidae.sp.12
+	Apidae.sp.14
+	Apidae.sp.17
+	Apidae.sp.4
+	Apidae.sp.6
+	Apidae.sp.7
+	Apidae.sp.8
+	Apidae.sp.9
+	Apis.mellifera
+	Arachnidae.sp.1
+	Arachnidae.sp.10
+	Arachnidae.sp.11
+	Arachnidae.sp.12
+	Arachnidae.sp.2
+	Arachnidae.sp.3
+	Arachnidae.sp.4
+	Arachnidae.sp.5
+	Arachnidae.sp.6
+	Arachnidae.sp.7
+	Arachnidae.sp.8
+	Asilidae.sp.1
+	Auchenorrhyncha.sp.1
+	Blattodea
+	Bombus
+	Bombus.hortorum
+	Bombus.lapidarius
+	Bombus.pascuorum
+	Bombus.pratorum
+	Bombus.sp.1
+	Bombus.sp.2
+	Bombus.sp.3
+	Bombus.sp.4
+	Bombus.sp.5
+	Bombus.sp.6
+	Bombus.sp.7
+	Bombus.sp.8
+	Bombus.terrestris
+	Bombylius.major
+	Botanophila.fugax
+	Brachycera.sp.1
+	Brachycera.sp.11
+	Brachycera.sp.13
+	Brachycera.sp.16
+	Brachycera.sp.19
+	Brachycera.sp.2
+	Brachycera.sp.21
+	Brachycera.sp.22
+	Brachycera.sp.24
+	Brachycera.sp.25
+	Brachycera.sp.27
+	Brachycera.sp.4
+	Brachycera.sp.7
+	Brachycera.sp.8
+	Brachycera.sp.9
+	Bruchus.luteicornis
+	Byrrhidae.sp.1
+	Cantharidae.sp.1
+	Cantharidae.sp.2
+	Cantharidae.sp.4
+	Cephus.cultratus
+	Cephus.pygmaeus
+	Cerambycidae.sp.1
+	Cerambycidae.sp.2
+	Cerambycidae.sp.3
+	Ceratina.cyanea
+	Cetonia.aurata
+	Chloromyia.formosa
+	Chrysomelidae.sp.1
+	Chrysomelidae.sp.3
+	Chrysoperla.carnea
+	Chrysotoxum.vernale
+	Cidnopus.aeruginosus
+	Clytra.quadripunctata
+	Coccinella.sp.1
+	Coccinella.sp.2
+	Coccinellidae.larve
+	Coenorhinus.aequatus
+	Coleoptera.sp.12
+	Coleoptera.sp.13
+	Coleoptera.sp.28
+	Coreus.marginatus
+	Curculionidae.sp.2
+	Curculionidae.sp.5
+	Curculionidae.sp.8
+	Curculionidae.sp.9
+	Cynegetis.impunctata
+	Dasytes.caeruleus
+	Dasytes.niger
+	Dasytes.virens
+	Dermaptera.sp.1
+	Dicraeus.vagans
+	Diptera.sp.1
+	Diptera.sp.3
+	Elateridae.sp.1
+	Empis.s.str.anfractuosa
+	Empis.s.str.caudatula
+	Ensifera.sp.1
+	Ensifera.sp.10
+	Ensifera.sp.2
+	Ensifera.sp.3
+	Ensifera.sp.4
+	Ensifera.sp.5
+	Ensifera.sp.6
+	Ensifera.sp.7
+	Ensifera.sp.8
+	Ensifera.sp.9
+	Eucera.nigrescens
+	Euclidia.glyphica
+	Formica.rufibarbis
+	Formica.rufibarbis.
+	Halictus.tumulorum
+	Heteroptera.Nymphen
+	Heteroptera.sp.1
+	Heteroptera.sp.3
+	Hymenoptera.sp.1
+	Hymenoptera.sp.2
+	Hymenoptera.sp.5
+	Hymenoptera.sp.6
+	Ichneumonidae.sp.1
+	Insecta.sp.1
+	Isomira.semiflava
+	Lasioglossum.malachurum
+	Lasioglossum.sp.1
+	Lasius.fuliginosus
+	Lasius.niger
+	Lepidoptera.sp.1
+	Leucopis.armillata
+	Lindenius.albilabris
+	Lygaeidae.sp.2
+	Lygocoris.pabulinus
+	Magdalis.cerasi
+	Magdalis.ruficornis
+	Malachius.bipustulatus
+	Megabombus.ruderarius
+	Megachile.sp.1
+	Megachile.sp.2
+	Melanargia.galatea
+	Melecta.luctuosa
+	Meligethes.sp.
+	Melyridae.sp.1
+	Microlepidoptera.sp.1
+	Miridae.sp.1
+	Miris.striatus
+	Misumena.vatia
+	Mordellidae.sp.1
+	Mordellistena.brevicauda
+	Muscidae.sp.1
+	Nematocera.sp.1
+	Nematocera.sp.10
+	Nematocera.sp.11
+	Nematocera.sp.3
+	Nematocera.sp.4
+	Nematocera.sp.5
+	Nematocera.sp.6
+	Nematocera.sp.7
+	Nematocera.sp.8
+	Nematocera.sp.9
+	Nitidulidae.sp.1
+	Nitidulidae.sp.2
+	Nitidulidae.sp.3
+	Notoxus.monoceros
+	Oedemera.femorata
+	Oedemera.podagrariae
+	Oedemeridae
+	Oedemeridae.sp.1
+	Oedemeridae.sp.2
+	Oedemeridae.sp.3
+	Olibrus.aeneus
+	Olibrus.bicolor
+	Osmia.bicornis
+	Otites.sp.1
+	Oxystoma.craccae
+	Oxythyrea.funesta
+	Ozirhincus.millefolii
+	Pentatomidae.sp.2
+	Phoridae.sp.1
+	Phoridae.sp.2
+	Phyllopertha.horticola
+	Plataspidae.sp.
+	Proctotrupoidea.sp.1
+	Propylaea.quatuordecimpunctata
+	Pseudovadonia.livida
+	Pteromalidae.sp.1
+	Pyralidae.sp.1
+	Pyralidae.sp.2
+	Pyrrhocoris.apterus
+	Raupe.sp.1
+	Raupe.sp.2
+	Raupe.sp.3
+	Raupe.sp.4
+	Raupe.sp.5
+	Raupe.sp.6
+	Raupe.sp.7
+	Rhynchaenus.populi
+	Sicus.ferrugineus
+	Spermaphagus.sericeus
+	Strangalia.melanura
+	Strangalia.nigra
+	Syrphidae.sp.1
+	Syrphidae.sp.2
+	Syrphidae.sp.3
+	Syrphidae.sp.4
+	Syrphidae.sp.5
+	Syrphidae.sp.6
+	Syrphidae.sp.7
+	Tachina.fera
+	Thomisidae.sp.1.
+	Thysanoptera
+	Trachysiphonella.pygmaea
+	Volucella.bombylans
+	Xylophagidae.sp.1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Vicia.sativa
+
+Colnames: 
+
+	Cantharis.sp.1
+	Cantharis.sp.2
+	Curculionidae.sp.3
+	Myrmica.rubra
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Thlaspi.sp.
+
+Colnames: 
+
+	Chrysomelidae.sp.2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Trifolium.pratense
+
+Colnames: 
+
+	Curculionidae.sp.7
+	Polyommatus.semiargus
+
+__________________________
+
+__________________________
+

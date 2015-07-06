@@ -1,0 +1,163 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Aristotelia chilensis
+	Alstroemeria aurea
+	Schinus patagonicus
+	Vicia nigricans
+	Cynanchum diemii
+	Ribes magellanicum
+	Tristerix corymbosus
+
+Colnames: 
+
+	Policana albopilosa
+	Bombus dahlbomii
+	Trichophthalma amoena
+	Bombus ruderatus
+	Syrphus octomaculatus
+	Allograpta.Toxomerus
+	Trichophthalma jaffueli
+	Phthiria
+	Manuelia postica
+	Nitidulidae
+	Megachile2
+	Braconidae3
+	Vespula germanica
+	Torymidae2
+	Phthiria1
+	Coleoptera9
+	Svastrides melanura
+	Ruizantheda nigrocaerulea
+	Megachile1
+	Sephanoides galeritus
+	Salpingidae
+	Diptera5
+	Diptera3
+	Ichneumonidae7
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Aristotelia chilensis
+
+Colnames: 
+
+	Policana albopilosa
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Alstroemeria aurea
+
+Colnames: 
+
+	Bombus ruderatus
+	Syrphus octomaculatus
+	Trichophthalma jaffueli
+	Phthiria
+	Megachile2
+	Vespula germanica
+	Phthiria1
+	Svastrides melanura
+	Ruizantheda nigrocaerulea
+	Megachile1
+	Diptera5
+	Diptera3
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Schinus patagonicus
+
+Colnames: 
+
+	Trichophthalma amoena
+	Allograpta.Toxomerus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Cynanchum diemii
+
+Colnames: 
+
+	Braconidae3
+	Torymidae2
+	Coleoptera9
+	Salpingidae
+	Ichneumonidae7
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Ribes magellanicum
+
+Colnames: 
+
+	Nitidulidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Tristerix corymbosus
+
+Colnames: 
+
+	Manuelia postica
+	Sephanoides galeritus
+
+__________________________
+
+__________________________
+

@@ -1,0 +1,105 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Diplopterys.pubipetala
+	Byrsonima.gardnerana
+	Banisteriopsis.muricata
+	Heteropterys.sp1
+	Heteropterys.sp2
+	Dicella.bracteosa
+	Carolus.chasei
+	Stigmaphyllon.paralias
+	Banisteriopsis.stellaris
+	Banisteriopsis.schizoptera
+	Stigmaphyllon.auriculatum
+	Stigmaphyllon.ciliatum
+	Janusia.anisandra
+
+Colnames: 
+
+	Centris.aenea
+	Centris.fuscata
+	Centris.caxiensis
+	Centris.tarsata
+	Centris.flavifrons
+	Centris.trigonoides
+	Centris.obsoleta
+	Epicharis.sp2
+	Apis.mellifera
+	Centris.sp3
+	Centris.sp1
+	Xylocopa.sp
+	Xylocopa.grisescens
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Diplopterys.pubipetala
+	Banisteriopsis.muricata
+	Heteropterys.sp1
+	Heteropterys.sp2
+
+Colnames: 
+
+	Centris.trigonoides
+	Centris.obsoleta
+	Epicharis.sp2
+	Apis.mellifera
+	Centris.sp3
+	Centris.sp1
+	Xylocopa.sp
+	Xylocopa.grisescens
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Dicella.bracteosa
+	Carolus.chasei
+	Stigmaphyllon.paralias
+	Banisteriopsis.stellaris
+	Banisteriopsis.schizoptera
+	Janusia.anisandra
+
+Colnames: 
+
+	Centris.aenea
+	Centris.fuscata
+	Centris.caxiensis
+	Centris.tarsata
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Byrsonima.gardnerana
+	Stigmaphyllon.auriculatum
+	Stigmaphyllon.ciliatum
+
+Colnames: 
+
+	Centris.flavifrons
+
+__________________________
+
+__________________________
+

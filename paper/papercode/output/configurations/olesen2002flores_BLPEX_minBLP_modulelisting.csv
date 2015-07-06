@@ -1,0 +1,145 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Azorina:vidalii
+	Crithmum:maritimum
+	Solidago:sempervivens
+	Beta:vulgaris
+	Daucus:carota
+	Silene:vulgaris
+	Chamomilla:suaveolens
+	Lotus:corniculatus
+	Freesia:refracta
+	Reseda:luteola
+
+Colnames: 
+
+	Halictus.sp.
+	Sepsis.thoracica
+	Agrotis.ipsilon
+	Bombus.ruderatus
+	Colias.crocea
+	Musca.domestica
+	Apis.mellifera
+	Lucilia.sericata
+	Lasius.niger
+	Anothomyia.pluvialis
+	Calliphora.vemitoria
+	Eristalix.tenax
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Azorina:vidalii
+
+Colnames: 
+
+	Lasius.niger
+	Calliphora.vemitoria
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Solidago:sempervivens
+
+Colnames: 
+
+	Agrotis.ipsilon
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Beta:vulgaris
+	Silene:vulgaris
+
+Colnames: 
+
+	Sepsis.thoracica
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Crithmum:maritimum
+	Daucus:carota
+
+Colnames: 
+
+	Musca.domestica
+	Lucilia.sericata
+	Eristalix.tenax
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Chamomilla:suaveolens
+
+Colnames: 
+
+	Anothomyia.pluvialis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Lotus:corniculatus
+	Freesia:refracta
+
+Colnames: 
+
+	Bombus.ruderatus
+	Colias.crocea
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Reseda:luteola
+
+Colnames: 
+
+	Halictus.sp.
+	Apis.mellifera
+
+__________________________
+
+__________________________
+

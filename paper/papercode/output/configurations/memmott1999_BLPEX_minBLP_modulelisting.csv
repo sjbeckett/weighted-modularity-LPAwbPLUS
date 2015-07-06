@@ -1,0 +1,453 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Agrimonium.eupatorium
+	Leontodon.autumnalis
+	Lotus.corniculatus
+	Medicago.lupulina
+	Rubus.fruticosus
+	Hypochaeris.radicata
+	Centaurea.nigra
+	Euphrasia.officinalis
+	Linum.catharticum
+	Convolvulus.arvensis
+	Knautia.arvensis
+	Aethusa.cynapium
+	Eupatorium.cannabinum
+	Plantago.major
+	Leontodon.saxatilis
+	Lathyrus.pratensis
+	Clematis.vitalba
+	Senecio.jacobaea
+	Trifolium.pratense
+	Chamerion.angustifolium
+	Leontodon.hispidus
+	Crepis.capillaris
+	Torilis.japonica
+	Angelica.sylvestris
+	Daucus.carota
+
+Colnames: 
+
+	Coleoptera.spec1
+	Coleoptera.spec2
+	Coleoptera.spec3
+	Coleoptera.spec4
+	Coleoptera.spec5
+	Coleoptera.spec6
+	Coleoptera.spec7
+	Cantharidae.spec1
+	Curculionidae.spec1
+	Diptera.spec1
+	Diptera.spec2
+	Diptera.spec3
+	Diptera.spec4
+	Conipidae.spec1
+	Diptera.spec5
+	Diptera.spec6
+	Scatophaga.stercoraria
+	Diptera.spec7
+	Diptera.spec8
+	Diptera.spec9
+	Diptera.spec10
+	Diptera.spec11
+	Diptera.spec12
+	Diptera.spec13
+	Diptera.spec14
+	Diptera.spec15
+	Diptera.spec16
+	Diptera.spec17
+	Diptera.spec18
+	Diptera.spec19
+	Eriothrix.rufomaculata
+	Diptera.spec20
+	Diptera.spec21
+	Diptera.spec22
+	Diptera.spec23
+	Diptera.spec24
+	Diptera.spec25
+	Tephretidae.spec1
+	Diptera.spec26
+	Diptera.spec27
+	Chrysotoxum.bicinctum
+	Episyrphus.arbustorum
+	Episyrphus.balteatus
+	Eristalis.pertinax
+	Eristalis.tenax
+	Helophilus.pendulus
+	Helophilus.trivittatus
+	Melanostoma.mellinum
+	Melanostoma.scalare
+	Meliscaeva.auricollis
+	Metasyrphus.corollae
+	Platycheirus.albimanus
+	Platycheirus.clypeatus
+	Platycheirus.scutatus
+	Rhingia.campestris
+	Scaeva.pyrastri
+	Sphaerophoria.scripta
+	Syritta.pipiens
+	Syrphus.ribesii
+	Syrphus.vitripennis
+	Xanthogramma.pedissequum
+	Bombus.lapidarius
+	Bombus.muscorum
+	Bombus.pascuorum
+	Bombus.terrestris
+	Psithyrus.spec1
+	Apis.mellifera
+	Parasitica
+	Formicidae.spec1
+	Symphyta.spec1
+	Symphyta.spec2
+	solitary.bees
+	Polyommatus.icarus
+	Pyonia.tithonus
+	Pieris.brassicae
+	Incurvariidae.spec1
+	Maniola.jurtina
+	Thymelicus.sylvestris
+	Aglais.urticae
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Leontodon.autumnalis
+
+Colnames: 
+
+	Coleoptera.spec7
+	Diptera.spec10
+	Eristalis.tenax
+	Metasyrphus.corollae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Lotus.corniculatus
+
+Colnames: 
+
+	Polyommatus.icarus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Agrimonium.eupatorium
+	Medicago.lupulina
+	Linum.catharticum
+	Convolvulus.arvensis
+	Leontodon.saxatilis
+	Senecio.jacobaea
+
+Colnames: 
+
+	Diptera.spec22
+	Episyrphus.balteatus
+	Melanostoma.mellinum
+	Sphaerophoria.scripta
+	solitary.bees
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Rubus.fruticosus
+
+Colnames: 
+
+	Syritta.pipiens
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Hypochaeris.radicata
+
+Colnames: 
+
+	Coleoptera.spec3
+	Coleoptera.spec6
+	Diptera.spec23
+	Pieris.brassicae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Centaurea.nigra
+
+Colnames: 
+
+	Cantharidae.spec1
+	Conipidae.spec1
+	Diptera.spec16
+	Apis.mellifera
+	Symphyta.spec2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Euphrasia.officinalis
+
+Colnames: 
+
+	Eriothrix.rufomaculata
+	Helophilus.pendulus
+	Platycheirus.albimanus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 8
+
+Rownames: 
+
+	Knautia.arvensis
+
+Colnames: 
+
+	Scatophaga.stercoraria
+	Diptera.spec9
+	Bombus.terrestris
+	Psithyrus.spec1
+	Pyonia.tithonus
+	Maniola.jurtina
+	Aglais.urticae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 9
+
+Rownames: 
+
+	Aethusa.cynapium
+
+Colnames: 
+
+	Diptera.spec6
+	Diptera.spec7
+	Diptera.spec19
+	Meliscaeva.auricollis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 10
+
+Rownames: 
+
+	Eupatorium.cannabinum
+
+Colnames: 
+
+	Diptera.spec2
+	Diptera.spec4
+	Diptera.spec24
+	Helophilus.trivittatus
+	Scaeva.pyrastri
+
+__________________________
+
+Depth: 1
+
+Nr of module: 11
+
+Rownames: 
+
+	Plantago.major
+
+Colnames: 
+
+	Melanostoma.scalare
+	Platycheirus.clypeatus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 12
+
+Rownames: 
+
+	Lathyrus.pratensis
+
+Colnames: 
+
+	Diptera.spec5
+	Bombus.pascuorum
+
+__________________________
+
+Depth: 1
+
+Nr of module: 13
+
+Rownames: 
+
+	Clematis.vitalba
+	Crepis.capillaris
+
+Colnames: 
+
+	Diptera.spec21
+	Parasitica
+
+__________________________
+
+Depth: 1
+
+Nr of module: 14
+
+Rownames: 
+
+	Trifolium.pratense
+
+Colnames: 
+
+	Coleoptera.spec1
+	Curculionidae.spec1
+	Eristalis.pertinax
+	Bombus.muscorum
+	Thymelicus.sylvestris
+
+__________________________
+
+Depth: 1
+
+Nr of module: 15
+
+Rownames: 
+
+	Chamerion.angustifolium
+
+Colnames: 
+
+	Diptera.spec8
+	Diptera.spec17
+	Rhingia.campestris
+	Bombus.lapidarius
+
+__________________________
+
+Depth: 1
+
+Nr of module: 16
+
+Rownames: 
+
+	Leontodon.hispidus
+
+Colnames: 
+
+	Coleoptera.spec2
+	Coleoptera.spec4
+	Coleoptera.spec5
+	Diptera.spec3
+	Diptera.spec18
+	Incurvariidae.spec1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 17
+
+Rownames: 
+
+	Torilis.japonica
+
+Colnames: 
+
+	Diptera.spec15
+	Syrphus.vitripennis
+	Formicidae.spec1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 18
+
+Rownames: 
+
+	Angelica.sylvestris
+
+Colnames: 
+
+	Diptera.spec12
+	Diptera.spec14
+	Diptera.spec25
+	Diptera.spec27
+	Episyrphus.arbustorum
+	Symphyta.spec1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 19
+
+Rownames: 
+
+	Daucus.carota
+
+Colnames: 
+
+	Diptera.spec1
+	Diptera.spec11
+	Diptera.spec13
+	Diptera.spec20
+	Tephretidae.spec1
+	Diptera.spec26
+	Chrysotoxum.bicinctum
+	Platycheirus.scutatus
+	Syrphus.ribesii
+	Xanthogramma.pedissequum
+
+__________________________
+
+__________________________
+

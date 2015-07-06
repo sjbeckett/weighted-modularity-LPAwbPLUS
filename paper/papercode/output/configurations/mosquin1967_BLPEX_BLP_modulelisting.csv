@@ -1,0 +1,207 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Cerastium.alpinum
+	Caltha.palustris
+	Papaver.radicatum
+	Potentilla.vahliana
+	Dryas.integrifolia
+	Geum.rossii
+	Astragalus.alpinus
+	Oxytropis.arctica
+	Petasites.frigidus
+	Arnica.alpina
+	Taraxacum.sp.
+
+Colnames: 
+
+	Boloria.improba
+	Colias.hecla
+	Colias.nastes
+	Anarta.richardsoni
+	Rhamphomyia.sp.
+	Boreellus.atriceps
+	Protocalliphora.sp.
+	Spilogona.aesturium
+	Spilogona.almquistii
+	Spilogona.dorsata
+	Spilogona.hurdiana
+	Spilogona.latilamina
+	Spilogona.melanosoma
+	Spilogona.projecta
+	Spilogona.sanctipauli
+	Eupogonomyia.probilofensis
+	Pogonomyiodes.segnis
+	Bombus.polaris
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Cerastium.alpinum
+
+Colnames: 
+
+	Spilogona.projecta
+	Spilogona.sanctipauli
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Caltha.palustris
+
+Colnames: 
+
+	Spilogona.dorsata
+	Spilogona.hurdiana
+	Spilogona.melanosoma
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Papaver.radicatum
+
+Colnames: 
+
+	Pogonomyiodes.segnis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Potentilla.vahliana
+
+Colnames: 
+
+	Protocalliphora.sp.
+	Spilogona.latilamina
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Dryas.integrifolia
+
+Colnames: 
+
+	Boloria.improba
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Geum.rossii
+
+Colnames: 
+
+	Spilogona.almquistii
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Astragalus.alpinus
+
+Colnames: 
+
+	Colias.hecla
+	Colias.nastes
+
+__________________________
+
+Depth: 1
+
+Nr of module: 8
+
+Rownames: 
+
+	Oxytropis.arctica
+
+Colnames: 
+
+	Anarta.richardsoni
+
+__________________________
+
+Depth: 1
+
+Nr of module: 9
+
+Rownames: 
+
+	Petasites.frigidus
+
+Colnames: 
+
+	Bombus.polaris
+
+__________________________
+
+Depth: 1
+
+Nr of module: 10
+
+Rownames: 
+
+	Arnica.alpina
+
+Colnames: 
+
+	Eupogonomyia.probilofensis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 11
+
+Rownames: 
+
+	Taraxacum.sp.
+
+Colnames: 
+
+	Rhamphomyia.sp.
+	Boreellus.atriceps
+	Spilogona.aesturium
+
+__________________________
+
+__________________________
+

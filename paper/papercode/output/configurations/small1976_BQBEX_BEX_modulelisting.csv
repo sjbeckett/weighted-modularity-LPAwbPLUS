@@ -1,0 +1,171 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Salix.fragilis
+	Chamaedaphne.calyculata
+	Nemopanthus.mucronata
+	Andromeda.glaucophylla
+	Kalmia.polifolia
+	Smilacina.trifolia
+	Vaccinium.myrtilloides
+	Aronia.melanocarpa
+	Ledum.groenlandicum
+	Gaylussacia.baccata
+	Kalmia.angustifolia
+	Calopogon.pulchellus
+	Spiraea.alba
+
+Colnames: 
+
+	Adela.purpurea
+	Thymelicus.lineola
+	Macrodactlyus.subspinosus
+	Cyphon.variabilis
+	Hybomitra.minuscula
+	Hybomitra.typhus
+	Dilophus.caurinus
+	Spilogona.fatima
+	Shaerophoria.sp.
+	Pyrophaena.rosarum
+	Melanostoma.sp.
+	Sercomyia.transversa
+	Eristalis.dimidiata
+	Helophilus.latifrons
+	Helophilus.fasciatus
+	Helophilus.laetus
+	Syritta.pipiens
+	Toxomerus.marginatus
+	Syrphus.torvus
+	Apis.mellifera
+	Bombus.terricola
+	Pyrobombus.impatiens
+	Pyrobombus.perplexus
+	Pyrobombus.sandersoni
+	Pyrobombus.ternarius
+	Andrena.alleghaniensis
+	Andrena.bradleyi
+	Andrena.carlini
+	Andrena.carolina
+	Andrena.mandibularis
+	Andrena.regularis
+	Andrena.vicina
+	Colletes.inaequalis
+	Dialictus.pilosus
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Aronia.melanocarpa
+	Ledum.groenlandicum
+
+Colnames: 
+
+	Shaerophoria.sp.
+	Eristalis.dimidiata
+	Helophilus.latifrons
+	Helophilus.fasciatus
+	Helophilus.laetus
+	Andrena.alleghaniensis
+	Colletes.inaequalis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Andromeda.glaucophylla
+
+Colnames: 
+
+	Pyrobombus.impatiens
+	Pyrobombus.ternarius
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Salix.fragilis
+	Kalmia.polifolia
+	Vaccinium.myrtilloides
+	Gaylussacia.baccata
+
+Colnames: 
+
+	Adela.purpurea
+	Cyphon.variabilis
+	Sercomyia.transversa
+	Apis.mellifera
+	Bombus.terricola
+	Pyrobombus.perplexus
+	Pyrobombus.sandersoni
+	Andrena.bradleyi
+	Andrena.carolina
+	Andrena.vicina
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Chamaedaphne.calyculata
+	Nemopanthus.mucronata
+
+Colnames: 
+
+	Dilophus.caurinus
+	Spilogona.fatima
+	Melanostoma.sp.
+	Syrphus.torvus
+	Andrena.carlini
+	Andrena.mandibularis
+	Andrena.regularis
+	Dialictus.pilosus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Smilacina.trifolia
+	Kalmia.angustifolia
+	Calopogon.pulchellus
+	Spiraea.alba
+
+Colnames: 
+
+	Thymelicus.lineola
+	Macrodactlyus.subspinosus
+	Hybomitra.minuscula
+	Hybomitra.typhus
+	Pyrophaena.rosarum
+	Syritta.pipiens
+	Toxomerus.marginatus
+
+__________________________
+
+__________________________
+

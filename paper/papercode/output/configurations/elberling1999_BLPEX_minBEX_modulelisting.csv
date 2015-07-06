@@ -1,0 +1,395 @@
+
+Depth: 0
+
+Nr of module: 1
+
+Rownames: 
+
+	Arabis.alpina
+	Astragalus.alpinus
+	Bartsia.alpina
+	Cassiope.hypniodes
+	Cassiope.tetragona
+	Cerastium.alpinun
+	Diapensia.lapponica
+	Dryas.octopetala
+	Parnassia.palustris
+	Pinguicula.alpina
+	Polygonum.viviparum
+	Potentilla.crantzii
+	Rhodiola.rosea
+	Rhododendron.lapponicum
+	Salix.lanata
+	Salix.polaris
+	Salix.reticulata
+	Saxifraga.aizoides
+	Saxifraga.oppositifolia
+	Silene.acaulis
+	Taraxacum.sp.
+	Trollius.europaeus
+	Viola.biflora
+
+Colnames: 
+
+	Phytomyza.aquilonia
+	Alliopsis.glacialis
+	Botanophilia.bidens
+	Delai.piliventris
+	Egle.minuta
+	Egle.parva
+	Egle.sp.
+	Paradelia.sp.
+	Pegomya.haemorrhoum
+	Pegomya.sp.
+	Pegoplata.aestiva
+	Dipt..sp.
+	Dipt..sp..1
+	Dipt..sp..2
+	Zaphne.barbiventris
+	Zaphne.frontata
+	Zaphne.sp.
+	Zaphne.sp..1
+	Bellardia.pubicornis
+	Dasineura.sp.
+	Acamptocladius.submontanus
+	Corynoneura.scutella
+	Heterotrissocladius.subpilosus
+	Limnophyes.brachytomus
+	Limnophyes.natalensis
+	Limnophyes.ninae
+	Limnophyes.schnelli
+	Micropsectra.radialis
+	Micropsectra.sp.
+	Micropsectra.sp..1
+	Oliveridia.tricornis
+	Pseudosmittia.oxoniana
+	Smittia.betuletorum
+	Smittia.aterrima
+	Smittia.sp.
+	Smittia.sp..1
+	Chloropinae.sp.
+	Dolichopus.plumipes
+	Rhaphium.crassipes
+	Empis.lucida
+	Rhamphomyia.aethiops
+	Rhamphomyia.obscuripennis
+	Rhamphomyia.morio
+	Rhamphomyia.reflexa
+	Fannia.mollissima
+	Platypalpus.nigritarsis
+	Phyllolabis.macroura
+	Coenosia.atritibia
+	Coenosia.octopunctata
+	Phaonia.alpicola
+	Phaonia.lugubris
+	Phaonia.subfuscinereis
+	Spilogona.alpica
+	Spilogona.megastoma
+	Spilogona.nitidicauda
+	Spilogona.triangulifera
+	Thricops.cunctans
+	Thricops.furcatus
+	Thricops.hirtulus
+	Thricops.nigritellus
+	Thricops.rostratus
+	Boletina.sp.
+	Mycomya.fuscata
+	Megaselia.cirriventris
+	Megaselia.coci
+	Megaselia.digitalis
+	Megaselia.diversa
+	Megaselia.girandii
+	Megaselia.groenlandica
+	Megaselia.pleuralis
+	Megaselia.sordida
+	Megaselia.sp.
+	Parapiophila.vulgaris
+	Chamaepsila.morio
+	Gimnomera.dorsala
+	Bradysia.girandii
+	Bradysia.sp.
+	Bradysia.sp..1
+	Bradysia.sp..2
+	Corynoptera.refrigerata
+	Corynoptera.sp.
+	Corynoptera.sp..1
+	Lycoriella.curvispina
+	Lycoriella.freyi
+	Lycoriella.sp.
+	Lycoriella.sp..1
+	Trichosia.truncata
+	Allophorocera.lapponica
+	Podabrus.sp.
+	Arpedium.sp.
+	Bombus.alpinus
+	Bombus.hyperboreus
+	Alysiinae.sp.
+	Alysiinae.sp..1
+	Alysiinae.sp..2
+	Alysiinae.sp..3
+	Alysiinae.sp..4
+	Cotesia.sp.
+	Tetrastichinae.sp.
+	Aclastus.sp.
+	Aclastus.sp..1
+	Orthocentrinae.sp.
+	Phygadenon.sp.
+	Porizontini.sp.
+	Ichn..sp.
+	Ichn..sp..1
+	Ichn..sp..2
+	Ichn..sp..3
+	Stenomacrus.sp.
+	Platygaster.sp.
+	Pteromalidae.sp.
+	Pteromalidae.sp..1
+	Xestommaster.sp.
+	Cidaria.sp.
+	Urbicola.sp.
+	Anarta.sp.
+	Thysan..sp.
+	Limnophilus.sp.
+
+__________________________
+
+__________________________
+
+Depth: 1
+
+Nr of module: 1
+
+Rownames: 
+
+	Astragalus.alpinus
+	Bartsia.alpina
+
+Colnames: 
+
+	Bradysia.girandii
+	Bombus.hyperboreus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Dryas.octopetala
+	Silene.acaulis
+
+Colnames: 
+
+	Botanophilia.bidens
+	Pseudosmittia.oxoniana
+	Chloropinae.sp.
+	Empis.lucida
+	Phaonia.lugubris
+	Spilogona.megastoma
+	Megaselia.coci
+	Megaselia.digitalis
+	Megaselia.diversa
+	Megaselia.sordida
+	Bradysia.sp.
+	Bradysia.sp..2
+	Alysiinae.sp.
+	Alysiinae.sp..1
+	Alysiinae.sp..3
+	Aclastus.sp..1
+	Porizontini.sp.
+	Ichn..sp..1
+	Cidaria.sp.
+	Urbicola.sp.
+	Anarta.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Cassiope.tetragona
+	Rhododendron.lapponicum
+	Salix.lanata
+	Salix.polaris
+	Salix.reticulata
+
+Colnames: 
+
+	Egle.parva
+	Egle.sp.
+	Dipt..sp..1
+	Bellardia.pubicornis
+	Heterotrissocladius.subpilosus
+	Limnophyes.schnelli
+	Micropsectra.radialis
+	Coenosia.octopunctata
+	Chamaepsila.morio
+	Corynoptera.refrigerata
+	Lycoriella.sp..1
+	Podabrus.sp.
+	Bombus.alpinus
+	Ichn..sp.
+	Limnophilus.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Cerastium.alpinun
+	Diapensia.lapponica
+	Rhodiola.rosea
+
+Colnames: 
+
+	Pegomya.haemorrhoum
+	Dipt..sp.
+	Zaphne.barbiventris
+	Dasineura.sp.
+	Corynoneura.scutella
+	Limnophyes.ninae
+	Micropsectra.sp..1
+	Smittia.betuletorum
+	Dolichopus.plumipes
+	Spilogona.triangulifera
+	Megaselia.girandii
+	Megaselia.groenlandica
+	Corynoptera.sp.
+	Corynoptera.sp..1
+	Lycoriella.curvispina
+	Lycoriella.sp.
+	Trichosia.truncata
+	Arpedium.sp.
+	Aclastus.sp.
+	Phygadenon.sp.
+	Ichn..sp..2
+	Ichn..sp..3
+	Platygaster.sp.
+	Xestommaster.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Trollius.europaeus
+
+Colnames: 
+
+	Egle.minuta
+	Fannia.mollissima
+	Thricops.hirtulus
+	Thricops.nigritellus
+	Gimnomera.dorsala
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Arabis.alpina
+	Parnassia.palustris
+	Saxifraga.oppositifolia
+
+Colnames: 
+
+	Delai.piliventris
+	Pegoplata.aestiva
+	Dipt..sp..2
+	Zaphne.sp..1
+	Acamptocladius.submontanus
+	Limnophyes.brachytomus
+	Oliveridia.tricornis
+	Smittia.aterrima
+	Phyllolabis.macroura
+	Thricops.rostratus
+	Boletina.sp.
+	Megaselia.pleuralis
+	Allophorocera.lapponica
+	Pteromalidae.sp..1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Pinguicula.alpina
+	Polygonum.viviparum
+	Taraxacum.sp.
+	Viola.biflora
+
+Colnames: 
+
+	Micropsectra.sp.
+	Smittia.sp.
+	Rhamphomyia.aethiops
+	Rhamphomyia.obscuripennis
+	Rhamphomyia.morio
+	Rhamphomyia.reflexa
+	Coenosia.atritibia
+	Phaonia.alpicola
+	Spilogona.nitidicauda
+	Megaselia.sp.
+	Bradysia.sp..1
+	Lycoriella.freyi
+	Alysiinae.sp..4
+	Stenomacrus.sp.
+	Pteromalidae.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 8
+
+Rownames: 
+
+	Cassiope.hypniodes
+	Potentilla.crantzii
+	Saxifraga.aizoides
+
+Colnames: 
+
+	Phytomyza.aquilonia
+	Alliopsis.glacialis
+	Paradelia.sp.
+	Pegomya.sp.
+	Zaphne.frontata
+	Zaphne.sp.
+	Limnophyes.natalensis
+	Smittia.sp..1
+	Rhaphium.crassipes
+	Platypalpus.nigritarsis
+	Phaonia.subfuscinereis
+	Spilogona.alpica
+	Thricops.cunctans
+	Thricops.furcatus
+	Mycomya.fuscata
+	Megaselia.cirriventris
+	Parapiophila.vulgaris
+	Alysiinae.sp..2
+	Cotesia.sp.
+	Tetrastichinae.sp.
+	Orthocentrinae.sp.
+	Thysan..sp.
+
+__________________________
+
+__________________________
+

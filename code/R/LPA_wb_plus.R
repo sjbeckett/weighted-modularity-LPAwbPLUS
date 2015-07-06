@@ -55,7 +55,7 @@ LPA_wb_plus <- function(MATRIX,initialmoduleguess=NA) {
 Exhaustive_LPA_wb_plus <- function(MATRIX,mini=4,reps=10) {
 	A=LPA_wb_plus(MATRIX)
 
-	mods=length(unique(A)[[1]])
+	mods=length(unique(A[[1]]))
 
 	if((mods-mini) > 0) {
 		for(aa in mini:mods) {
