@@ -1,7 +1,7 @@
 weighted-modularity-LPAwbPLUS
 =============================
 
-Two algorithms for finding modularity in bipartite networks: LPAwb+ and Exhaustive LPAwb+.
+Two algorithms for finding modularity in bipartite networks are presented: LPAwb+ and Exhaustive LPAwb+.
 
 These are based on the LPAb+ algorithm of Liu & Murata, 2010 for use on bipartite/two-mode networks. The algorithm has been modified such that the weighted modularity of a network can be found (note that the result is equivalent to that found by the LPAb+ algorithm if the network is binary). Code is currently available for Julia, MATLAB/Octave and R langauges.
 
@@ -23,6 +23,8 @@ LPA_wb_plus(MATRIX) # find labels and weighted modularity using LPAwb+
 ```
 where MATRIX is the incidence/biadjacency matrix describing the input network. Three outputs are returned: `redlabels` - the module labels for each row in the input matrix, `bluelabels` - the module labels for each row in the input matrix and `Q` - the modularity score.
 
+Code for plotting modular structure is also provided. Please view the REAME files within the relevant code folder.
+
 
 
 
@@ -33,7 +35,6 @@ For details of the LPAb+ algorithm please see [Liu & Murata, 2010](https://www.f
 
 Liu X., Murata T. 2010. An Efficient Algorithm for Optimizing Bipartite Modularity in Bipartite Networks. Journal of Advanced Computational Intelligence and Intelligent Informatics (JACIII) 14(4): 408-415.
 
-Further details for LPAwb+ are being written in (Beckett, unsubmitted)
 
 
 Contact
