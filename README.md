@@ -1,4 +1,4 @@
-<div class="align-right">[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.19477.svg)](http://dx.doi.org/10.5281/zenodo.19477)</div>
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.19477.svg)](http://dx.doi.org/10.5281/zenodo.19477)
 
 weighted-modularity-LPAwbPLUS
 =============================
