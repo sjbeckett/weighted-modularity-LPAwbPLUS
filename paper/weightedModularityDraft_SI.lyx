@@ -145,7 +145,14 @@ b
 
 \begin_layout Standard
 The results from the synthetic ensemble are saved in the folder paper/papercode/
-syntheticEnsemble.RData in the supporting data repository (CITE).
+syntheticEnsemble.RData in the supporting data repository 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "beckettZenodo"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2055,7 +2062,14 @@ Details for viewing plant-pollinator partitions
 \begin_layout Standard
 The modular partitions found for each plant-pollinator network for both
  binary and quantitative cases are described in the supporting data repository
- (CITE).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "beckettZenodo"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2086,16 +2100,16 @@ Then the final string of important characters again identifies whether it
  was found by.
  If this string is preceded by either min or max - this means that multiple
  network configurations were found with the highest modularity score detected
- by one of the two competing algorithms (see column U in tables 
+ by one of the two competing algorithms (see column U in tables S
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:Extra-results-Bin"
 
 \end_inset
 
--
+-S
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:Extra-results-Quant"
 
 \end_inset

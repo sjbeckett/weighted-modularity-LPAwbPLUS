@@ -4,6 +4,7 @@
 \begin_header
 \textclass article
 \begin_preamble
+
 \usepackage{colortbl}
 \usepackage{soul}
 \definecolor{lcyan}{RGB}{204,229,255}
@@ -461,8 +462,10 @@ The definitions of binary and weighted modularity are presented.
  A further modification allowing a more thorough search of modularity space
  is also presented.
  I call this Exhaustive LPAwb+.
- The three algorithms for maximising weighted modularity are compared on
- a dataset of 23 plant-pollinator networks.
+ First, the performance of LPAwb+ and Exhaustive LPAwb+ are assessed using
+ an ensemble of synthetic weighted networks with a given modular structure.
+ Then, all three algorithms for maximising weighted modularity are compared
+ on an empirical dataset containing 23 plant-pollinator networks.
  I find that QuanBiMo is highly sensitive to its input parameters, which
  may lead to reporting of modularity far below the optimal value in a given
  network.
@@ -472,7 +475,8 @@ The definitions of binary and weighted modularity are presented.
  on smaller networks, whilst the speed of LPAwb+ makes it particularly suitable
  for use on larger datasets.
  The inclusion of quantitative information in networks alters the structure
- of detected modules.
+ of detected modules, which may have implications for how moudularity is
+ used.
 \end_layout
 
 \begin_layout Section*
@@ -2064,6 +2068,24 @@ Some network properties are shown in Table S1.
 Computing Modularity
 \end_layout
 
+\begin_layout Subsubsection*
+Synthetic networks
+\end_layout
+
+\begin_layout Standard
+LPAwb+ and Exhaustive LPAwb+ were each run once on each of the 800 quantitative
+ synthetic networks.
+ The performance of these algorithms at detecting weighted modular structure
+ was assessed using three indicators: the ratio of the number of modules
+ between the detected and synthetic networks, the ratio of modularity between
+ the detected and synthetic networks and the normalised mutual information
+ between that detected and that in the synthetic networks.
+\end_layout
+
+\begin_layout Subsubsection*
+Plant-pollinator networks
+\end_layout
+
 \begin_layout Standard
 I computed the binary and quantitative networks for each of the datasets,
  removing rows and columns that contained no interaction data from the analysis.
@@ -2082,30 +2104,15 @@ y.
 Code implementations for the LPAwb+ algorithm are currently available online
  for the Julia, MATLAB/Octave and R programming languages.
  This and the R code used to create the figures and perform the analysis
- presented in this paper is available online
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textcolor{white}{
-\backslash
-rule{
-\backslash
-linewidth}{1pt}}
-\end_layout
+ presented in this paper is available in a supporting online depository
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "beckettZenodo"
 
 \end_inset
 
- (
-\bar under
-\color blue
-https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS
-\bar default
-\color inherit
- ).
+.
  For fair comparison in timing the algorithms all computations were performed
  in R version 3.1.1 using version 2.04 of the bipartite package on an Intel(R)
  Core(TM) i5-4570 CPU @ 3.20GHz desktop computer.
@@ -2212,7 +2219,7 @@ Community detection is affected by the level of network noise, as well as
  (see Figure S2).
  Over-reporting bias of the number of modules was reduced when the number
  of synthetic modules was greater, and more similar modularity scores were
- achieved when connectance is lower.
+ achieved when connectance was lower.
 \end_layout
 
 \begin_layout Subsection*
@@ -33441,15 +33448,14 @@ lly infeasible.
 
 \begin_layout Standard
 I have made the code for the LPAwb+ and Exhaustive LPAwb+ algorithms; as
- well as the analysis performed in this paper available online ( 
-\bar under
-\color blue
-https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS
-\bar default
-\color black
- 
-\color inherit
-) to allow researchers to replicate my findings and encourage those with
+ well as the analysis performed in this paper available online 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "beckettZenodo"
+
+\end_inset
+
+ to allow researchers to replicate my findings and encourage those with
  access to potentially interesting weighted bipartite datasets to analyse
  them using these methods.
 \end_layout
@@ -33873,7 +33879,22 @@ Data accessibility
 \end_layout
 
 \begin_layout Standard
-Code used in this manuscript are available from the Zenodo depository: 
+Code used in this manuscript are available on Github: 
+\bar under
+\color blue
+https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS
+\bar default
+\color black
+ and are archived on Zenodo
+\color inherit
+: 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "beckettZenodo"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
