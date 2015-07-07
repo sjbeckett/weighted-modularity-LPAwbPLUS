@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.19477.svg)](http://dx.doi.org/10.5281/zenodo.19477)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.19585.svg)](http://dx.doi.org/10.5281/zenodo.19585)
 
 weighted-modularity-LPAwbPLUS
 =============================
@@ -37,7 +37,7 @@ For details of the LPAb+ algorithm please see [Liu & Murata, 2010](https://www.f
 
 Liu X., Murata T. 2010. An Efficient Algorithm for Optimizing Bipartite Modularity in Bipartite Networks. Journal of Advanced Computational Intelligence and Intelligent Informatics (JACIII) 14(4): 408-415.
 
-This repository has been archived using [Zenodo](https://zenodo.org/) and has been assigned DOI: [10.5281/zenodo.19477](http://dx.doi.org/10.5281/zenodo.19477).
+This repository has been archived using [Zenodo](https://zenodo.org/) and has been assigned DOI: [10.5281/zenodo.19585](http://dx.doi.org/10.5281/zenodo.19477).
 If you use LPAwb+ or Exhaustive LPAwb+ please cite this repository or the accompanying paper when it becomes available.
 
 
