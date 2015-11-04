@@ -1,6 +1,6 @@
 # LPA_wb_plus.R
 # Label propagation algorithm for weighted bipartite networks that finds modularity.
-# Contains the LPAwb+ and the Exhaustive LPAwb+ algorithms
+# Contains the LPAwb+ and the DIRTLPAwb+ algorithms
 # Author :  Stephen Beckett ( https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS )
 # MIT License
 
@@ -52,7 +52,7 @@ LPA_wb_plus <- function(MATRIX,initialmoduleguess=NA) {
 
 ###############################################
 
-Exhaustive_LPA_wb_plus <- function(MATRIX,mini=4,reps=10) {
+DIRT_LPA_wb_plus <- function(MATRIX,mini=4,reps=10) {
 	A=LPA_wb_plus(MATRIX)
 
 	mods=length(unique(A[[1]]))
@@ -146,7 +146,7 @@ StageTwo_LPAwbdash <- function(row_marginals,col_marginals,MATRIX,BMatrix,Matsum
 					CHECK_BLUE[which(bluelabels==Mod1)] = divisionsFound[div2check]
 
 
-					QQ = WEIGHTEDMODULARITY2(BMatrix,Matsum,redlabels,bluelabels)			
+					QQ = WEIGHTEDMODULARITY2(BMatrix,Matsum,CHECK_RED,CHECK_BLUE)			
 					if(QQ > Qb_now) { #If a division will improve modularity - find the best way to do this
                     				FoundBetter = 0
                     				for(aa in 1:NUMdiv) {

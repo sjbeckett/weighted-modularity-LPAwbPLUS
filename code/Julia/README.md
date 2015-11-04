@@ -1,4 +1,4 @@
-LPAwb+ in Julia
+LPAwb+ and DIRTLPAwb+ in Julia
 =============================
 
 
@@ -11,9 +11,9 @@ MAT = rand(0:3,20,20) # create an example matrix
 
 MOD1 = LPA_wb_plus(MAT) # find labels and weighted modularity using LPAwb+
 
-MOD2 = Exhaustive_LPA_wb_plus(MAT) # find labels and weighted modularity using Exhaustive LPAwb+
+MOD2 = DIRT_LPA_wb_plus(MAT) # find labels and weighted modularity using DIRTLPAwb+
 
-MOD3 = Exhaustive_LPA_wb_plus(MAT.>0, 2, 20) # find labels and binary modularity using Exhaustive LPAwb+ checking from a minimum of 2 modules and 20 replicates
+MOD3 = DIRT_LPA_wb_plus(MAT.>0, 2, 20) # find labels and binary modularity using DIRTLPAwb+ checking from a minimum of 2 modules and 20 replicates
 
 #plotting
 

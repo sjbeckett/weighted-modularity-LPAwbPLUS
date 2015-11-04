@@ -1,10 +1,10 @@
-% Exhaustive_LPA_wb_plus.R
+% DIRT_LPA_wb_plus.R
 % Label propagation algorithm for weighted bipartite networks that finds modularity.
-% Contains the Exhaustive LPAwb+ algorithm
+% Contains the DIRTLPAwb+ algorithm
 % Author :  Stephen Beckett ( https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS )
 % MIT License
 
-function [Qb_current,redlabels,bluelabels] = Exhaustive_LPA_wb_plus(MATRIX,mini,reps,parallel)
+function [Qb_current,redlabels,bluelabels] = DIRT_LPA_wb_plus(MATRIX,mini,reps,parallel)
 
 
     %Default settings are invoked when only some inputs are supplied
