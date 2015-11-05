@@ -1,14 +1,14 @@
 	
 	source("syntheticEnsemblePreparation.R") #load required functions
 
-	#Generate ensemble of matrices to test Exhaustive LPAwb+ against.
+	#Generate ensemble of matrices to test LPAwb+ and DIRTLPAwb+ against.
 
 	Nrow = 30
 	Ncol = 50
-	LowMod = 3
+	LowMod = 2
 	HighMod = 10
-	LowFill = 0.2
-	HighFill = 1
+	LowFill = 0.5
+	HighFill = 2.5
 	
 	Replicates=10
 	
@@ -93,16 +93,16 @@
 			
 				#LPA and EXLPA
 				DETECT_LPA_LMLF[[index]] = LPA_wb_plus(LMLF[[index]])
-				DETECT_EXLPA_LMLF[[index]] = Exhaustive_LPA_wb_plus(LMLF[[index]])
+				DETECT_EXLPA_LMLF[[index]] = DIRT_LPA_wb_plus(LMLF[[index]])
 
 				DETECT_LPA_LMHF[[index]] = LPA_wb_plus(LMHF[[index]])
-				DETECT_EXLPA_LMHF[[index]] = Exhaustive_LPA_wb_plus(LMHF[[index]])
+				DETECT_EXLPA_LMHF[[index]] = DIRT_LPA_wb_plus(LMHF[[index]])
 		
 				DETECT_LPA_HMLF[[index]] = LPA_wb_plus(HMLF[[index]])
-				DETECT_EXLPA_HMLF[[index]] = Exhaustive_LPA_wb_plus(HMLF[[index]])
+				DETECT_EXLPA_HMLF[[index]] = DIRT_LPA_wb_plus(HMLF[[index]])
 	
 				DETECT_LPA_HMHF[[index]] = LPA_wb_plus(HMHF[[index]])
-				DETECT_EXLPA_HMHF[[index]] = Exhaustive_LPA_wb_plus(HMHF[[index]])	
+				DETECT_EXLPA_HMHF[[index]] = DIRT_LPA_wb_plus(HMHF[[index]])	
 				
 				#Compare Number of Modules
 				DET_TO_PERF_MODULES_LPA_LMLF[[index]] = COMPAREMODS(LowModLowFill[[aa]],DETECT_LPA_LMLF[[index]])

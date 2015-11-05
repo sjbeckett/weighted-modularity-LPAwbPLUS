@@ -1,16 +1,10 @@
 source("../../code/R/LPA_wb_plus.R")
 source("NormalisedMutualInformation.R")
 
-#Inputs
-Nrow = 100;
-Ncol = 400;
-
-Nmod = 3;
 
 
 
 MakeModule <- function(Nrow,Ncol,Nmod,Filling) {
-	#Filling (E [0,1]) used is 0.4 or 0.8
 
 	#Make module labels
 	flag=1;
@@ -31,20 +25,21 @@ MakeModule <- function(Nrow,Ncol,Nmod,Filling) {
 				A[a,b]=1
 		}
 	}
-
+	
 
 	#Put in Quantitative links
 	DistSize=100000 # make a large negative binomial distribution
 	W = A #copy A to fill with weighted links
+	dist = rnbinom(DistSize,size=Filling,mu=4) #negative binomial distribution
+
 	flag = 1
 	while(flag==1) {	
-		dist = rnbinom(DistSize,size=Filling,mu=2) #negative binomial distribution
 		want = sample(dist,sum(A>0)) # sample from distribution to replace 1's in A
 	
 		W[A>0] = want
 		image(W)
 
-		if( length(which(rowSums(W)==0))==0 && length(which(colSums(W)==0)) ) { # check no zero rows/columns
+		if( length(which(rowSums(W)==0))==0 && length(which(colSums(W)==0))==0 ) { # check no zero rows/columns
 			flag=0
 		}
 	}
