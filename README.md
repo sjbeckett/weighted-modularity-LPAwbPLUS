@@ -44,17 +44,7 @@ If you use LPAwb+ or DIRTLPAwb+ please cite this repository or the accompanying 
 Change notes
 ---------
 
-v1.1 (November 5th 2015) - Revision of code
-
-* Updated Stage Two of the LPAwb+ algorithm. Previously a block of code was not being called as it was checking the modularity against itself (within R and Julia). This has been updated for all langauges.
-* To test the importance of this code block a new experiment:  has been added to papercode/code
-* To reflect the change in the code, all previous results have been recomputed. (The previous results computed in v1.01 are archived at http://dx.doi.org/10.5281/zenodo.19585 )
-* Exhaustive LPAwb+ has been renamed as DIRTLPAwb+ (Different Initialisations with Repeated Trials of LPAwb+), the code and paper has been updated to reflect this change.
-* Various changes have been made to the manuscript to improve its clarity
-
-v1.01 (July 7th 2015) - update of the DOI.
-
-v1.0 (July 6th 2015) - First release of code
+Click [here](https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS/blob/master/changelog.md) to view notes of changes between release versions.
 
 
 
