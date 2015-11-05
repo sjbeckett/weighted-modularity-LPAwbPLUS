@@ -67,8 +67,8 @@ TimeData_EXLPAwbplus = as.matrix(read.csv(paste(front1,fQua,"_Times_EXLPA_wb_plu
 #QL - quantitative LPAwb+
 #BQ - binary QuanBiMo
 #QQ - quantitative QuanBiMo
-#BE - binary ExhaustiveLPAwb+
-#QE - quantitative ExhaustiveLPAwb+
+#BE - binary DIRTLPAwb+
+#QE - quantitative DIRTLPAwb+
 
 AVG_time_BL = rowMeans(BinTimeData_LPA_wb_plus)
 AVG_time_QL = rowMeans(TimeData_LPA_wb_plus)
@@ -339,7 +339,7 @@ for( aa in DATALIST ) {
 		print(MODULES) }
 
 	#May want to check these for extra configs...hard to code!!
-#binary ExhaustiveLPAwb+
+#binary DIRTLPAwb+
 	B_EX_R = as.matrix(read.csv(paste(front2,fbin,frow,fEL,NETWORKS[data],".csv",sep=""),row.names=1))
 	B_EX_C = as.matrix(read.csv(paste(front2,fbin,fcol,fEL,NETWORKS[data],".csv",sep=""),row.names=1))
 
@@ -359,19 +359,19 @@ for( aa in DATALIST ) {
 			Realized[bb] = RealizedMod(A,B_EX_R[HAM[bb],],B_EX_C[HAM[bb],])
 		}
 		if(length(unique(Realized))>1) {
-			print("multiple Qr values: binary EXLPAwbplus")
+			print("multiple Qr values: binary DIRTLPAwbplus")
 			print(NETWORKS[[data]]) }
 	HAH=unique(HMM)
 	}
 	UniqueConfigs_BE[data] = length(HAH)
 	if( length(unique(MODULES)) == 1) {
 		MODULES_BE[data] = MODULES[1]
-	} else {	print("multiple module numbers found: binary EXLPAwbplus")
+	} else {	print("multiple module numbers found: binary DIRTLPAwbplus")
 		print(NETWORKS[[data]])
 		print(MODULES) }
 
 	#May want to check these for extra configs...hard to code!!
-#quantitative ExhaustiveLPAwb+
+#quantitative DIRTLPAwb+
 	Q_EX_R = as.matrix(read.csv(paste(front2,fq,frow,fEL,NETWORKS[data],".csv",sep=""),row.names=1))
 	Q_EX_C = as.matrix(read.csv(paste(front2,fq,fcol,fEL,NETWORKS[data],".csv",sep=""),row.names=1))
 

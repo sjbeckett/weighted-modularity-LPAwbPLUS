@@ -43,7 +43,7 @@ axis(2,col=colw,labels=FALSE,lwd=2)
 
 par(fig=c(0,1,0,1),oma=c(0,0,0,0),mar=c(0,0,0,0),new=TRUE)
 plot(0,0,type="n",bty="n",xaxt="n",yaxt="n")
-legend("bottom",c("LPAwb+","Exhaustive LPAwb+"),pch=c(3,4),col=c("grey30","grey65"),bty="n",horiz=TRUE)
+legend("bottom",c("LPAwb+","DIRTLPAwb+"),pch=c(3,4),col=c("grey30","grey65"),bty="n",horiz=TRUE)
 
 
 #dev.copy2eps(file="Modularity.eps")

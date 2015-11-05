@@ -1,8 +1,3 @@
-# Want to compare speeds and robustness of LPA_wb_plusEXHAUSTIVE
-# Want to do significance testing in Julia with parallelism. (could be done in R, but I know how to do it in Julia already- and chance to show Julia off!)
-
-
-
 # R - run each network 100 times through each algorithm. Want to know:
 #	a) modularity score
 #	b) time to find
@@ -12,7 +7,7 @@
 #Initialise
 
 library(bipartite)
-source("LPA_wb_plus.R")
+source("../../code/R/LPA_wb_plus.R")
 
 
 #NB: some of the larger datasets take a very long time to run e.g. kato1990 - consider removing these if performing a reanalysis.
@@ -80,13 +75,13 @@ for(filename in DATALIST) {
 	cEX <- cLP
 	cQM <- cLP
 
-	B <- filename
-	rLPname <- paste('output/QrowsLPAwb+',B,sep="")
-	rEXname <- paste('output/QrowsEXLPAwb+',B,sep="")
-	rQMname <- paste('output/QrowsQBM',B,sep="")
-	cLPname <- paste('output/QcolsLPAwb+',B,sep="")
-	cLPname <- paste('output/QcolsEXLPAwb+',B,sep="")
-	cQMname <- paste('output/QcolsQBM',B,sep="")
+	B <- Networks[dataset]
+	rLPname <- paste('output/QrowsLPAwb+',B,'.csv',sep="")
+	rEXname <- paste('output/QrowsEXLPAwb+',B,'.csv',sep="")
+	rQMname <- paste('output/QrowsQBM',B,'.csv',sep="")
+	cLPname <- paste('output/QcolsLPAwb+',B,'.csv',sep="")
+	cEXname <- paste('output/QcolsEXLPAwb+',B,'.csv',sep="")
+	cQMname <- paste('output/QcolsQBM',B,'.csv',sep="")
 
 	for( aa in 1:Repititions) {
 		## LPAwb+
@@ -105,9 +100,9 @@ for(filename in DATALIST) {
 		ModularityScore_LPA_wb_plus[dataset,aa] <- Mod[[3]]
 		TimeData_LPA_wb_plus[dataset,aa] <- Time[[3]]
 
-		## ExhaustiveLPAwb+
+		## DIRTLPAwb+
 		Time <- system.time({
-					 Mod <- tryCatch( { Exhaustive_LPA_wb_plus(Q) }, error = function(cond) {return(NA) } )
+					 Mod <- tryCatch( { DIRT_LPA_wb_plus(Q) }, error = function(cond) {return(NA) } )
 				})
 		if (sum(is.na(Mod))>0) { #If modularity partitioning failed
 			ModularityScore_EXLPA_wb_plus[dataset,aa] <- NA
@@ -177,13 +172,13 @@ for(filename in DATALIST) {
 	cEX <- cLP
 	cQM <- cLP
 
-	B <- filename
-	rLPname <- paste('output/binrowsLPAwb+',B,sep="")
-	rEXname <- paste('output/binrowsEXLPAwb+',B,sep="")
-	rQMname <- paste('output/binrowsQBM',B,sep="")
-	cLPname <- paste('output/bincolsLPAwb+',B,sep="")
-	cEXname <- paste('output/bincolsEXLPAwb+',B,sep="")
-	cQMname <- paste('output/bincolsQBM',B,sep="")
+	B <- Networks[dataset]
+	rLPname <- paste('output/binrowsLPAwb+',B,'.csv',sep="")
+	rEXname <- paste('output/binrowsEXLPAwb+',B,'.csv',sep="")
+	rQMname <- paste('output/binrowsQBM',B,'.csv',sep="")
+	cLPname <- paste('output/bincolsLPAwb+',B,'.csv',sep="")
+	cEXname <- paste('output/bincolsEXLPAwb+',B,'.csv',sep="")
+	cQMname <- paste('output/bincolsQBM',B,'.csv',sep="")
 
 	for( aa in 1:Repititions) {
 		## LPAwb+
@@ -202,9 +197,9 @@ for(filename in DATALIST) {
 		BinModularityScore_LPA_wb_plus[dataset,aa] <- Mod[[3]]
 		BinTimeData_LPA_wb_plus[dataset,aa] <- Time[[3]]
 
-		## Exhaustive LPAwb+
+		## DIRTLPAwb+
 		Time <- system.time({
-					 Mod <- tryCatch( { Exhaustive_LPA_wb_plus(A) }, error = function(cond) {return(NA) } )
+					 Mod <- tryCatch( { DIRT_LPA_wb_plus(A) }, error = function(cond) {return(NA) } )
 				})
 		if (sum(is.na(Mod))>0) { #If modularity partitioning failed
 			BinModularityScore_EXLPA_wb_plus[dataset,aa] <- NA
