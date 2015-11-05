@@ -4,11 +4,11 @@
 NOISEBOXPLOT <- function(Hm1,Hm2,Hm3,Hm4,Hm5,Hm6,Hm7,Hm8,ylabel,legon,plottype) {
 colw="grey"
 if(plottype==1) { #module number ratio
-	YLIMITS = c(0,9)
-	ATY = 0:9
+	YLIMITS = c(0,14)
+	ATY = 0:14
 }else if(plottype==2) { #modularity ratio
-	YLIMITS = c(0.5,1.2)
-	ATY = seq(0.5,1.2,0.1)
+	YLIMITS = c(0.3,1.1)
+	ATY = seq(0.3,1.1,0.1)
 } else { #NMI
 	YLIMITS = c(0,1)
 	ATY = seq(0,1,0.2)
@@ -21,7 +21,7 @@ axis(1, at=seq(1,4,1),labels=c(0,0.01,0.25,0.5),col=colw,lwd=2)
 axis(2,col=colw,lwd=2,at=ATY)
 
 if(legon==1)
-	legend(2,0.1,c("LPAwb+","Exhaustive LPAwb+"),fill=c("#99cd99","#ff99cc"),border=c("#99cd99","#ff99cc"),bty="n")
+	legend(2,0.1,c("LPAwb+","DIRTLPAwb+"),fill=c("#99cd99","#ff99cc"),border=c("#99cd99","#ff99cc"),bty="n")
 
 }
 
@@ -30,11 +30,11 @@ if(legon==1)
 MODULESANDFILLBOXPLOT <- function(Hm1,Hm2,Hm3,Hm4,Hm5,Hm6,Hm7,Hm8,ylabel,legon,plottype) {
 colw="grey"
 if(plottype==1) { #module number ratio
-	YLIMITS = c(0,9)
-	ATY = 0:9
+	YLIMITS = c(0,14)
+	ATY = 0:14
 }else if(plottype==2) { #modularity ratio
-	YLIMITS = c(0.5,1.2)
-	ATY = seq(0.5,1.2,0.1)
+	YLIMITS = c(0.3,1.1)
+	ATY = seq(0.3,1.1,0.1)
 } else { #NMI
 	YLIMITS = c(0,1)
 	ATY = seq(0,1,0.2)
@@ -46,7 +46,7 @@ axis(2,col=colw,lwd=2,at =ATY)
 
 
 if(legon==1)
-	legend(2,0.1,c("LPAwb+","Exhaustive LPAwb+"),fill=c("#99cd99","#ff99cc"),border=c("#99cd99","#ff99cc"),bty="n")
+	legend(2,0.1,c("LPAwb+","DIRTLPAwb+"),fill=c("#99cd99","#ff99cc"),border=c("#99cd99","#ff99cc"),bty="n")
 
 
 }
