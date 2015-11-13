@@ -358,7 +358,6 @@ Colnames:
 	Nitidulidae.sp.2
 	Noctuidae.sp.2
 	Pentatomidae.sp.1
-	Syrphidae.sp.2
 
 __________________________
 
@@ -606,6 +605,7 @@ Colnames:
 	Hymenoptera.sp.5
 	Nematocera.sp.11
 	Raupe.sp.7
+	Syrphidae.sp.4
 	Syrphidae.sp.7
 
 __________________________
@@ -750,6 +750,7 @@ Colnames:
 	Chloromyia.formosa
 	Coleoptera.sp.13
 	Empis.s.str.anfractuosa
+	Ensifera.sp.4
 	Magdalis.cerasi
 	Nematocera.sp.6
 	Nematocera.sp.7
@@ -990,7 +991,6 @@ Colnames:
 	Mordellistena.brevicauda
 	Oedemera.lurida
 	Syrphidae.sp.3
-	Syrphidae.sp.4
 
 __________________________
 
@@ -1094,7 +1094,6 @@ Colnames:
 	Curculionidae.sp.5
 	Cynegetis.impunctata
 	Diptera.sp.1
-	Ensifera.sp.4
 	Nematocera.sp.10
 	Plataspidae.sp.
 
@@ -1214,6 +1213,7 @@ Colnames:
 	Ensifera.sp.5
 	Miris.striatus
 	Myrmica.rubra
+	Syrphidae.sp.2
 
 __________________________
 

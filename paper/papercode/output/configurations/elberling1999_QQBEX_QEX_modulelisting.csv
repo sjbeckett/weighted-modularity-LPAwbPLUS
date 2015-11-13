@@ -160,27 +160,11 @@ Nr of module: 1
 
 Rownames: 
 
-	Pinguicula.alpina
-	Polygonum.viviparum
-	Taraxacum.sp.
-	Viola.biflora
+	Arabis.alpina
 
 Colnames: 
 
-	Micropsectra.sp.
-	Smittia.sp.
-	Rhamphomyia.aethiops
-	Rhamphomyia.morio
-	Rhamphomyia.reflexa
-	Phaonia.alpicola
-	Megaselia.sp.
-	Bradysia.sp..1
-	Lycoriella.freyi
-	Arpedium.sp.
-	Alysiinae.sp..4
-	Stenomacrus.sp.
-	Pteromalidae.sp.
-	Anarta.sp.
+	Pegoplata.aestiva
 
 __________________________
 
@@ -191,13 +175,18 @@ Nr of module: 2
 Rownames: 
 
 	Rhodiola.rosea
+	Saxifraga.oppositifolia
 
 Colnames: 
 
+	Dipt..sp..2
+	Zaphne.sp..1
 	Limnophyes.ninae
 	Smittia.betuletorum
 	Gimnomera.dorsala
 	Trichosia.truncata
+	Allophorocera.lapponica
+	Pteromalidae.sp..1
 	Xestommaster.sp.
 	Urbicola.sp.
 
@@ -209,16 +198,24 @@ Nr of module: 3
 
 Rownames: 
 
-	Arabis.alpina
-	Astragalus.alpinus
-	Bartsia.alpina
+	Parnassia.palustris
+	Silene.acaulis
 
 Colnames: 
 
-	Pegoplata.aestiva
-	Bradysia.girandii
-	Bombus.hyperboreus
-	Thysan..sp.
+	Delai.piliventris
+	Acamptocladius.submontanus
+	Limnophyes.brachytomus
+	Oliveridia.tricornis
+	Boletina.sp.
+	Megaselia.digitalis
+	Megaselia.pleuralis
+	Bradysia.sp.
+	Alysiinae.sp.
+	Alysiinae.sp..3
+	Aclastus.sp..1
+	Cidaria.sp.
+	Anarta.sp.
 
 __________________________
 
@@ -258,6 +255,140 @@ Nr of module: 5
 
 Rownames: 
 
+	Pinguicula.alpina
+	Polygonum.viviparum
+	Taraxacum.sp.
+	Viola.biflora
+
+Colnames: 
+
+	Micropsectra.sp.
+	Smittia.sp.
+	Rhamphomyia.aethiops
+	Rhamphomyia.morio
+	Rhamphomyia.reflexa
+	Phaonia.alpicola
+	Megaselia.sp.
+	Bradysia.sp..1
+	Lycoriella.freyi
+	Alysiinae.sp..4
+	Stenomacrus.sp.
+	Pteromalidae.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Cerastium.alpinun
+
+Colnames: 
+
+	Pegomya.haemorrhoum
+	Dasineura.sp.
+	Dolichopus.plumipes
+	Megaselia.groenlandica
+	Arpedium.sp.
+	Phygadenon.sp.
+	Platygaster.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Cassiope.hypniodes
+	Potentilla.crantzii
+
+Colnames: 
+
+	Phytomyza.aquilonia
+	Zaphne.barbiventris
+	Zaphne.sp.
+	Coenosia.atritibia
+	Phaonia.subfuscinereis
+	Spilogona.nitidicauda
+	Thricops.cunctans
+	Thricops.rostratus
+	Parapiophila.vulgaris
+	Cotesia.sp.
+	Tetrastichinae.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 8
+
+Rownames: 
+
+	Saxifraga.aizoides
+
+Colnames: 
+
+	Alliopsis.glacialis
+	Paradelia.sp.
+	Pegomya.sp.
+	Zaphne.frontata
+	Limnophyes.natalensis
+	Smittia.aterrima
+	Smittia.sp..1
+	Rhaphium.crassipes
+	Platypalpus.nigritarsis
+	Phyllolabis.macroura
+	Thricops.furcatus
+	Mycomya.fuscata
+	Megaselia.cirriventris
+	Alysiinae.sp..2
+	Orthocentrinae.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 9
+
+Rownames: 
+
+	Cassiope.tetragona
+
+Colnames: 
+
+	Heterotrissocladius.subpilosus
+	Limnophyes.schnelli
+	Micropsectra.radialis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 10
+
+Rownames: 
+
+	Astragalus.alpinus
+	Bartsia.alpina
+
+Colnames: 
+
+	Bradysia.girandii
+	Bombus.hyperboreus
+	Thysan..sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 11
+
+Rownames: 
+
 	Rhododendron.lapponicum
 	Salix.lanata
 	Salix.polaris
@@ -282,12 +413,11 @@ __________________________
 
 Depth: 1
 
-Nr of module: 6
+Nr of module: 12
 
 Rownames: 
 
 	Diapensia.lapponica
-	Silene.acaulis
 
 Colnames: 
 
@@ -295,123 +425,17 @@ Colnames:
 	Corynoneura.scutella
 	Micropsectra.sp..1
 	Pseudosmittia.oxoniana
+	Rhamphomyia.obscuripennis
 	Spilogona.megastoma
 	Spilogona.triangulifera
-	Megaselia.digitalis
 	Megaselia.girandii
-	Bradysia.sp.
 	Corynoptera.sp.
 	Corynoptera.sp..1
 	Lycoriella.curvispina
 	Lycoriella.sp.
-	Alysiinae.sp.
-	Alysiinae.sp..3
-	Aclastus.sp..1
+	Aclastus.sp.
 	Ichn..sp..2
 	Ichn..sp..3
-	Cidaria.sp.
-
-__________________________
-
-Depth: 1
-
-Nr of module: 7
-
-Rownames: 
-
-	Cassiope.tetragona
-
-Colnames: 
-
-	Heterotrissocladius.subpilosus
-	Limnophyes.schnelli
-	Micropsectra.radialis
-
-__________________________
-
-Depth: 1
-
-Nr of module: 8
-
-Rownames: 
-
-	Parnassia.palustris
-
-Colnames: 
-
-	Delai.piliventris
-	Acamptocladius.submontanus
-	Limnophyes.brachytomus
-	Oliveridia.tricornis
-	Phyllolabis.macroura
-	Boletina.sp.
-	Megaselia.pleuralis
-
-__________________________
-
-Depth: 1
-
-Nr of module: 9
-
-Rownames: 
-
-	Cerastium.alpinun
-	Saxifraga.aizoides
-
-Colnames: 
-
-	Alliopsis.glacialis
-	Paradelia.sp.
-	Pegomya.haemorrhoum
-	Pegomya.sp.
-	Zaphne.frontata
-	Dasineura.sp.
-	Limnophyes.natalensis
-	Smittia.aterrima
-	Smittia.sp..1
-	Dolichopus.plumipes
-	Rhaphium.crassipes
-	Platypalpus.nigritarsis
-	Thricops.furcatus
-	Mycomya.fuscata
-	Megaselia.cirriventris
-	Megaselia.groenlandica
-	Alysiinae.sp..2
-	Aclastus.sp.
-	Orthocentrinae.sp.
-	Phygadenon.sp.
-	Platygaster.sp.
-
-__________________________
-
-Depth: 1
-
-Nr of module: 10
-
-Rownames: 
-
-	Cassiope.hypniodes
-	Potentilla.crantzii
-	Saxifraga.oppositifolia
-
-Colnames: 
-
-	Phytomyza.aquilonia
-	Dipt..sp..2
-	Zaphne.barbiventris
-	Zaphne.sp.
-	Zaphne.sp..1
-	Rhamphomyia.obscuripennis
-	Coenosia.atritibia
-	Phaonia.subfuscinereis
-	Spilogona.nitidicauda
-	Thricops.cunctans
-	Thricops.rostratus
-	Parapiophila.vulgaris
-	Allophorocera.lapponica
-	Cotesia.sp.
-	Tetrastichinae.sp.
-	Pteromalidae.sp..1
 
 __________________________
 

@@ -45,30 +45,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Diplopterys.pubipetala
-	Banisteriopsis.muricata
-	Heteropterys.sp1
-	Heteropterys.sp2
-
-Colnames: 
-
-	Centris.trigonoides
-	Centris.obsoleta
-	Epicharis.sp2
-	Apis.mellifera
-	Centris.sp3
-	Centris.sp1
-	Xylocopa.sp
-	Xylocopa.grisescens
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
 	Dicella.bracteosa
 	Carolus.chasei
 	Stigmaphyllon.paralias
@@ -87,7 +63,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 2
 
 Rownames: 
 
@@ -98,6 +74,30 @@ Rownames:
 Colnames: 
 
 	Centris.flavifrons
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Diplopterys.pubipetala
+	Banisteriopsis.muricata
+	Heteropterys.sp1
+	Heteropterys.sp2
+
+Colnames: 
+
+	Centris.trigonoides
+	Centris.obsoleta
+	Epicharis.sp2
+	Apis.mellifera
+	Centris.sp3
+	Centris.sp1
+	Xylocopa.sp
+	Xylocopa.grisescens
 
 __________________________
 

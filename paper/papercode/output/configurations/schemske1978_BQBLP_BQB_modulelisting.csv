@@ -58,24 +58,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Erythronium.albidum
-
-Colnames: 
-
-	Andrena.carlini
-	Andrena.irgeniae
-	Andrena.erythronii
-	Andrena.forbesii
-	Andrena.mansonii
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
 	Claytonia.virginica
 
 Colnames: 
@@ -93,7 +75,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 2
 
 Rownames: 
 
@@ -116,21 +98,34 @@ __________________________
 
 Depth: 1
 
+Nr of module: 3
+
+Rownames: 
+
+	Erythronium.albidum
+
+Colnames: 
+
+	Andrena.carlini
+	Andrena.irgeniae
+	Andrena.erythronii
+	Andrena.forbesii
+	Andrena.mansonii
+
+__________________________
+
+Depth: 1
+
 Nr of module: 4
 
 Rownames: 
 
-	Dentaria.laciniata
+	Dicentra.canadensis
+	Dicentra.cucullaria
 
 Colnames: 
 
-	Andrena.rugosa
-	Halictus.confusus
-	Eristalis.dimidiatus
-	Helophilus.fasciatus
-	Melanostoma.sp.
-	Surphus.torvus
-	Syrphus.sp.
+	Bombus.greseocollis
 
 __________________________
 
@@ -154,12 +149,17 @@ Nr of module: 6
 
 Rownames: 
 
-	Dicentra.canadensis
-	Dicentra.cucullaria
+	Dentaria.laciniata
 
 Colnames: 
 
-	Bombus.greseocollis
+	Andrena.rugosa
+	Halictus.confusus
+	Eristalis.dimidiatus
+	Helophilus.fasciatus
+	Melanostoma.sp.
+	Surphus.torvus
+	Syrphus.sp.
 
 __________________________
 

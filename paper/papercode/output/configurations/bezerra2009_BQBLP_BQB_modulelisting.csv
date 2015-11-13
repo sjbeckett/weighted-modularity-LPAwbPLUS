@@ -45,13 +45,21 @@ Nr of module: 1
 
 Rownames: 
 
-	Byrsonima.gardnerana
-	Stigmaphyllon.auriculatum
-	Stigmaphyllon.ciliatum
+	Diplopterys.pubipetala
+	Banisteriopsis.muricata
+	Heteropterys.sp1
+	Heteropterys.sp2
 
 Colnames: 
 
-	Centris.flavifrons
+	Centris.trigonoides
+	Centris.obsoleta
+	Epicharis.sp2
+	Apis.mellifera
+	Centris.sp3
+	Centris.sp1
+	Xylocopa.sp
+	Xylocopa.grisescens
 
 __________________________
 
@@ -83,21 +91,13 @@ Nr of module: 3
 
 Rownames: 
 
-	Diplopterys.pubipetala
-	Banisteriopsis.muricata
-	Heteropterys.sp1
-	Heteropterys.sp2
+	Byrsonima.gardnerana
+	Stigmaphyllon.auriculatum
+	Stigmaphyllon.ciliatum
 
 Colnames: 
 
-	Centris.trigonoides
-	Centris.obsoleta
-	Epicharis.sp2
-	Apis.mellifera
-	Centris.sp3
-	Centris.sp1
-	Xylocopa.sp
-	Xylocopa.grisescens
+	Centris.flavifrons
 
 __________________________
 

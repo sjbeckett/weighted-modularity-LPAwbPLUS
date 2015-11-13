@@ -64,19 +64,34 @@ Nr of module: 2
 
 Rownames: 
 
-	Heteropterys.sp1
-	Dicella.bracteosa
-	Stigmaphyllon.auriculatum
+	Byrsonima.gardnerana
+	Heteropterys.sp2
 
 Colnames: 
 
-	Centris.flavifrons
+	Centris.caxiensis
+	Centris.tarsata
 
 __________________________
 
 Depth: 1
 
 Nr of module: 3
+
+Rownames: 
+
+	Diplopterys.pubipetala
+
+Colnames: 
+
+	Apis.mellifera
+	Centris.sp3
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
 
 Rownames: 
 
@@ -96,32 +111,17 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
-
-Rownames: 
-
-	Diplopterys.pubipetala
-
-Colnames: 
-
-	Apis.mellifera
-	Centris.sp3
-
-__________________________
-
-Depth: 1
-
 Nr of module: 5
 
 Rownames: 
 
-	Byrsonima.gardnerana
-	Heteropterys.sp2
+	Heteropterys.sp1
+	Dicella.bracteosa
+	Stigmaphyllon.auriculatum
 
 Colnames: 
 
-	Centris.caxiensis
-	Centris.tarsata
+	Centris.flavifrons
 
 __________________________
 

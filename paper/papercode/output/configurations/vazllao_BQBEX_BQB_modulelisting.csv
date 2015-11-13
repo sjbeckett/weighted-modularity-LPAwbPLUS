@@ -58,6 +58,40 @@ Nr of module: 1
 
 Rownames: 
 
+	Berberis darwinii
+	Vicia nigricans
+	Tristerix corymbosus
+
+Colnames: 
+
+	Bombus dahlbomii
+	Manuelia postica
+	Lepidoptera1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Aristotelia chilensis
+	Schinus patagonicus
+
+Colnames: 
+
+	Policana albopilosa
+	Ruizantheda mutabilis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
 	Alstroemeria aurea
 
 Colnames: 
@@ -75,38 +109,6 @@ Colnames:
 	Coleoptera3
 	Ichneumonidae1
 	Hymenoptera6
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
-	Gavilea odoratissima
-
-Colnames: 
-
-	Sphecidae
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
-	Berberis darwinii
-	Vicia nigricans
-	Tristerix corymbosus
-
-Colnames: 
-
-	Bombus dahlbomii
-	Manuelia postica
-	Lepidoptera1
 
 __________________________
 
@@ -134,13 +136,11 @@ Nr of module: 5
 
 Rownames: 
 
-	Aristotelia chilensis
-	Schinus patagonicus
+	Gavilea odoratissima
 
 Colnames: 
 
-	Policana albopilosa
-	Ruizantheda mutabilis
+	Sphecidae
 
 __________________________
 

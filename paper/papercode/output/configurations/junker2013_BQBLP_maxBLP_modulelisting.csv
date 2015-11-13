@@ -358,6 +358,7 @@ Colnames:
 	Nitidulidae.sp.2
 	Noctuidae.sp.2
 	Pentatomidae.sp.1
+	Syrphidae.sp.2
 
 __________________________
 
@@ -605,7 +606,6 @@ Colnames:
 	Hymenoptera.sp.5
 	Nematocera.sp.11
 	Raupe.sp.7
-	Syrphidae.sp.4
 	Syrphidae.sp.7
 
 __________________________
@@ -804,6 +804,7 @@ Rownames:
 
 Colnames: 
 
+	Apis.mellifera
 	Bombus.lucorum.Komplex
 
 __________________________
@@ -818,7 +819,6 @@ Rownames:
 
 Colnames: 
 
-	Apis.mellifera
 	Chrysotoxum.vernale
 
 __________________________
@@ -991,6 +991,7 @@ Colnames:
 	Mordellistena.brevicauda
 	Oedemera.lurida
 	Syrphidae.sp.3
+	Syrphidae.sp.4
 
 __________________________
 
@@ -1213,7 +1214,6 @@ Colnames:
 	Ensifera.sp.5
 	Miris.striatus
 	Myrmica.rubra
-	Syrphidae.sp.2
 
 __________________________
 

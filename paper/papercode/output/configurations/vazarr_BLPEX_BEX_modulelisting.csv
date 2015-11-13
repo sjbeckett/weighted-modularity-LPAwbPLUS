@@ -72,6 +72,20 @@ Nr of module: 2
 
 Rownames: 
 
+	Mutisia decurrens
+
+Colnames: 
+
+	Anthaxia
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
 	Berberis darwinii
 	Vicia nigricans
 	Ribes magellanicum
@@ -86,7 +100,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 4
 
 Rownames: 
 
@@ -104,7 +118,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 5
 
 Rownames: 
 
@@ -125,21 +139,21 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 6
 
 Rownames: 
 
-	Mutisia decurrens
+	Calceolaria crenatiflora
 
 Colnames: 
 
-	Anthaxia
+	Chalepogenus caeruleus
 
 __________________________
 
 Depth: 1
 
-Nr of module: 6
+Nr of module: 7
 
 Rownames: 
 
@@ -158,20 +172,6 @@ Colnames:
 	Thomisidae
 	Acroceridae
 	Chilicola1
-
-__________________________
-
-Depth: 1
-
-Nr of module: 7
-
-Rownames: 
-
-	Calceolaria crenatiflora
-
-Colnames: 
-
-	Chalepogenus caeruleus
 
 __________________________
 

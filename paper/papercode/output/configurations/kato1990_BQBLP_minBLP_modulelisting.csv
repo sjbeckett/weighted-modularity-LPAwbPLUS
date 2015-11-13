@@ -887,7 +887,6 @@ Colnames:
 	BRACONIDAE13 (Bra. : Hym. )
 	BRACONIDAE16 (Bra. : Hym. )
 	BRACONIDAE27 (Bra. : Hym. )
-	CALLIPHORIDAE8 (Cal. : Dip. )
 	CHLOROPIDAE22 (Chl. : Dip. )
 	DIAPRIIDAE1 (Dia. : Hym. )
 	EPHYDRIDAE14 (Eph. : Dip. )
@@ -897,6 +896,7 @@ Colnames:
 	ICHNEUMONIDAE53 (Ich. : Hym. )
 	ICHNEUMONIDAE64 (Ich. : Hym. )
 	ICHNEUMONIDAE82 (Ich. : Hym. )
+	Plateros sp. (Lyc. : Col. )
 	PTEROMALIDAE3 (Pte. : Hym. )
 	PYRALIDAE2 (Pyr. : Lep. )
 	TACHINIDAE45 (Tac. : Dip. )
@@ -1107,6 +1107,7 @@ Rownames:
 Colnames: 
 
 	Arge nigrinodosa (Ari. : Hym. )
+	CALLIPHORIDAE8 (Cal. : Dip. )
 	Cerceris carinalis (Sph. : Hym. )
 	CHRYSOMELIDAE20 (Chr. : Col. )
 	Ectemnius (Cameronitus) radiatus (Sph. : Hym. )
@@ -1120,7 +1121,6 @@ Colnames:
 	Onomaus lautus (Mir. : Hem. )
 	Paratrechina flavipes (For. : Hym. )
 	Paratrichius septemdecimguttatus (Sca. : Col. )
-	Plateros sp. (Lyc. : Col. )
 	Pseudaosterna misella (Cer. : Col. )
 	PYRALIDAE3 (Pyr. : Lep. )
 	PYRALIDAE4 (Pyr. : Lep. )
@@ -1239,27 +1239,6 @@ Nr of module: 18
 
 Rownames: 
 
-	Ainsliaea.acerifolia
-	Alangium.platanifolium
-	Cirsium.japonicum
-	Disporum.sessile
-	Impatiens.noli.tangere
-	Polygonatum.macranthum
-	Salvia.glabrescens
-	Tricyrtis.hirta
-
-Colnames: 
-
-	Bombus (Diversobombus) diversus diversus (Api. : Hym. )
-
-__________________________
-
-Depth: 1
-
-Nr of module: 19
-
-Rownames: 
-
 	Cirsium.kagamontanum
 
 Colnames: 
@@ -1272,7 +1251,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 20
+Nr of module: 19
 
 Rownames: 
 
@@ -1282,7 +1261,6 @@ Rownames:
 	Rabdosia.longituba
 	Rubus.illecebrosus
 	Tripterospermum.japonicum
-	Caryopteris.divaricata
 
 Colnames: 
 
@@ -1292,7 +1270,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 21
+Nr of module: 20
 
 Rownames: 
 
@@ -1315,7 +1293,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 22
+Nr of module: 21
 
 Rownames: 
 
@@ -1339,7 +1317,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 23
+Nr of module: 22
 
 Rownames: 
 
@@ -1353,7 +1331,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 24
+Nr of module: 23
 
 Rownames: 
 
@@ -1369,7 +1347,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 25
+Nr of module: 24
 
 Rownames: 
 
@@ -1392,7 +1370,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 26
+Nr of module: 25
 
 Rownames: 
 
@@ -1406,7 +1384,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 27
+Nr of module: 26
 
 Rownames: 
 
@@ -1450,7 +1428,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 28
+Nr of module: 27
 
 Rownames: 
 
@@ -1465,7 +1443,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 29
+Nr of module: 28
 
 Rownames: 
 
@@ -1482,7 +1460,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 30
+Nr of module: 29
 
 Rownames: 
 
@@ -1498,7 +1476,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 31
+Nr of module: 30
 
 Rownames: 
 
@@ -1537,7 +1515,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 32
+Nr of module: 31
 
 Rownames: 
 
@@ -1577,7 +1555,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 33
+Nr of module: 32
 
 Rownames: 
 
@@ -1628,7 +1606,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 34
+Nr of module: 33
 
 Rownames: 
 
@@ -1642,7 +1620,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 35
+Nr of module: 34
 
 Rownames: 
 
@@ -1667,7 +1645,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 36
+Nr of module: 35
 
 Rownames: 
 
@@ -1681,7 +1659,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 37
+Nr of module: 36
 
 Rownames: 
 
@@ -1696,7 +1674,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 38
+Nr of module: 37
 
 Rownames: 
 
@@ -1710,7 +1688,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 39
+Nr of module: 38
 
 Rownames: 
 
@@ -1736,7 +1714,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 40
+Nr of module: 39
 
 Rownames: 
 
@@ -1750,7 +1728,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 41
+Nr of module: 40
 
 Rownames: 
 
@@ -1765,7 +1743,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 42
+Nr of module: 41
 
 Rownames: 
 
@@ -1779,7 +1757,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 43
+Nr of module: 42
 
 Rownames: 
 
@@ -1793,7 +1771,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 44
+Nr of module: 43
 
 Rownames: 
 
@@ -1814,7 +1792,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 45
+Nr of module: 44
 
 Rownames: 
 
@@ -1829,7 +1807,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 46
+Nr of module: 45
 
 Rownames: 
 
@@ -1851,7 +1829,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 47
+Nr of module: 46
 
 Rownames: 
 
@@ -1865,7 +1843,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 48
+Nr of module: 47
 
 Rownames: 
 
@@ -1891,7 +1869,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 49
+Nr of module: 48
 
 Rownames: 
 
@@ -1923,7 +1901,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 50
+Nr of module: 49
 
 Rownames: 
 
@@ -1947,7 +1925,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 51
+Nr of module: 50
 
 Rownames: 
 
@@ -1972,7 +1950,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 52
+Nr of module: 51
 
 Rownames: 
 
@@ -2000,7 +1978,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 53
+Nr of module: 52
 
 Rownames: 
 
@@ -2019,7 +1997,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 54
+Nr of module: 53
 
 Rownames: 
 
@@ -2041,7 +2019,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 55
+Nr of module: 54
 
 Rownames: 
 
@@ -2057,7 +2035,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 56
+Nr of module: 55
 
 Rownames: 
 
@@ -2072,7 +2050,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 57
+Nr of module: 56
 
 Rownames: 
 
@@ -2092,7 +2070,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 58
+Nr of module: 57
 
 Rownames: 
 
@@ -2106,7 +2084,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 59
+Nr of module: 58
 
 Rownames: 
 
@@ -2120,7 +2098,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 60
+Nr of module: 59
 
 Rownames: 
 
@@ -2147,7 +2125,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 61
+Nr of module: 60
 
 Rownames: 
 
@@ -2162,7 +2140,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 62
+Nr of module: 61
 
 Rownames: 
 
@@ -2180,7 +2158,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 63
+Nr of module: 62
 
 Rownames: 
 
@@ -2195,7 +2173,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 64
+Nr of module: 63
 
 Rownames: 
 
@@ -2215,7 +2193,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 65
+Nr of module: 64
 
 Rownames: 
 
@@ -2243,6 +2221,28 @@ Colnames:
 	Takaomyia sexmaculata (Syr. : Dip. )
 	TISCHERIIDAE2 (Tis. : Lep. )
 	Tremus cyanipennis (Can. : Col. )
+
+__________________________
+
+Depth: 1
+
+Nr of module: 65
+
+Rownames: 
+
+	Ainsliaea.acerifolia
+	Alangium.platanifolium
+	Cirsium.japonicum
+	Disporum.sessile
+	Impatiens.noli.tangere
+	Polygonatum.macranthum
+	Salvia.glabrescens
+	Tricyrtis.hirta
+	Caryopteris.divaricata
+
+Colnames: 
+
+	Bombus (Diversobombus) diversus diversus (Api. : Hym. )
 
 __________________________
 

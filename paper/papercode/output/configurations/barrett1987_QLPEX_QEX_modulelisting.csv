@@ -133,12 +133,27 @@ Nr of module: 1
 
 Rownames: 
 
-	Chimaphila.umbellata
+	Linnaea.borealis
+	Trientalis.borealis
+	Trillium.undulatum
 
 Colnames: 
 
-	Bombus.terricola
-	Paramyia.nitens
+	Carposcalis.confusus
+	Carposcalis.obscura
+	Crabro.sp.
+	Eclimus.harrisi
+	Eupyses.vestris
+	Fannia.ungulata
+	Hylaeus.ellipticus
+	Hylaeus.stevensi
+	Melagyna.lasiophthalma
+	Osmia.pumila
+	Passaloecus.sp.
+	Phaonia.serva
+	Pyrophaena.rosarum
+	Sphaerophoria.bifurcata
+	Zeraea.americana
 
 __________________________
 
@@ -177,33 +192,69 @@ Nr of module: 3
 
 Rownames: 
 
-	Linnaea.borealis
-	Trientalis.borealis
-	Trillium.undulatum
+	Chimaphila.umbellata
 
 Colnames: 
 
-	Carposcalis.confusus
-	Carposcalis.obscura
-	Crabro.sp.
-	Eclimus.harrisi
-	Eupyses.vestris
-	Fannia.ungulata
-	Hylaeus.ellipticus
-	Hylaeus.stevensi
-	Melagyna.lasiophthalma
-	Osmia.pumila
-	Passaloecus.sp.
-	Phaonia.serva
-	Pyrophaena.rosarum
-	Sphaerophoria.bifurcata
-	Zeraea.americana
+	Bombus.terricola
+	Paramyia.nitens
 
 __________________________
 
 Depth: 1
 
 Nr of module: 4
+
+Rownames: 
+
+	Clintonia.borealis
+	Pyrola.secunda
+
+Colnames: 
+
+	Andrena.wilkella
+	Bombus.ternarius
+	Bombus.vagans
+	Dialictus.imitatus
+	Hoplitis.producta
+	Osmia.lignaria
+	Poanes.hobomok
+	Rhopalum.sp.
+	Sarcophaga.nearctica
+	Sphaerophoria.sp.
+	Vespula.arenaria
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Aralia.nudicaulis
+	Cypripedium.acaule
+	Oxalis.montana
+
+Colnames: 
+
+	Andrena.wheeleri
+	Bombus.perplexus
+	Cateres.pennatus
+	Cheilosia.pallipes
+	Cheilosia.tristis
+	Eusphalerum.convexum
+	Eusphalerum.phothos
+	Eusphalerum.sp.
+	Mallota.posticata
+	Melanostoma.sp.
+	Trachysida.aspera
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
 
 Rownames: 
 
@@ -262,32 +313,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
-
-Rownames: 
-
-	Clintonia.borealis
-	Pyrola.secunda
-
-Colnames: 
-
-	Andrena.wilkella
-	Bombus.ternarius
-	Bombus.vagans
-	Dialictus.imitatus
-	Hoplitis.producta
-	Osmia.lignaria
-	Poanes.hobomok
-	Rhopalum.sp.
-	Sarcophaga.nearctica
-	Sphaerophoria.sp.
-	Vespula.arenaria
-
-__________________________
-
-Depth: 1
-
-Nr of module: 6
+Nr of module: 7
 
 Rownames: 
 
@@ -296,32 +322,6 @@ Rownames:
 Colnames: 
 
 	Ephemerella.sp.
-
-__________________________
-
-Depth: 1
-
-Nr of module: 7
-
-Rownames: 
-
-	Aralia.nudicaulis
-	Cypripedium.acaule
-	Oxalis.montana
-
-Colnames: 
-
-	Andrena.wheeleri
-	Bombus.perplexus
-	Cateres.pennatus
-	Cheilosia.pallipes
-	Cheilosia.tristis
-	Eusphalerum.convexum
-	Eusphalerum.phothos
-	Eusphalerum.sp.
-	Mallota.posticata
-	Melanostoma.sp.
-	Trachysida.aspera
 
 __________________________
 

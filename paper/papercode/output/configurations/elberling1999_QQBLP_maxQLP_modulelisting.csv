@@ -180,6 +180,7 @@ Rownames:
 Colnames: 
 
 	Bradysia.girandii
+	Bombus.alpinus
 	Bombus.hyperboreus
 	Thysan..sp.
 
@@ -293,6 +294,7 @@ Colnames:
 	Oliveridia.tricornis
 	Phyllolabis.macroura
 	Boletina.sp.
+	Megaselia.digitalis
 	Megaselia.groenlandica
 	Megaselia.pleuralis
 
@@ -373,7 +375,6 @@ Colnames:
 
 	Bellardia.pubicornis
 	Podabrus.sp.
-	Bombus.alpinus
 	Limnophilus.sp.
 
 __________________________
@@ -467,7 +468,6 @@ Rownames:
 
 Colnames: 
 
-	Megaselia.digitalis
 	Bradysia.sp.
 	Alysiinae.sp.
 	Alysiinae.sp..3

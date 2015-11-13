@@ -62,6 +62,45 @@ Nr of module: 1
 
 Rownames: 
 
+	Berberis darwinii
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+	Trichophthalma amoena
+	Colletes seminitidus
+	Allograpta.Toxomerus
+	Caenohalictus1
+	Curculionidae1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Rosa eglanteria
+	Ribes magellanicum
+
+Colnames: 
+
+	Platycheirus1
+	Sapromyza.Minettia
+	Nitidulidae
+	Ruizantheda nigrocaerulea
+	Melyridae1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
 	Mutisia decurrens
 
 Colnames: 
@@ -73,7 +112,23 @@ __________________________
 
 Depth: 1
 
-Nr of module: 2
+Nr of module: 4
+
+Rownames: 
+
+	Aristotelia chilensis
+
+Colnames: 
+
+	Policana albopilosa
+	Ruizantheda mutabilis
+	Braconidae2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
 
 Rownames: 
 
@@ -97,61 +152,6 @@ Colnames:
 	Tabanidae
 	Heteroptera
 	Hymenoptera3
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
-	Aristotelia chilensis
-
-Colnames: 
-
-	Policana albopilosa
-	Ruizantheda mutabilis
-	Braconidae2
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
-	Berberis darwinii
-	Vicia nigricans
-
-Colnames: 
-
-	Bombus dahlbomii
-	Trichophthalma amoena
-	Colletes seminitidus
-	Allograpta.Toxomerus
-	Caenohalictus1
-	Curculionidae1
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Rosa eglanteria
-	Ribes magellanicum
-
-Colnames: 
-
-	Platycheirus1
-	Sapromyza.Minettia
-	Nitidulidae
-	Ruizantheda nigrocaerulea
-	Melyridae1
 
 __________________________
 

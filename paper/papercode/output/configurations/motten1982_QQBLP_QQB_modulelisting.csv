@@ -102,17 +102,34 @@ Nr of module: 2
 
 Rownames: 
 
-	Tiarella.cordifolia collina
-	Podophyllum.peltatum
-	Trillium.catesbei
-	Aesculus.sylvatica
+	Thalictrum.thalictroides
+	Cardamine.angustata angustata
+	Stellaria.pubera
+	Viola.papilionacea
 
 Colnames: 
 
-	Ephemoropsis.laboriosa
-	Xylocopa.virginica.virginica
-	Bombus.bimaculatus
-	Bombus.pennsylvanicus
+	Andrena..Scaphandrena..arabis
+	Andrena..Melandrena..carlini
+	Andrena..Melandrena..dunningi
+	Andrena..Simandrena..nasonii
+	Andrena..Micrandrena..personata
+	Andrena..Tomelissa..violae
+	Ceratina.calcarata
+	Nomada..Heminomada..bishopii
+	Nomada..Heminomada..luteola
+	Nomada..Nomada..pygmaea
+	Nomada..Nomada..sayi
+	Nomada.sp.
+	Augochlora.pura
+	Lassioglossum.fuscipenne
+	Osmia.atriventris
+	Osmia.conjucta
+	Osmia.simillima
+	Bombylius.major
+	Platycheirus.obscurus
+	Toxomerous.geminatus
+	unknown.sp.
 
 __________________________
 
@@ -144,34 +161,17 @@ Nr of module: 4
 
 Rownames: 
 
-	Thalictrum.thalictroides
-	Cardamine.angustata angustata
-	Stellaria.pubera
-	Viola.papilionacea
+	Tiarella.cordifolia collina
+	Podophyllum.peltatum
+	Trillium.catesbei
+	Aesculus.sylvatica
 
 Colnames: 
 
-	Andrena..Scaphandrena..arabis
-	Andrena..Melandrena..carlini
-	Andrena..Melandrena..dunningi
-	Andrena..Simandrena..nasonii
-	Andrena..Micrandrena..personata
-	Andrena..Tomelissa..violae
-	Ceratina.calcarata
-	Nomada..Heminomada..bishopii
-	Nomada..Heminomada..luteola
-	Nomada..Nomada..pygmaea
-	Nomada..Nomada..sayi
-	Nomada.sp.
-	Augochlora.pura
-	Lassioglossum.fuscipenne
-	Osmia.atriventris
-	Osmia.conjucta
-	Osmia.simillima
-	Bombylius.major
-	Platycheirus.obscurus
-	Toxomerous.geminatus
-	unknown.sp.
+	Ephemoropsis.laboriosa
+	Xylocopa.virginica.virginica
+	Bombus.bimaculatus
+	Bombus.pennsylvanicus
 
 __________________________
 

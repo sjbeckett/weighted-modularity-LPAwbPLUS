@@ -58,35 +58,30 @@ Nr of module: 1
 
 Rownames: 
 
-	Dentaria.laciniata
-	Erythronium.albidum
+	Isopyrum.biternatum
 
 Colnames: 
 
-	Andrena.carlini
-	Andrena.erythronii
-	Halictus.confusus
+	Andrena.cressoni
+	Andrena.forbesii
+	Andrena.mansonii
+	Andrena.personata
+	Andrena.rugosa
+	Augochlora.pura
+	Augochlorella.striata
+	Dialictus.oblongus
+	Dialictus.imitatus
+	Dialictus.zephyrus
+	Erylaeus.macroupinensis
+	Melanostoma.sp.
+	Surphus.torvus
+	Xylota.nemorum
 
 __________________________
 
 Depth: 1
 
 Nr of module: 2
-
-Rownames: 
-
-	Dicentra.canadensis
-	Dicentra.cucullaria
-
-Colnames: 
-
-	Bombus.greseocollis
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
 
 Rownames: 
 
@@ -114,28 +109,33 @@ __________________________
 
 Depth: 1
 
+Nr of module: 3
+
+Rownames: 
+
+	Dentaria.laciniata
+	Erythronium.albidum
+
+Colnames: 
+
+	Andrena.carlini
+	Andrena.erythronii
+	Halictus.confusus
+
+__________________________
+
+Depth: 1
+
 Nr of module: 4
 
 Rownames: 
 
-	Isopyrum.biternatum
+	Dicentra.canadensis
+	Dicentra.cucullaria
 
 Colnames: 
 
-	Andrena.cressoni
-	Andrena.forbesii
-	Andrena.mansonii
-	Andrena.personata
-	Andrena.rugosa
-	Augochlora.pura
-	Augochlorella.striata
-	Dialictus.oblongus
-	Dialictus.imitatus
-	Dialictus.zephyrus
-	Erylaeus.macroupinensis
-	Melanostoma.sp.
-	Surphus.torvus
-	Xylota.nemorum
+	Bombus.greseocollis
 
 __________________________
 

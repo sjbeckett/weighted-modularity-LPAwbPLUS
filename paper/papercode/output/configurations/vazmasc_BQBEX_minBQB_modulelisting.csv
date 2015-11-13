@@ -86,6 +86,23 @@ Nr of module: 3
 
 Rownames: 
 
+	Alstroemeria aurea
+
+Colnames: 
+
+	Ruizantheda mutabilis
+	Manuelia gayi
+	Trichophthalma jaffueli
+	Heterosarus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
 	Schinus patagonicus
 
 Colnames: 
@@ -104,7 +121,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 5
 
 Rownames: 
 
@@ -119,23 +136,6 @@ Colnames:
 	Staphilinidae
 	Cantharidae
 	Diptera9
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Alstroemeria aurea
-
-Colnames: 
-
-	Ruizantheda mutabilis
-	Manuelia gayi
-	Trichophthalma jaffueli
-	Heterosarus
 
 __________________________
 

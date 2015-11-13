@@ -62,41 +62,19 @@ Nr of module: 1
 
 Rownames: 
 
-	Mutisia decurrens
+	Aristotelia chilensis
 
 Colnames: 
 
-	Manuelia gayi
-	Anthaxia
-	Phthiria
-	Sapromyza.Minettia
-	Vespula germanica
-	Ocyptamus melanorrhinus
+	Policana albopilosa
+	Ruizantheda mutabilis
+	Braconidae2
 
 __________________________
 
 Depth: 1
 
 Nr of module: 2
-
-Rownames: 
-
-	Rosa eglanteria
-	Ribes magellanicum
-
-Colnames: 
-
-	Syrphus octomaculatus
-	Platycheirus1
-	Nitidulidae
-	Ruizantheda nigrocaerulea
-	Melyridae1
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
 
 Rownames: 
 
@@ -116,7 +94,45 @@ __________________________
 
 Depth: 1
 
+Nr of module: 3
+
+Rownames: 
+
+	Rosa eglanteria
+	Ribes magellanicum
+
+Colnames: 
+
+	Syrphus octomaculatus
+	Platycheirus1
+	Nitidulidae
+	Ruizantheda nigrocaerulea
+	Melyridae1
+
+__________________________
+
+Depth: 1
+
 Nr of module: 4
+
+Rownames: 
+
+	Mutisia decurrens
+
+Colnames: 
+
+	Manuelia gayi
+	Anthaxia
+	Phthiria
+	Sapromyza.Minettia
+	Vespula germanica
+	Ocyptamus melanorrhinus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
 
 Rownames: 
 
@@ -136,22 +152,6 @@ Colnames:
 	Tabanidae
 	Heteroptera
 	Hymenoptera3
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Aristotelia chilensis
-
-Colnames: 
-
-	Policana albopilosa
-	Ruizantheda mutabilis
-	Braconidae2
 
 __________________________
 

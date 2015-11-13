@@ -41,38 +41,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Crithmum:maritimum
-	Daucus:carota
-
-Colnames: 
-
-	Musca.domestica
-	Lucilia.sericata
-	Eristalix.tenax
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
-	Beta:vulgaris
-	Silene:vulgaris
-
-Colnames: 
-
-	Sepsis.thoracica
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
 	Azorina:vidalii
 	Lotus:corniculatus
 	Freesia:refracta
@@ -89,7 +57,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 2
 
 Rownames: 
 
@@ -102,6 +70,38 @@ Colnames:
 	Halictus.sp.
 	Agrotis.ipsilon
 	Anothomyia.pluvialis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Beta:vulgaris
+	Silene:vulgaris
+
+Colnames: 
+
+	Sepsis.thoracica
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Crithmum:maritimum
+	Daucus:carota
+
+Colnames: 
+
+	Musca.domestica
+	Lucilia.sericata
+	Eristalix.tenax
 
 __________________________
 

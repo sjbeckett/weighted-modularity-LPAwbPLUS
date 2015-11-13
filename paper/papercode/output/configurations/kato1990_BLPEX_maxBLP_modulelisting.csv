@@ -818,6 +818,28 @@ Nr of module: 3
 
 Rownames: 
 
+	Ainsliaea.acerifolia
+	Alangium.platanifolium
+	Cirsium.japonicum
+	Disporum.sessile
+	Impatiens.noli.tangere
+	Polygonatum.macranthum
+	Salvia.glabrescens
+	Tricyrtis.hirta
+	Caryopteris.divaricata
+
+Colnames: 
+
+	Bombus (Diversobombus) diversus diversus (Api. : Hym. )
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
 	Ampelopsis.brevipedunculata
 
 Colnames: 
@@ -836,7 +858,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 5
 
 Rownames: 
 
@@ -857,7 +879,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 6
 
 Rownames: 
 
@@ -873,7 +895,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 6
+Nr of module: 7
 
 Rownames: 
 
@@ -909,7 +931,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 7
+Nr of module: 8
 
 Rownames: 
 
@@ -923,7 +945,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 8
+Nr of module: 9
 
 Rownames: 
 
@@ -1066,7 +1088,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 9
+Nr of module: 10
 
 Rownames: 
 
@@ -1084,7 +1106,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 10
+Nr of module: 11
 
 Rownames: 
 
@@ -1101,7 +1123,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 11
+Nr of module: 12
 
 Rownames: 
 
@@ -1131,7 +1153,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 12
+Nr of module: 13
 
 Rownames: 
 
@@ -1145,7 +1167,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 13
+Nr of module: 14
 
 Rownames: 
 
@@ -1159,7 +1181,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 14
+Nr of module: 15
 
 Rownames: 
 
@@ -1176,7 +1198,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 15
+Nr of module: 16
 
 Rownames: 
 
@@ -1196,7 +1218,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 16
+Nr of module: 17
 
 Rownames: 
 
@@ -1210,7 +1232,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 17
+Nr of module: 18
 
 Rownames: 
 
@@ -1235,7 +1257,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 18
+Nr of module: 19
 
 Rownames: 
 
@@ -1246,24 +1268,6 @@ Colnames:
 	Dasysyrphus bilineatus (Syr. : Dip. )
 	TIPULIDAE7 (Tip. : Dip. )
 	Vanessa indica (Nym. : Lep. )
-
-__________________________
-
-Depth: 1
-
-Nr of module: 19
-
-Rownames: 
-
-	Clinopodium.micranthum
-	Commelina.communis
-	Plantago.asiatica
-	Tripterospermum.japonicum
-	Caryopteris.divaricata
-
-Colnames: 
-
-	Bombus (Thoracobombus) honshuensis (Api. : Hym. )
 
 __________________________
 
@@ -1373,29 +1377,6 @@ Nr of module: 25
 
 Rownames: 
 
-	Ainsliaea.acerifolia
-	Alangium.platanifolium
-	Cirsium.japonicum
-	Disporum.sessile
-	Impatiens.noli.tangere
-	Polygonatum.macranthum
-	Rabdosia.longituba
-	Rubus.illecebrosus
-	Salvia.glabrescens
-	Tricyrtis.hirta
-
-Colnames: 
-
-	Bombus (Diversobombus) diversus diversus (Api. : Hym. )
-
-__________________________
-
-Depth: 1
-
-Nr of module: 26
-
-Rownames: 
-
 	Epimedium.grandiflorum
 
 Colnames: 
@@ -1406,7 +1387,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 27
+Nr of module: 26
 
 Rownames: 
 
@@ -1450,7 +1431,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 28
+Nr of module: 27
 
 Rownames: 
 
@@ -1465,7 +1446,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 29
+Nr of module: 28
 
 Rownames: 
 
@@ -1482,7 +1463,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 30
+Nr of module: 29
 
 Rownames: 
 
@@ -1498,7 +1479,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 31
+Nr of module: 30
 
 Rownames: 
 
@@ -1537,7 +1518,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 32
+Nr of module: 31
 
 Rownames: 
 
@@ -1577,7 +1558,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 33
+Nr of module: 32
 
 Rownames: 
 
@@ -1628,7 +1609,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 34
+Nr of module: 33
 
 Rownames: 
 
@@ -1642,7 +1623,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 35
+Nr of module: 34
 
 Rownames: 
 
@@ -1667,7 +1648,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 36
+Nr of module: 35
 
 Rownames: 
 
@@ -1681,7 +1662,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 37
+Nr of module: 36
 
 Rownames: 
 
@@ -1696,7 +1677,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 38
+Nr of module: 37
 
 Rownames: 
 
@@ -1710,7 +1691,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 39
+Nr of module: 38
 
 Rownames: 
 
@@ -1736,7 +1717,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 40
+Nr of module: 39
 
 Rownames: 
 
@@ -1750,7 +1731,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 41
+Nr of module: 40
 
 Rownames: 
 
@@ -1765,7 +1746,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 42
+Nr of module: 41
 
 Rownames: 
 
@@ -1779,7 +1760,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 43
+Nr of module: 42
 
 Rownames: 
 
@@ -1793,7 +1774,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 44
+Nr of module: 43
 
 Rownames: 
 
@@ -1814,7 +1795,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 45
+Nr of module: 44
 
 Rownames: 
 
@@ -1829,7 +1810,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 46
+Nr of module: 45
 
 Rownames: 
 
@@ -1840,6 +1821,7 @@ Colnames:
 	Adelphocoris triannulatus (Mir. : Hem. )
 	ANTHOCORIDAE2 (Ant. : Hem. )
 	CECIDOMYIIDAE3 (Cec. : Dip. )
+	Cheilosia sp.12 (Syr. : Dip. )
 	Coelioxys brevis (Meg. : Hym. )
 	EMPIDIDAE22 (Emp. : Dip. )
 	ICHNEUMONIDAE116 (Ich. : Hym. )
@@ -1850,7 +1832,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 47
+Nr of module: 46
 
 Rownames: 
 
@@ -1864,7 +1846,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 48
+Nr of module: 47
 
 Rownames: 
 
@@ -1885,6 +1867,25 @@ Colnames:
 	Sphaerophoria menthastri (Syr. : Dip. )
 	Syritta pipiens (Syr. : Dip. )
 	TACHINIDAE15 (Tac. : Dip. )
+
+__________________________
+
+Depth: 1
+
+Nr of module: 48
+
+Rownames: 
+
+	Clinopodium.micranthum
+	Commelina.communis
+	Plantago.asiatica
+	Rabdosia.longituba
+	Rubus.illecebrosus
+	Tripterospermum.japonicum
+
+Colnames: 
+
+	Bombus (Thoracobombus) honshuensis (Api. : Hym. )
 
 __________________________
 
@@ -1959,7 +1960,6 @@ Colnames:
 	Anostinus daimio (Ela. : Col. )
 	ARANEIDA41 (Ara. : Ara. )
 	BIBIONIDAE1 (Bib. : Dip. )
-	Cheilosia sp.12 (Syr. : Dip. )
 	EMPIDIDAE19 (Emp. : Dip. )
 	EMPIDIDAE33 (Emp. : Dip. )
 	EMPIDIDAE44 (Emp. : Dip. )
@@ -2315,6 +2315,7 @@ Rownames:
 
 Colnames: 
 
+	Andrena (Euandrena) stellaria (And. : Hym. )
 	Athalia japonica (Ten. : Hym. )
 	Cheilosia sp.14 (Syr. : Dip. )
 	MECOPTERA5 (Mec. : Mec. )
@@ -2332,7 +2333,6 @@ Rownames:
 
 Colnames: 
 
-	Andrena (Euandrena) stellaria (And. : Hym. )
 	Andrena (Micrandrena) komachi (And. : Hym. )
 	ANTHOMYIIDAE14 (Ant. : Dip. )
 	ANTHOMYIIDAE27 (Ant. : Dip. )

@@ -123,6 +123,40 @@ Nr of module: 1
 
 Rownames: 
 
+	Euphrasia.officinalis
+	Angelica.sylvestris
+
+Colnames: 
+
+	Diptera.spec14
+	Diptera.spec25
+	Platycheirus.albimanus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Agrimonium.eupatorium
+	Plantago.major
+
+Colnames: 
+
+	Melanostoma.mellinum
+	Melanostoma.scalare
+	Platycheirus.clypeatus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
 	Lotus.corniculatus
 	Centaurea.nigra
 	Knautia.arvensis
@@ -154,7 +188,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 2
+Nr of module: 4
 
 Rownames: 
 
@@ -202,22 +236,26 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 5
 
 Rownames: 
 
-	Angelica.sylvestris
+	Aethusa.cynapium
+	Clematis.vitalba
+	Torilis.japonica
 
 Colnames: 
 
-	Diptera.spec14
-	Diptera.spec25
+	Cantharidae.spec1
+	Episyrphus.balteatus
+	Meliscaeva.auricollis
+	Formicidae.spec1
 
 __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 6
 
 Rownames: 
 
@@ -252,56 +290,6 @@ Colnames:
 	Pieris.brassicae
 	Incurvariidae.spec1
 	Aglais.urticae
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Euphrasia.officinalis
-
-Colnames: 
-
-	Platycheirus.albimanus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 6
-
-Rownames: 
-
-	Aethusa.cynapium
-	Clematis.vitalba
-	Torilis.japonica
-
-Colnames: 
-
-	Cantharidae.spec1
-	Episyrphus.balteatus
-	Meliscaeva.auricollis
-	Formicidae.spec1
-
-__________________________
-
-Depth: 1
-
-Nr of module: 7
-
-Rownames: 
-
-	Agrimonium.eupatorium
-	Plantago.major
-
-Colnames: 
-
-	Melanostoma.mellinum
-	Melanostoma.scalare
-	Platycheirus.clypeatus
 
 __________________________
 

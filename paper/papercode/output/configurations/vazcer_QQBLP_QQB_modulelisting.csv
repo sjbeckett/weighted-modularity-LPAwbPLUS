@@ -61,39 +61,20 @@ Nr of module: 1
 
 Rownames: 
 
-	Berberis darwinii
-	Berberis buxifolia
+	Rosa eglanteria
 
 Colnames: 
 
-	Trichophthalma amoena
-	Caenohalictus1
+	Allograpta.Toxomerus
+	Mordellidae
+	Corynura
+	Halictidae
 
 __________________________
 
 Depth: 1
 
 Nr of module: 2
-
-Rownames: 
-
-	Aristotelia chilensis
-	Schinus patagonicus
-
-Colnames: 
-
-	Policana albopilosa
-	Ruizantheda mutabilis
-	Syrphus octomaculatus
-	Platycheirus1
-	Manuelia postica
-	Formicidae1
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
 
 Rownames: 
 
@@ -126,18 +107,31 @@ __________________________
 
 Depth: 1
 
+Nr of module: 3
+
+Rownames: 
+
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+
+__________________________
+
+Depth: 1
+
 Nr of module: 4
 
 Rownames: 
 
-	Rosa eglanteria
+	Berberis darwinii
+	Berberis buxifolia
 
 Colnames: 
 
-	Allograpta.Toxomerus
-	Mordellidae
-	Corynura
-	Halictidae
+	Trichophthalma amoena
+	Caenohalictus1
 
 __________________________
 
@@ -147,11 +141,17 @@ Nr of module: 5
 
 Rownames: 
 
-	Vicia nigricans
+	Aristotelia chilensis
+	Schinus patagonicus
 
 Colnames: 
 
-	Bombus dahlbomii
+	Policana albopilosa
+	Ruizantheda mutabilis
+	Syrphus octomaculatus
+	Platycheirus1
+	Manuelia postica
+	Formicidae1
 
 __________________________
 

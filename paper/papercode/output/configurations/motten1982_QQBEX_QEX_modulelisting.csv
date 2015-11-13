@@ -76,17 +76,19 @@ Nr of module: 1
 
 Rownames: 
 
-	Tiarella.cordifolia collina
-	Podophyllum.peltatum
-	Trillium.catesbei
-	Aesculus.sylvatica
+	Claytonia.virginica
 
 Colnames: 
 
-	Ephemoropsis.laboriosa
-	Xylocopa.virginica.virginica
-	Bombus.bimaculatus
-	Bombus.pennsylvanicus
+	Andrena..Trachandrena..ceanothi
+	Andrena..Ptilandrena..erigeniae
+	Andrena..Scrapopteris..imatrix
+	Dialictus.cressonii
+	halictid.sp.
+	Hylema.platura
+	Gonia.sp.
+	Lycaenopsis.argiolus
+	Euchlo.creusa.lotta
 
 __________________________
 
@@ -159,19 +161,17 @@ Nr of module: 4
 
 Rownames: 
 
-	Claytonia.virginica
+	Tiarella.cordifolia collina
+	Podophyllum.peltatum
+	Trillium.catesbei
+	Aesculus.sylvatica
 
 Colnames: 
 
-	Andrena..Trachandrena..ceanothi
-	Andrena..Ptilandrena..erigeniae
-	Andrena..Scrapopteris..imatrix
-	Dialictus.cressonii
-	halictid.sp.
-	Hylema.platura
-	Gonia.sp.
-	Lycaenopsis.argiolus
-	Euchlo.creusa.lotta
+	Ephemoropsis.laboriosa
+	Xylocopa.virginica.virginica
+	Bombus.bimaculatus
+	Bombus.pennsylvanicus
 
 __________________________
 

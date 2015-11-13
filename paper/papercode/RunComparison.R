@@ -270,7 +270,7 @@ write.csv(ModularityScore_QuanBiMo,"output/summary/Qua_Modscore_QuanBiMo.csv")
 write.csv(TimeData_QuanBiMo,"output/summary/Qua_Times_QuanBiMo.csv")
 
 write.csv(BinModularityScore_LPA_wb_plus,"output/summary/Bin_Modscore_LPA_wb_plus.csv")
-write.csv(BinTimeData_LPA_wb_plus,"output/summary/Bin_TimesLPA_wb_plus.csv")
+write.csv(BinTimeData_LPA_wb_plus,"output/summary/Bin_Times_LPA_wb_plus.csv")
 write.csv(BinModularityScore_EXLPA_wb_plus,"output/summary/Bin_Modscore_EXLPA_wb_plus.csv")
 write.csv(BinTimeData_EXLPA_wb_plus,"output/summary/Bin_Times_EXLPA_wb_plus.csv")
 write.csv(BinModularityScore_QuanBiMo,"output/summary/Bin_Modscore_QuanBiMo.csv")

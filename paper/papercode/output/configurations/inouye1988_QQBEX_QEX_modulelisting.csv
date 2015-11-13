@@ -143,13 +143,14 @@ Nr of module: 1
 
 Rownames: 
 
-	Brachycome.scapiformis
-	Gentianella.diemensis
+	Phebalium.ovatifolium
 
 Colnames: 
 
-	Dilophus.sp.
-	Empis.sp.C
+	Empis.sp.F
+	Calliphora.fulvicoxa
+	Calliphora.hilli
+	Calliphora.sp.B
 
 __________________________
 
@@ -159,8 +160,6 @@ Nr of module: 2
 
 Rownames: 
 
-	Achillea.millefolium
-	Helipterum.anthemoides
 	Pemelea.ligustrina
 	Prostanthera.cuneata
 
@@ -168,13 +167,9 @@ Colnames:
 
 	Exoneura.sp
 	Apis.mellifera
-	Lasioglossum.sp.1
 	Lasioglossum.sp.3
-	Lasioglossum.Parasphecodes.sp.2
-	Villa.sp.
 	Eristalis.tenax
 	Sapromyza.sp.
-	Alophera.sp.
 	Chaetophthalamus.dorsalis
 
 __________________________
@@ -186,25 +181,19 @@ Nr of module: 3
 Rownames: 
 
 	Baeckia.gunniana
-	Brachycome.scapigera
 	Brachycome.stolonifera
 	Epacris.petrophila
 	Epilobium.gunnianum
 	Helichrysum.alpinum
-	Helipterum.albicans
 	Leucopogon.montanus
-	Phebalium.ovatifolium
+	Prasophyllum.alpinum
 
 Colnames: 
 
 	Hylaeus.sp.
-	Anthoboscinae
 	Tabanus.froggatti
 	Stratiomyidae
-	Empis.sp.D
-	Empis.sp.E
-	Empis.sp.F
-	Melangyna.sp.
+	Diostracus.sp.1
 	Rivellia.sp.F
 	Phytoliriomyza.sp.
 	Incurviseta.sp.K
@@ -212,14 +201,8 @@ Colnames:
 	Coenosia.sp.B
 	Helina.sp.A
 	Musca.vetustissima
-	Calliphora.fulvicoxa
-	Calliphora.hilli
 	Calliphora.sp.A
-	Calliphora.sp.B
-	Scaptia.alpina
-	Unident.no.1
 	Unident.no.2
-	Unident.no.3
 	Unident.no.4
 
 __________________________
@@ -231,13 +214,11 @@ Nr of module: 4
 Rownames: 
 
 	Asperula.gunnii
-	Euphrasia.collina diversicolor
 	Neopaxia.australasica
 	Olearia.phlogopappa
 
 Colnames: 
 
-	Euryinae.sp.2
 	Poecilohetaerus.sp.
 	Scaptomyza.australis
 	Coenosia.sp.A
@@ -247,6 +228,98 @@ __________________________
 Depth: 1
 
 Nr of module: 5
+
+Rownames: 
+
+	Helipterum.anthemoides
+
+Colnames: 
+
+	Villa.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Aciphylla.simplicifolia
+	Brachycome.scapiformis
+	Gentianella.diemensis
+
+Colnames: 
+
+	Dilophus.sp.
+	Empis.sp.C
+	Sphenella.marginata
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Stylidium.graminifolium
+
+Colnames: 
+
+	Lasioglossum.sp.4
+	Megachile.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 8
+
+Rownames: 
+
+	Aciphylla.glacialis
+	Euphrasia.collina diversicolor
+	Hypochoeris.radicata
+	Oxylobium.ellipticum
+
+Colnames: 
+
+	Euryglossa.sp.
+	Lasioglossum.sp.2
+	Lasioglossum.sp.5
+	Lasioglossum.sp.6
+	Lasioglossum.Parasphecodes.sp.1
+	Euryinae.sp.1
+	Euryinae.sp.2
+	Euryinae.sp.3
+	Sciaridae
+	Pelecorhychus.rubidus
+	Therevidae
+	Comptosia.sylvana
+	Hydrellia.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 9
+
+Rownames: 
+
+	Achillea.millefolium
+
+Colnames: 
+
+	Lasioglossum.sp.1
+	Lasioglossum.Parasphecodes.sp.2
+	Alophera.sp.
+
+__________________________
+
+Depth: 1
+
+Nr of module: 10
 
 Rownames: 
 
@@ -272,65 +345,32 @@ __________________________
 
 Depth: 1
 
-Nr of module: 6
-
-Rownames: 
-
-	Aciphylla.glacialis
-	Aciphylla.simplicifolia
-	Hypochoeris.radicata
-	Oxylobium.ellipticum
-
-Colnames: 
-
-	Euryglossa.sp.
-	Lasioglossum.sp.2
-	Lasioglossum.sp.5
-	Lasioglossum.sp.6
-	Lasioglossum.Parasphecodes.sp.1
-	Euryinae.sp.1
-	Euryinae.sp.3
-	Sciaridae
-	Pelecorhychus.rubidus
-	Therevidae
-	Comptosia.sylvana
-	Sphenella.marginata
-	Hydrellia.sp.
-
-__________________________
-
-Depth: 1
-
-Nr of module: 7
+Nr of module: 11
 
 Rownames: 
 
 	Epacris.microphylla
-	Prasophyllum.alpinum
+	Pentachondra.pumila
 
 Colnames: 
 
-	Diostracus.sp.1
+	Helina.sp.B
+	Senostoma.sp.B
 	Senostoma.sp.D
+	Unident.no.1
 
 __________________________
 
 Depth: 1
 
-Nr of module: 8
+Nr of module: 12
 
 Rownames: 
 
 	Epacris.paludosa
-	Pentachondra.pumila
-	Stylidium.graminifolium
 
 Colnames: 
 
-	Lasioglossum.sp.4
-	Megachile.sp.
-	Helina.sp.B
-	Senostoma.sp.B
 	Agrostis.infusa
 	Hippotion.scofa
 
@@ -338,10 +378,29 @@ __________________________
 
 Depth: 1
 
-Nr of module: 9
+Nr of module: 13
 
 Rownames: 
 
+	Helipterum.albicans
+
+Colnames: 
+
+	Anthoboscinae
+	Empis.sp.D
+	Empis.sp.E
+	Melangyna.sp.
+	Scaptia.alpina
+
+__________________________
+
+Depth: 1
+
+Nr of module: 14
+
+Rownames: 
+
+	Brachycome.scapigera
 	Brachycome.sp.
 	Celmisia.longifolia
 	Craspedia.sp.
@@ -365,6 +424,7 @@ Colnames:
 	Limnophora.sp.
 	Prosena.sp.C
 	Senostoma.sp.A
+	Unident.no.3
 	Oreixenica.orichora
 
 __________________________

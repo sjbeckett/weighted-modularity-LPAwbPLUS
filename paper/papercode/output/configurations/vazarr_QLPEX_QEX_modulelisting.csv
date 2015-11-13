@@ -58,16 +58,11 @@ Nr of module: 1
 
 Rownames: 
 
-	Berberis darwinii
-	Rosa eglanteria
-	Ribes magellanicum
+	Cynanchum diemii
 
 Colnames: 
 
-	Bombus dahlbomii
-	Colletes seminitidus
-	Sapromyza.Minettia
-	Platycherius fenestratus
+	Torymidae2
 
 __________________________
 
@@ -77,11 +72,17 @@ Nr of module: 2
 
 Rownames: 
 
-	Cynanchum diemii
+	Schinus patagonicus
 
 Colnames: 
 
-	Torymidae2
+	Ruizantheda mutabilis
+	Allograpta.Toxomerus
+	Platycheirus1
+	Camponotus
+	Scaeva melanostoma
+	Diptera10
+	Vespidae
 
 __________________________
 
@@ -105,17 +106,16 @@ Nr of module: 4
 
 Rownames: 
 
-	Schinus patagonicus
+	Berberis darwinii
+	Rosa eglanteria
+	Ribes magellanicum
 
 Colnames: 
 
-	Ruizantheda mutabilis
-	Allograpta.Toxomerus
-	Platycheirus1
-	Camponotus
-	Scaeva melanostoma
-	Diptera10
-	Vespidae
+	Bombus dahlbomii
+	Colletes seminitidus
+	Sapromyza.Minettia
+	Platycherius fenestratus
 
 __________________________
 

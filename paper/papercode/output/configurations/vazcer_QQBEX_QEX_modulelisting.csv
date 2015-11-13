@@ -81,6 +81,34 @@ Nr of module: 2
 
 Rownames: 
 
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Cynanchum diemii
+
+Colnames: 
+
+	Colletes seminitidus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
 	Rosa eglanteria
 
 Colnames: 
@@ -94,7 +122,23 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 5
+
+Rownames: 
+
+	Berberis darwinii
+	Berberis buxifolia
+
+Colnames: 
+
+	Trichophthalma amoena
+	Caenohalictus1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
 
 Rownames: 
 
@@ -122,50 +166,6 @@ Colnames:
 	Bombilidae
 	Coleoptera2
 	Caenohalictus2
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
-	Cynanchum diemii
-
-Colnames: 
-
-	Colletes seminitidus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Berberis darwinii
-	Berberis buxifolia
-
-Colnames: 
-
-	Trichophthalma amoena
-	Caenohalictus1
-
-__________________________
-
-Depth: 1
-
-Nr of module: 6
-
-Rownames: 
-
-	Vicia nigricans
-
-Colnames: 
-
-	Bombus dahlbomii
 
 __________________________
 

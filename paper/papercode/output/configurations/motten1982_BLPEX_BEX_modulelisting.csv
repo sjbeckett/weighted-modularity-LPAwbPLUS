@@ -76,24 +76,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Viola.papilionacea
-
-Colnames: 
-
-	Andrena..Tomelissa..violae
-	Osmia.atriventris
-	Osmia.conjucta
-	Osmia.simillima
-	Bombylius.major
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
 	Thalictrum.thalictroides
 	Stellaria.pubera
 
@@ -114,48 +96,50 @@ __________________________
 
 Depth: 1
 
+Nr of module: 2
+
+Rownames: 
+
+	Sangiunaria.canadensis
+	Tiarella.cordifolia collina
+	Podophyllum.peltatum
+	Trillium.catesbei
+	Aesculus.sylvatica
+
+Colnames: 
+
+	Andrena..Melandrena..carlini
+	Ephemoropsis.laboriosa
+	Xylocopa.virginica.virginica
+	Apis.mellifera
+	Bombus.bimaculatus
+	Bombus.pennsylvanicus
+	Dialictus.cressonii
+	Toxomerous.geminatus
+
+__________________________
+
+Depth: 1
+
 Nr of module: 3
 
 Rownames: 
 
-	Cardamine.angustata angustata
+	Viola.papilionacea
 
 Colnames: 
 
-	Andrena..Scaphandrena..arabis
-	Andrena..Melandrena..dunningi
-	Andrena..Simandrena..nasonii
-	Nomada..Nomada..pygmaea
-	Lassioglossum.fuscipenne
-	unknown.sp.
-	Euchlo.creusa.lotta
+	Andrena..Tomelissa..violae
+	Osmia.atriventris
+	Osmia.conjucta
+	Osmia.simillima
+	Bombylius.major
 
 __________________________
 
 Depth: 1
 
 Nr of module: 4
-
-Rownames: 
-
-	Erythronium.umbilicatum
-	Claytonia.virginica
-
-Colnames: 
-
-	Andrena..Trachandrena..ceanothi
-	Andrena..Scrapopteris..imatrix
-	Nomada..Gnathias..perplexa
-	Augochlora.pura
-	Augochorella.striata
-	Osmia.lignaria
-	Lycaenopsis.argiolus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
 
 Rownames: 
 
@@ -176,26 +160,42 @@ __________________________
 
 Depth: 1
 
+Nr of module: 5
+
+Rownames: 
+
+	Erythronium.umbilicatum
+	Claytonia.virginica
+
+Colnames: 
+
+	Andrena..Trachandrena..ceanothi
+	Andrena..Scrapopteris..imatrix
+	Nomada..Gnathias..perplexa
+	Augochlora.pura
+	Augochorella.striata
+	Osmia.lignaria
+	Lycaenopsis.argiolus
+
+__________________________
+
+Depth: 1
+
 Nr of module: 6
 
 Rownames: 
 
-	Sangiunaria.canadensis
-	Tiarella.cordifolia collina
-	Podophyllum.peltatum
-	Trillium.catesbei
-	Aesculus.sylvatica
+	Cardamine.angustata angustata
 
 Colnames: 
 
-	Andrena..Melandrena..carlini
-	Ephemoropsis.laboriosa
-	Xylocopa.virginica.virginica
-	Apis.mellifera
-	Bombus.bimaculatus
-	Bombus.pennsylvanicus
-	Dialictus.cressonii
-	Toxomerous.geminatus
+	Andrena..Scaphandrena..arabis
+	Andrena..Melandrena..dunningi
+	Andrena..Simandrena..nasonii
+	Nomada..Nomada..pygmaea
+	Lassioglossum.fuscipenne
+	unknown.sp.
+	Euchlo.creusa.lotta
 
 __________________________
 

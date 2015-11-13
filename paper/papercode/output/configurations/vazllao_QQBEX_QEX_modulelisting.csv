@@ -58,33 +58,19 @@ Nr of module: 1
 
 Rownames: 
 
-	Vicia nigricans
+	Cynanchum diemii
 
 Colnames: 
 
-	Bombus dahlbomii
-	Lepidoptera1
+	Formicidae3
+	Braconidae3
+	Torymidae3
 
 __________________________
 
 Depth: 1
 
 Nr of module: 2
-
-Rownames: 
-
-	Ribes magellanicum
-
-Colnames: 
-
-	Trichophthalma amoena
-	Salpingidae
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
 
 Rownames: 
 
@@ -98,23 +84,22 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 3
 
 Rownames: 
 
-	Cynanchum diemii
+	Vicia nigricans
 
 Colnames: 
 
-	Formicidae3
-	Braconidae3
-	Torymidae3
+	Bombus dahlbomii
+	Lepidoptera1
 
 __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 4
 
 Rownames: 
 
@@ -129,7 +114,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 6
+Nr of module: 5
 
 Rownames: 
 
@@ -160,6 +145,21 @@ Colnames:
 	Coleoptera3
 	Ichneumonidae1
 	Hymenoptera6
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Ribes magellanicum
+
+Colnames: 
+
+	Trichophthalma amoena
+	Salpingidae
 
 __________________________
 

@@ -41,12 +41,14 @@ Nr of module: 1
 
 Rownames: 
 
-	Beta:vulgaris
-	Silene:vulgaris
+	Crithmum:maritimum
+	Daucus:carota
 
 Colnames: 
 
-	Sepsis.thoracica
+	Musca.domestica
+	Lucilia.sericata
+	Eristalix.tenax
 
 __________________________
 
@@ -94,14 +96,12 @@ Nr of module: 4
 
 Rownames: 
 
-	Crithmum:maritimum
-	Daucus:carota
+	Beta:vulgaris
+	Silene:vulgaris
 
 Colnames: 
 
-	Musca.domestica
-	Lucilia.sericata
-	Eristalix.tenax
+	Sepsis.thoracica
 
 __________________________
 

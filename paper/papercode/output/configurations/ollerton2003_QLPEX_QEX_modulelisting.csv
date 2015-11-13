@@ -84,47 +84,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Xysmalobium.involucratum
-
-Colnames: 
-
-	Other.wasps
-	Other.bees
-	Elateridae.sp
-	Chrysomelidae.sp1
-	Chrysomelidae.sp2
-	Scarabaeinae.sp2
-	Other.Coleoptera
-	Lygaeidae.sp2
-	Sepsidae.sp1
-	Sepsidae.sp2
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
-	Aspidonepsis.diploglossa
-
-Colnames: 
-
-	Apis.mellifera
-	Halictidaesp1
-	Musca.domestica
-	Muscidae.genus2
-	Chloropidae
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
 	Asclepias.cucullata
 
 Colnames: 
@@ -137,7 +96,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 2
 
 Rownames: 
 
@@ -160,7 +119,25 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 3
+
+Rownames: 
+
+	Aspidonepsis.diploglossa
+
+Colnames: 
+
+	Apis.mellifera
+	Halictidaesp1
+	Musca.domestica
+	Muscidae.genus2
+	Chloropidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
 
 Rownames: 
 
@@ -178,6 +155,29 @@ Colnames:
 	Sepsidae.sp3
 	Dacus.sp
 	Diptera.sp22
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Xysmalobium.involucratum
+
+Colnames: 
+
+	Other.wasps
+	Other.bees
+	Elateridae.sp
+	Chrysomelidae.sp1
+	Chrysomelidae.sp2
+	Scarabaeinae.sp2
+	Other.Coleoptera
+	Lygaeidae.sp2
+	Sepsidae.sp1
+	Sepsidae.sp2
 
 __________________________
 

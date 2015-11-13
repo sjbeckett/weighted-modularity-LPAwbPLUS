@@ -48,25 +48,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Cerastium.alpinum
-	Dryas.integrifolia
-	Arnica.alpina
-
-Colnames: 
-
-	Boloria.improba
-	Spilogona.projecta
-	Spilogona.sanctipauli
-	Eupogonomyia.probilofensis
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
 	Caltha.palustris
 	Potentilla.vahliana
 
@@ -82,7 +63,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 2
 
 Rownames: 
 
@@ -93,6 +74,25 @@ Colnames:
 
 	Spilogona.almquistii
 	Pogonomyiodes.segnis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Cerastium.alpinum
+	Dryas.integrifolia
+	Arnica.alpina
+
+Colnames: 
+
+	Boloria.improba
+	Spilogona.projecta
+	Spilogona.sanctipauli
+	Eupogonomyia.probilofensis
 
 __________________________
 

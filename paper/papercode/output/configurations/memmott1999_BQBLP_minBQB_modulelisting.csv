@@ -123,136 +123,8 @@ Nr of module: 1
 
 Rownames: 
 
-	Leontodon.autumnalis
-	Rubus.fruticosus
-
-Colnames: 
-
-	Coleoptera.spec7
-	Diptera.spec10
-	Diptera.spec17
-	Metasyrphus.corollae
-	Syritta.pipiens
-	Pieris.brassicae
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
-	Aethusa.cynapium
-	Torilis.japonica
-
-Colnames: 
-
-	Coleoptera.spec6
-	Diptera.spec4
-	Conipidae.spec1
-	Diptera.spec6
-	Diptera.spec8
-	Diptera.spec12
-	Diptera.spec15
-	Diptera.spec19
-	Meliscaeva.auricollis
-	Syrphus.vitripennis
-	Formicidae.spec1
-	Symphyta.spec1
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
-	Lotus.corniculatus
-	Centaurea.nigra
-	Knautia.arvensis
-	Eupatorium.cannabinum
-	Lathyrus.pratensis
-	Trifolium.pratense
-
-Colnames: 
-
-	Coleoptera.spec1
-	Cantharidae.spec1
-	Curculionidae.spec1
-	Diptera.spec2
-	Diptera.spec7
-	Diptera.spec9
-	Diptera.spec16
-	Diptera.spec24
-	Eristalis.pertinax
-	Eristalis.tenax
-	Helophilus.trivittatus
-	Scaeva.pyrastri
-	Bombus.lapidarius
-	Bombus.muscorum
-	Bombus.pascuorum
-	Bombus.terrestris
-	Psithyrus.spec1
-	Apis.mellifera
-	Symphyta.spec2
-	Polyommatus.icarus
-	Pyonia.tithonus
-	Maniola.jurtina
-	Thymelicus.sylvestris
-	Aglais.urticae
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
-	Euphrasia.officinalis
-	Leontodon.hispidus
-	Angelica.sylvestris
-	Daucus.carota
-
-Colnames: 
-
-	Coleoptera.spec2
-	Coleoptera.spec4
-	Coleoptera.spec5
-	Diptera.spec1
-	Diptera.spec3
-	Scatophaga.stercoraria
-	Diptera.spec11
-	Diptera.spec13
-	Diptera.spec14
-	Diptera.spec18
-	Diptera.spec20
-	Diptera.spec25
-	Tephretidae.spec1
-	Diptera.spec26
-	Diptera.spec27
-	Chrysotoxum.bicinctum
-	Episyrphus.arbustorum
-	Helophilus.pendulus
-	Platycheirus.albimanus
-	Platycheirus.scutatus
-	Rhingia.campestris
-	Syrphus.ribesii
-	Xanthogramma.pedissequum
-	Parasitica
-	Incurvariidae.spec1
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
 	Agrimonium.eupatorium
+	Leontodon.autumnalis
 	Medicago.lupulina
 	Hypochaeris.radicata
 	Linum.catharticum
@@ -267,7 +139,10 @@ Rownames:
 Colnames: 
 
 	Coleoptera.spec3
+	Coleoptera.spec7
 	Diptera.spec5
+	Diptera.spec10
+	Diptera.spec17
 	Eriothrix.rufomaculata
 	Diptera.spec21
 	Diptera.spec22
@@ -275,9 +150,122 @@ Colnames:
 	Episyrphus.balteatus
 	Melanostoma.mellinum
 	Melanostoma.scalare
+	Metasyrphus.corollae
 	Platycheirus.clypeatus
 	Sphaerophoria.scripta
 	solitary.bees
+	Pieris.brassicae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Rubus.fruticosus
+	Aethusa.cynapium
+	Torilis.japonica
+	Angelica.sylvestris
+
+Colnames: 
+
+	Coleoptera.spec6
+	Conipidae.spec1
+	Diptera.spec6
+	Diptera.spec8
+	Diptera.spec12
+	Diptera.spec14
+	Diptera.spec15
+	Diptera.spec19
+	Diptera.spec25
+	Meliscaeva.auricollis
+	Syritta.pipiens
+	Syrphus.vitripennis
+	Formicidae.spec1
+	Symphyta.spec1
+	Symphyta.spec2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Lotus.corniculatus
+	Centaurea.nigra
+	Knautia.arvensis
+	Lathyrus.pratensis
+	Trifolium.pratense
+
+Colnames: 
+
+	Coleoptera.spec1
+	Curculionidae.spec1
+	Diptera.spec7
+	Diptera.spec16
+	Eristalis.pertinax
+	Eristalis.tenax
+	Bombus.lapidarius
+	Bombus.muscorum
+	Bombus.pascuorum
+	Bombus.terrestris
+	Psithyrus.spec1
+	Apis.mellifera
+	Polyommatus.icarus
+	Pyonia.tithonus
+	Maniola.jurtina
+	Thymelicus.sylvestris
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Euphrasia.officinalis
+	Eupatorium.cannabinum
+	Leontodon.hispidus
+	Daucus.carota
+
+Colnames: 
+
+	Coleoptera.spec2
+	Coleoptera.spec4
+	Coleoptera.spec5
+	Cantharidae.spec1
+	Diptera.spec1
+	Diptera.spec2
+	Diptera.spec3
+	Diptera.spec4
+	Scatophaga.stercoraria
+	Diptera.spec9
+	Diptera.spec11
+	Diptera.spec13
+	Diptera.spec18
+	Diptera.spec20
+	Diptera.spec24
+	Tephretidae.spec1
+	Diptera.spec26
+	Diptera.spec27
+	Chrysotoxum.bicinctum
+	Episyrphus.arbustorum
+	Helophilus.pendulus
+	Helophilus.trivittatus
+	Platycheirus.albimanus
+	Platycheirus.scutatus
+	Rhingia.campestris
+	Scaeva.pyrastri
+	Syrphus.ribesii
+	Xanthogramma.pedissequum
+	Parasitica
+	Incurvariidae.spec1
+	Aglais.urticae
 
 __________________________
 

@@ -167,6 +167,7 @@ Rownames:
 	Linnaea.borealis
 	Maianthemum.canadense
 	Pyrola.secunda
+	Trientalis.borealis
 	Trillium.undulatum
 
 Colnames: 
@@ -193,6 +194,7 @@ Colnames:
 	Bombylius.pigmaeus
 	Cantharis.sp.
 	Carposcalis.confusus
+	Carposcalis.obscura
 	Celastrina.argiolus
 	Chalcosyrphus.curvarius
 	Chalcosyrphus.inarmatus
@@ -264,20 +266,6 @@ Nr of module: 3
 
 Rownames: 
 
-	Trientalis.borealis
-
-Colnames: 
-
-	Carposcalis.obscura
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
 	Chimaphila.umbellata
 
 Colnames: 
@@ -289,7 +277,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 4
 
 Rownames: 
 

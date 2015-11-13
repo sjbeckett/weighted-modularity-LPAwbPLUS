@@ -887,10 +887,8 @@ Colnames:
 	BRACONIDAE13 (Bra. : Hym. )
 	BRACONIDAE16 (Bra. : Hym. )
 	BRACONIDAE27 (Bra. : Hym. )
-	CALLIPHORIDAE8 (Cal. : Dip. )
 	CHLOROPIDAE22 (Chl. : Dip. )
 	DIAPRIIDAE1 (Dia. : Hym. )
-	Ectemnuis rubicola nipponis (Sph. : Hym. )
 	EPHYDRIDAE14 (Eph. : Dip. )
 	Graphomyia maculata (Mus. : Dip. )
 	Hylaeus nippon (Col. : Hym. )
@@ -898,6 +896,7 @@ Colnames:
 	ICHNEUMONIDAE53 (Ich. : Hym. )
 	ICHNEUMONIDAE64 (Ich. : Hym. )
 	ICHNEUMONIDAE82 (Ich. : Hym. )
+	Onomaus lautus (Mir. : Hem. )
 	Plateros sp. (Lyc. : Col. )
 	PTEROMALIDAE3 (Pte. : Hym. )
 	PYRALIDAE2 (Pyr. : Lep. )
@@ -1109,16 +1108,17 @@ Rownames:
 Colnames: 
 
 	Arge nigrinodosa (Ari. : Hym. )
+	CALLIPHORIDAE8 (Cal. : Dip. )
 	Cerceris carinalis (Sph. : Hym. )
 	CHRYSOMELIDAE20 (Chr. : Col. )
 	Ectemnius (Cameronitus) radiatus (Sph. : Hym. )
 	Ectemnius (Hypocrabro) rubicola (Sph. : Hym. )
+	Ectemnuis rubicola nipponis (Sph. : Hym. )
 	Gamepenthes versipellis (Ela. : Col. )
 	HELIOZELIDAE3 (Hel. : Lep. )
 	ICHNEUMONIDAE120 (Ich. : Hym. )
 	ICHNEUMONIDAE123 (Ich. : Hym. )
 	ICHNEUMONIDAE74 (Ich. : Hym. )
-	Onomaus lautus (Mir. : Hem. )
 	Paratrechina flavipes (For. : Hym. )
 	Paratrichius septemdecimguttatus (Sca. : Col. )
 	Pseudaosterna misella (Cer. : Col. )
@@ -1255,23 +1255,6 @@ Nr of module: 19
 
 Rownames: 
 
-	Clinopodium.micranthum
-	Commelina.communis
-	Plantago.asiatica
-	Tripterospermum.japonicum
-
-Colnames: 
-
-	Bombus (Thoracobombus) honshuensis (Api. : Hym. )
-
-__________________________
-
-Depth: 1
-
-Nr of module: 20
-
-Rownames: 
-
 	Corydalis.lineariloba
 
 Colnames: 
@@ -1290,7 +1273,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 21
+Nr of module: 20
 
 Rownames: 
 
@@ -1314,7 +1297,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 22
+Nr of module: 21
 
 Rownames: 
 
@@ -1328,7 +1311,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 23
+Nr of module: 22
 
 Rownames: 
 
@@ -1344,7 +1327,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 24
+Nr of module: 23
 
 Rownames: 
 
@@ -1362,6 +1345,30 @@ Colnames:
 	Oedemeronia manicata (Oed. : Col. )
 	Trachys saundersi (Bup. : Col. )
 	LUSIIDAE1 (Clu. : Dip. )
+
+__________________________
+
+Depth: 1
+
+Nr of module: 24
+
+Rownames: 
+
+	Ainsliaea.acerifolia
+	Alangium.platanifolium
+	Cirsium.japonicum
+	Disporum.sessile
+	Impatiens.noli.tangere
+	Polygonatum.macranthum
+	Rabdosia.longituba
+	Rubus.illecebrosus
+	Salvia.glabrescens
+	Tricyrtis.hirta
+	Caryopteris.divaricata
+
+Colnames: 
+
+	Bombus (Diversobombus) diversus diversus (Api. : Hym. )
 
 __________________________
 
@@ -1815,6 +1822,7 @@ Colnames:
 	Adelphocoris triannulatus (Mir. : Hem. )
 	ANTHOCORIDAE2 (Ant. : Hem. )
 	CECIDOMYIIDAE3 (Cec. : Dip. )
+	Cheilosia sp.12 (Syr. : Dip. )
 	Coelioxys brevis (Meg. : Hym. )
 	EMPIDIDAE22 (Emp. : Dip. )
 	ICHNEUMONIDAE116 (Ich. : Hym. )
@@ -1869,6 +1877,23 @@ Nr of module: 48
 
 Rownames: 
 
+	Clinopodium.micranthum
+	Commelina.communis
+	Plantago.asiatica
+	Tripterospermum.japonicum
+
+Colnames: 
+
+	Bombus (Thoracobombus) honshuensis (Api. : Hym. )
+
+__________________________
+
+Depth: 1
+
+Nr of module: 49
+
+Rownames: 
+
 	Prunus.Grayana
 
 Colnames: 
@@ -1897,7 +1922,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 49
+Nr of module: 50
 
 Rownames: 
 
@@ -1921,7 +1946,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 50
+Nr of module: 51
 
 Rownames: 
 
@@ -1934,7 +1959,6 @@ Colnames:
 	Anostinus daimio (Ela. : Col. )
 	ARANEIDA41 (Ara. : Ara. )
 	BIBIONIDAE1 (Bib. : Dip. )
-	Cheilosia sp.12 (Syr. : Dip. )
 	EMPIDIDAE19 (Emp. : Dip. )
 	EMPIDIDAE33 (Emp. : Dip. )
 	EMPIDIDAE44 (Emp. : Dip. )
@@ -1947,7 +1971,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 51
+Nr of module: 52
 
 Rownames: 
 
@@ -1974,7 +1998,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 52
+Nr of module: 53
 
 Rownames: 
 
@@ -1993,7 +2017,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 53
+Nr of module: 54
 
 Rownames: 
 
@@ -2015,7 +2039,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 54
+Nr of module: 55
 
 Rownames: 
 
@@ -2031,7 +2055,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 55
+Nr of module: 56
 
 Rownames: 
 
@@ -2046,7 +2070,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 56
+Nr of module: 57
 
 Rownames: 
 
@@ -2066,7 +2090,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 57
+Nr of module: 58
 
 Rownames: 
 
@@ -2080,7 +2104,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 58
+Nr of module: 59
 
 Rownames: 
 
@@ -2094,7 +2118,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 59
+Nr of module: 60
 
 Rownames: 
 
@@ -2117,30 +2141,6 @@ Colnames:
 	EMPIDIDAE4 (Emp. : Dip. )
 	Eusphalerum parallelum (Sta. : Col. )
 	Mordellina sp. (Mor. : Col. )
-
-__________________________
-
-Depth: 1
-
-Nr of module: 60
-
-Rownames: 
-
-	Ainsliaea.acerifolia
-	Alangium.platanifolium
-	Cirsium.japonicum
-	Disporum.sessile
-	Impatiens.noli.tangere
-	Polygonatum.macranthum
-	Rabdosia.longituba
-	Rubus.illecebrosus
-	Salvia.glabrescens
-	Tricyrtis.hirta
-	Caryopteris.divaricata
-
-Colnames: 
-
-	Bombus (Diversobombus) diversus diversus (Api. : Hym. )
 
 __________________________
 

@@ -58,20 +58,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Aristotelia chilensis
-
-Colnames: 
-
-	Policana albopilosa
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
 	Berberis darwinii
 	Rosa eglanteria
 	Ribes magellanicum
@@ -87,7 +73,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 2
 
 Rownames: 
 
@@ -102,6 +88,20 @@ Colnames:
 	Scaeva melanostoma
 	Diptera10
 	Vespidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Aristotelia chilensis
+
+Colnames: 
+
+	Policana albopilosa
 
 __________________________
 

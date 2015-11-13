@@ -82,25 +82,6 @@ Nr of module: 3
 
 Rownames: 
 
-	Alstroemeria aurea
-	Berberis darwinii
-	Vicia nigricans
-
-Colnames: 
-
-	Bombus dahlbomii
-	Manuelia gayi
-	Trichophthalma jaffueli
-	Heterosarus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
 	Rosa eglanteria
 
 Colnames: 
@@ -111,6 +92,25 @@ Colnames:
 	Staphilinidae
 	Cantharidae
 	Diptera9
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Alstroemeria aurea
+	Berberis darwinii
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+	Manuelia gayi
+	Trichophthalma jaffueli
+	Heterosarus
 
 __________________________
 

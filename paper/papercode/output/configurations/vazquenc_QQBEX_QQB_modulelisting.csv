@@ -65,6 +65,23 @@ Nr of module: 2
 
 Rownames: 
 
+	Aristotelia chilensis
+	Schinus patagonicus
+
+Colnames: 
+
+	Policana albopilosa
+	Trichophthalma amoena
+	Allograpta.Toxomerus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
 	Alstroemeria aurea
 	Vicia nigricans
 
@@ -83,23 +100,6 @@ Colnames:
 	Megachile1
 	Diptera5
 	Diptera3
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
-	Aristotelia chilensis
-	Schinus patagonicus
-
-Colnames: 
-
-	Policana albopilosa
-	Trichophthalma amoena
-	Allograpta.Toxomerus
 
 __________________________
 

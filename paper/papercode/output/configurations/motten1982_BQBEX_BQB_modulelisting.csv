@@ -76,26 +76,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Cardamine.angustata angustata
-
-Colnames: 
-
-	Andrena..Scaphandrena..arabis
-	Andrena..Melandrena..dunningi
-	Andrena..Simandrena..nasonii
-	Nomada..Nomada..pygmaea
-	Lassioglossum.fuscipenne
-	unknown.sp.
-	Euchlo.creusa.lotta
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
 	Erythronium.umbilicatum
 	Claytonia.virginica
 
@@ -113,25 +93,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
-
-Rownames: 
-
-	Viola.papilionacea
-
-Colnames: 
-
-	Andrena..Tomelissa..violae
-	Osmia.atriventris
-	Osmia.conjucta
-	Osmia.simillima
-	Bombylius.major
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
+Nr of module: 2
 
 Rownames: 
 
@@ -155,28 +117,27 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 3
 
 Rownames: 
 
-	Hepatica.americana
-	Uvularia.sessilifolia
+	Cardamine.angustata angustata
 
 Colnames: 
 
-	Andrena..Euandrena..nigrihirta
-	Andrena..Andrena..tridens
-	Andrena..Micrandrena..ziziaeformis
-	Dialictus.abanci
-	Evylaeus.macoupinensis
-	halictid.sp.
-	Hylema.platura
+	Andrena..Scaphandrena..arabis
+	Andrena..Melandrena..dunningi
+	Andrena..Simandrena..nasonii
+	Nomada..Nomada..pygmaea
+	Lassioglossum.fuscipenne
+	unknown.sp.
+	Euchlo.creusa.lotta
 
 __________________________
 
 Depth: 1
 
-Nr of module: 6
+Nr of module: 4
 
 Rownames: 
 
@@ -196,6 +157,45 @@ Colnames:
 	Bombus.pennsylvanicus
 	Dialictus.cressonii
 	Toxomerous.geminatus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Viola.papilionacea
+
+Colnames: 
+
+	Andrena..Tomelissa..violae
+	Osmia.atriventris
+	Osmia.conjucta
+	Osmia.simillima
+	Bombylius.major
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Hepatica.americana
+	Uvularia.sessilifolia
+
+Colnames: 
+
+	Andrena..Euandrena..nigrihirta
+	Andrena..Andrena..tridens
+	Andrena..Micrandrena..ziziaeformis
+	Dialictus.abanci
+	Evylaeus.macoupinensis
+	halictid.sp.
+	Hylema.platura
 
 __________________________
 

@@ -65,23 +65,6 @@ Nr of module: 2
 
 Rownames: 
 
-	Geum.rossii
-	Taraxacum.sp.
-
-Colnames: 
-
-	Rhamphomyia.sp.
-	Spilogona.aesturium
-	Spilogona.almquistii
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
 	Cerastium.alpinum
 
 Colnames: 
@@ -92,15 +75,41 @@ __________________________
 
 Depth: 1
 
+Nr of module: 3
+
+Rownames: 
+
+	Caltha.palustris
+	Potentilla.vahliana
+	Arnica.alpina
+
+Colnames: 
+
+	Boreellus.atriceps
+	Protocalliphora.sp.
+	Spilogona.dorsata
+	Spilogona.hurdiana
+	Spilogona.latilamina
+	Spilogona.melanosoma
+	Spilogona.sanctipauli
+	Eupogonomyia.probilofensis
+
+__________________________
+
+Depth: 1
+
 Nr of module: 4
 
 Rownames: 
 
-	Oxytropis.arctica
+	Geum.rossii
+	Taraxacum.sp.
 
 Colnames: 
 
-	Anarta.richardsoni
+	Rhamphomyia.sp.
+	Spilogona.aesturium
+	Spilogona.almquistii
 
 __________________________
 
@@ -126,20 +135,11 @@ Nr of module: 6
 
 Rownames: 
 
-	Caltha.palustris
-	Potentilla.vahliana
-	Arnica.alpina
+	Oxytropis.arctica
 
 Colnames: 
 
-	Boreellus.atriceps
-	Protocalliphora.sp.
-	Spilogona.dorsata
-	Spilogona.hurdiana
-	Spilogona.latilamina
-	Spilogona.melanosoma
-	Spilogona.sanctipauli
-	Eupogonomyia.probilofensis
+	Anarta.richardsoni
 
 __________________________
 

@@ -158,28 +158,32 @@ Nr of module: 2
 
 Rownames: 
 
-	Leontodon.autumnalis
-	Euphrasia.officinalis
-	Leontodon.hispidus
+	Aethusa.cynapium
+	Torilis.japonica
+	Daucus.carota
 
 Colnames: 
 
-	Coleoptera.spec2
-	Coleoptera.spec3
-	Coleoptera.spec4
-	Coleoptera.spec5
-	Coleoptera.spec7
-	Diptera.spec3
-	Scatophaga.stercoraria
-	Diptera.spec10
-	Diptera.spec17
-	Diptera.spec18
-	Helophilus.pendulus
-	Metasyrphus.corollae
-	Platycheirus.albimanus
-	Rhingia.campestris
-	Pieris.brassicae
-	Incurvariidae.spec1
+	Cantharidae.spec1
+	Diptera.spec1
+	Diptera.spec4
+	Diptera.spec6
+	Diptera.spec8
+	Diptera.spec11
+	Diptera.spec13
+	Diptera.spec15
+	Diptera.spec19
+	Diptera.spec20
+	Tephretidae.spec1
+	Diptera.spec26
+	Chrysotoxum.bicinctum
+	Meliscaeva.auricollis
+	Platycheirus.scutatus
+	Syrphus.ribesii
+	Syrphus.vitripennis
+	Xanthogramma.pedissequum
+	Formicidae.spec1
+	Symphyta.spec1
 
 __________________________
 
@@ -252,32 +256,28 @@ Nr of module: 5
 
 Rownames: 
 
-	Aethusa.cynapium
-	Torilis.japonica
-	Daucus.carota
+	Leontodon.autumnalis
+	Euphrasia.officinalis
+	Leontodon.hispidus
 
 Colnames: 
 
-	Cantharidae.spec1
-	Diptera.spec1
-	Diptera.spec4
-	Diptera.spec6
-	Diptera.spec8
-	Diptera.spec11
-	Diptera.spec13
-	Diptera.spec15
-	Diptera.spec19
-	Diptera.spec20
-	Tephretidae.spec1
-	Diptera.spec26
-	Chrysotoxum.bicinctum
-	Meliscaeva.auricollis
-	Platycheirus.scutatus
-	Syrphus.ribesii
-	Syrphus.vitripennis
-	Xanthogramma.pedissequum
-	Formicidae.spec1
-	Symphyta.spec1
+	Coleoptera.spec2
+	Coleoptera.spec3
+	Coleoptera.spec4
+	Coleoptera.spec5
+	Coleoptera.spec7
+	Diptera.spec3
+	Scatophaga.stercoraria
+	Diptera.spec10
+	Diptera.spec17
+	Diptera.spec18
+	Helophilus.pendulus
+	Metasyrphus.corollae
+	Platycheirus.albimanus
+	Rhingia.campestris
+	Pieris.brassicae
+	Incurvariidae.spec1
 
 __________________________
 

@@ -789,11 +789,11 @@ Nr of module: 1
 
 Rownames: 
 
-	Stachyurus.praecox
+	Magnolia.salicifolia
 
 Colnames: 
 
-	TACHINIDAE11 (Tac. : Dip. )
+	Epuraea sp. (Nit. : Col. )
 
 __________________________
 
@@ -803,56 +803,64 @@ Nr of module: 2
 
 Rownames: 
 
-	Anemone.flaccida
-	Bistorta.tenuicaulis
-	Corydalis.lineariloba
+	Aruncus.dioicus
 	Epimedium.grandiflorum
 	Euonymus.sieboldianus
-	Geranium.nepalense
-	Petasites.japonicus
-	Rubus.palmatus
-	Viola.grypoceras
+	Prunus.incisa
+	Viola.kusanoana
 	Viola.vaginata
 
 Colnames: 
 
 	Andrena (Euandrena) stellaria (And. : Hym. )
-	Andrena (Micrandrena) sublevigata (And. : Hym. )
-	ANTHOMYIIDAE14 (Ant. : Dip. )
+	Andrena (Micrandrena) komachi (And. : Hym. )
 	ANTHOMYIIDAE27 (Ant. : Dip. )
+	Athalia japonica (Ten. : Hym. )
 	Bombylius major (Bom. : Dip. )
-	BRACONIDAE31 (Bra. : Hym. )
-	BRACONIDAE5 (Bra. : Hym. )
-	Cheilosia sp.8 (Syr. : Dip. )
-	Celastrina argiolus (Lyc. : Lep. )
-	Ceratina megastigmata (Ant. : Hym. )
-	Cheilosia sp.11 (Syr. : Dip. )
-	Cheilosia sp.9 (Syr. : Dip. )
+	BRACONIDAE20 (Bra. : Hym. )
+	Ceratina japonica (Ant. : Hym. )
+	CERATOPOGONIDAE2 (Cer. : Dip. )
 	Cheilosia sp.14 (Syr. : Dip. )
 	CHLOROPIDAE3 (Chl. : Dip. )
-	DOLICHOPODIDAE1 (Dol. : Dip. )
+	CHRYSOMELIDAE24 (Chr. : Col. )
+	CHRYSOMELIDAE32 (Chr. : Col. )
+	CYNIPIDAE1 (Cyn. : Hym. )
 	EMPIDIDAE32 (Emp. : Dip. )
-	Empria quadrimaculata (Ten. : Hym. )
-	EPHYDRIDAE19 (Eph. : Dip. )
-	Helophilus virgatus (Syr. : Dip. )
+	EMPIDIDAE36 (Emp. : Dip. )
+	Eusphalerum parallelum (Sta. : Col. )
 	Hemitaxonus japonicas (Ten. : Hym. )
 	ICHNEUMONIDAE96 (Ich. : Hym. )
-	Lasioglossum ("Dialictus") problematicum (Hal. : Hym. )
-	Loderus eversmanini obscurus (Ten. : Hym. )
-	Nomada ginran (Ant. : Hym. )
-	Nomada hakonensis (Ant. : Hym. )
-	Osmia orientalis (Meg. : Hym. )
+	Idiostrangalia contracta (Cer. : Col. )
+	LAUXANIIDAE9 (Lau. : Dip. )
+	MECOPTERA5 (Mec. : Mec. )
+	NITIDULIDAE11 (Nit. : Col. )
 	Osmia taurus (Meg. : Hym. )
-	Paragus tibialis (Syr. : Dip. )
 	SARCOPHAGIDAE4 (Sar. : Dip. )
-	Tenthredo sp. (Ten. : Hym. )
-	Cheilosia sp.8 (Syr. : Dip.)
+	Syreta adamsi (Chr. : Col. )
+	TACHINIDAE37 (Tac. : Dip. )
+	Tricholochmaea semifulva (Chr. : Col. )
 
 __________________________
 
 Depth: 1
 
 Nr of module: 3
+
+Rownames: 
+
+	Oxalis.griffithii
+
+Colnames: 
+
+	Andrena (Andrena) ishiharai (And. : Hym. )
+	Andrena (Micrandrena) minutula (And. : Hym. )
+	ORTHOPTERA10 (Ort. : Ort. )
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
 
 Rownames: 
 
@@ -863,6 +871,7 @@ Rownames:
 	Ainsliaea.acerifolia
 	Alangium.platanifolium
 	Ampelopsis.brevipedunculata
+	Anemone.flaccida
 	Angelica.polymorpha
 	Angelica.pubescens
 	Antenoron.filiforme
@@ -870,6 +879,7 @@ Rownames:
 	Aster.glehni
 	Astilbe.thunbergii
 	Aucuba.japonica
+	Bistorta.tenuicaulis
 	Cacalia.delphiniifolia
 	Cardiandra.alternifolia
 	Carpesium.divaricatum
@@ -878,11 +888,13 @@ Rownames:
 	Cirsium.kagamontanum
 	Clinopodium.micranthum
 	Commelina.communis
+	Corydalis.lineariloba
 	Corydalis.pallida
 	Desmodium.podocarpum
 	Deutzia.crenata
 	Disporum.sessile
 	Euonymus.alatus
+	Geranium.nepalense
 	Geum.japonicum
 	Hovenia.tomentella
 	Hydrangea.hirta
@@ -895,18 +907,16 @@ Rownames:
 	Lespedeza.bicolor
 	Ligustrum.obtusifolium
 	Lysimachia.clethroides
-	Magnolia.salicifolia
-	Oxalis.griffithii
 	Patrinia.villosa
 	Persicaria.aestiva
 	Persicaria.pubescens
 	Persicaria.senticosa
 	Persicaria.thunbergii
+	Petasites.japonicus
 	Phellodendron.amurense
 	Plantago.asiatica
 	Polygonatum.macranthum
 	Prunus.Grayana
-	Prunus.incisa
 	Prunus.salicina
 	Rabdosia.longituba
 	Rabdosia.trichocarpa
@@ -916,11 +926,13 @@ Rownames:
 	Rosa.multiflora
 	Rubus.illecebrosus
 	Rubus.microphyllus
+	Rubus.palmatus
 	Rubus.parvifolius
 	Salix.gracilistyla
 	Salvia.glabrescens
 	Siegesbeckia.orientalis
 	Spuriopimpinella.nikoensis
+	Stachyurus.praecox
 	Stenactis.annuus
 	Styrax.japonica
 	Symplocos.chinensis
@@ -928,7 +940,7 @@ Rownames:
 	Trifolium.repens
 	Tripterospermum.japonicum
 	Viburnum.plicatum
-	Viola.kusanoana
+	Viola.grypoceras
 	Viola.verecunda
 	Weigela.hortensis
 	Cornus.controversa
@@ -954,7 +966,6 @@ Colnames:
 	Ancistrocerus melanocerus (Ves. : Hym. )
 	Andrena (Andrena) benefica (And. : Hym. )
 	Andrena (Andrena) brevihirtiscopa (And. : Hym. )
-	Andrena (Andrena) ishiharai (And. : Hym. )
 	Andrena (Andrena) longitibialis (And. : Hym. )
 	Andrena (Calomelissa) tsukubana (And. : Hym. )
 	Andrena (Chlorandrena) Knuthi (And. : Hym. )
@@ -964,8 +975,7 @@ Colnames:
 	Andrena (Hoplandrena) miyamotoi (And. : Hym. )
 	Andrena (Micrandrena) hikosana (And. : Hym. )
 	Andrena (Micrandrena) kaguya (And. : Hym. )
-	Andrena (Micrandrena) komachi (And. : Hym. )
-	Andrena (Micrandrena) minutula (And. : Hym. )
+	Andrena (Micrandrena) sublevigata (And. : Hym. )
 	Andrena (Simandrena) opacifovea opacifovea (And. : Hym. )
 	Andrena (Simandrena) yamamotoi (And. : Hym. )
 	Andrena (Stenomelissa) halictoides (And. : Hym. )
@@ -975,6 +985,7 @@ Colnames:
 	Antherophagus nigricornis (Cry. : Col. )
 	ANTHOCORIDAE2 (Ant. : Hem. )
 	ANTHOMYIIDAE12 (Ant. : Dip. )
+	ANTHOMYIIDAE14 (Ant. : Dip. )
 	ANTHOMYIIDAE16 (Ant. : Dip. )
 	ANTHOMYIIDAE17 (Ant. : Dip. )
 	ANTHOMYIIDAE20 (Ant. : Dip. )
@@ -1022,7 +1033,6 @@ Colnames:
 	Arge nipponensis (Ari. : Hym. )
 	Arge similis (Ari. : Hym. )
 	Asiemphytus albilabris (Ten. : Hym. )
-	Athalia japonica (Ten. : Hym. )
 	Athemellus insulsus (Can. : Col. )
 	AULACIDAE1 (Aul. : Hym. )
 	Baccha maculata (Syr. : Dip. )
@@ -1046,18 +1056,19 @@ Colnames:
 	BRACONIDAE17 (Bra. : Hym. )
 	BRACONIDAE18 (Bra. : Hym. )
 	BRACONIDAE2 (Bra. : Hym. )
-	BRACONIDAE20 (Bra. : Hym. )
 	BRACONIDAE25 (Bra. : Hym. )
 	BRACONIDAE26 (Bra. : Hym. )
 	BRACONIDAE27 (Bra. : Hym. )
 	BRACONIDAE28 (Bra. : Hym. )
 	BRACONIDAE29 (Bra. : Hym. )
+	BRACONIDAE31 (Bra. : Hym. )
 	BRACONIDAE36 (Bra. : Hym. )
 	BRACONIDAE38 (Bra. : Hym. )
 	BRACONIDAE40 (Bra. : Hym. )
 	BRACONIDAE41 (Bra. : Hym. )
 	BRACONIDAE44 (Bra. : Hym. )
 	BRACONIDAE45 (Bra. : Hym. )
+	BRACONIDAE5 (Bra. : Hym. )
 	Byctiscus puberulus (Att. : Col. )
 	Byturus affinis (Byt. : Col. )
 	CALLIPHORIDAE10 (Cal. : Dip. )
@@ -1076,15 +1087,16 @@ Colnames:
 	CECIDOMYIIDAE4 (Cec. : Dip. )
 	CECIDOMYIIDAE5 (Cec. : Dip. )
 	CECIDOMYIIDAE6 (Cec. : Dip. )
+	Cheilosia sp.8 (Syr. : Dip. )
+	Celastrina argiolus (Lyc. : Lep. )
 	CEPHALOIDAE2 (Cep. : Col. )
 	Cephaloon pallensa (Cep. : Col. )
 	Cephenius nitobei (Bom. : Dip. )
 	Cephenius sp. (Bom. : Dip. )
 	Ceratina esakii (Ant. : Hym. )
 	Ceratina flavipes (Ant. : Hym. )
-	Ceratina japonica (Ant. : Hym. )
+	Ceratina megastigmata (Ant. : Hym. )
 	CERATOPOGONIDAE1 (Cer. : Dip. )
-	CERATOPOGONIDAE2 (Cer. : Dip. )
 	CERATOPOGONIDAE4 (Cer. : Dip. )
 	Cerceris carinalis (Sph. : Hym. )
 	Cerceris hortivaga (Sph. : Hym. )
@@ -1094,11 +1106,13 @@ Colnames:
 	Cheilosia omogensis (Syr. : Dip. )
 	Cheilosia sp.1 (Syr. : Dip. )
 	Cheilosia sp.10 (Syr. : Dip. )
+	Cheilosia sp.11 (Syr. : Dip. )
 	Cheilosia sp.12 (Syr. : Dip. )
 	Cheilosia sp.4 (Syr. : Dip. )
 	Cheilosia sp.5 (Syr. : Dip. )
 	Cheilosia sp.6 (Syr. : Dip. )
 	Cheilosia sp.7 (Syr. : Dip. )
+	Cheilosia sp.9 (Syr. : Dip. )
 	CHIRONOMIDAE5 (Chi. : Dip. )
 	CHIRONOMIDAE8 (Chi. : Dip. )
 	CHIRONOMIDAE9 (Chi. : Dip. )
@@ -1123,10 +1137,8 @@ Colnames:
 	CHRYSOMELIDAE17 (Chr. : Col. )
 	CHRYSOMELIDAE20 (Chr. : Col. )
 	CHRYSOMELIDAE22 (Chr. : Col. )
-	CHRYSOMELIDAE24 (Chr. : Col. )
 	CHRYSOMELIDAE26 (Chr. : Col. )
 	CHRYSOMELIDAE31 (Chr. : Col. )
-	CHRYSOMELIDAE32 (Chr. : Col. )
 	Chrystogaster brevicornis (Syr. : Dip. )
 	CIXIIDAE1 (Cix. : Hem. )
 	CIXIIDAE2 (Cix. : Hem. )
@@ -1151,7 +1163,6 @@ Colnames:
 	CURCULIONIDAE3 (Cur. : Col. )
 	CURCULIONIDAE6 (Cur. : Col. )
 	CURCULIONIDAE8 (Cur. : Col. )
-	CYNIPIDAE1 (Cyn. : Hym. )
 	Dasysyrphus bilineatus (Syr. : Dip. )
 	dasytes vulgaris (Mel. : Col. )
 	DELTOCEPHALIDAE2 (Del. : Hem. )
@@ -1165,6 +1176,7 @@ Colnames:
 	DIASTATIDAE2 (Dia. : Dip. )
 	Didea fasciata (Syr. : Dip. )
 	Dinoptera minuta ticollis (Cer. : Col. )
+	DOLICHOPODIDAE1 (Dol. : Dip. )
 	DOLICHOPODIDAE2 (Dol. : Dip. )
 	DOLICHOPODIDAE3 (Dol. : Dip. )
 	DROSOPHILIDAE11 (Dro. : Dip. )
@@ -1202,7 +1214,6 @@ Colnames:
 	EMPIDIDAE3 (Emp. : Dip. )
 	EMPIDIDAE31 (Emp. : Dip. )
 	EMPIDIDAE33 (Emp. : Dip. )
-	EMPIDIDAE36 (Emp. : Dip. )
 	EMPIDIDAE38 (Emp. : Dip. )
 	EMPIDIDAE39 (Emp. : Dip. )
 	EMPIDIDAE4 (Emp. : Dip. )
@@ -1213,9 +1224,11 @@ Colnames:
 	EMPIDIDAE7 (Emp. : Dip. )
 	EMPIDIDAE8 (Emp. : Dip. )
 	EMPIDIDAE9 (Emp. : Dip. )
+	Empria quadrimaculata (Ten. : Hym. )
 	ENDOMYCHIDAE2 (End. : Col. )
 	EPHEMEROPTERA1 (Eph. : Eph. )
 	EPHYDRIDAE14 (Eph. : Dip. )
+	EPHYDRIDAE19 (Eph. : Dip. )
 	EPHYDRIDAE2 (Eph. : Dip. )
 	EPHYDRIDAE28 (Eph. : Dip. )
 	EPHYDRIDAE4 (Eph. : Dip. )
@@ -1223,7 +1236,6 @@ Colnames:
 	Epistotophe shibakawae (Syr. : Dip. )
 	Episyrphus balteatus (Syr. : Dip. )
 	Epotiocerus flexuosus (Der. : Hem. )
-	Epuraea sp. (Nit. : Col. )
 	Eristalis cerealis (Syr. : Dip. )
 	Eristalomya tenax (Syr. : Dip. )
 	Eucetonia roelofsi (Sca. : Col. )
@@ -1232,7 +1244,6 @@ Colnames:
 	Eumenes rubronotatus (Ves. : Hym. )
 	Eurystylus coelestialium (Mir. : Hem. )
 	EURYTOMIDAE1 (Eur. : Hym. )
-	Eusphalerum parallelum (Sta. : Col. )
 	EVACANTHIDAE1 (Eva. : Hem. )
 	Ferdinandea cuprea (Syr. : Dip. )
 	Ferusa sp. (Ten. : Hym. )
@@ -1249,6 +1260,7 @@ Colnames:
 	HELIOZELIDAE1 (Hel. : Lep. )
 	HELIOZELIDAE3 (Hel. : Lep. )
 	HELIOZELIDAE6 (Hel. : Lep. )
+	Helophilus virgatus (Syr. : Dip. )
 	Hylaeus floralis (Col. : Hym. )
 	Hylaeus globula (Col. : Hym. )
 	Hylaeus nippon (Col. : Hym. )
@@ -1287,13 +1299,13 @@ Colnames:
 	ICHNEUMONIDAE88 (Ich. : Hym. )
 	ICHNEUMONIDAE91 (Ich. : Hym. )
 	ICHNEUMONIDAE94 (Ich. : Hym. )
-	Idiostrangalia contracta (Cer. : Col. )
 	Imatisma abdominalis (Syr. : Dip. )
 	Imatisma dimorpha (Syr. : Dip. )
 	Imatisma sp. (Syr. : Dip. )
 	Japanostrangalia deutatipennis (Cer. : Col. )
 	Japonica luter (Lyc. : Lep. )
 	Lagria nigricollis (Lag. : Col. )
+	Lasioglossum ("Dialictus") problematicum (Hal. : Hym. )
 	Lasioglossum ("Dialictus") sp.2 (Hal. : Hym. )
 	Lasioglossum (Carinate Evylaeus) duplex (Hal. : Hym. )
 	Lasioglossum (Ctenonomia) sp.1 (Hal. : Hym. )
@@ -1321,11 +1333,11 @@ Colnames:
 	LAUXANIIDAE16 (Lau. : Dip. )
 	LAUXANIIDAE2 (Lau. : Dip. )
 	LAUXANIIDAE5 (Lau. : Dip. )
-	LAUXANIIDAE9 (Lau. : Dip. )
 	Leptura aethiops (Cer. : Col. )
 	Leptura arcuata (Cer. : Col. )
 	Leptura ochraceofasciata (Cer. : Col. )
 	Linoetis coeruleipennis (Chr. : Col. )
+	Loderus eversmanini obscurus (Ten. : Hym. )
 	LONCHAEIDAE11 (Lon. : Dip. )
 	LONCHAEIDAE3 (Lon. : Dip. )
 	LONCHAEIDAE4 (Lon. : Dip. )
@@ -1340,7 +1352,6 @@ Colnames:
 	MECOPTERA2 (Mec. : Mec. )
 	MECOPTERA3 (Mec. : Mec. )
 	MECOPTERA4 (Mec. : Mec. )
-	MECOPTERA5 (Mec. : Mec. )
 	Megachile remota sakagamii (Meg. : Hym. )
 	Megachile tsurugensis (Meg. : Hym. )
 	Megalopaederus lewsi (Sta. : Col. )
@@ -1387,9 +1398,10 @@ Colnames:
 	NEPTICULIDAE1 (Nep. : Lep. )
 	NEUROPTERA4 (Neu. : Neu. )
 	Nipponovalgus angusticollis (Sca. : Col. )
-	NITIDULIDAE11 (Nit. : Col. )
 	NITIDULIDAE6 (Nit. : Col. )
 	Nomada galloisi (Ant. : Hym. )
+	Nomada ginran (Ant. : Hym. )
+	Nomada hakonensis (Ant. : Hym. )
 	Nomada pacifica (Ant. : Hym. )
 	Nonartha cyaneum (Chr. : Col. )
 	Nysius sp. (Lyg. : Hem. )
@@ -1398,11 +1410,13 @@ Colnames:
 	Oncomerella venosa (Oed. : Col. )
 	Onomaus lautus (Mir. : Hem. )
 	ORTHOPTERA1 (Ort. : Ort. )
-	ORTHOPTERA10 (Ort. : Ort. )
 	ORTHOPTERA3 (Ort. : Ort. )
 	ORTHOPTERA6 (Ort. : Ort. )
+	Osmia orientalis (Meg. : Hym. )
 	Oxycetonia jucunda (Sca. : Col. )
 	Pachyprotasis tanakai (Ten. : Hym. )
+	Paragus tibialis (Syr. : Dip. )
+	Parastrangalis nymphula (Cer. : Col. )
 	Paratrechina flavipes (For. : Hym. )
 	Paratrichius doentzi (Sca. : Col. )
 	Paratrichius septemdecimguttatus (Sca. : Col. )
@@ -1489,10 +1503,10 @@ Colnames:
 	Strogylogaster lineata (Ten. : Hym. )
 	Strombocerina koebelei (Ten. : Hym. )
 	Symmorphus cliens (Ves. : Hym. )
-	Syreta adamsi (Chr. : Col. )
 	Syritta pipiens (Syr. : Dip. )
 	Syrphus vitripennis (Syr. : Dip. )
 	Tabanus iyoensis (Tab. : Dip. )
+	TACHINIDAE11 (Tac. : Dip. )
 	TACHINIDAE14 (Tac. : Dip. )
 	TACHINIDAE15 (Tac. : Dip. )
 	TACHINIDAE18 (Tac. : Dip. )
@@ -1501,7 +1515,6 @@ Colnames:
 	TACHINIDAE25 (Tac. : Dip. )
 	TACHINIDAE26 (Tac. : Dip. )
 	TACHINIDAE30 (Tac. : Dip. )
-	TACHINIDAE37 (Tac. : Dip. )
 	TACHINIDAE45 (Tac. : Dip. )
 	TACHINIDAE46 (Tac. : Dip. )
 	TACHINIDAE49 (Tac. : Dip. )
@@ -1530,6 +1543,7 @@ Colnames:
 	Tenthredinidae sp.?1 (Ten. : Hym. )
 	Tenthredo convagennata (Ten. : Hym. )
 	Tenthredo fukaii (Ten. : Hym. )
+	Tenthredo sp. (Ten. : Hym. )
 	TEPHRITIDAE1 (Tep. : Dip. )
 	TEPHRITIDAE12 (Tep. : Dip. )
 	TEPHRITIDAE3 (Tep. : Dip. )
@@ -1557,7 +1571,6 @@ Colnames:
 	TORTRICIDAE4 (Tor. : Lep. )
 	Trachys saundersi (Bup. : Col. )
 	Tremus cyanipennis (Can. : Col. )
-	Tricholochmaea semifulva (Chr. : Col. )
 	TRICHOPTERA11 (Tri. : Tri. )
 	TRICHOPTERA15 (Tri. : Tri. )
 	TRICHOPTERA6 (Tri. : Tri. )
@@ -1577,25 +1590,12 @@ Colnames:
 	Zaraea fasciata (Cim. : Hym. )
 	Zeugophora annulata (Chr. : Col. )
 	ZYGAENIDAE1 (Zyg. : Lep. )
+	Cheilosia sp.8 (Syr. : Dip.)
 	LUSIIDAE1 (Clu. : Dip. )
 	Lasioglossum (El.) aff (Hal. : Hym )
 	Camponotus sp. (For. : Hym. )
 	Andrena sp. (And. : Hym. )
 	Ceratina sp. (Ant. : Hym.)
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
-	Aruncus.dioicus
-
-Colnames: 
-
-	Parastrangalis nymphula (Cer. : Col. )
 
 __________________________
 

@@ -58,11 +58,15 @@ Nr of module: 1
 
 Rownames: 
 
-	Mutisia decurrens
+	Rosa eglanteria
 
 Colnames: 
 
-	Anthaxia
+	Syrphus octomaculatus
+	Phthiria
+	Platycheirus1
+	Sapromyza.Minettia
+	Platycherius fenestratus
 
 __________________________
 
@@ -72,21 +76,11 @@ Nr of module: 2
 
 Rownames: 
 
-	Alstroemeria aurea
+	Mutisia decurrens
 
 Colnames: 
 
-	Trichophthalma jaffueli
-	Heterosarus
-	Megachile2
-	Vespula germanica
-	Phthiria1
-	Ruizantheda nigrocaerulea
-	Chilicola2
-	Sphecidae
-	Thomisidae
-	Acroceridae
-	Chilicola1
+	Anthaxia
 
 __________________________
 
@@ -117,15 +111,21 @@ Nr of module: 4
 
 Rownames: 
 
-	Berberis darwinii
-	Vicia nigricans
-	Ribes magellanicum
+	Alstroemeria aurea
 
 Colnames: 
 
-	Bombus dahlbomii
-	Bombus ruderatus
-	Colletes seminitidus
+	Trichophthalma jaffueli
+	Heterosarus
+	Megachile2
+	Vespula germanica
+	Phthiria1
+	Ruizantheda nigrocaerulea
+	Chilicola2
+	Sphecidae
+	Thomisidae
+	Acroceridae
+	Chilicola1
 
 __________________________
 
@@ -135,15 +135,15 @@ Nr of module: 5
 
 Rownames: 
 
-	Rosa eglanteria
+	Berberis darwinii
+	Vicia nigricans
+	Ribes magellanicum
 
 Colnames: 
 
-	Syrphus octomaculatus
-	Phthiria
-	Platycheirus1
-	Sapromyza.Minettia
-	Platycherius fenestratus
+	Bombus dahlbomii
+	Bombus ruderatus
+	Colletes seminitidus
 
 __________________________
 

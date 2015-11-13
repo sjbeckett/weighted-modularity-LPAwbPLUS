@@ -100,22 +100,6 @@ Nr of module: 3
 
 Rownames: 
 
-	Berberis darwinii
-	Tristerix corymbosus
-
-Colnames: 
-
-	Bombus dahlbomii
-	Manuelia postica
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
 	Vicia nigricans
 
 Colnames: 
@@ -126,7 +110,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 4
 
 Rownames: 
 
@@ -134,7 +118,6 @@ Rownames:
 
 Colnames: 
 
-	Formicidae3
 	Braconidae3
 	Torymidae3
 
@@ -142,7 +125,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 6
+Nr of module: 5
 
 Rownames: 
 
@@ -151,13 +134,14 @@ Rownames:
 Colnames: 
 
 	Trichophthalma amoena
+	Formicidae3
 	Salpingidae
 
 __________________________
 
 Depth: 1
 
-Nr of module: 7
+Nr of module: 6
 
 Rownames: 
 
@@ -170,6 +154,22 @@ Colnames:
 	Phthiria
 	Sapromyza.Minettia
 	Sephanoides galeritus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 7
+
+Rownames: 
+
+	Berberis darwinii
+	Tristerix corymbosus
+
+Colnames: 
+
+	Bombus dahlbomii
+	Manuelia postica
 
 __________________________
 

@@ -480,22 +480,6 @@ Nr of module: 18
 
 Rownames: 
 
-	Ranumculus.sulphureus
-	Pedicularis.capitata
-	Erigeron.eriocephalus
-
-Colnames: 
-
-	Limnophyes.sp.
-
-__________________________
-
-Depth: 1
-
-Nr of module: 19
-
-Rownames: 
-
 	Pedicularis.arctica
 
 Colnames: 
@@ -512,7 +496,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 20
+Nr of module: 19
 
 Rownames: 
 
@@ -522,6 +506,22 @@ Colnames:
 
 	Rhamphomyia.sp.
 	Phytomyza.erigerontophaga
+
+__________________________
+
+Depth: 1
+
+Nr of module: 20
+
+Rownames: 
+
+	Ranumculus.sulphureus
+	Pedicularis.capitata
+	Erigeron.eriocephalus
+
+Colnames: 
+
+	Limnophyes.sp.
 
 __________________________
 

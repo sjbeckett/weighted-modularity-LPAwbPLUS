@@ -164,8 +164,29 @@ Nr of module: 1
 Rownames: 
 
 	Salix.arctica
-	Saxifraga.oppositifolia
+	Oxyoria.digyna
+	Stellaria.longipes
+	Melandrium.triflorum
+	Ranumculus.sulphureus
+	Papaver.radicatum
+	Lesquerella.arctica
+	Draba.sp.
+	Draba.bellii
+	Draba.cinerea
+	Draba.groenlandica
+	Erysimum.pallasii
+	Braya.sp.
+	Braya.purpurescens
+	Saxifraga.hirculus
+	Saxifraga.tricuspidata
 	Dryas.integrifolia
+	Epilobium.latifolium
+	Cassiope.tetragona
+	Pedicularis.capitata
+	Pedicularis.arctica
+	Erigeron.eriocephalus
+	Chrysanthemum.integrifolium
+	Taraxacum.arctogenum
 
 Colnames: 
 
@@ -175,55 +196,57 @@ Colnames:
 	Byrdia.sp.
 	Anarta.richardsoni
 	Boloria.polaris
+	Tipula.arctica
+	Limnophyes.sp.
 	Smittia.sp.
-	Smittia.velutina
+	Empididae.
 	Carposcalis.carinata
-	Phalacrodira.nigropilosa
 	Metasyrphus.chillcotti
-	Boreellus.atriceps
-	Scatophaga.apicaulis
 	Scatophaga.multisetosa
-	Fucellia.pictipennis
 	Eupogonomyia.groenlandica
 	Nematus.sp.
 	Parasitica.
 	Cryptus.arcticus
 	Oresbius.sp.
-	Paraphaenocladius.despectus
-	Syrphidae.
-	Phormia.terraenovae
+	Bombus.sp.
 	Pectinarctica.stylata
 	Periscepsia.sp.
+	Crymodes.exulis
 	Rhamphomyia.filicauda
 	Rhamphomyia.nigrita
 	Pogonomyoides.segnis
 	Spilogona.sanctipauli
+	Corynoneura.scutellata
+	Bradysia..sp.
 	Spilogona.melanosoma
+	Chalcidae.
+	Tridymus.sp.
+	Atractodes.sp.
+	Stenomacrus.sp.
+	Tetrastichus.sp.
+	Bryobia..praetiosa.
 	Sympistris.labradoris
+	Trissocladius.
+	Entomobrya.comparata
 	Nematocera.
-	Arctoseius.cetratus
-	Eriophyidae.
-	Cecidophyes.sp.
-	Tarentula.exasperans
-	Tarentula.exasperans..prob..
-	Lycaenidae.
-	Metrocnemius.ursinus
-	Scatophaga.sp.
 	Orthocladiinae.gn.
 	Erigone.pyschrophila
 	Apatania.zonella
 	Lepidoptera.
+	Boloria.sp.
 	Procladius.sp.
 	Psectrocladius.
 	Microspectra.groenlandica
 	Forcipomyia..Thryridomyia..sp.
 	Ceratopogon..Ceratopogon...sp.
+	Ceratopogon..Isohelea...sp.
 	Culicoides.sp.
 	Aedes.sp.
 	Aedes.impiger
 	Aedes.nigripes
 	Rhamphomyia.hoeli
 	Rhamphomyia.ursinella
+	Helophilus.borealis
 	Allopiophila.fulviceps
 	Lasiopiophila.pilosa
 	Pegomyia.sp.
@@ -240,6 +263,7 @@ Colnames:
 	Mesoleius.sp.
 	Saotis.sp.
 	Stenomacnis.sp.
+	Olethreutes.inquietana
 
 __________________________
 
@@ -249,64 +273,27 @@ Nr of module: 2
 
 Rownames: 
 
-	Oxyoria.digyna
 	Polygonum.viviparum
-	Stellaria.longipes
 	Cerastium.alpinum
-	Melandrium.triflorum
-	Ranumculus.sulphureus
-	Papaver.radicatum
-	Lesquerella.arctica
-	Draba.sp.
-	Draba.bellii
-	Draba.cinerea
-	Draba.groenlandica
-	Erysimum.pallasii
-	Braya.sp.
-	Braya.purpurescens
-	Saxifraga.hirculus
-	Saxifraga.tricuspidata
 	Potentilla.nivea
-	Epilobium.latifolium
-	Cassiope.tetragona
-	Pedicularis.capitata
-	Pedicularis.arctica
 	Erigeron.compositus
-	Erigeron.eriocephalus
-	Chrysanthemum.integrifolium
 	Arnica.alpina
-	Taraxacum.arctogenum
 
 Colnames: 
 
 	Noctuidae.
-	Tipula.arctica
-	Limnophyes.sp.
-	Empididae.
 	Calliphoridae.
-	Bombus.sp.
 	Boloria.chariclea
 	Plebius.aquilo
 	Chironomidae.
-	Crymodes.exulis
 	Lasiestra.leucocycla
 	Lycaena.feildeni
 	Dolichopus.dasyops
 	Peleteria.aenea
-	Corynoneura.scutellata
-	Bradysia..sp.
-	Chalcidae.
-	Tridymus.sp.
-	Atractodes.sp.
 	Mesoleptus.sp.
-	Stenomacrus.sp.
-	Tetrastichus.sp.
 	Colias.hecla
 	Muscidae.
-	Bryobia..praetiosa.
-	Trissocladius.
 	Dictyna.borealis
-	Entomobrya.comparata
 	Heterotrissocladius.subpilosus
 	Rhamphomyia.sp.
 	Protanypus.caudatus
@@ -316,12 +303,37 @@ Colnames:
 	Bradysia.2.sp.
 	Phytomyza.erigerontophaga
 	Tachinidae.
-	Boloria.sp.
 	Cricotopus.sp.
-	Ceratopogon..Isohelea...sp.
-	Helophilus.borealis
 	Ichneumonidae.
-	Olethreutes.inquietana
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Saxifraga.oppositifolia
+
+Colnames: 
+
+	Smittia.velutina
+	Phalacrodira.nigropilosa
+	Boreellus.atriceps
+	Scatophaga.apicaulis
+	Fucellia.pictipennis
+	Paraphaenocladius.despectus
+	Syrphidae.
+	Phormia.terraenovae
+	Arctoseius.cetratus
+	Eriophyidae.
+	Cecidophyes.sp.
+	Tarentula.exasperans
+	Tarentula.exasperans..prob..
+	Lycaenidae.
+	Metrocnemius.ursinus
+	Scatophaga.sp.
 
 __________________________
 

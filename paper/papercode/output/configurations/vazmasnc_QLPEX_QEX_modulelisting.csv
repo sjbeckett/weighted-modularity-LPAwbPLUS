@@ -78,6 +78,25 @@ Nr of module: 2
 
 Rownames: 
 
+	Rosa eglanteria
+	Ribes magellanicum
+
+Colnames: 
+
+	Platycheirus1
+	Sapromyza.Minettia
+	Nitidulidae
+	Ruizantheda nigrocaerulea
+	Melyridae1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
 	Berberis darwinii
 	Vicia nigricans
 
@@ -94,7 +113,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 4
 
 Rownames: 
 
@@ -123,41 +142,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
-
-Rownames: 
-
-	Rosa eglanteria
-	Ribes magellanicum
-
-Colnames: 
-
-	Platycheirus1
-	Sapromyza.Minettia
-	Nitidulidae
-	Ruizantheda nigrocaerulea
-	Melyridae1
-
-__________________________
-
-Depth: 1
-
 Nr of module: 5
-
-Rownames: 
-
-	Mutisia decurrens
-
-Colnames: 
-
-	Phthiria
-	Vespula germanica
-
-__________________________
-
-Depth: 1
-
-Nr of module: 6
 
 Rownames: 
 
@@ -168,6 +153,21 @@ Colnames:
 	Policana albopilosa
 	Ruizantheda mutabilis
 	Braconidae2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Mutisia decurrens
+
+Colnames: 
+
+	Phthiria
+	Vespula germanica
 
 __________________________
 

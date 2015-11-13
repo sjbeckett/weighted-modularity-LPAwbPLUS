@@ -66,6 +66,29 @@ Nr of module: 1
 
 Rownames: 
 
+	Smilacina.trifolia
+	Kalmia.angustifolia
+	Calopogon.pulchellus
+	Spiraea.alba
+
+Colnames: 
+
+	Thymelicus.lineola
+	Macrodactlyus.subspinosus
+	Hybomitra.minuscula
+	Hybomitra.typhus
+	Pyrophaena.rosarum
+	Syritta.pipiens
+	Toxomerus.marginatus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
 	Aronia.melanocarpa
 	Ledum.groenlandicum
 
@@ -78,21 +101,6 @@ Colnames:
 	Helophilus.laetus
 	Andrena.alleghaniensis
 	Colletes.inaequalis
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
-	Andromeda.glaucophylla
-
-Colnames: 
-
-	Pyrobombus.impatiens
-	Pyrobombus.ternarius
 
 __________________________
 
@@ -128,6 +136,21 @@ Nr of module: 4
 
 Rownames: 
 
+	Andromeda.glaucophylla
+
+Colnames: 
+
+	Pyrobombus.impatiens
+	Pyrobombus.ternarius
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
 	Chamaedaphne.calyculata
 	Nemopanthus.mucronata
 
@@ -141,29 +164,6 @@ Colnames:
 	Andrena.mandibularis
 	Andrena.regularis
 	Dialictus.pilosus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Smilacina.trifolia
-	Kalmia.angustifolia
-	Calopogon.pulchellus
-	Spiraea.alba
-
-Colnames: 
-
-	Thymelicus.lineola
-	Macrodactlyus.subspinosus
-	Hybomitra.minuscula
-	Hybomitra.typhus
-	Pyrophaena.rosarum
-	Syritta.pipiens
-	Toxomerus.marginatus
 
 __________________________
 

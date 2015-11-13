@@ -250,22 +250,6 @@ Nr of module: 6
 
 Rownames: 
 
-	Ranumculus.sulphureus
-	Pedicularis.capitata
-	Erigeron.eriocephalus
-
-Colnames: 
-
-	Limnophyes.sp.
-
-__________________________
-
-Depth: 1
-
-Nr of module: 7
-
-Rownames: 
-
 	Papaver.radicatum
 
 Colnames: 
@@ -278,7 +262,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 8
+Nr of module: 7
 
 Rownames: 
 
@@ -297,7 +281,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 9
+Nr of module: 8
 
 Rownames: 
 
@@ -307,6 +291,25 @@ Colnames:
 
 	Eupogonomyia.groenlandica
 	Protanypus.caudatus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 9
+
+Rownames: 
+
+	Draba.cinerea
+	Draba.groenlandica
+	Braya.sp.
+	Braya.purpurescens
+
+Colnames: 
+
+	Bombus.sp.
+	Syrphidae.
+	Bryobia..praetiosa.
 
 __________________________
 
@@ -331,25 +334,6 @@ Nr of module: 11
 
 Rownames: 
 
-	Draba.cinerea
-	Draba.groenlandica
-	Braya.sp.
-	Braya.purpurescens
-
-Colnames: 
-
-	Bombus.sp.
-	Syrphidae.
-	Bryobia..praetiosa.
-
-__________________________
-
-Depth: 1
-
-Nr of module: 12
-
-Rownames: 
-
 	Saxifraga.hirculus
 
 Colnames: 
@@ -362,7 +346,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 13
+Nr of module: 12
 
 Rownames: 
 
@@ -391,7 +375,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 14
+Nr of module: 13
 
 Rownames: 
 
@@ -408,7 +392,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 15
+Nr of module: 14
 
 Rownames: 
 
@@ -424,7 +408,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 16
+Nr of module: 15
 
 Rownames: 
 
@@ -463,7 +447,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 17
+Nr of module: 16
 
 Rownames: 
 
@@ -477,7 +461,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 18
+Nr of module: 17
 
 Rownames: 
 
@@ -493,7 +477,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 19
+Nr of module: 18
 
 Rownames: 
 
@@ -512,7 +496,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 20
+Nr of module: 19
 
 Rownames: 
 
@@ -522,6 +506,22 @@ Colnames:
 
 	Rhamphomyia.sp.
 	Phytomyza.erigerontophaga
+
+__________________________
+
+Depth: 1
+
+Nr of module: 20
+
+Rownames: 
+
+	Ranumculus.sulphureus
+	Pedicularis.capitata
+	Erigeron.eriocephalus
+
+Colnames: 
+
+	Limnophyes.sp.
 
 __________________________
 

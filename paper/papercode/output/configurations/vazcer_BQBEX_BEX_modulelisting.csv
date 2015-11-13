@@ -75,6 +75,24 @@ Nr of module: 2
 
 Rownames: 
 
+	Berberis darwinii
+	Vicia nigricans
+	Berberis buxifolia
+
+Colnames: 
+
+	Bombus dahlbomii
+	Trichophthalma amoena
+	Caenohalictus1
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
 	Rosa eglanteria
 
 Colnames: 
@@ -89,7 +107,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 4
 
 Rownames: 
 
@@ -111,44 +129,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
-
-Rownames: 
-
-	Berberis darwinii
-	Vicia nigricans
-	Berberis buxifolia
-
-Colnames: 
-
-	Bombus dahlbomii
-	Trichophthalma amoena
-	Caenohalictus1
-
-__________________________
-
-Depth: 1
-
 Nr of module: 5
-
-Rownames: 
-
-	Aristotelia chilensis
-	Schinus patagonicus
-
-Colnames: 
-
-	Policana albopilosa
-	Ruizantheda mutabilis
-	Platycheirus1
-	Manuelia postica
-	Formicidae1
-
-__________________________
-
-Depth: 1
-
-Nr of module: 6
 
 Rownames: 
 
@@ -166,6 +147,25 @@ Colnames:
 	Sephanoides galeritus
 	Coleoptera8
 	Caenohalictus2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Aristotelia chilensis
+	Schinus patagonicus
+
+Colnames: 
+
+	Policana albopilosa
+	Ruizantheda mutabilis
+	Platycheirus1
+	Manuelia postica
+	Formicidae1
 
 __________________________
 

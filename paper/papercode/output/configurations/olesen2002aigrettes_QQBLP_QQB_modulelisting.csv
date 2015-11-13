@@ -46,36 +46,22 @@ Nr of module: 1
 
 Rownames: 
 
-	Pemphis.acidula
-	Stachytapheta.jamaicencis
+	Gastonia.mauritiana
 
 Colnames: 
 
-	Phalantha.phalantha
+	Stratiomydae.sp.
+	Protaetia.aurichalcea
+	Leptotes.pirithous
+	Musca.domestica
+	Lucilia.sp.
+	Ornidia.obesa
 
 __________________________
 
 Depth: 1
 
 Nr of module: 2
-
-Rownames: 
-
-	Scaevola.sericea
-	Suriana.maritima
-	Turnera.angustifolia
-
-Colnames: 
-
-	Xylocopa.fenestrata
-	Megachile.sp.
-	Borbo.borbonica
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
 
 Rownames: 
 
@@ -91,7 +77,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 3
 
 Rownames: 
 
@@ -110,20 +96,34 @@ __________________________
 
 Depth: 1
 
+Nr of module: 4
+
+Rownames: 
+
+	Scaevola.sericea
+	Suriana.maritima
+	Turnera.angustifolia
+
+Colnames: 
+
+	Xylocopa.fenestrata
+	Megachile.sp.
+	Borbo.borbonica
+
+__________________________
+
+Depth: 1
+
 Nr of module: 5
 
 Rownames: 
 
-	Gastonia.mauritiana
+	Pemphis.acidula
+	Stachytapheta.jamaicencis
 
 Colnames: 
 
-	Stratiomydae.sp.
-	Protaetia.aurichalcea
-	Leptotes.pirithous
-	Musca.domestica
-	Lucilia.sp.
-	Ornidia.obesa
+	Phalantha.phalantha
 
 __________________________
 

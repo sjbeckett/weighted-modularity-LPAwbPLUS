@@ -41,14 +41,15 @@ Nr of module: 1
 
 Rownames: 
 
-	Azorina:vidalii
-	Reseda:luteola
+	Crithmum:maritimum
+	Beta:vulgaris
+	Silene:vulgaris
 
 Colnames: 
 
-	Apis.mellifera
-	Lasius.niger
-	Calliphora.vemitoria
+	Sepsis.thoracica
+	Lucilia.sericata
+	Eristalix.tenax
 
 __________________________
 
@@ -73,15 +74,13 @@ Nr of module: 3
 
 Rownames: 
 
-	Crithmum:maritimum
-	Beta:vulgaris
-	Silene:vulgaris
+	Lotus:corniculatus
+	Freesia:refracta
 
 Colnames: 
 
-	Sepsis.thoracica
-	Lucilia.sericata
-	Eristalix.tenax
+	Bombus.ruderatus
+	Colias.crocea
 
 __________________________
 
@@ -107,13 +106,14 @@ Nr of module: 5
 
 Rownames: 
 
-	Lotus:corniculatus
-	Freesia:refracta
+	Azorina:vidalii
+	Reseda:luteola
 
 Colnames: 
 
-	Bombus.ruderatus
-	Colias.crocea
+	Apis.mellifera
+	Lasius.niger
+	Calliphora.vemitoria
 
 __________________________
 

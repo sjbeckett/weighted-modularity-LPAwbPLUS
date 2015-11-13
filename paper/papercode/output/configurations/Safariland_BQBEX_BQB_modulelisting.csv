@@ -55,6 +55,23 @@ Nr of module: 1
 
 Rownames: 
 
+	Ribes magellanicum
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Trichophthalma amoena
+	Allograpta.Toxomerus
+	Chalepogenus caeruleus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
 	Berberis darwinii
 	Rosa eglanteria
 
@@ -69,32 +86,24 @@ __________________________
 
 Depth: 1
 
-Nr of module: 2
-
-Rownames: 
-
-	Mutisia decurrens
-
-Colnames: 
-
-	Phthiria
-
-__________________________
-
-Depth: 1
-
 Nr of module: 3
 
 Rownames: 
 
-	Ribes magellanicum
-	Calceolaria crenatiflora
+	Alstroemeria aurea
 
 Colnames: 
 
-	Trichophthalma amoena
-	Allograpta.Toxomerus
-	Chalepogenus caeruleus
+	Manuelia gayi
+	Trichophthalma jaffueli
+	Sapromyza.Minettia
+	Vespula germanica
+	Phthiria1
+	Svastrides melanura
+	Sphecidae
+	Thomisidae
+	Ichneumonidae2
+	Ruizantheda proxima
 
 __________________________
 
@@ -123,20 +132,11 @@ Nr of module: 5
 
 Rownames: 
 
-	Alstroemeria aurea
+	Mutisia decurrens
 
 Colnames: 
 
-	Manuelia gayi
-	Trichophthalma jaffueli
-	Sapromyza.Minettia
-	Vespula germanica
-	Phthiria1
-	Svastrides melanura
-	Sphecidae
-	Thomisidae
-	Ichneumonidae2
-	Ruizantheda proxima
+	Phthiria
 
 __________________________
 

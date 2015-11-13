@@ -68,6 +68,25 @@ Nr of module: 2
 
 Rownames: 
 
+	Pemphis.acidula
+	Thespesia.populnea
+	Stachytapheta.jamaicencis
+
+Colnames: 
+
+	Phalantha.phalantha
+	Stratiomydae.sp.
+	Leptotes.pirithous
+	Borbo.borbonica
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
 	Gastonia.mauritiana
 
 Colnames: 
@@ -81,7 +100,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 4
 
 Rownames: 
 
@@ -93,25 +112,6 @@ Colnames:
 
 	Xylocopa.fenestrata
 	Megachile.sp.
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
-	Pemphis.acidula
-	Thespesia.populnea
-	Stachytapheta.jamaicencis
-
-Colnames: 
-
-	Phalantha.phalantha
-	Stratiomydae.sp.
-	Leptotes.pirithous
-	Borbo.borbonica
 
 __________________________
 

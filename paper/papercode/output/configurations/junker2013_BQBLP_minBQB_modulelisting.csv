@@ -332,46 +332,11 @@ Nr of module: 1
 
 Rownames: 
 
-	Alliaria.petiolata
-	Bellis.perennis
-	Erigeron.annuus
-	Geranium.pyrenaicum
-	Geranium.robertianum
-	Potentilla.reptans
 	Verbascum.lychnitis
 
 Colnames: 
 
-	Anthaxia.nitidula
-	Anthonomus.rubi
-	Anthrenus.verbasci
-	Apidae.sp.13
-	Apidae.sp.15
-	Atrichopogon.sp.
-	Bombus.lucorum.Komplex
-	Brachycera.sp.10
-	Brachycera.sp.18
-	Brachycera.sp.20
-	Brachycera.sp.26
-	Brachycera.sp.5
-	Byturus.tomentosus
-	Carabidae.sp.1
-	Curculionidae.sp.4
-	Diptera.sp.4
-	Hoplitis.leucomelana
-	Lassioglossum-Komplex
-	Lygaeidae.sp.1
-	Lygus.wagneri
-	Noctuidae.sp.1
-	Noctuidae.sp.2
-	Oedemera.lurida
-	Osmia.sp.1
-	Panurginus.sp.1
-	Pentatomidae.sp.1
-	Rhinophora.lepida.
 	Rhinusa.tetra
-	Stenopterus.rufus
-	Vespidae.sp.2
 
 __________________________
 
@@ -381,30 +346,105 @@ Nr of module: 2
 
 Rownames: 
 
-	Achillea.millefolium
+	Leucanthemum.vulgare
+
+Colnames: 
+
+	Lygaeidae.sp.2
+	Mordellistena.brevicauda
+	Pseudovadonia.livida
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
 	Bunias.orientalis
+	Galium.pycnotrichum
+	Geranium.pyrenaicum
+	Malus.sp.
+	Melilotus.officinalis
+	Myosotis.arvensis
+	Potentilla.reptans
+	Rosa.canina
+
+Colnames: 
+
+	Ampedus.pomorum
+	Anthaxia.nitidula
+	Anthonomus.rubi
+	Apidae.sp.10
+	Apidae.sp.13
+	Apidae.sp.15
+	Apis.mellifera
+	Arachnidae.sp.3
+	Atrichopogon.sp.
+	Bombus.lucorum.Komplex
+	Brachycera.sp.10
+	Brachycera.sp.16
+	Brachycera.sp.26
+	Cantharidae.sp.2
+	Carabidae.sp.1
+	Cephus.cultratus
+	Chloromyia.formosa
+	Chrysotoxum.vernale
+	Coleoptera.sp.13
+	Curculionidae.sp.4
+	Empis.s.str.anfractuosa
+	Hoplitis.leucomelana
+	Isomira.semiflava
+	Lassioglossum-Komplex
+	Lygaeidae.sp.1
+	Magdalis.cerasi
+	Magdalis.ruficornis
+	Miridae.sp.1
+	Myrmica.rubra
+	Nematocera.sp.6
+	Nematocera.sp.7
+	Oedemera.femorata
+	Oedemeridae
+	Oedemeridae.sp.1
+	Osmia.sp.1
+	Panurginus.sp.1
+	Phyllopertha.horticola
+	Raupe.sp.5
+	Raupe.sp.6
+	Syrphidae.sp.4
+	Vespidae.sp.2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Achillea.millefolium
+	Alliaria.petiolata
+	Bellis.perennis
 	Chaerophyllum.temulum
 	Convolvulaceae
 	Cornus.sanguinea
 	Crataegus.monogyna
+	Erigeron.annuus
 	Euonymus.europaea
 	Galium.aparine
 	Galium.mollugo
-	Galium.pycnotrichum
+	Geranium.robertianum
 	Geum.rivale
 	Geum.urbanum
 	Glechoma.hederacea
 	Knautia.arvensis
 	Lamium.album
-	Leucanthemum.vulgare
 	Lonicera.sp.
 	Lotus.corniculatus
 	Mahonia.aquifolium
-	Malus.sp.
 	Medicago.lupulina
 	Medicago.sativa
-	Melilotus.officinalis
-	Myosotis.arvensis
 	Papaver.rhoeas
 	Plantago.lanceolata
 	Plantago.major
@@ -412,10 +452,8 @@ Rownames:
 	Prunus.cf.Mahaleb
 	Prunus.sp.1.Kirsche
 	Prunus.sp.2.Pflaume
-	Prunus.spinosa
 	Ranunculus.arvensis
 	Ribes.cf.Alpinum
-	Rosa.canina
 	Rosacae.sp.
 	Rubus.fruticosus
 	Salvia.pratensis
@@ -427,17 +465,16 @@ Rownames:
 	Veronica.chamaedrys
 	Vicia.cracca
 	Vicia.hirsuta
+	Vicia.sativa
 
 Colnames: 
 
 	Agrypnus.murinus
-	Ampedus.pomorum
 	Anaspis.frontalis
 	Anthophora.plumipes
+	Anthrenus.verbasci
 	Aphidoidea.
-	Apidae.sp.1
 	Apidae.sp.2
-	Apidae.sp.10
 	Apidae.sp.11
 	Apidae.sp.12
 	Apidae.sp.14
@@ -447,13 +484,11 @@ Colnames:
 	Apidae.sp.7
 	Apidae.sp.8
 	Apidae.sp.9
-	Apis.mellifera
 	Arachnidae.sp.1
 	Arachnidae.sp.10
 	Arachnidae.sp.11
 	Arachnidae.sp.12
 	Arachnidae.sp.2
-	Arachnidae.sp.3
 	Arachnidae.sp.4
 	Arachnidae.sp.5
 	Arachnidae.sp.6
@@ -462,7 +497,6 @@ Colnames:
 	Asilidae.sp.1
 	Auchenorrhyncha.sp.1
 	Blattodea
-	Bombus
 	Bombus.hortorum
 	Bombus.lapidarius
 	Bombus.pascuorum
@@ -481,35 +515,36 @@ Colnames:
 	Brachycera.sp.1
 	Brachycera.sp.11
 	Brachycera.sp.13
-	Brachycera.sp.16
+	Brachycera.sp.18
 	Brachycera.sp.19
 	Brachycera.sp.2
+	Brachycera.sp.20
 	Brachycera.sp.21
 	Brachycera.sp.22
 	Brachycera.sp.24
 	Brachycera.sp.25
 	Brachycera.sp.27
 	Brachycera.sp.4
+	Brachycera.sp.5
 	Brachycera.sp.7
 	Brachycera.sp.8
 	Brachycera.sp.9
 	Bruchus.luteicornis
 	Byrrhidae.sp.1
+	Byturus.tomentosus
 	Cantharidae.sp.1
-	Cantharidae.sp.2
 	Cantharidae.sp.4
-	Cephus.cultratus
+	Cantharis.sp.1
+	Cantharis.sp.2
 	Cephus.pygmaeus
 	Cerambycidae.sp.1
 	Cerambycidae.sp.2
 	Cerambycidae.sp.3
 	Ceratina.cyanea
 	Cetonia.aurata
-	Chloromyia.formosa
 	Chrysomelidae.sp.1
 	Chrysomelidae.sp.3
 	Chrysoperla.carnea
-	Chrysotoxum.vernale
 	Cidnopus.aeruginosus
 	Clytra.quadripunctata
 	Coccinella.sp.1
@@ -517,10 +552,10 @@ Colnames:
 	Coccinellidae.larve
 	Coenorhinus.aequatus
 	Coleoptera.sp.12
-	Coleoptera.sp.13
 	Coleoptera.sp.28
 	Coreus.marginatus
 	Curculionidae.sp.2
+	Curculionidae.sp.3
 	Curculionidae.sp.5
 	Curculionidae.sp.8
 	Curculionidae.sp.9
@@ -532,8 +567,8 @@ Colnames:
 	Dicraeus.vagans
 	Diptera.sp.1
 	Diptera.sp.3
+	Diptera.sp.4
 	Elateridae.sp.1
-	Empis.s.str.anfractuosa
 	Empis.s.str.caudatula
 	Ensifera.sp.1
 	Ensifera.sp.10
@@ -559,7 +594,6 @@ Colnames:
 	Hymenoptera.sp.6
 	Ichneumonidae.sp.1
 	Insecta.sp.1
-	Isomira.semiflava
 	Lasioglossum.malachurum
 	Lasioglossum.sp.1
 	Lasius.fuliginosus
@@ -567,10 +601,8 @@ Colnames:
 	Lepidoptera.sp.1
 	Leucopis.armillata
 	Lindenius.albilabris
-	Lygaeidae.sp.2
 	Lygocoris.pabulinus
-	Magdalis.cerasi
-	Magdalis.ruficornis
+	Lygus.wagneri
 	Malachius.bipustulatus
 	Megabombus.ruderarius
 	Megachile.sp.1
@@ -580,11 +612,9 @@ Colnames:
 	Meligethes.sp.
 	Melyridae.sp.1
 	Microlepidoptera.sp.1
-	Miridae.sp.1
 	Miris.striatus
 	Misumena.vatia
 	Mordellidae.sp.1
-	Mordellistena.brevicauda
 	Muscidae.sp.1
 	Nematocera.sp.1
 	Nematocera.sp.10
@@ -592,18 +622,16 @@ Colnames:
 	Nematocera.sp.3
 	Nematocera.sp.4
 	Nematocera.sp.5
-	Nematocera.sp.6
-	Nematocera.sp.7
 	Nematocera.sp.8
 	Nematocera.sp.9
 	Nitidulidae.sp.1
 	Nitidulidae.sp.2
 	Nitidulidae.sp.3
+	Noctuidae.sp.1
+	Noctuidae.sp.2
 	Notoxus.monoceros
-	Oedemera.femorata
+	Oedemera.lurida
 	Oedemera.podagrariae
-	Oedemeridae
-	Oedemeridae.sp.1
 	Oedemeridae.sp.2
 	Oedemeridae.sp.3
 	Olibrus.aeneus
@@ -613,14 +641,12 @@ Colnames:
 	Oxystoma.craccae
 	Oxythyrea.funesta
 	Ozirhincus.millefolii
+	Pentatomidae.sp.1
 	Pentatomidae.sp.2
 	Phoridae.sp.1
-	Phoridae.sp.2
-	Phyllopertha.horticola
 	Plataspidae.sp.
 	Proctotrupoidea.sp.1
 	Propylaea.quatuordecimpunctata
-	Pseudovadonia.livida
 	Pteromalidae.sp.1
 	Pyralidae.sp.1
 	Pyralidae.sp.2
@@ -629,18 +655,17 @@ Colnames:
 	Raupe.sp.2
 	Raupe.sp.3
 	Raupe.sp.4
-	Raupe.sp.5
-	Raupe.sp.6
 	Raupe.sp.7
+	Rhinophora.lepida.
 	Rhynchaenus.populi
 	Sicus.ferrugineus
 	Spermaphagus.sericeus
+	Stenopterus.rufus
 	Strangalia.melanura
 	Strangalia.nigra
 	Syrphidae.sp.1
 	Syrphidae.sp.2
 	Syrphidae.sp.3
-	Syrphidae.sp.4
 	Syrphidae.sp.5
 	Syrphidae.sp.6
 	Syrphidae.sp.7
@@ -655,24 +680,23 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
+Nr of module: 5
 
 Rownames: 
 
-	Vicia.sativa
+	Prunus.spinosa
 
 Colnames: 
 
-	Cantharis.sp.1
-	Cantharis.sp.2
-	Curculionidae.sp.3
-	Myrmica.rubra
+	Apidae.sp.1
+	Bombus
+	Phoridae.sp.2
 
 __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 6
 
 Rownames: 
 
@@ -686,7 +710,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 7
 
 Rownames: 
 

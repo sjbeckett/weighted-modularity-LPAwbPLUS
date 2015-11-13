@@ -53,22 +53,70 @@ Nr of module: 1
 
 Rownames: 
 
-	Alstroemeria aurea
-	Vicia nigricans
+	Calceolaria crenatiflora
 
 Colnames: 
 
-	Bombus dahlbomii
-	Ruizantheda mutabilis
-	Manuelia gayi
-	Trichophthalma jaffueli
-	Heterosarus
+	Chalepogenus caeruleus
 
 __________________________
 
 Depth: 1
 
 Nr of module: 2
+
+Rownames: 
+
+	Schinus patagonicus
+
+Colnames: 
+
+	Phoridae2
+	Unknown1
+	Coleoptera8
+	Curculionidae3
+	Coleoptera7
+	Coleoptera6
+	Phoridae3
+	Tachinidae
+	Diapriidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Berberis darwinii
+	Berberis buxifolia
+
+Colnames: 
+
+	Trichophthalma amoena
+	Colletes seminitidus
+	Allograpta.Toxomerus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Aristotelia chilensis
+
+Colnames: 
+
+	Policana albopilosa
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
 
 Rownames: 
 
@@ -88,68 +136,20 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
-
-Rownames: 
-
-	Calceolaria crenatiflora
-
-Colnames: 
-
-	Chalepogenus caeruleus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
-	Berberis darwinii
-	Berberis buxifolia
-
-Colnames: 
-
-	Trichophthalma amoena
-	Colletes seminitidus
-	Allograpta.Toxomerus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Aristotelia chilensis
-
-Colnames: 
-
-	Policana albopilosa
-
-__________________________
-
-Depth: 1
-
 Nr of module: 6
 
 Rownames: 
 
-	Schinus patagonicus
+	Alstroemeria aurea
+	Vicia nigricans
 
 Colnames: 
 
-	Phoridae2
-	Unknown1
-	Coleoptera8
-	Curculionidae3
-	Coleoptera7
-	Coleoptera6
-	Phoridae3
-	Tachinidae
-	Diapriidae
+	Bombus dahlbomii
+	Ruizantheda mutabilis
+	Manuelia gayi
+	Trichophthalma jaffueli
+	Heterosarus
 
 __________________________
 

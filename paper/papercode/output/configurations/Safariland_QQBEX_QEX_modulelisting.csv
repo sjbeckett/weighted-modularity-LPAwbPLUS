@@ -55,40 +55,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Ribes magellanicum
-	Calceolaria crenatiflora
-
-Colnames: 
-
-	Trichophthalma amoena
-	Allograpta.Toxomerus
-	Chalepogenus caeruleus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
-	Aristotelia chilensis
-
-Colnames: 
-
-	Policana albopilosa
-	Ruizantheda mutabilis
-	Platycheirus1
-	Braconidae2
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
 	Cynanchum diemii
 
 Colnames: 
@@ -102,7 +68,24 @@ __________________________
 
 Depth: 1
 
-Nr of module: 4
+Nr of module: 2
+
+Rownames: 
+
+	Ribes magellanicum
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Trichophthalma amoena
+	Allograpta.Toxomerus
+	Chalepogenus caeruleus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
 
 Rownames: 
 
@@ -128,6 +111,23 @@ Colnames:
 	Corynura prothysteres
 	Ichneumonidae2
 	Ruizantheda proxima
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Aristotelia chilensis
+
+Colnames: 
+
+	Policana albopilosa
+	Ruizantheda mutabilis
+	Platycheirus1
+	Braconidae2
 
 __________________________
 

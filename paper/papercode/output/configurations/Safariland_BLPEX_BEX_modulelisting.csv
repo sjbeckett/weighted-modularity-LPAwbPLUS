@@ -55,6 +55,60 @@ Nr of module: 1
 
 Rownames: 
 
+	Aristotelia chilensis
+	Schinus patagonicus
+
+Colnames: 
+
+	Policana albopilosa
+	Platycheirus1
+	Ichneumonidae4
+	Corynura prothysteres
+	Braconidae2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Berberis darwinii
+	Rosa eglanteria
+
+Colnames: 
+
+	Bombus dahlbomii
+	Ruizantheda mutabilis
+	Syrphus octomaculatus
+	Staphilinidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Ribes magellanicum
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Trichophthalma amoena
+	Allograpta.Toxomerus
+	Chalepogenus caeruleus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
 	Cynanchum diemii
 
 Colnames: 
@@ -68,7 +122,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 2
+Nr of module: 5
 
 Rownames: 
 
@@ -86,60 +140,6 @@ Colnames:
 	Thomisidae
 	Ichneumonidae2
 	Ruizantheda proxima
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
-	Aristotelia chilensis
-	Schinus patagonicus
-
-Colnames: 
-
-	Policana albopilosa
-	Platycheirus1
-	Ichneumonidae4
-	Corynura prothysteres
-	Braconidae2
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
-	Ribes magellanicum
-	Calceolaria crenatiflora
-
-Colnames: 
-
-	Trichophthalma amoena
-	Allograpta.Toxomerus
-	Chalepogenus caeruleus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Berberis darwinii
-	Rosa eglanteria
-
-Colnames: 
-
-	Bombus dahlbomii
-	Ruizantheda mutabilis
-	Syrphus octomaculatus
-	Staphilinidae
 
 __________________________
 

@@ -84,18 +84,20 @@ Nr of module: 1
 
 Rownames: 
 
-	Xysmalobium.involucratum
+	Asclepias.cucullata
+	Pachycarpus.natalensis
 
 Colnames: 
 
-	Other.bees
-	Elateridae.sp
-	Chrysomelidae.sp1
-	Scarabaeinae.sp2
-	Other.Coleoptera
-	Lygaeidae.sp2
-	Sepsidae.sp1
-	Sepsidae.sp2
+	Halictidaesp2
+	Aspilocoryphus.fasciativentris
+	Spilostethus.rivularis
+	Homoecerus.annulatus
+	Empididae.sp1
+	Microphthalma.sp1
+	Dacus.sp
+	Diptera.sp22
+	Unident.micromoth
 
 __________________________
 
@@ -125,50 +127,6 @@ Nr of module: 3
 
 Rownames: 
 
-	Asclepias.woodii
-	Miraglossum.verticillare
-
-Colnames: 
-
-	Tiphia.sp
-	Atrichelaphinis.tigrina
-	Cyrtothyrea.marginalis
-	Curculionidae.sp2
-	Sarcophaga.sp
-	Sepsidae.sp3
-	Other.Diptera
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
-	Asclepias.cucullata
-	Pachycarpus.natalensis
-
-Colnames: 
-
-	Halictidaesp2
-	Aspilocoryphus.fasciativentris
-	Spilostethus.rivularis
-	Homoecerus.annulatus
-	Empididae.sp1
-	Microphthalma.sp1
-	Dacus.sp
-	Diptera.sp22
-	Unident.micromoth
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
 	Miraglossum.pilosum
 	Sisyranthus.trichostomus
 
@@ -187,7 +145,28 @@ __________________________
 
 Depth: 1
 
-Nr of module: 6
+Nr of module: 4
+
+Rownames: 
+
+	Xysmalobium.involucratum
+
+Colnames: 
+
+	Other.bees
+	Elateridae.sp
+	Chrysomelidae.sp1
+	Scarabaeinae.sp2
+	Other.Coleoptera
+	Lygaeidae.sp2
+	Sepsidae.sp1
+	Sepsidae.sp2
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
 
 Rownames: 
 
@@ -212,6 +191,27 @@ Colnames:
 	Tachinidae.genus2
 	Actea.sp
 	Bibionidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Asclepias.woodii
+	Miraglossum.verticillare
+
+Colnames: 
+
+	Tiphia.sp
+	Atrichelaphinis.tigrina
+	Cyrtothyrea.marginalis
+	Curculionidae.sp2
+	Sarcophaga.sp
+	Sepsidae.sp3
+	Other.Diptera
 
 __________________________
 

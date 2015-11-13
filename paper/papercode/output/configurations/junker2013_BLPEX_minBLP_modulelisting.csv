@@ -358,6 +358,7 @@ Colnames:
 	Nitidulidae.sp.2
 	Noctuidae.sp.2
 	Pentatomidae.sp.1
+	Syrphidae.sp.2
 
 __________________________
 
@@ -694,6 +695,7 @@ Colnames:
 	Bombus.terrestris
 	Cantharidae.sp.1
 	Cerambycidae.sp.1
+	Oedemeridae.sp.2
 	Oedemeridae.sp.3
 	Osmia.bicornis
 	Strangalia.nigra
@@ -803,6 +805,7 @@ Rownames:
 
 Colnames: 
 
+	Apis.mellifera
 	Bombus.lucorum.Komplex
 
 __________________________
@@ -817,7 +820,6 @@ Rownames:
 
 Colnames: 
 
-	Apis.mellifera
 	Chrysotoxum.vernale
 
 __________________________
@@ -1040,7 +1042,6 @@ Colnames:
 	Formica.rufibarbis.
 	Magdalis.ruficornis
 	Nitidulidae.sp.3
-	Oedemeridae.sp.2
 
 __________________________
 
@@ -1213,7 +1214,6 @@ Colnames:
 	Ensifera.sp.5
 	Miris.striatus
 	Myrmica.rubra
-	Syrphidae.sp.2
 
 __________________________
 

@@ -66,12 +66,19 @@ Nr of module: 1
 
 Rownames: 
 
-	Andromeda.glaucophylla
+	Chamaedaphne.calyculata
+	Nemopanthus.mucronata
 
 Colnames: 
 
-	Pyrobombus.impatiens
-	Pyrobombus.ternarius
+	Dilophus.caurinus
+	Spilogona.fatima
+	Melanostoma.sp.
+	Syrphus.torvus
+	Andrena.carlini
+	Andrena.mandibularis
+	Andrena.regularis
+	Dialictus.pilosus
 
 __________________________
 
@@ -81,23 +88,12 @@ Nr of module: 2
 
 Rownames: 
 
-	Salix.fragilis
-	Kalmia.polifolia
-	Vaccinium.myrtilloides
-	Gaylussacia.baccata
+	Andromeda.glaucophylla
 
 Colnames: 
 
-	Adela.purpurea
-	Cyphon.variabilis
-	Sercomyia.transversa
-	Apis.mellifera
-	Bombus.terricola
-	Pyrobombus.perplexus
-	Pyrobombus.sandersoni
-	Andrena.bradleyi
-	Andrena.carolina
-	Andrena.vicina
+	Pyrobombus.impatiens
+	Pyrobombus.ternarius
 
 __________________________
 
@@ -128,6 +124,32 @@ Nr of module: 4
 
 Rownames: 
 
+	Salix.fragilis
+	Kalmia.polifolia
+	Vaccinium.myrtilloides
+	Gaylussacia.baccata
+
+Colnames: 
+
+	Adela.purpurea
+	Cyphon.variabilis
+	Sercomyia.transversa
+	Apis.mellifera
+	Bombus.terricola
+	Pyrobombus.perplexus
+	Pyrobombus.sandersoni
+	Andrena.bradleyi
+	Andrena.carolina
+	Andrena.vicina
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
 	Smilacina.trifolia
 	Kalmia.angustifolia
 	Calopogon.pulchellus
@@ -142,28 +164,6 @@ Colnames:
 	Pyrophaena.rosarum
 	Syritta.pipiens
 	Toxomerus.marginatus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Chamaedaphne.calyculata
-	Nemopanthus.mucronata
-
-Colnames: 
-
-	Dilophus.caurinus
-	Spilogona.fatima
-	Melanostoma.sp.
-	Syrphus.torvus
-	Andrena.carlini
-	Andrena.mandibularis
-	Andrena.regularis
-	Dialictus.pilosus
 
 __________________________
 

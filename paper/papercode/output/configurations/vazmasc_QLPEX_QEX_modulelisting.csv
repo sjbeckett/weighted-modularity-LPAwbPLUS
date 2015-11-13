@@ -53,73 +53,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Alstroemeria aurea
-	Berberis darwinii
-	Vicia nigricans
-
-Colnames: 
-
-	Bombus dahlbomii
-	Manuelia gayi
-	Trichophthalma jaffueli
-	Heterosarus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
-	Berberis buxifolia
-
-Colnames: 
-
-	Trichophthalma amoena
-	Colletes seminitidus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
-	Calceolaria crenatiflora
-
-Colnames: 
-
-	Chalepogenus caeruleus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
-	Rosa eglanteria
-
-Colnames: 
-
-	Platycheirus1
-	Sapromyza.Minettia
-	Nitidulidae
-	Staphilinidae
-	Cantharidae
-	Diptera9
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
 	Schinus patagonicus
 
 Colnames: 
@@ -136,6 +69,73 @@ Colnames:
 	Phoridae3
 	Tachinidae
 	Diapriidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 2
+
+Rownames: 
+
+	Calceolaria crenatiflora
+
+Colnames: 
+
+	Chalepogenus caeruleus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Alstroemeria aurea
+	Berberis darwinii
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+	Manuelia gayi
+	Trichophthalma jaffueli
+	Heterosarus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Berberis buxifolia
+
+Colnames: 
+
+	Trichophthalma amoena
+	Colletes seminitidus
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Rosa eglanteria
+
+Colnames: 
+
+	Platycheirus1
+	Sapromyza.Minettia
+	Nitidulidae
+	Staphilinidae
+	Cantharidae
+	Diptera9
 
 __________________________
 

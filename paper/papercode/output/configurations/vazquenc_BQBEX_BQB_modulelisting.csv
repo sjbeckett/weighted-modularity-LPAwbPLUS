@@ -50,11 +50,22 @@ Nr of module: 1
 
 Rownames: 
 
-	Vicia nigricans
+	Alstroemeria aurea
 
 Colnames: 
 
-	Bombus dahlbomii
+	Bombus ruderatus
+	Syrphus octomaculatus
+	Trichophthalma jaffueli
+	Phthiria
+	Megachile2
+	Vespula germanica
+	Phthiria1
+	Svastrides melanura
+	Ruizantheda nigrocaerulea
+	Megachile1
+	Diptera5
+	Diptera3
 
 __________________________
 
@@ -64,12 +75,11 @@ Nr of module: 2
 
 Rownames: 
 
-	Tristerix corymbosus
+	Vicia nigricans
 
 Colnames: 
 
-	Manuelia postica
-	Sephanoides galeritus
+	Bombus dahlbomii
 
 __________________________
 
@@ -96,22 +106,12 @@ Nr of module: 4
 
 Rownames: 
 
-	Alstroemeria aurea
+	Tristerix corymbosus
 
 Colnames: 
 
-	Bombus ruderatus
-	Syrphus octomaculatus
-	Trichophthalma jaffueli
-	Phthiria
-	Megachile2
-	Vespula germanica
-	Phthiria1
-	Svastrides melanura
-	Ruizantheda nigrocaerulea
-	Megachile1
-	Diptera5
-	Diptera3
+	Manuelia postica
+	Sephanoides galeritus
 
 __________________________
 

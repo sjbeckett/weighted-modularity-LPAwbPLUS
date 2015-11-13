@@ -66,57 +66,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Salix.fragilis
-
-Colnames: 
-
-	Adela.purpurea
-	Cyphon.variabilis
-	Colletes.inaequalis
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
-	Kalmia.angustifolia
-
-Colnames: 
-
-	Hybomitra.typhus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 3
-
-Rownames: 
-
-	Chamaedaphne.calyculata
-	Gaylussacia.baccata
-
-Colnames: 
-
-	Spilogona.fatima
-	Sercomyia.transversa
-	Eristalis.dimidiata
-	Pyrobombus.sandersoni
-	Andrena.bradleyi
-	Andrena.carlini
-	Andrena.vicina
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
 	Calopogon.pulchellus
 
 Colnames: 
@@ -128,7 +77,42 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 2
+
+Rownames: 
+
+	Andromeda.glaucophylla
+	Vaccinium.myrtilloides
+
+Colnames: 
+
+	Apis.mellifera
+	Pyrobombus.impatiens
+	Pyrobombus.perplexus
+	Pyrobombus.ternarius
+	Andrena.carolina
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Spiraea.alba
+
+Colnames: 
+
+	Macrodactlyus.subspinosus
+	Hybomitra.minuscula
+	Bombus.terricola
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
 
 Rownames: 
 
@@ -152,26 +136,28 @@ __________________________
 
 Depth: 1
 
-Nr of module: 6
+Nr of module: 5
 
 Rownames: 
 
-	Andromeda.glaucophylla
-	Vaccinium.myrtilloides
+	Chamaedaphne.calyculata
+	Gaylussacia.baccata
 
 Colnames: 
 
-	Apis.mellifera
-	Pyrobombus.impatiens
-	Pyrobombus.perplexus
-	Pyrobombus.ternarius
-	Andrena.carolina
+	Spilogona.fatima
+	Sercomyia.transversa
+	Eristalis.dimidiata
+	Pyrobombus.sandersoni
+	Andrena.bradleyi
+	Andrena.carlini
+	Andrena.vicina
 
 __________________________
 
 Depth: 1
 
-Nr of module: 7
+Nr of module: 6
 
 Rownames: 
 
@@ -189,17 +175,31 @@ __________________________
 
 Depth: 1
 
+Nr of module: 7
+
+Rownames: 
+
+	Kalmia.angustifolia
+
+Colnames: 
+
+	Hybomitra.typhus
+
+__________________________
+
+Depth: 1
+
 Nr of module: 8
 
 Rownames: 
 
-	Spiraea.alba
+	Salix.fragilis
 
 Colnames: 
 
-	Macrodactlyus.subspinosus
-	Hybomitra.minuscula
-	Bombus.terricola
+	Adela.purpurea
+	Cyphon.variabilis
+	Colletes.inaequalis
 
 __________________________
 

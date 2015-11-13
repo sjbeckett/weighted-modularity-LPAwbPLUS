@@ -84,25 +84,6 @@ Nr of module: 3
 
 Rownames: 
 
-	Alstroemeria aurea
-	Vicia nigricans
-
-Colnames: 
-
-	Bombus dahlbomii
-	Ruizantheda mutabilis
-	Manuelia gayi
-	Trichophthalma jaffueli
-	Heterosarus
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
-
-Rownames: 
-
 	Rosa eglanteria
 
 Colnames: 
@@ -119,7 +100,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 5
+Nr of module: 4
 
 Rownames: 
 
@@ -136,6 +117,25 @@ Colnames:
 	Phoridae3
 	Tachinidae
 	Diapriidae
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Alstroemeria aurea
+	Vicia nigricans
+
+Colnames: 
+
+	Bombus dahlbomii
+	Ruizantheda mutabilis
+	Manuelia gayi
+	Trichophthalma jaffueli
+	Heterosarus
 
 __________________________
 

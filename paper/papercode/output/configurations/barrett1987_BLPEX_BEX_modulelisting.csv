@@ -133,17 +133,49 @@ Nr of module: 1
 
 Rownames: 
 
-	Medeola.virginiana
+	Aralia.nudicaulis
+	Oxalis.montana
 
 Colnames: 
 
-	Ephemerella.sp.
+	Andrena.wheeleri
+	Andrena.w.scripta
+	Bombus.perplexus
+	Cateres.pennatus
+	Cheilosia.pallipes
+	Cheilosia.tristis
+	Dialictus.sp.
+	Eusphalerum.convexum
+	Eusphalerum.phothos
+	Eusphalerum.sp.
+	Halictus.rubicundus
+	Mallota.posticata
+	Melanostoma.sp.
+	Trachysida.aspera
 
 __________________________
 
 Depth: 1
 
 Nr of module: 2
+
+Rownames: 
+
+	Trientalis.borealis
+	Trillium.undulatum
+
+Colnames: 
+
+	Anthaxia.expansa
+	Carposcalis.confusus
+	Carposcalis.obscura
+	Sphaerophoria.bifurcata
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
 
 Rownames: 
 
@@ -194,24 +226,6 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
-
-Rownames: 
-
-	Trientalis.borealis
-	Trillium.undulatum
-
-Colnames: 
-
-	Anthaxia.expansa
-	Carposcalis.confusus
-	Carposcalis.obscura
-	Sphaerophoria.bifurcata
-
-__________________________
-
-Depth: 1
-
 Nr of module: 4
 
 Rownames: 
@@ -240,34 +254,6 @@ Nr of module: 5
 
 Rownames: 
 
-	Aralia.nudicaulis
-	Oxalis.montana
-
-Colnames: 
-
-	Andrena.wheeleri
-	Andrena.w.scripta
-	Bombus.perplexus
-	Cateres.pennatus
-	Cheilosia.pallipes
-	Cheilosia.tristis
-	Dialictus.sp.
-	Eusphalerum.convexum
-	Eusphalerum.phothos
-	Eusphalerum.sp.
-	Halictus.rubicundus
-	Mallota.posticata
-	Melanostoma.sp.
-	Trachysida.aspera
-
-__________________________
-
-Depth: 1
-
-Nr of module: 6
-
-Rownames: 
-
 	Chimaphila.umbellata
 	Cypripedium.acaule
 	Pyrola.secunda
@@ -284,7 +270,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 7
+Nr of module: 6
 
 Rownames: 
 
@@ -312,7 +298,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 8
+Nr of module: 7
 
 Rownames: 
 
@@ -334,6 +320,20 @@ Colnames:
 	Phaonia.serva
 	Pyrophaena.rosarum
 	Zeraea.americana
+
+__________________________
+
+Depth: 1
+
+Nr of module: 8
+
+Rownames: 
+
+	Medeola.virginiana
+
+Colnames: 
+
+	Ephemerella.sp.
 
 __________________________
 

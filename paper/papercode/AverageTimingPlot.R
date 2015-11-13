@@ -29,7 +29,7 @@
 
  NETWORKS = list("Safariland","barrett1987","bezerra2009","elberling1999","inouye1988","junker2013","kato1990","kevan1970","memmott1999","mosquin1967","motten1982","olesen2002aigrettes","olesen2002flores","ollerton2003","schemske1978","small1976","vazarr","vazcer","vazllao","vazmasc","vazmasnc","vazquec","vazquenc")
 
-
+h = 1:23
 
  setEPS()
  postscript("Timings.eps",height=6,width=12)

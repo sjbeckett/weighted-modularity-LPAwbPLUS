@@ -159,14 +159,14 @@ changeQnorm = NQW - NQB
 
 colw = "grey"
 
-plot(0,0,type='n',xlab="NMI",ylab=expression(paste(Delta, "Q"^norm)),bty="n",ylim=c(min(changeQ2),0.3),xlim=c(0,1))
+plot(0,0,type='n',xlab="NMI",ylab=expression(paste(Delta, "Q"^norm)),bty="n",ylim=c(min(changeQnorm),0.3),xlim=c(0,1))
 lines(0:1,rep(0,2),lty=3,lwd=4,col="grey80")
 points(NMI,changeQnorm)
 axis(1,col=colw,labels=FALSE,lwd=2)
 axis(2,col=colw,labels=FALSE,lwd=2)
 
-subset = c(10,14,15)#6,8,9,13,14,19) # labels to put above point
-subset2 = c(19)
+subset = c(1,4,5,7,14,15)#6,8,9,13,14,19) # labels to put above point
+subset2 = c(19,22)
 
 text(NMI[subset], changeQnorm[subset], labels = Networks[subset], cex= 0.7, pos=3, offset = 0.4)  #above
 text(NMI[subset2], changeQnorm[subset2], labels = Networks[subset2], cex= 0.7, pos=4, offset = 0.4)  #above

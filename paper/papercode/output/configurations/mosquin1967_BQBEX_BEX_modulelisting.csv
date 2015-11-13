@@ -67,13 +67,13 @@ Nr of module: 2
 
 Rownames: 
 
-	Taraxacum.sp.
+	Papaver.radicatum
+	Geum.rossii
 
 Colnames: 
 
-	Rhamphomyia.sp.
-	Boreellus.atriceps
-	Spilogona.aesturium
+	Spilogona.almquistii
+	Pogonomyiodes.segnis
 
 __________________________
 
@@ -97,39 +97,6 @@ Nr of module: 4
 
 Rownames: 
 
-	Astragalus.alpinus
-	Petasites.frigidus
-
-Colnames: 
-
-	Colias.hecla
-	Colias.nastes
-	Bombus.polaris
-
-__________________________
-
-Depth: 1
-
-Nr of module: 5
-
-Rownames: 
-
-	Papaver.radicatum
-	Geum.rossii
-
-Colnames: 
-
-	Spilogona.almquistii
-	Pogonomyiodes.segnis
-
-__________________________
-
-Depth: 1
-
-Nr of module: 6
-
-Rownames: 
-
 	Cerastium.alpinum
 	Dryas.integrifolia
 	Arnica.alpina
@@ -140,6 +107,39 @@ Colnames:
 	Spilogona.projecta
 	Spilogona.sanctipauli
 	Eupogonomyia.probilofensis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 5
+
+Rownames: 
+
+	Taraxacum.sp.
+
+Colnames: 
+
+	Rhamphomyia.sp.
+	Boreellus.atriceps
+	Spilogona.aesturium
+
+__________________________
+
+Depth: 1
+
+Nr of module: 6
+
+Rownames: 
+
+	Astragalus.alpinus
+	Petasites.frigidus
+
+Colnames: 
+
+	Colias.hecla
+	Colias.nastes
+	Bombus.polaris
 
 __________________________
 

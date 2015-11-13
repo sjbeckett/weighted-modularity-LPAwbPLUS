@@ -48,23 +48,6 @@ Nr of module: 1
 
 Rownames: 
 
-	Geum.rossii
-	Taraxacum.sp.
-
-Colnames: 
-
-	Rhamphomyia.sp.
-	Spilogona.aesturium
-	Spilogona.almquistii
-
-__________________________
-
-Depth: 1
-
-Nr of module: 2
-
-Rownames: 
-
 	Papaver.radicatum
 	Dryas.integrifolia
 
@@ -77,21 +60,7 @@ __________________________
 
 Depth: 1
 
-Nr of module: 3
-
-Rownames: 
-
-	Cerastium.alpinum
-
-Colnames: 
-
-	Spilogona.projecta
-
-__________________________
-
-Depth: 1
-
-Nr of module: 4
+Nr of module: 2
 
 Rownames: 
 
@@ -109,6 +78,37 @@ Colnames:
 	Spilogona.melanosoma
 	Spilogona.sanctipauli
 	Eupogonomyia.probilofensis
+
+__________________________
+
+Depth: 1
+
+Nr of module: 3
+
+Rownames: 
+
+	Geum.rossii
+	Taraxacum.sp.
+
+Colnames: 
+
+	Rhamphomyia.sp.
+	Spilogona.aesturium
+	Spilogona.almquistii
+
+__________________________
+
+Depth: 1
+
+Nr of module: 4
+
+Rownames: 
+
+	Cerastium.alpinum
+
+Colnames: 
+
+	Spilogona.projecta
 
 __________________________
 
