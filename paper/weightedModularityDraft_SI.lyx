@@ -78,6 +78,11 @@ Biosciences, College of Life and Environmental Sciences, University of Exeter,
 \end_layout
 
 \begin_layout Standard
+Current address: School of Biology, Georgia Institute of Technology, Atlanta,
+ Georgia, USA 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -99,6 +104,47 @@ Synthetic Networks
 
 \begin_layout Standard
 \begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../../weightedModResponseToReviewe/papercode/negativeBinomialSizevariation.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Proportion of 10,000 numbers drawn from negative binomial distributions
+ with a mean of 4 that were not equal to zero.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
 placement H
 wide false
 sideways false
@@ -107,7 +153,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename papercode/negativebinomial.eps
+	filename ../../weightedModResponseToReviewe/papercode/negativebinomial.eps
 	width 100text%
 
 \end_inset
@@ -121,16 +167,16 @@ status open
 \begin_layout Plain Layout
 Histograms of 10,000 draws from the two negative binomial distributions
  used to generate edge weights in the synthetic networks.
- Both distributions have a mean of 2, (
+ Both distributions have a mean of 4, (
 \shape italic
 a
 \shape default
-) has a distribution parameter of 0.2 corresponding to a lower level of network
+) has a distribution parameter of 0.5 corresponding to a lower level of network
  connectance as there exist a greater number of zeroes, than in (
 \shape italic
 b
 \shape default
-) where the distribution parameter is set to 1.
+) where the distribution parameter is set to 2.5.
 \end_layout
 
 \end_inset
@@ -165,7 +211,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename papercode/ModuleFillingAssessment.eps
+	filename ../../weightedModResponseToReviewe/papercode/ModuleFillingAssessment.eps
 	width 100text%
 
 \end_inset
@@ -177,15 +223,15 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Evaluation of the LPAwb+ and Exhautive LPAwb+ algorithms against synthetically
+Evaluation of the LPAwb+ and DIRTLPAwb+ algorithms against synthetically
  generated weighted networks with known modular structure for four different
- treatments: LMLF -- 3 modules and low connectance (dispersion parameter
+ treatments: LMLF -- 2 modules and low connectance (dispersion parameter
  given as 
-\begin_inset Formula $size=0.2$
+\begin_inset Formula $size=0.5$
 \end_inset
 
-), LMHF -- 3 modules, higher connectance(dispersion parameter given as 
-\begin_inset Formula $size=1$
+), LMHF -- 2 modules, higher connectance(dispersion parameter given as 
+\begin_inset Formula $size=2.5$
 \end_inset
 
 ), HMLF -- 10 modules, lower connectance, HMHF -- 10 modules, higher connectance
@@ -2091,7 +2137,7 @@ Second a letter B or Q details whether this is a binary or quantitative
 
 \begin_layout Standard
 Next are two sets of two letters, which together describe the two algorithms
- being compared (LP: LPAwb+, EX: Exhaustive LPAwb+, QB: QuanBiMo)
+ being compared (LP: LPAwb+, EX: DIRTLPAwb+, QB: QuanBiMo)
 \end_layout
 
 \begin_layout Standard
@@ -2940,7 +2986,7 @@ Safariland
 \uwave off
 \noun off
 \color none
-0.519
+0.385
 \end_layout
 
 \end_inset
@@ -2970,7 +3016,7 @@ Safariland
 \uwave off
 \noun off
 \color none
-40
+46
 \end_layout
 
 \end_inset
@@ -3083,7 +3129,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-0.077
+0.106
 \end_layout
 
 \end_inset
@@ -3146,7 +3192,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-0.593
+0.521
 \end_layout
 
 \end_inset
@@ -3176,7 +3222,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-98
+95
 \end_layout
 
 \end_inset
@@ -3260,7 +3306,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-0.470
+0.246
 \end_layout
 
 \end_inset
@@ -3278,19 +3324,7 @@ barrett1987
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1
+4
 \end_layout
 
 \end_inset
@@ -3311,7 +3345,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-0.481
+0.480
 \end_layout
 
 \end_inset
@@ -3382,7 +3416,7 @@ bezerra2009
 \uwave off
 \noun off
 \color none
-73
+76
 \end_layout
 
 \end_inset
@@ -3580,7 +3614,7 @@ bezerra2009
 \uwave off
 \noun off
 \color none
-0.218
+-0.099
 \end_layout
 
 \end_inset
@@ -3610,7 +3644,7 @@ bezerra2009
 \uwave off
 \noun off
 \color none
-52
+34
 \end_layout
 
 \end_inset
@@ -3631,7 +3665,7 @@ bezerra2009
 \uwave off
 \noun off
 \color none
-0.230
+0.229
 \end_layout
 
 \end_inset
@@ -3723,7 +3757,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-0.143
+0.144
 \end_layout
 
 \end_inset
@@ -3753,19 +3787,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-5
+6
 \end_layout
 
 \end_inset
@@ -3786,7 +3808,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-0.311
+0.395
 \end_layout
 
 \end_inset
@@ -3888,7 +3910,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-0.458
+0.008
 \end_layout
 
 \end_inset
@@ -3915,7 +3937,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.484
+0.483
 \end_layout
 
 \end_inset
@@ -3942,7 +3964,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.286
+0.193
 \end_layout
 
 \end_inset
@@ -4007,7 +4029,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-0.395
+0.389
 \end_layout
 
 \end_inset
@@ -4070,7 +4092,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-0.239
+0.194
 \end_layout
 
 \end_inset
@@ -4100,7 +4122,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-51
+55
 \end_layout
 
 \end_inset
@@ -4172,7 +4194,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-0.351
+-0.179
 \end_layout
 
 \end_inset
@@ -4199,7 +4221,7 @@ inouye1988
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.404
+0.403
 \end_layout
 
 \end_inset
@@ -4226,7 +4248,7 @@ inouye1988
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.082
+0.209
 \end_layout
 
 \end_inset
@@ -4291,7 +4313,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-0.024
+0.021
 \end_layout
 
 \end_inset
@@ -4354,7 +4376,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-0.619
+0.570
 \end_layout
 
 \end_inset
@@ -4372,75 +4394,12 @@ junker2013
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-44
+62
 \end_layout
 
 \end_inset
 </cell>
 <cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.430
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-27
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4466,6 +4425,57 @@ junker2013
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+33
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.091
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -4483,7 +4493,7 @@ junker2013
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.479
+0.480
 \end_layout
 
 \end_inset
@@ -4510,7 +4520,7 @@ junker2013
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.112
+0.119
 \end_layout
 
 \end_inset
@@ -4668,7 +4678,7 @@ kato1990
 \uwave off
 \noun off
 \color none
-92
+98
 \end_layout
 
 \end_inset
@@ -4710,7 +4720,7 @@ kato1990
 \uwave off
 \noun off
 \color none
-85
+90
 \end_layout
 
 \end_inset
@@ -4740,7 +4750,7 @@ kato1990
 \uwave off
 \noun off
 \color none
-0.544
+0.154
 \end_layout
 
 \end_inset
@@ -4767,7 +4777,7 @@ kato1990
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.574
+0.573
 \end_layout
 
 \end_inset
@@ -4794,7 +4804,7 @@ kato1990
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.279
+-0.987
 \end_layout
 
 \end_inset
@@ -4859,7 +4869,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-0.312
+0.309
 \end_layout
 
 \end_inset
@@ -4922,7 +4932,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-0.276
+0.301
 \end_layout
 
 \end_inset
@@ -4940,19 +4950,7 @@ kevan1970
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-6
+8
 \end_layout
 
 \end_inset
@@ -4973,7 +4971,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-0.340
+0.341
 \end_layout
 
 \end_inset
@@ -4982,19 +4980,7 @@ kevan1970
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-4
+3
 \end_layout
 
 \end_inset
@@ -5024,7 +5010,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-0.341
+-0.205
 \end_layout
 
 \end_inset
@@ -5051,7 +5037,7 @@ kevan1970
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.422
+0.423
 \end_layout
 
 \end_inset
@@ -5143,7 +5129,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-0.290
+0.295
 \end_layout
 
 \end_inset
@@ -5206,7 +5192,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-0.124
+0.171
 \end_layout
 
 \end_inset
@@ -5224,19 +5210,7 @@ memmott1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-57
+60
 \end_layout
 
 \end_inset
@@ -5320,7 +5294,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-0.268
+-0.344
 \end_layout
 
 \end_inset
@@ -5371,7 +5345,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-0.328
+0.329
 \end_layout
 
 \end_inset
@@ -5442,7 +5416,7 @@ mosquin1967
 \uwave off
 \noun off
 \color none
-64
+58
 \end_layout
 
 \end_inset
@@ -5640,7 +5614,7 @@ mosquin1967
 \uwave off
 \noun off
 \color none
-0.393
+-0.053
 \end_layout
 
 \end_inset
@@ -5658,19 +5632,7 @@ mosquin1967
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-25
+42
 \end_layout
 
 \end_inset
@@ -5691,7 +5653,7 @@ mosquin1967
 \uwave off
 \noun off
 \color none
-0.470
+0.472
 \end_layout
 
 \end_inset
@@ -5750,19 +5712,7 @@ motten1982
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-6
+3
 \end_layout
 
 \end_inset
@@ -5960,7 +5910,7 @@ motten1982
 \uwave off
 \noun off
 \color none
-0.281
+-0.259
 \end_layout
 
 \end_inset
@@ -5978,19 +5928,7 @@ motten1982
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-8
+3
 \end_layout
 
 \end_inset
@@ -6011,7 +5949,7 @@ motten1982
 \uwave off
 \noun off
 \color none
-0.304
+0.303
 \end_layout
 
 \end_inset
@@ -6070,19 +6008,7 @@ olesen2002aigrettes
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-19
+21
 \end_layout
 
 \end_inset
@@ -6196,7 +6122,7 @@ olesen2002aigrettes
 \uwave off
 \noun off
 \color none
-98
+95
 \end_layout
 
 \end_inset
@@ -6280,7 +6206,7 @@ olesen2002aigrettes
 \uwave off
 \noun off
 \color none
-0.314
+0.000
 \end_layout
 
 \end_inset
@@ -6298,19 +6224,7 @@ olesen2002aigrettes
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-80
+75
 \end_layout
 
 \end_inset
@@ -6402,7 +6316,7 @@ olesen2002flores
 \uwave off
 \noun off
 \color none
-24
+25
 \end_layout
 
 \end_inset
@@ -6516,7 +6430,7 @@ olesen2002flores
 \uwave off
 \noun off
 \color none
-98
+95
 \end_layout
 
 \end_inset
@@ -6600,7 +6514,7 @@ olesen2002flores
 \uwave off
 \noun off
 \color none
-0.422
+0.133
 \end_layout
 
 \end_inset
@@ -6618,19 +6532,7 @@ olesen2002flores
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-61
+44
 \end_layout
 
 \end_inset
@@ -6651,7 +6553,7 @@ olesen2002flores
 \uwave off
 \noun off
 \color none
-0.444
+0.441
 \end_layout
 
 \end_inset
@@ -6710,19 +6612,7 @@ ollerton2003
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1
+5
 \end_layout
 
 \end_inset
@@ -6743,7 +6633,7 @@ ollerton2003
 \uwave off
 \noun off
 \color none
-0.302
+0.318
 \end_layout
 
 \end_inset
@@ -6773,19 +6663,7 @@ ollerton2003
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-3
+2
 \end_layout
 
 \end_inset
@@ -6824,19 +6702,7 @@ ollerton2003
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-43
+39
 \end_layout
 
 \end_inset
@@ -6857,7 +6723,7 @@ ollerton2003
 \uwave off
 \noun off
 \color none
-0.418
+0.439
 \end_layout
 
 \end_inset
@@ -6920,7 +6786,7 @@ ollerton2003
 \uwave off
 \noun off
 \color none
-0.439
+0.165
 \end_layout
 
 \end_inset
@@ -6938,19 +6804,7 @@ ollerton2003
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-9
+5
 \end_layout
 
 \end_inset
@@ -7042,7 +6896,7 @@ schemske1978
 \uwave off
 \noun off
 \color none
-53
+54
 \end_layout
 
 \end_inset
@@ -7240,7 +7094,7 @@ schemske1978
 \uwave off
 \noun off
 \color none
-0.370
+0.119
 \end_layout
 
 \end_inset
@@ -7350,19 +7204,7 @@ small1976
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-9
+5
 \end_layout
 
 \end_inset
@@ -7383,7 +7225,7 @@ small1976
 \uwave off
 \noun off
 \color none
-0.256
+0.255
 \end_layout
 
 \end_inset
@@ -7464,19 +7306,7 @@ small1976
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-100
+99
 \end_layout
 
 \end_inset
@@ -7560,7 +7390,7 @@ small1976
 \uwave off
 \noun off
 \color none
-0.242
+-0.234
 \end_layout
 
 \end_inset
@@ -7578,19 +7408,7 @@ small1976
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-13
+8
 \end_layout
 
 \end_inset
@@ -7611,7 +7429,7 @@ small1976
 \uwave off
 \noun off
 \color none
-0.262
+0.260
 \end_layout
 
 \end_inset
@@ -7880,7 +7698,7 @@ vazarr
 \uwave off
 \noun off
 \color none
-0.512
+0.395
 \end_layout
 
 \end_inset
@@ -7910,7 +7728,7 @@ vazarr
 \uwave off
 \noun off
 \color none
-17
+13
 \end_layout
 
 \end_inset
@@ -8002,7 +7820,7 @@ vazcer
 \uwave off
 \noun off
 \color none
-28
+29
 \end_layout
 
 \end_inset
@@ -8200,7 +8018,7 @@ vazcer
 \uwave off
 \noun off
 \color none
-0.565
+0.467
 \end_layout
 
 \end_inset
@@ -8230,7 +8048,7 @@ vazcer
 \uwave off
 \noun off
 \color none
-73
+75
 \end_layout
 
 \end_inset
@@ -8424,19 +8242,7 @@ vazllao
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-82
+78
 \end_layout
 
 \end_inset
@@ -8520,7 +8326,7 @@ vazllao
 \uwave off
 \noun off
 \color none
-0.550
+0.524
 \end_layout
 
 \end_inset
@@ -8538,19 +8344,7 @@ vazllao
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-39
+27
 \end_layout
 
 \end_inset
@@ -8840,7 +8634,7 @@ vazmasc
 \uwave off
 \noun off
 \color none
-0.522
+0.444
 \end_layout
 
 \end_inset
@@ -8858,19 +8652,7 @@ vazmasc
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-48
+56
 \end_layout
 
 \end_inset
@@ -8891,7 +8673,7 @@ vazmasc
 \uwave off
 \noun off
 \color none
-0.546
+0.547
 \end_layout
 
 \end_inset
@@ -8962,7 +8744,7 @@ vazmasnc
 \uwave off
 \noun off
 \color none
-14
+10
 \end_layout
 
 \end_inset
@@ -9160,7 +8942,7 @@ vazmasnc
 \uwave off
 \noun off
 \color none
-0.512
+0.373
 \end_layout
 
 \end_inset
@@ -9178,19 +8960,7 @@ vazmasnc
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-8
+20
 \end_layout
 
 \end_inset
@@ -9211,7 +8981,7 @@ vazmasnc
 \uwave off
 \noun off
 \color none
-0.521
+0.522
 \end_layout
 
 \end_inset
@@ -9480,7 +9250,7 @@ vazquec
 \uwave off
 \noun off
 \color none
-0.474
+0.234
 \end_layout
 
 \end_inset
@@ -9510,7 +9280,7 @@ vazquec
 \uwave off
 \noun off
 \color none
-73
+77
 \end_layout
 
 \end_inset
@@ -9800,7 +9570,7 @@ vazquenc
 \uwave off
 \noun off
 \color none
-0.514
+0.548
 \end_layout
 
 \end_inset
@@ -9830,7 +9600,7 @@ vazquenc
 \uwave off
 \noun off
 \color none
-74
+78
 \end_layout
 
 \end_inset
@@ -10596,7 +10366,7 @@ Safariland
 \uwave off
 \noun off
 \color none
-91
+75
 \end_layout
 
 \end_inset
@@ -10824,7 +10594,7 @@ Safariland
 \uwave off
 \noun off
 \color none
-42
+35
 \end_layout
 
 \end_inset
@@ -10949,7 +10719,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-0.068
+0.047
 \end_layout
 
 \end_inset
@@ -11012,7 +10782,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-0.836
+0.844
 \end_layout
 
 \end_inset
@@ -11144,19 +10914,7 @@ barrett1987
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-11
+3
 \end_layout
 
 \end_inset
@@ -11260,7 +11018,7 @@ bezerra2009
 \uwave off
 \noun off
 \color none
-21
+22
 \end_layout
 
 \end_inset
@@ -11613,7 +11371,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-0.131
+0.134
 \end_layout
 
 \end_inset
@@ -11676,7 +11434,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-0.530
+0.436
 \end_layout
 
 \end_inset
@@ -11817,7 +11575,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.507
+0.506
 \end_layout
 
 \end_inset
@@ -11856,7 +11614,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.311
+0.269
 \end_layout
 
 \end_inset
@@ -11921,7 +11679,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-0.486
+0.481
 \end_layout
 
 \end_inset
@@ -11984,7 +11742,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-0.565
+0.589
 \end_layout
 
 \end_inset
@@ -12125,7 +11883,7 @@ inouye1988
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.609
+0.608
 \end_layout
 
 \end_inset
@@ -12164,7 +11922,7 @@ inouye1988
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.579
+0.582
 \end_layout
 
 \end_inset
@@ -12229,7 +11987,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-0.007
+0.008
 \end_layout
 
 \end_inset
@@ -12292,7 +12050,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-0.743
+0.597
 \end_layout
 
 \end_inset
@@ -12433,7 +12191,7 @@ junker2013
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.559
+0.558
 \end_layout
 
 \end_inset
@@ -12472,7 +12230,7 @@ junker2013
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.590
+0.588
 \end_layout
 
 \end_inset
@@ -12537,7 +12295,7 @@ kato1990
 \uwave off
 \noun off
 \color none
-0.006
+0.004
 \end_layout
 
 \end_inset
@@ -12600,7 +12358,7 @@ kato1990
 \uwave off
 \noun off
 \color none
-0.903
+0.896
 \end_layout
 
 \end_inset
@@ -12741,7 +12499,7 @@ kato1990
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.621
+0.620
 \end_layout
 
 \end_inset
@@ -12780,7 +12538,7 @@ kato1990
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.431
+-0.967
 \end_layout
 
 \end_inset
@@ -12845,7 +12603,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-0.247
+0.241
 \end_layout
 
 \end_inset
@@ -12908,7 +12666,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-0.739
+0.559
 \end_layout
 
 \end_inset
@@ -13040,7 +12798,7 @@ kevan1970
 \begin_inset Text
 
 \begin_layout Plain Layout
-7
+5
 \end_layout
 
 \end_inset
@@ -13153,7 +12911,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-0.127
+0.123
 \end_layout
 
 \end_inset
@@ -13216,7 +12974,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-0.532
+0.407
 \end_layout
 
 \end_inset
@@ -13464,7 +13222,7 @@ mosquin1967
 \uwave off
 \noun off
 \color none
-78
+73
 \end_layout
 
 \end_inset
@@ -13680,19 +13438,7 @@ mosquin1967
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-89
+60
 \end_layout
 
 \end_inset
@@ -13796,7 +13542,7 @@ motten1982
 \uwave off
 \noun off
 \color none
-16
+12
 \end_layout
 
 \end_inset
@@ -14012,19 +13758,7 @@ motten1982
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-100
+97
 \end_layout
 
 \end_inset
@@ -14128,7 +13862,7 @@ olesen2002aigrettes
 \uwave off
 \noun off
 \color none
-96
+91
 \end_layout
 
 \end_inset
@@ -14448,19 +14182,7 @@ olesen2002flores
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-67
+72
 \end_layout
 
 \end_inset
@@ -14843,19 +14565,7 @@ ollerton2003
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-2
+0
 \end_layout
 
 \end_inset
@@ -15020,7 +14730,7 @@ ollerton2003
 \uwave off
 \noun off
 \color none
-98
+88
 \end_layout
 
 \end_inset
@@ -15112,19 +14822,7 @@ schemske1978
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-5
+1
 \end_layout
 
 \end_inset
@@ -15456,7 +15154,7 @@ small1976
 \uwave off
 \noun off
 \color none
-33
+35
 \end_layout
 
 \end_inset
@@ -15705,7 +15403,7 @@ small1976
 \uwave off
 \noun off
 \color none
-0.517
+0.516
 \end_layout
 
 \end_inset
@@ -15744,7 +15442,7 @@ small1976
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.337
+0.387
 \end_layout
 
 \end_inset
@@ -15788,7 +15486,7 @@ vazarr
 \uwave off
 \noun off
 \color none
-21
+22
 \end_layout
 
 \end_inset
@@ -16016,7 +15714,7 @@ vazarr
 \uwave off
 \noun off
 \color none
-93
+60
 \end_layout
 
 \end_inset
@@ -16120,7 +15818,7 @@ vazcer
 \uwave off
 \noun off
 \color none
-30
+31
 \end_layout
 
 \end_inset
@@ -16348,7 +16046,7 @@ vazcer
 \uwave off
 \noun off
 \color none
-80
+60
 \end_layout
 
 \end_inset
@@ -16680,7 +16378,7 @@ vazllao
 \uwave off
 \noun off
 \color none
-61
+34
 \end_layout
 
 \end_inset
@@ -16740,7 +16438,7 @@ vazllao
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.635
+0.625
 \end_layout
 
 \end_inset
@@ -16772,19 +16470,7 @@ vazmasc
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-31
+27
 \end_layout
 
 \end_inset
@@ -17000,19 +16686,7 @@ vazmasc
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-80
+62
 \end_layout
 
 \end_inset
@@ -17116,7 +16790,7 @@ vazmasnc
 \uwave off
 \noun off
 \color none
-26
+25
 \end_layout
 
 \end_inset
@@ -17332,19 +17006,7 @@ vazmasnc
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-31
+20
 \end_layout
 
 \end_inset
@@ -17365,7 +17027,7 @@ vazmasnc
 \uwave off
 \noun off
 \color none
-0.401
+0.400
 \end_layout
 
 \end_inset
@@ -17664,19 +17326,7 @@ vazquec
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-22
+14
 \end_layout
 
 \end_inset
@@ -17697,7 +17347,7 @@ vazquec
 \uwave off
 \noun off
 \color none
-0.508
+0.504
 \end_layout
 
 \end_inset

@@ -29,7 +29,7 @@
 \font_tt_scale 100
 
 \graphics default
-\default_output_format pdf5
+\default_output_format pdf4
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -83,28 +83,39 @@ Stephen Beckett
 
 \begin_layout Address
 Biosciences, College of Life and Environmental Sciences, University of Exeter,
- EX4 4QE
+ EX4 4QE, UK
+\end_layout
+
+\begin_layout Address
+School of Biology, Georgia Institute of Technology, Atlanta, Georgia, USA
+ *current address
 \end_layout
 
 \begin_layout Standard
-Key words: modular structure, network ecology, bipartite networks, compartments
+Key words: modular structure, network ecology, bipartite networks, modules
 \end_layout
 
 \begin_layout Abstract
-Real-world complex networks are composed of non-random quantitative interactions
-, yet many community detection algorithms only use the presence or absence
- of interactions between nodes.
+Real-world complex networks are composed of non-random quantitative interactions.
+ Identifying communities of nodes that tend to interact more with each other
+ than the network as a whole is a key research focus across multiple disciplines
+, yet many community detection algorithms only utilise information about
+ the presence or absence of interactions between nodes.
  Weighted modularity is a potential method for evaluating the quality of
- communities in quantitative networks.
- Modularity optimisation is a method for finding communities in a network.
- QuanBiMo has been proposed to maximise weighted modularity in bipartite
- networks.
- This paper introduces two new algorithms, LPAwb+ and Exhaustive LPAwb+,
- for maximising weighted modularity in bipartite networks.
- These algorithms robustly identify partitions with high modularity scores.
- Exhaustive LPAwb+ consistently matched or outperformed QuanBiMo, whilst
- the speed of LPAwb+ makes it an attractive choice for detecting the modularity
- of larger networks.
+ community partitions in quantitative networks.
+ In this framework, the optimal community partition of a network can be
+ found by searching for the partition that maximises modularity.
+ Attempting to find the partition that maximises modularity is a computationally
+ hard problem requiring the use of algorithms.
+ QuanBiMo is an algorithm that has been proposed to maximise weighted modularity
+ in bipartite networks.
+ This paper introduces two new algorithms, LPAwb+ and DIRTLPAwb+, for maximising
+ weighted modularity in bipartite networks.
+ LPAwb+ and DIRTLPAwb+ robustly identify partitions with high modularity
+ scores.
+ DIRTLPAwb+ consistently matched or outperformed QuanBiMo, whilst the speed
+ of LPAwb+ makes it an attractive choice for detecting the modularity of
+ larger networks.
  Searching for modules using weighted data (rather than binary data) provides
  a different and potentially insightful method for evaluating network partitions.
 \end_layout
@@ -115,20 +126,81 @@ Introduction
 
 \begin_layout Standard
 Bipartite networks are the representation of interactions between two distinct
- classes of nodes.
- Identifying structure within these networks is useful in explaining their
- formation, function and behaviour.
- Modularity is an evaluation of the partitioning of nodes into separate
- subsets, forming modules.
- These are also known as groups, compartments, communities or subgraphs.
- Determining functional groups of networks is an important challenge for
- a diverse set of fields including sociology, ecology and the physical sciences.
+ classes of nodes, such that nodes can only interact with nodes from the
+ other class 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "newman2010networks"
+
+\end_inset
+
+.
+ Such networks can be used for example to represent the way in which certain
+ actors are related to certain events in social networks 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "newman2002random"
+
+\end_inset
+
+, to represent industrial trade networks 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "saavedra2011strong"
+
+\end_inset
+
+; and in ecology to represent the interactions between plant species and
+ pollinator species 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "olesen2007modularity"
+
+\end_inset
+
+.
+ Identifying structure within networks is useful in explaining their formation,
+ function and behaviour and is an important challenge in a diverse set of
+ disciplines.
+ Community detection algorithms are designed to identify clusters, or modules,
+ of nodes within a network that are more likely to interact amongst themselves
+ than with the rest of the network 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fortunato2010community"
+
+\end_inset
+
+.
+ Modularity is an evaluation of the way in which nodes are partitioned into
+ separate subsets, forming modules.
+ This is done by assessing the extent to which interactions in the network
+ occur within modules rather than between modules, relative to a null model
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "newman2004finding,barber2007modularity"
+
+\end_inset
+
+.
+ One (of many) community detection methods is to find the partitioning of
+ nodes into modules that will maximise the modularity of a network.
+ Several modularity maximisation algorithms have been designed to attempt
+ to achieve this 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fortunato2010community"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
-Maximising the modularity of a network is one method for detecting communities
- originally developed for unipartite (in which all nodes are allowed to
- interact with one another) networks 
+Modularity maximisation was originally developed for unipartite (in which
+ all nodes are allowed to interact with one another) networks 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "newman2004finding"
@@ -138,7 +210,7 @@ key "newman2004finding"
 .
  Modularity is highest when each module appears isolated from the rest of
  the network.
- This occurs when nodes interact often with nodes in the same module, but
+ This occurs when nodes interact often with nodes in the same module and
  there are few between module interactions.
  Negative modularity scores imply fewer interactions occur within modules
  than expected in a random network.
@@ -181,7 +253,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename papercode/olesen2002f.eps
+	filename ../../weightedModResponseToReviewe/papercode/olesen2002f.eps
 	width 100col%
 
 \end_inset
@@ -211,7 +283,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename papercode/olesen2002fBINARY.eps
+	filename ../../weightedModResponseToReviewe/papercode/olesen2002fBINARY.eps
 	width 30page%
 
 \end_inset
@@ -241,7 +313,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename papercode/olesen2002fWEIGHTED.eps
+	filename ../../weightedModResponseToReviewe/papercode/olesen2002fWEIGHTED.eps
 	width 30page%
 
 \end_inset
@@ -401,9 +473,16 @@ reference "fig:(A)-The-olesen2002flores"
 \end_layout
 
 \begin_layout Standard
-The majority of approaches to community detection only focus on whether
- two nodes have an association, regardless of the strength of those associations
- 
+Whilst it is possible to utilise interaction weights to perform community
+ detection 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "newman2004analysis,dormann2014method"
+
+\end_inset
+
+, the majority of approaches only focus on whether two nodes have an association
+, regardless of the strength of such associations 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "fortunato2010community"
@@ -411,38 +490,51 @@ key "fortunato2010community"
 \end_inset
 
 .
- However, there are some exceptions in unipartite networks 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "newman2004analysis"
-
-\end_inset
-
-.
- QuanBiMo 
+ Recently QuanBiMo 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "dormann2014method"
 
 \end_inset
 
- is the first algorithm to maximise weighted modularity in bipartite networks
- with quantitative data.
- It may be possible to adapt some of the methods available for binary data
- to deal with quantitative information, rather than having to discard this
- important data dimension.
-\end_layout
+ was introduced as the first algorithm to use quantitative interaction strengths
+ to perform community detection via maximising weighted modularity in bipartite
+ networks.
+ QuanBiMo is an algorithm to maximise modularity in bipartite networks based
+ on hierarchical random graphs 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clauset2008hierarchical"
 
-\begin_layout Standard
-The LPAb+ algorithm 
+\end_inset
+
+ and simulated annealing.
+ Many approaches to modularity maximisation have been developed for binary
+ bipartite networks, which do not necessarily reach the same result 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fortunato2010community,liu2010efficient,costa2014locally"
+
+\end_inset
+
+.
+ There may be danger in relying on a single approach to maximise modularity
+ in weighted networks, but as yet there is no other method to compare the
+ results of QuanBiMo against.
+ It may be possible to adapt some of the methods used for detecting communities
+ in binary networks to deal with quantitative information, rather than having
+ to discard this important data dimension.
+ In this paper I consider modifying the LPAb+ algorithm 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "liu2010efficient"
 
 \end_inset
 
- for maximising modularity in binary bipartite networks has been shown to
- outperform seven other available methods for binary networks 
+, that uses label propagation and multi-step agglomeration to attempt to
+ maximise modularity in binary bipartite networks.
+ The LPAb+ algorithm has been shown to outperform seven other available
+ methods for binary networks 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "liu2010efficient,costa2014locally"
@@ -452,7 +544,10 @@ key "liu2010efficient,costa2014locally"
  whilst retaining fast time complexity.
  These qualities make it a good candidate for extension to the case of weighted
  networks.
- 
+ Additionally LPAb+ and QuanBiMo both operate to maximise Barber's modularity
+ in binary networks.
+ Thus, if LPAb+ can be modified to maximise the weighted modularity function
+ proposed by QuanBiMo, the results can be directly compared.
 \end_layout
 
 \begin_layout Standard
@@ -461,21 +556,21 @@ The definitions of binary and weighted modularity are presented.
  and denote this algorithm LPAwb+.
  A further modification allowing a more thorough search of modularity space
  is also presented.
- I call this Exhaustive LPAwb+.
- First, the performance of LPAwb+ and Exhaustive LPAwb+ are assessed using
- an ensemble of synthetic weighted networks with a given modular structure.
+ I call this DIRTLPAwb+.
+ First, the performance of LPAwb+ and DIRTLPAwb+ are assessed using an ensemble
+ of synthetic weighted networks with a given modular structure.
  Then, all three algorithms for maximising weighted modularity are compared
  on an empirical dataset containing 23 plant-pollinator networks.
  I find that QuanBiMo is highly sensitive to its input parameters, which
  may lead to reporting of modularity far below the optimal value in a given
  network.
  QuanBiMo reported less consistent modularity scores than either LPAwb+
- or Exhautive LPAwb+.
- These experiments show that Exhaustive LPAwb+ and QuanBiMo performed well
- on smaller networks, whilst the speed of LPAwb+ makes it particularly suitable
- for use on larger datasets.
+ or DIRTLPAwb+.
+ These experiments show that DIRTLPAwb+ and QuanBiMo performed well on smaller
+ networks, whilst the speed of LPAwb+ makes it particularly suitable for
+ use on larger datasets.
  The inclusion of quantitative information in networks alters the structure
- of detected modules, which may have implications for how moudularity is
+ of detected modules, which may have implications for how modularity is
  used.
 \end_layout
 
@@ -548,8 +643,19 @@ key "barber2007modularity"
 
 \begin_layout Standard
 \begin_inset Formula 
+\[
+Q_{B}=\frac{1}{m}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{A}_{uv}-P_{uv}\right)\delta\left(g_{u},h_{v}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
 \begin{equation}
-Q_{B}=\frac{1}{m}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{A}_{uv}-\frac{k_{u}d_{v}}{m}\right)\delta\left(g_{u},h_{v}\right)\label{eq:Barbers}
+=\frac{1}{m}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{A}_{uv}-\frac{k_{u}d_{v}}{m}\right)\delta\left(g_{u},h_{v}\right)\label{eq:Barbers}
 \end{equation}
 
 \end_inset
@@ -559,24 +665,41 @@ Q_{B}=\frac{1}{m}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{A}_{uv}-\frac{k_{u}d_{
 
 \begin_layout Standard
 where 
-\begin_inset Formula $m$
+\begin_inset Formula $P$
 \end_inset
 
- is matrix fill - the number of edges in 
+ is the null model matrix describing the expected probability of interactions
+ between red and blue nodes given the degree distributions of 
 \begin_inset Formula $\tilde{A}$
 \end_inset
 
-, 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "barber2007modularity"
+
+\end_inset
+
+.
+ This is calculated by finding: 
+\begin_inset Formula $m$
+\end_inset
+
+, the matrix fill - the number of edges in 
+\begin_inset Formula $\tilde{A}$
+\end_inset
+
+; 
 \begin_inset Formula $k$
 \end_inset
 
- describes the node degree for red nodes (the number of blue nodes each
- red node interacts with) and 
+, that describes the node degree for red nodes (the number of blue nodes
+ each red node interacts with); and 
 \begin_inset Formula $d$
 \end_inset
 
- describes the node degree for blue nodes (the number of red nodes each
- blue node associates with).
+, that describes the node degree for blue nodes (the number of red nodes
+ each blue node associates with).
  Red node labels are denoted 
 \begin_inset Formula $g$
 \end_inset
@@ -667,11 +790,12 @@ Q_{W}=\frac{1}{M}\sum_{u=1}^{r}\sum_{v=1}^{c}\left(\tilde{W}_{uv}-\tilde{E}_{uv}
 \end_layout
 
 \begin_layout Standard
+where 
 \begin_inset Formula $\tilde{E}$
 \end_inset
 
  is the matrix of the null expectations of interaction between two nodes,
- where 
+ 
 \begin_inset Formula $y$
 \end_inset
 
@@ -805,7 +929,7 @@ key "dormann2014method"
 
 \end_inset
 
-, based on the heirarchical random graph algorithm 
+, based on the hierarchical random graph algorithm 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "clauset2008hierarchical"
@@ -842,32 +966,290 @@ LPAwb+
 \end_layout
 
 \begin_layout Standard
-A key feature of the LPAwb+ algorithm is that it simplifies to the LPAb+
- algorithm when a binary network is used as input.
- The algorithm is made from two stages - a `bottom up' step that maximises
+The LPAwb+ algorithm is made from two stages - a `bottom up' step that maximises
  modularity on a node-by-node basis using label propagation; and a `top
  down' step that joins modules together when it results in increased network
  modularity.
- First the dimensions of the network are used to decide how to run the algorithm
- (whose pseudocode is given in Algorithm 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "alg:LPAwb+-pseudo-code"
-
-\end_inset
-
-); this is because a bipartite network can have at the most 
+ A bipartite network can have at the most 
 \begin_inset Formula $F=min(r,c)$
 \end_inset
 
  communities with our chosen definition of modularity.
  The LPAwb+ algorithm is initialised by giving a unique label to each of
  the nodes in the smallest of the two sets.
- The LPAwb+ algorithm is sensitive to the initial labelling of nodes - this
- can lead to different values of modularity being reported.
- To combat this issue the initial node labels are randomly assigned and
- it is suggested that the LPAb+ algorithm is run multiple times on a given
- network to find the greatest modularity score 
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Stage 1 - label propagation stage - bottom up
+\end_layout
+
+\begin_layout Standard
+
+\color black
+Asynchronous updating of blue, then red labels on the network is performed
+ to locally maximise modularity (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:weightedMod"
+
+\end_inset
+
+).
+
+\color inherit
+ For a particular red node 
+\begin_inset Formula $x$
+\end_inset
+
+ this can be written as choosing a new label 
+\begin_inset Formula $g_{x}$
+\end_inset
+
+ by trying to maximise the condition:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+g_{x}=\left(\sum_{v=1}^{c}\left(\tilde{W}_{xv}-\frac{y_{x}z_{v}}{M}\right)\right)\delta\left(g,h_{v}\right)\\
+\qquad\quad=\left(\sum_{v=1}^{c}\tilde{W}_{xv}\delta\left(g,h_{v}\right)-\sum_{v=1}^{c}\left(\frac{y_{x}z_{v}}{M}\right)\delta\left(g,h_{v}\right)\right)
+\end{array}\label{eq:gmax}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Red nodes only use information about the blue nodes to update their labels
+ (
+\begin_inset Formula $g$
+\end_inset
+
+) and similarly blue node labels (
+\begin_inset Formula $h$
+\end_inset
+
+) are updated only using information about the red nodes.
+ Simplifying 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:gmax"
+
+\end_inset
+
+ and creating an analogue for the updating rules for blue node labels leads
+ to the following set of conditions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+g_{x}^{new}=\underset{g}{\arg\max}\left(N_{xg}-\frac{y_{x}Z_{g}}{M}\right)\\
+h_{x}^{new}=\underset{h}{\arg\max}\left(N_{xh}-\frac{Y_{h}z_{x}}{M}\right)
+\end{cases}\label{eq:weightedupdate}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the new label assigned to node 
+\begin_inset Formula $x$
+\end_inset
+
+ of type 
+\begin_inset Formula $g$
+\end_inset
+
+ (red) or 
+\begin_inset Formula $h$
+\end_inset
+
+ (blue) is that which maximises 
+\begin_inset Formula $g$
+\end_inset
+
+ or 
+\begin_inset Formula $h$
+\end_inset
+
+ on the right-hand side (if more than one solution exists, one is chosen
+ at random).
+ Here 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $N_{xg}$
+\end_inset
+
+ is the sum of interactions from nodes
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ connecting to 
+\begin_inset Formula $x$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ labelled 
+\begin_inset Formula $g$
+\end_inset
+
+, while 
+\begin_inset Formula $Z_{g}$
+\end_inset
+
+ is the sum of the marginal sums of blue nodes labelled 
+\begin_inset Formula $g$
+\end_inset
+
+ and 
+\begin_inset Formula $Y_{h}$
+\end_inset
+
+ is the sum of the marginal sums for red nodes labelled 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ As these `bottom-up' updating rules (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:weightedupdate"
+
+\end_inset
+
+) are mutually exclusive of one another they are applied asynchronously
+ such that blue labels are updated, then red nodes are updated, then blue
+ nodes are updated and so on until modularity (
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:weightedMod"
+
+\end_inset
+
+) can no longer be increased.
+\end_layout
+
+\begin_layout Paragraph*
+Stage 2 - agglomeration stage - top down
+\end_layout
+
+\begin_layout Standard
+When modularity can no longer be increased via stage 1's `bottom-up' steps,
+ a localised maximum of modularity for the network is reached, however this
+ may not be the global maximum.
+ The second stage seeks to prevent the algorithm getting stuck at local
+ maxima by merging groups of communities together.
+ Each identified community module 
+\begin_inset Formula $t$
+\end_inset
+
+ is composed of blue and red nodes that share the same label i.e.
+ when 
+\begin_inset Formula $g_{u}=h_{v}$
+\end_inset
+
+ .
+ If there are 
+\begin_inset Formula $F$
+\end_inset
+
+ communities in total, then the merging of two different communities 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $t_{j}$
+\end_inset
+
+ can only occur if this would result in an increase in network modularity
+ and if there is no third community 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ (
+\begin_inset Formula $1\leq k\leq F$
+\end_inset
+
+, 
+\begin_inset Formula $i\neq j\neq k$
+\end_inset
+
+ ) whose merger with either of 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ or 
+\begin_inset Formula $t_{j}$
+\end_inset
+
+ would result in a larger increase to modularity.
+ Pseudo-code representing these steps is shown in algorithm 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "alg:Agglomeration-pseudo-code"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Once this merger of modules is completed, stages 1 and then stage 2 are
+ repetitively performed until it is no longer possible to increase network
+ modularity by merging any of the possible communities together.
+ These modules (communities) and the modularity of this partition are the
+ solution provided by the LPAwb+ algorithm.
+ A key feature of the LPAwb+ algorithm is that it simplifies to the previously
+ described LPAb+ algorithm 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "liu2010efficient"
+
+\end_inset
+
+ when a binary network is used as input.
+ The LPAwb+ algorithm is stochastic - this can lead to different values
+ of modularity being reported.
+ To combat this issue it has been suggested that the LPAb+ algorithm is
+ run multiple times on a given network to find the greatest modularity score
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "liu2010efficient"
@@ -1093,7 +1475,7 @@ return row labels, column labels and modularity
 LPAwb+ pseudo-code 
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:LPAwb+-pseudo-code"
+name "alg:LPAwb+-pseudo-code-2"
 
 \end_inset
 
@@ -1104,49 +1486,6 @@ name "alg:LPAwb+-pseudo-code"
 
 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph*
-Stage 1 - label propagation stage - bottom up
-\end_layout
-
-\begin_layout Standard
-
-\color black
-Asynchronous updating of red, then blue labels on the network is performed
- to locally maximise modularity (
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:weightedMod"
-
-\end_inset
-
-).
-
-\color inherit
- For a particular red node 
-\begin_inset Formula $x$
-\end_inset
-
- this can be written as choosing a new label 
-\begin_inset Formula $g_{x}$
-\end_inset
-
- by trying to maximise the condition:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\begin{array}{c}
-g_{x}=\left(\sum_{v=1}^{c}\left(\tilde{W}_{xv}-\frac{y_{x}z_{v}}{M}\right)\right)\delta\left(g,h_{v}\right)\\
-\qquad\quad=\left(\sum_{v=1}^{c}\tilde{W}_{xv}\delta\left(g,h_{v}\right)-\sum_{v=1}^{c}\left(\frac{y_{x}z_{v}}{M}\right)\delta\left(g,h_{v}\right)\right)
-\end{array}\label{eq:gmax}
-\end{equation}
 
 \end_inset
 
@@ -1154,214 +1493,94 @@ g_{x}=\left(\sum_{v=1}^{c}\left(\tilde{W}_{xv}-\frac{y_{x}z_{v}}{M}\right)\right
 \end_layout
 
 \begin_layout Standard
-Red nodes only use information about the blue nodes to update their labels
- (
-\begin_inset Formula $g$
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Formula $1\qquad$
 \end_inset
 
-) and similarly blue node labels (
-\begin_inset Formula $h$
-\end_inset
-
-) are updated only using information about the red nodes.
- Simplifying 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:gmax"
-
-\end_inset
-
- and creating an analogue for the updating rules for blue node labels leads
- to the following set of conditions:
+F = number of modular communities
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\begin{cases}
-g_{x}^{new}=\underset{g}{\arg\max}\left(N_{xg}-\frac{y_{x}Z_{g}}{M}\right)\\
-h_{x}^{new}=\underset{h}{\arg\max}\left(N_{xh}-\frac{Y_{h}z_{x}}{M}\right)
-\end{cases}\label{eq:weightedupdate}
-\end{equation}
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Formula $2\qquad$
+\end_inset
+
+for each module: modA = 1:(F-1)
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Formula $3\qquad\;$
+\end_inset
+
+for each module: modB = (modA+1):F
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Formula $4\qquad\quad$
+\end_inset
+
+if merging modules modA and modB would increase network modularity (Q)
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Formula $5\qquad\qquad$
+\end_inset
+
+if joining modA with modB increases Q more than joining modA with any other
+ module and if joining modA with modB increases Q more than joining modB
+ with any other module
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Formula $6\qquad\qquad\qquad\qquad\qquad$
+\end_inset
+
+Then merge modA with modB
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Agglomeration pseudo-code
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Agglomeration-pseudo-code"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-where the new label assigned to node 
-\begin_inset Formula $x$
-\end_inset
-
- of type 
-\begin_inset Formula $g$
-\end_inset
-
- (red) or 
-\begin_inset Formula $h$
-\end_inset
-
- (blue) is that which maximises 
-\begin_inset Formula $g$
-\end_inset
-
- or 
-\begin_inset Formula $h$
-\end_inset
-
- on the right-hand side (if more than one solution exists, one is chosen
- at random).
- Here 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $N_{xg}$
-\end_inset
-
- is the number of 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-nodes connecting to 
-\begin_inset Formula $x$
 \end_inset
 
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- labelled 
-\begin_inset Formula $g$
-\end_inset
-
-, while 
-\begin_inset Formula $Z_{g}$
-\end_inset
-
- is the sum of blue node degrees labelled 
-\begin_inset Formula $g$
-\end_inset
-
- and 
-\begin_inset Formula $Y_{h}$
-\end_inset
-
- is the sum of red node degrees labelled 
-\begin_inset Formula $h$
-\end_inset
-
-.
- As these `bottom-up' updating rules (
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:weightedupdate"
-
-\end_inset
-
-) are mutually exclusive of one another they are applied asynchronously
- such that blue labels are updated, then red nodes are updated, then blue
- nodes are updated and so on until modularity (
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:weightedMod"
-
-\end_inset
-
-) can no longer be increased.
 \end_layout
 
-\begin_layout Paragraph*
-Stage 2 - agglomeration stage - top down
-\end_layout
-
-\begin_layout Standard
-When modularity can no longer be increased via stage 1's `bottom-up' steps,
- a localised maximum of modularity for the network is reached, however this
- may not be the global maximum.
- The second stage seeks to prevent the algorithm getting stuck at local
- maxima by merging groups of communities together.
- Each identified community 
-\begin_inset Formula $t$
 \end_inset
 
- is composed of blue and red nodes that share the same label i.e.
- when 
-\begin_inset Formula $g_{u}=h_{v}$
-\end_inset
 
- .
- If there are 
-\begin_inset Formula $F$
-\end_inset
-
- communities in total, then the merging of two different communities 
-\begin_inset Formula $t_{i}$
-\end_inset
-
- and 
-\begin_inset Formula $t_{j}$
-\end_inset
-
- can only occur if this would result in an increase in network modularity
- and if there is no third community 
-\begin_inset Formula $t_{k}$
-\end_inset
-
- (
-\begin_inset Formula $1\leq k\leq F$
-\end_inset
-
-, 
-\begin_inset Formula $i\neq j\neq k$
-\end_inset
-
- ) whose merger with 
-\begin_inset Formula $t_{i}$
-\end_inset
-
- or 
-\begin_inset Formula $t_{j}$
-\end_inset
-
- would result in a larger increase to modularity.
-\end_layout
-
-\begin_layout Standard
-Once this merger of communities is completed, stages 1 and then stage 2
- are repetitively performed until it is no longer possible to increase network
- modularity by merging any of the possible communities together.
- These modules (communities) and the modularity of this partition are the
- solution provided by the LPAwb+ algorithm.
 \end_layout
 
 \begin_layout Subsubsection*
-Exhaustive LPAwb+ 
+DIRTLPAwb+ 
 \end_layout
 
 \begin_layout Standard
@@ -1383,8 +1602,8 @@ key "liu2010efficient"
 
 \end_inset
 
- and that it performs faster than QuanBiMo I designed a new algorithm, Exhaustiv
-e LPAwb+ (see algorithm 
+ and that it performs faster than QuanBiMo I designed a new algorithm, DIRTLPAwb
++ (see algorithm 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "alg:ExLPAwb+-pseudo"
@@ -1392,8 +1611,8 @@ reference "alg:ExLPAwb+-pseudo"
 \end_inset
 
 ).
- Exhaustive LPAwb+ computes LPAwb+ multiple times with different random
- initialisations of node labels chosen from 
+ DIRTLPAwb+ computes LPAwb+ multiple times with different random initialisations
+ of node labels chosen from 
 \color inherit
 
 \begin_inset Formula $\mu$
@@ -1408,9 +1627,8 @@ reference "alg:ExLPAwb+-pseudo"
 \begin_layout Standard
 
 \color black
-Exhaustive LPAwb+ takes three inputs; the incidence matrix for the network
- of interest, the number of times that LPAwb+ should be run for each value
- of
+DIRTLPAwb+ takes three inputs; the incidence matrix for the network of interest,
+ the number of times that LPAwb+ should be run for each value of
 \color inherit
  
 \begin_inset Formula $\mu$
@@ -1445,7 +1663,7 @@ status open
 \begin_layout Plain Layout
 
 \family typewriter
-Inputs : an incidence matrix, minimum number of modules, repititions
+Inputs : an incidence matrix, minimum number of modules, repetitions
 \end_layout
 
 \begin_layout Plain Layout
@@ -1599,7 +1817,7 @@ return row labels, column labels and modularity from Sol1
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Pseudo-code for Exhaustive LPAwb+
+Pseudo-code for DIRTLPAwb+
 \begin_inset CommandInset label
 LatexCommand label
 name "alg:ExLPAwb+-pseudo"
@@ -1625,8 +1843,8 @@ name "alg:ExLPAwb+-pseudo"
 Setting the minimum number of modules to search for small, and the number
  of repetitions high will increase the chance of detecting the global modularity
  optimum for a network; but is likely to be computationally costly.
- I chose to give Exhaustive LPAwb+ default settings of ten repetitions for
- each value of
+ I chose to give DIRTLPAwb+ default settings of ten repetitions for each
+ value of
 \color inherit
  
 \begin_inset Formula $\mu$
@@ -1668,7 +1886,7 @@ key "newman2010networks,thebault2013identifying,dormann2014method"
 
 .
  In order to compare the strength of assortative mixing across different
- network studies it is neccessary to account for the possibility of these
+ network studies it is necessary to account for the possibility of these
  effects.
  
 \begin_inset CommandInset citation
@@ -1970,9 +2188,9 @@ Synthetic networks
 \end_layout
 
 \begin_layout Standard
-An ensemble of 800 synthetic networks were generated to evaulate the algorithms.
+An ensemble of 800 synthetic networks were generated to evaluate the algorithms.
  Networks, all with 30 row nodes and 50 column nodes, were assigned either
- 3 or 10 modules which are randomly positioned such that sizes of modules
+ 2 or 10 modules which are randomly positioned such that sizes of modules
  differed between the networks.
  Edge weights were then assigned to all cells within a module using random
  numbers derived from a skewed negative binomial distribution (following
@@ -1984,15 +2202,15 @@ key "dormann2014method"
 \end_inset
 
 ) with the dispersion parameter set to either 
-\begin_inset Formula $size=0.2$
+\begin_inset Formula $size=0.5$
 \end_inset
 
  (a network with lower connectance) or 
-\begin_inset Formula $size=1$
+\begin_inset Formula $size=2.5$
 \end_inset
 
- (a network with higher connectance) in both cases using a mean of 2 (see
- Figure S1 for histograms of these distributions).
+ (a network with higher connectance) in both cases using a mean of 4 (see
+ Figure S2 for histograms of these distributions).
  This provided four different treatments of levels of modules and connectance.
  Ten initial networks were calculated for each of the four treatments.
  Each of these 40 “perfectly modular” networks was then subjected to noise
@@ -2073,7 +2291,7 @@ Synthetic networks
 \end_layout
 
 \begin_layout Standard
-LPAwb+ and Exhaustive LPAwb+ were each run once on each of the 800 quantitative
+LPAwb+ and DIRTLPAwb+ were each run once on each of the 800 quantitative
  synthetic networks.
  The performance of these algorithms at detecting weighted modular structure
  was assessed using three indicators: the ratio of the number of modules
@@ -2089,9 +2307,9 @@ Plant-pollinator networks
 \begin_layout Standard
 I computed the binary and quantitative networks for each of the datasets,
  removing rows and columns that contained no interaction data from the analysis.
- QuanBiMo, LPAwb+ and Exhaustive LPAwb+ were run 100 times for each binary
- and each weighted network in order to assess the modular structures found
- and the fidelity of the algorithms.
+ QuanBiMo, LPAwb+ and DIRTLPAwb+ were run 100 times for each binary and
+ each weighted network in order to assess the modular structures found and
+ the fidelity of the algorithms.
  I then quantified the differences between the modular structures found
  by the binary and weighted algorithms using the normalised mutual information
  criterion and investigated the differences in normalised and realised modularit
@@ -2101,8 +2319,8 @@ y.
 \begin_layout Standard
 \paragraph_spacing single
 \noindent
-Code implementations for the LPAwb+ algorithm are currently available online
- for the Julia, MATLAB/Octave and R programming languages.
+Code implementations for the LPAwb+ and DIRTLPAwb+ algorithms are currently
+ available online for the Julia, MATLAB/Octave and R programming languages.
  This and the R code used to create the figures and perform the analysis
  presented in this paper is available in a supporting online depository
  
@@ -2114,8 +2332,8 @@ key "beckettZenodo"
 
 .
  For fair comparison in timing the algorithms all computations were performed
- in R version 3.1.1 using version 2.04 of the bipartite package on an Intel(R)
- Core(TM) i5-4570 CPU @ 3.20GHz desktop computer.
+ in R version 3.2.2 using version 2.05 of the bipartite package on an Intel(R)
+ Core(TM) i7-5960X CPU @ 3.00 GHz desktop computer.
 \end_layout
 
 \begin_layout Section*
@@ -2123,13 +2341,13 @@ Results
 \end_layout
 
 \begin_layout Subsection*
-Evaluating LPAwb+ and Exhaustive LPAwb+ on weighted networks
+Evaluating LPAwb+ and DIRTLPAwb+ on weighted networks
 \end_layout
 
 \begin_layout Standard
-Three indicators were used to assess the ability of the LPAwb+ and Exhaustive
- LPAwb+ algorithms to detect modularity in the synthetic ensemble of weighted
- networks, shown in Figure 
+Three indicators were used to assess the ability of the LPAwb+ and DIRTLPAwb+
+ algorithms to detect modularity in the synthetic ensemble of weighted networks,
+ shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:EvaluationAlg"
@@ -2139,8 +2357,8 @@ reference "fig:EvaluationAlg"
 .
  As the amount of noise in the synthetic networks increased the ability
  to discern the embedded community structures decreased.
- However, overall Exhaustive LPAwb+ outperformed LPAwb+ as it was less likely
- to over-report the number of modules detected and more likely to identify
+ However, overall DIRTLPAwb+ outperformed LPAwb+ as it was less likely to
+ over-report the number of modules detected and more likely to identify
  community structure and modularity scores closer to that of those in the
  synthetic networks.
  
@@ -2157,7 +2375,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename papercode/NoiseAssessment.eps
+	filename ../../weightedModResponseToReviewe/papercode/NoiseAssessment.eps
 	width 100text%
 
 \end_inset
@@ -2166,7 +2384,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Evaluation of the LPAwb+ and Exhautive LPAwb+ algorithms against synthetically
+Evaluation of the LPAwb+ and DIRTLPAwb+ algorithms against synthetically
  generated weighted networks with known modular structure for given levels
  of noise.
  (
@@ -2204,10 +2422,6 @@ name "fig:EvaluationAlg"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2216,7 +2430,7 @@ name "fig:EvaluationAlg"
 \begin_layout Standard
 Community detection is affected by the level of network noise, as well as
  by other factors such as the number of modules and network connectance
- (see Figure S2).
+ (see Figure S3).
  Over-reporting bias of the number of modules was reduced when the number
  of synthetic modules was greater, and more similar modularity scores were
  achieved when connectance was lower.
@@ -2227,9 +2441,9 @@ Comparing weighted modularity algorithms using plant-pollinator networks
 \end_layout
 
 \begin_layout Standard
-Having shown LPAwb+ and Exhaustive LPAwb+ have some capacity for detecting
- weighted modularity I now focus on a dataset of plant-pollinator ecological
- networks where these two algorithms are compared to QuanBiMo.
+Having shown LPAwb+ and DIRTLPAwb+ have some capacity for detecting weighted
+ modularity I now focus on a dataset of plant-pollinator ecological networks
+ where these two algorithms are compared to QuanBiMo.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2254,8 +2468,8 @@ reference "tab:weighted-Mod"
 \end_inset
 
  for weighted networks.
- As expected (by definition) Exhaustive LPAwb+ scores were always equal
- or greater than those detected by LPAwb+.
+ As expected (by definition) DIRTLPAwb+ scores were always equal or greater
+ than those detected by LPAwb+.
  Each algorithm detected similar maximum modularity scores for each network,
  with the exception of the datasets of kato1990, junker2013, barrett1987
  and elberling 1999 in binary networks (Figure 
@@ -2281,8 +2495,8 @@ reference "fig:Comparing-modularity"
 \shape italic
 b
 \shape default
-) in which LPAwb+ and Exhaustive LPAwb+ detected much greater modularity
- scores than QuanBiMo.
+) in which LPAwb+ and DIRTLPAwb+ detected much greater modularity scores
+ than QuanBiMo.
  
 \end_layout
 
@@ -2296,7 +2510,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename papercode/MaxModularity.eps
+	filename ../../weightedModResponseToReviewe/papercode/MaxModularity.eps
 	width 100text%
 
 \end_inset
@@ -2317,7 +2531,7 @@ Comparing the maximum detected modularity scores by each algorithm (from
 \begin_inset Formula $+$
 \end_inset
 
- ) or Exhaustive LPAwb+ ( 
+ ) or DIRTLPAwb+ ( 
 \begin_inset Formula $\times$
 \end_inset
 
@@ -2370,13 +2584,13 @@ reference "tab:binary-Mod"
  of modules in these partitions and the average execution time for each
  algorithm in the analysis of binary networks.
  The same partition was found by all three algorithms in only the schemske1978
- network; both QuanBiMo and Exhaustive LPAwb+ found the same partitions
- for another 15 networks; whilst Exhaustive LPAwb+ found the greatest modularity
- score for 6 networks and QuanBiMo found the best modularity score in the
- inouye1988 network.
+ network; both QuanBiMo and DIRTLPAwb+ found the same partitions for another
+ 16 networks; whilst DIRTLPAwb+ found the greatest modularity score for
+ 6 networks and QuanBiMo found the best modularity score in the inouye1988
+ network.
  LPAwb+ was by far the algorithm with the quickest execution time.
- Exhaustive LPAwb+ performs faster on small networks than QuanBiMo and more
- slowly on larger networks, however it generally found a much greater modularity
+ DIRTLPAwb+ performs faster on small networks than QuanBiMo and more slowly
+ on larger networks, however it generally found a much greater modularity
  score than QuanBiMo for these networks.
  The partitions found by LPAwb+ had more modules than those found by the
  solution with the greatest modularity.
@@ -2391,17 +2605,16 @@ reference "tab:weighted-Mod"
 \end_inset
 
  shows there were 5 networks for which the same maximum modularity was detected
- by all three algorithms, 10 networks in which QuanBiMo and Exhaustive LPAwb+
- found the greatest modularity, 7 networks for which Exhaustive LPAwb+ found
- the greatest modularity and a single network, small1976, that was maximised
- by QuanBiMo.
+ by all three algorithms, 10 networks in which QuanBiMo and DIRTLPAwb+ found
+ the greatest modularity, 7 networks for which DIRTLPAwb+ found the greatest
+ modularity and a single network, small1976, that was maximised by QuanBiMo.
  QuanBiMo had a similar average performance time to the binary networks,
  with LPAwb+ finding modularity more quickly in weighted than in binary
  networks.
- Exhaustive LPAwb+ has a similar performance time for smaller networks as
- under binary conditions and performs faster for the larger networks - which
- can be ascribed to the lower number of modules detected by LPAwb+ for the
- weighted networks.
+ DIRTLPAwb+ has a similar performance time for smaller networks as under
+ binary conditions and performs faster for the larger networks - which can
+ be ascribed to the lower number of modules detected by LPAwb+ for the weighted
+ networks.
  LPAwb+ detects partitions which generally have more modules than that with
  the greatest modularity, while QuanBiMo generally finds partitions with
  fewer modules than the solution found with greatest modularity.
@@ -2417,7 +2630,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename papercode/MedianMaximum.eps
+	filename ../../weightedModResponseToReviewe/papercode/MedianMaximum.eps
 	width 100text%
 
 \end_inset
@@ -2481,11 +2694,11 @@ reference "fig:median"
 \shape italic
 a
 \shape default
- shows that Exhaustive LPAwb+ consistently finds modularity scores closest
- to the maximal value, that LPAwb+ scores were close, but not so close and
- that whilst QuanBiMo could achieve consistency as good as the Exhaustive
- LPAwb+, for several networks QuanBiMo had a median value much lower than
- the maximum modularity detected.
+ shows that DIRTLPAwb+ consistently finds modularity scores closest to the
+ maximal value, that LPAwb+ scores were close, but not so close and that
+ whilst QuanBiMo could achieve consistency as good as the DIRTLPAwb+, for
+ several networks QuanBiMo had a median value much lower than the maximum
+ modularity detected.
  Similarly in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2497,9 +2710,9 @@ reference "fig:median"
 \shape italic
 b
 \shape default
- Exhaustive LPAwb+ shows high consistency as does LPAwb+ (more so than for
- binary networks), whilst QuanBiMo in general performs less consistently
- for weighted networks than binary networks.
+ DIRTLPAwb+ shows high consistency as does LPAwb+ (more so than for binary
+ networks), whilst QuanBiMo in general performs less consistently for weighted
+ networks than binary networks.
 \end_layout
 
 \begin_layout Standard
@@ -2621,7 +2834,7 @@ LPAwb+
 \begin_inset Text
 
 \begin_layout Plain Layout
-Exhaustive LPAwb+
+DIRTLPAwb+
 \end_layout
 
 \end_inset
@@ -2977,7 +3190,7 @@ Safariland
 \uwave off
 \noun off
 \color none
-1.067
+1.044
 \end_layout
 
 \end_inset
@@ -3037,7 +3250,7 @@ Safariland
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.014
+0.012
 \end_layout
 
 \end_inset
@@ -3087,7 +3300,7 @@ Safariland
 \uwave off
 \noun off
 \color none
-0.641
+0.521
 \end_layout
 
 \end_inset
@@ -3116,7 +3329,7 @@ barrett1987
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.286
+0.263
 \end_layout
 
 \end_inset
@@ -3158,7 +3371,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-11.811
+11.587
 \end_layout
 
 \end_inset
@@ -3206,7 +3419,7 @@ barrett1987
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.070
+0.061
 \end_layout
 
 \end_inset
@@ -3256,7 +3469,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-3.667
+2.708
 \end_layout
 
 \end_inset
@@ -3329,7 +3542,7 @@ bezerra2009
 \uwave off
 \noun off
 \color none
-1.106
+1.491
 \end_layout
 
 \end_inset
@@ -3389,7 +3602,7 @@ bezerra2009
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.008
+0.011
 \end_layout
 
 \end_inset
@@ -3439,7 +3652,7 @@ bezerra2009
 \uwave off
 \noun off
 \color none
-0.734
+0.186
 \end_layout
 
 \end_inset
@@ -3480,7 +3693,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-0.346
+0.300
 \end_layout
 
 \end_inset
@@ -3501,7 +3714,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-6
+5
 \end_layout
 
 \end_inset
@@ -3522,7 +3735,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-24.470
+26.208
 \end_layout
 
 \end_inset
@@ -3570,7 +3783,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.382
+0.187
 \end_layout
 
 \end_inset
@@ -3590,7 +3803,7 @@ elberling1999
 \begin_layout Plain Layout
 
 \series bold
-0.494
+0.497
 \end_layout
 
 \end_inset
@@ -3599,7 +3812,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-8
+14
 \end_layout
 
 \end_inset
@@ -3608,7 +3821,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-23.353
+17.22
 \end_layout
 
 \end_inset
@@ -3639,7 +3852,7 @@ inouye1988
 \begin_layout Plain Layout
 
 \series bold
-0.429
+0.427
 \end_layout
 
 \end_inset
@@ -3681,7 +3894,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-18.532
+17.277
 \end_layout
 
 \end_inset
@@ -3741,7 +3954,7 @@ inouye1988
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.710
+0.337
 \end_layout
 
 \end_inset
@@ -3768,7 +3981,7 @@ inouye1988
 \begin_inset Text
 
 \begin_layout Plain Layout
-11
+6
 \end_layout
 
 \end_inset
@@ -3777,7 +3990,7 @@ inouye1988
 \begin_inset Text
 
 \begin_layout Plain Layout
-74.624
+40.224
 \end_layout
 
 \end_inset
@@ -3818,7 +4031,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-0.130
+0.161
 \end_layout
 
 \end_inset
@@ -3839,7 +4052,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-5
+7
 \end_layout
 
 \end_inset
@@ -3860,7 +4073,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-46.076
+42.724
 \end_layout
 
 \end_inset
@@ -3908,7 +4121,7 @@ junker2013
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.762
+3.06
 \end_layout
 
 \end_inset
@@ -3928,7 +4141,7 @@ junker2013
 \begin_layout Plain Layout
 
 \series bold
-0.488
+0.489
 \end_layout
 
 \end_inset
@@ -3946,7 +4159,7 @@ junker2013
 \begin_inset Text
 
 \begin_layout Plain Layout
-405.596
+328.953
 \end_layout
 
 \end_inset
@@ -4077,7 +4290,7 @@ kato1990
 \begin_inset Text
 
 \begin_layout Plain Layout
-14.196
+13.243
 \end_layout
 
 \end_inset
@@ -4106,7 +4319,7 @@ kato1990
 \begin_inset Text
 
 \begin_layout Plain Layout
-20
+32
 \end_layout
 
 \end_inset
@@ -4115,7 +4328,7 @@ kato1990
 \begin_inset Text
 
 \begin_layout Plain Layout
-3441.840
+5510.003
 \end_layout
 
 \end_inset
@@ -4144,7 +4357,7 @@ kevan1970
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.388
+0.391
 \end_layout
 
 \end_inset
@@ -4186,7 +4399,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-29.303
+29.179
 \end_layout
 
 \end_inset
@@ -4246,7 +4459,7 @@ kevan1970
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.279
+0.228
 \end_layout
 
 \end_inset
@@ -4284,7 +4497,7 @@ kevan1970
 \begin_inset Text
 
 \begin_layout Plain Layout
-43.059
+20.781
 \end_layout
 
 \end_inset
@@ -4313,7 +4526,7 @@ memmott1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.333
+0.322
 \end_layout
 
 \end_inset
@@ -4334,7 +4547,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-5
+4
 \end_layout
 
 \end_inset
@@ -4355,7 +4568,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-10.598
+10.677
 \end_layout
 
 \end_inset
@@ -4415,7 +4628,7 @@ memmott1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.151
+0.145
 \end_layout
 
 \end_inset
@@ -4465,7 +4678,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-19.302
+11.714
 \end_layout
 
 \end_inset
@@ -4538,7 +4751,7 @@ mosquin1967
 \uwave off
 \noun off
 \color none
-0.916
+0.992
 \end_layout
 
 \end_inset
@@ -4598,7 +4811,7 @@ mosquin1967
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.014
+0.015
 \end_layout
 
 \end_inset
@@ -4648,7 +4861,7 @@ mosquin1967
 \uwave off
 \noun off
 \color none
-0.819
+0.774
 \end_layout
 
 \end_inset
@@ -4721,7 +4934,7 @@ motten1982
 \uwave off
 \noun off
 \color none
-2.763
+2.394
 \end_layout
 
 \end_inset
@@ -4781,7 +4994,7 @@ motten1982
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.032
+0.028
 \end_layout
 
 \end_inset
@@ -4831,7 +5044,7 @@ motten1982
 \uwave off
 \noun off
 \color none
-2.512
+1.284
 \end_layout
 
 \end_inset
@@ -4904,7 +5117,7 @@ olesen2002aigrettes
 \uwave off
 \noun off
 \color none
-1.149
+1.063
 \end_layout
 
 \end_inset
@@ -4964,7 +5177,7 @@ olesen2002aigrettes
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.011
+0.010
 \end_layout
 
 \end_inset
@@ -5014,7 +5227,7 @@ olesen2002aigrettes
 \uwave off
 \noun off
 \color none
-1.254
+0.303
 \end_layout
 
 \end_inset
@@ -5087,7 +5300,7 @@ olesen2002flores
 \uwave off
 \noun off
 \color none
-0.949
+0.923
 \end_layout
 
 \end_inset
@@ -5197,7 +5410,7 @@ olesen2002flores
 \uwave off
 \noun off
 \color none
-0.533
+0.216
 \end_layout
 
 \end_inset
@@ -5270,7 +5483,7 @@ ollerton2003
 \uwave off
 \noun off
 \color none
-5.334
+7.282
 \end_layout
 
 \end_inset
@@ -5330,7 +5543,7 @@ ollerton2003
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.026
+0.038
 \end_layout
 
 \end_inset
@@ -5380,7 +5593,7 @@ ollerton2003
 \uwave off
 \noun off
 \color none
-1.179
+1.383
 \end_layout
 
 \end_inset
@@ -5453,7 +5666,7 @@ schemske1978
 \uwave off
 \noun off
 \color none
-1.869
+1.778
 \end_layout
 
 \end_inset
@@ -5553,7 +5766,7 @@ schemske1978
 \uwave off
 \noun off
 \color none
-0.359
+0.197
 \end_layout
 
 \end_inset
@@ -5626,7 +5839,7 @@ small1976
 \uwave off
 \noun off
 \color none
-1.803
+1.684
 \end_layout
 
 \end_inset
@@ -5686,7 +5899,7 @@ small1976
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.021
+0.019
 \end_layout
 
 \end_inset
@@ -5736,7 +5949,7 @@ small1976
 \uwave off
 \noun off
 \color none
-2.103
+0.729
 \end_layout
 
 \end_inset
@@ -5809,7 +6022,7 @@ vazarr
 \uwave off
 \noun off
 \color none
-1.431
+1.348
 \end_layout
 
 \end_inset
@@ -5869,7 +6082,7 @@ vazarr
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.016
+0.014
 \end_layout
 
 \end_inset
@@ -5919,7 +6132,7 @@ vazarr
 \uwave off
 \noun off
 \color none
-0.865
+0.576
 \end_layout
 
 \end_inset
@@ -5992,7 +6205,7 @@ vazcer
 \uwave off
 \noun off
 \color none
-2.000
+1.970
 \end_layout
 
 \end_inset
@@ -6052,7 +6265,7 @@ vazcer
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.015
+0.014
 \end_layout
 
 \end_inset
@@ -6102,7 +6315,7 @@ vazcer
 \uwave off
 \noun off
 \color none
-0.744
+0.586
 \end_layout
 
 \end_inset
@@ -6175,7 +6388,7 @@ vazllao
 \uwave off
 \noun off
 \color none
-1.129
+1.103
 \end_layout
 
 \end_inset
@@ -6235,7 +6448,7 @@ vazllao
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.016
+0.015
 \end_layout
 
 \end_inset
@@ -6285,7 +6498,7 @@ vazllao
 \uwave off
 \noun off
 \color none
-0.915
+0.542
 \end_layout
 
 \end_inset
@@ -6358,7 +6571,7 @@ vazmasc
 \uwave off
 \noun off
 \color none
-1.340
+1.27
 \end_layout
 
 \end_inset
@@ -6418,7 +6631,7 @@ vazmasc
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.011
+0.010
 \end_layout
 
 \end_inset
@@ -6468,7 +6681,7 @@ vazmasc
 \uwave off
 \noun off
 \color none
-0.486
+0.342
 \end_layout
 
 \end_inset
@@ -6541,7 +6754,7 @@ vazmasnc
 \uwave off
 \noun off
 \color none
-1.969
+2.184
 \end_layout
 
 \end_inset
@@ -6601,7 +6814,7 @@ vazmasnc
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.014
+0.015
 \end_layout
 
 \end_inset
@@ -6651,7 +6864,7 @@ vazmasnc
 \uwave off
 \noun off
 \color none
-0.533
+0.508
 \end_layout
 
 \end_inset
@@ -6724,7 +6937,7 @@ vazquec
 \uwave off
 \noun off
 \color none
-1.529
+1.412
 \end_layout
 
 \end_inset
@@ -6784,7 +6997,7 @@ vazquec
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.013
+0.011
 \end_layout
 
 \end_inset
@@ -6834,7 +7047,7 @@ vazquec
 \uwave off
 \noun off
 \color none
-0.479
+0.311
 \end_layout
 
 \end_inset
@@ -6907,7 +7120,7 @@ vazquenc
 \uwave off
 \noun off
 \color none
-0.834
+0.855
 \end_layout
 
 \end_inset
@@ -7005,7 +7218,7 @@ vazquenc
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.300
+0.254
 \end_layout
 
 \end_inset
@@ -7022,8 +7235,8 @@ vazquenc
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Comparison of QuanBiMo, LPAwb+ and Exhaustive LPAwb+ algorithms on binary
- ecological interaction networks.
+Comparison of QuanBiMo, LPAwb+ and DIRTLPAwb+ algorithms on binary ecological
+ interaction networks.
  
 \family roman
 \series medium
@@ -7206,7 +7419,7 @@ LPAwb+
 \begin_inset Text
 
 \begin_layout Plain Layout
-Exhaustive LPAwb+
+DIRTLPAwb+
 \end_layout
 
 \end_inset
@@ -7574,7 +7787,7 @@ Safariland
 \uwave off
 \noun off
 \color none
-1.258
+1.193
 \end_layout
 
 \end_inset
@@ -7634,7 +7847,7 @@ Safariland
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.014
+0.012
 \end_layout
 
 \end_inset
@@ -7684,7 +7897,7 @@ Safariland
 \uwave off
 \noun off
 \color none
-0.721
+0.347
 \end_layout
 
 \end_inset
@@ -7737,7 +7950,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-0.483
+0.482
 \end_layout
 
 \end_inset
@@ -7758,7 +7971,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-5
+4
 \end_layout
 
 \end_inset
@@ -7779,7 +7992,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-10.107
+8.898
 \end_layout
 
 \end_inset
@@ -7827,7 +8040,7 @@ barrett1987
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.057
+0.049
 \end_layout
 
 \end_inset
@@ -7877,7 +8090,7 @@ barrett1987
 \uwave off
 \noun off
 \color none
-3.577
+1.889
 \end_layout
 
 \end_inset
@@ -7962,7 +8175,7 @@ bezerra2009
 \uwave off
 \noun off
 \color none
-1.178
+1.69
 \end_layout
 
 \end_inset
@@ -8012,7 +8225,7 @@ bezerra2009
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.008
+0.012
 \end_layout
 
 \end_inset
@@ -8062,7 +8275,7 @@ bezerra2009
 \uwave off
 \noun off
 \color none
-0.645
+0.19
 \end_layout
 
 \end_inset
@@ -8115,7 +8328,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-0.288
+0.270
 \end_layout
 
 \end_inset
@@ -8157,7 +8370,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-25.416
+25.367
 \end_layout
 
 \end_inset
@@ -8217,7 +8430,7 @@ elberling1999
 \uwave off
 \noun off
 \color none
-0.190
+0.129
 \end_layout
 
 \end_inset
@@ -8246,7 +8459,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-10
+12
 \end_layout
 
 \end_inset
@@ -8255,7 +8468,7 @@ elberling1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-21.288
+10.362
 \end_layout
 
 \end_inset
@@ -8308,7 +8521,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-0.565
+0.598
 \end_layout
 
 \end_inset
@@ -8329,7 +8542,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-11
+9
 \end_layout
 
 \end_inset
@@ -8350,7 +8563,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-25.368
+22.543
 \end_layout
 
 \end_inset
@@ -8410,7 +8623,7 @@ inouye1988
 \uwave off
 \noun off
 \color none
-0.413
+0.186
 \end_layout
 
 \end_inset
@@ -8430,7 +8643,7 @@ inouye1988
 \begin_layout Plain Layout
 
 \series bold
-0.615
+0.619
 \end_layout
 
 \end_inset
@@ -8439,7 +8652,7 @@ inouye1988
 \begin_inset Text
 
 \begin_layout Plain Layout
-9
+14
 \end_layout
 
 \end_inset
@@ -8448,7 +8661,7 @@ inouye1988
 \begin_inset Text
 
 \begin_layout Plain Layout
-54.377
+15.785
 \end_layout
 
 \end_inset
@@ -8501,7 +8714,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-0.052
+0.143
 \end_layout
 
 \end_inset
@@ -8522,7 +8735,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-5
+6
 \end_layout
 
 \end_inset
@@ -8543,7 +8756,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-83.548
+91.534
 \end_layout
 
 \end_inset
@@ -8603,7 +8816,7 @@ junker2013
 \uwave off
 \noun off
 \color none
-1.133
+1.335
 \end_layout
 
 \end_inset
@@ -8623,7 +8836,7 @@ junker2013
 \begin_layout Plain Layout
 
 \series bold
-0.564
+0.566
 \end_layout
 
 \end_inset
@@ -8632,7 +8845,7 @@ junker2013
 \begin_inset Text
 
 \begin_layout Plain Layout
-17
+16
 \end_layout
 
 \end_inset
@@ -8641,7 +8854,7 @@ junker2013
 \begin_inset Text
 
 \begin_layout Plain Layout
-287.774
+102.635
 \end_layout
 
 \end_inset
@@ -8694,7 +8907,7 @@ kato1990
 \uwave off
 \noun off
 \color none
-0.065
+0.061
 \end_layout
 
 \end_inset
@@ -8736,7 +8949,7 @@ kato1990
 \uwave off
 \noun off
 \color none
-2355.046
+2210.35
 \end_layout
 
 \end_inset
@@ -8796,7 +9009,7 @@ kato1990
 \uwave off
 \noun off
 \color none
-6.000
+6.217
 \end_layout
 
 \end_inset
@@ -8816,7 +9029,7 @@ kato1990
 \begin_layout Plain Layout
 
 \series bold
-0.631
+0.632
 \end_layout
 
 \end_inset
@@ -8825,7 +9038,7 @@ kato1990
 \begin_inset Text
 
 \begin_layout Plain Layout
-23
+20
 \end_layout
 
 \end_inset
@@ -8834,7 +9047,7 @@ kato1990
 \begin_inset Text
 
 \begin_layout Plain Layout
-2425.382
+1000.365
 \end_layout
 
 \end_inset
@@ -8887,7 +9100,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-0.309
+0.375
 \end_layout
 
 \end_inset
@@ -8908,7 +9121,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-2
+3
 \end_layout
 
 \end_inset
@@ -8929,7 +9142,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-35.164
+33.674
 \end_layout
 
 \end_inset
@@ -8989,7 +9202,7 @@ kevan1970
 \uwave off
 \noun off
 \color none
-0.096
+0.094
 \end_layout
 
 \end_inset
@@ -9027,7 +9240,7 @@ kevan1970
 \begin_inset Text
 
 \begin_layout Plain Layout
-26.133
+4.525
 \end_layout
 
 \end_inset
@@ -9080,7 +9293,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-0.267
+0.249
 \end_layout
 
 \end_inset
@@ -9101,7 +9314,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-4
+5
 \end_layout
 
 \end_inset
@@ -9122,7 +9335,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-12.333
+13.261
 \end_layout
 
 \end_inset
@@ -9170,7 +9383,7 @@ memmott1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.065
+0.075
 \end_layout
 
 \end_inset
@@ -9199,7 +9412,7 @@ memmott1999
 \begin_inset Text
 
 \begin_layout Plain Layout
-7
+6
 \end_layout
 
 \end_inset
@@ -9220,7 +9433,7 @@ memmott1999
 \uwave off
 \noun off
 \color none
-11.660
+3.420
 \end_layout
 
 \end_inset
@@ -9305,7 +9518,7 @@ mosquin1967
 \uwave off
 \noun off
 \color none
-0.970
+0.935
 \end_layout
 
 \end_inset
@@ -9415,7 +9628,7 @@ mosquin1967
 \uwave off
 \noun off
 \color none
-0.669
+0.252
 \end_layout
 
 \end_inset
@@ -9500,7 +9713,7 @@ motten1982
 \uwave off
 \noun off
 \color none
-3.292
+3.038
 \end_layout
 
 \end_inset
@@ -9560,7 +9773,7 @@ motten1982
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.020
+0.019
 \end_layout
 
 \end_inset
@@ -9610,7 +9823,7 @@ motten1982
 \uwave off
 \noun off
 \color none
-1.902
+0.434
 \end_layout
 
 \end_inset
@@ -9695,7 +9908,7 @@ olesen2002aigrettes
 \uwave off
 \noun off
 \color none
-1.181
+1.083
 \end_layout
 
 \end_inset
@@ -9745,7 +9958,7 @@ olesen2002aigrettes
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.008
+0.007
 \end_layout
 
 \end_inset
@@ -9795,7 +10008,7 @@ olesen2002aigrettes
 \uwave off
 \noun off
 \color none
-0.905
+0.117
 \end_layout
 
 \end_inset
@@ -9880,7 +10093,7 @@ olesen2002flores
 \uwave off
 \noun off
 \color none
-0.989
+0.938
 \end_layout
 
 \end_inset
@@ -9980,7 +10193,7 @@ olesen2002flores
 \uwave off
 \noun off
 \color none
-0.415
+0.085
 \end_layout
 
 \end_inset
@@ -10065,7 +10278,7 @@ ollerton2003
 \uwave off
 \noun off
 \color none
-6.023
+5.879
 \end_layout
 
 \end_inset
@@ -10125,7 +10338,7 @@ ollerton2003
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.024
+0.021
 \end_layout
 
 \end_inset
@@ -10175,7 +10388,7 @@ ollerton2003
 \uwave off
 \noun off
 \color none
-1.243
+0.587
 \end_layout
 
 \end_inset
@@ -10260,7 +10473,7 @@ schemske1978
 \uwave off
 \noun off
 \color none
-1.792
+2.26
 \end_layout
 
 \end_inset
@@ -10310,7 +10523,7 @@ schemske1978
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.009
+0.012
 \end_layout
 
 \end_inset
@@ -10360,7 +10573,7 @@ schemske1978
 \uwave off
 \noun off
 \color none
-0.392
+0.011
 \end_layout
 
 \end_inset
@@ -10445,7 +10658,7 @@ small1976
 \uwave off
 \noun off
 \color none
-1.984
+1.861
 \end_layout
 
 \end_inset
@@ -10505,7 +10718,7 @@ small1976
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.026
+0.024
 \end_layout
 
 \end_inset
@@ -10535,7 +10748,7 @@ small1976
 \uwave off
 \noun off
 \color none
-0.526
+0.525
 \end_layout
 
 \end_inset
@@ -10544,7 +10757,7 @@ small1976
 \begin_inset Text
 
 \begin_layout Plain Layout
-9
+7
 \end_layout
 
 \end_inset
@@ -10565,7 +10778,7 @@ small1976
 \uwave off
 \noun off
 \color none
-1.909
+1.057
 \end_layout
 
 \end_inset
@@ -10650,7 +10863,7 @@ vazarr
 \uwave off
 \noun off
 \color none
-1.733
+1.672
 \end_layout
 
 \end_inset
@@ -10710,7 +10923,7 @@ vazarr
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.014
+0.013
 \end_layout
 
 \end_inset
@@ -10760,7 +10973,7 @@ vazarr
 \uwave off
 \noun off
 \color none
-0.883
+0.359
 \end_layout
 
 \end_inset
@@ -10845,7 +11058,7 @@ vazcer
 \uwave off
 \noun off
 \color none
-2.317
+2.184
 \end_layout
 
 \end_inset
@@ -10905,7 +11118,7 @@ vazcer
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.015
+0.014
 \end_layout
 
 \end_inset
@@ -10955,7 +11168,7 @@ vazcer
 \uwave off
 \noun off
 \color none
-0.725
+0.389
 \end_layout
 
 \end_inset
@@ -11040,7 +11253,7 @@ vazllao
 \uwave off
 \noun off
 \color none
-1.386
+1.335
 \end_layout
 
 \end_inset
@@ -11100,7 +11313,7 @@ vazllao
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.013
+0.012
 \end_layout
 
 \end_inset
@@ -11150,7 +11363,7 @@ vazllao
 \uwave off
 \noun off
 \color none
-0.839
+0.418
 \end_layout
 
 \end_inset
@@ -11235,7 +11448,7 @@ vazmasc
 \uwave off
 \noun off
 \color none
-1.436
+1.424
 \end_layout
 
 \end_inset
@@ -11295,7 +11508,7 @@ vazmasc
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.010
+0.009
 \end_layout
 
 \end_inset
@@ -11345,7 +11558,7 @@ vazmasc
 \uwave off
 \noun off
 \color none
-0.456
+0.301
 \end_layout
 
 \end_inset
@@ -11430,7 +11643,7 @@ vazmasnc
 \uwave off
 \noun off
 \color none
-2.291
+2.162
 \end_layout
 
 \end_inset
@@ -11540,7 +11753,7 @@ vazmasnc
 \uwave off
 \noun off
 \color none
-0.565
+0.335
 \end_layout
 
 \end_inset
@@ -11625,7 +11838,7 @@ vazquec
 \uwave off
 \noun off
 \color none
-1.835
+2.027
 \end_layout
 
 \end_inset
@@ -11735,7 +11948,7 @@ vazquec
 \uwave off
 \noun off
 \color none
-0.474
+0.350
 \end_layout
 
 \end_inset
@@ -11820,7 +12033,7 @@ vazquenc
 \uwave off
 \noun off
 \color none
-0.815
+0.828
 \end_layout
 
 \end_inset
@@ -11920,7 +12133,7 @@ vazquenc
 \uwave off
 \noun off
 \color none
-0.265
+0.006
 \end_layout
 
 \end_inset
@@ -11937,8 +12150,8 @@ vazquenc
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Comparison of QuanBiMo, LPAwb+ and Exhaustive LPAwb+ algorithms on weighted
- ecological interaction networks.
+Comparison of QuanBiMo, LPAwb+ and DIRTLPAwb+ algorithms on weighted ecological
+ interaction networks.
  
 \family roman
 \series medium
@@ -12012,7 +12225,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename papercode/Timings.eps
+	filename ../../weightedModResponseToReviewe/papercode/Timings.eps
 	width 100text%
 
 \end_inset
@@ -12062,9 +12275,9 @@ reference "fig:Average-computational-time"
 \end_inset
 
 .
- Performance time is network dependent; where it takes longer to report
- modularity for larger networks.
- LPAwb+ performed quickest on all networks by roughly 2 orders of magnitude.
+ Performance time is network dependent; where it takes longer to compute
+ and report modularity for larger networks.
+ LPAwb+ performed the quickest on all networks by roughly 2 orders of magnitude.
  Performance on the binary (Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12093,13 +12306,12 @@ b
 \color inherit
 ) network representations was similar.
  However, QuanBiMo performed faster for binary (rather than quantitative)
- inputs on 20 of the 23 networks.
+ inputs on 17 of the 23 networks.
  On the other hand, LPAwb+ ran quicker with quantitative network representations
- (20 out of 23), as did Exhaustive LPAwb+ (18 out of 23).
- For the ten cases where Exhaustive LPAwb+ took longer than QuanBiMo, Exhaustive
- LPAwb+ found a partition with greater modularity seven times, both QuanBiMo
- and Exhaustive LPAwb+ found greatest modularity twice and QuanBiMo found
- the greatest modualrity score once (the binary representation of inouye1988).
+ (19 out of 23), as did DIRTLPAwb+ (20 out of 23).
+ For the five cases where DIRTLPAwb+ took longer than QuanBiMo, DIRTLPAwb+
+ found a partition with greater modularity four times and QuanBiMo found
+ the greatest modularity score once (the binary representation of inouye1988).
 \end_layout
 
 \begin_layout Subsection*
@@ -12125,18 +12337,18 @@ reference "tab:Pairwise"
  In almost all cases where the same greatest modularity score was detected
  -- this corresponded to the same community partition.
  The exception is the binary vazmasc network where two solutions were identified
- by both QuanBiMo and Exhaustive LPAwb+.
+ by both QuanBiMo and DIRTLPAwb+.
  These solutions are similar as the given NMI scores are high.
 \end_layout
 
 \begin_layout Standard
-Where the differences in modulartity scores detected by QuanBiMo and Exhaustive
- LPAwb+ were greatest also corresponded to greater differences in the community
+Where the differences in modularity scores detected by QuanBiMo and DIRTLPAwb+
+ were greatest also corresponded to greater differences in the community
  partitions being identified.
  In general the community partitions identified by the LPAwb+ algorithm
- were found to be more similar to those found by Exhaustive LPAwb+ than
- QuanBiMo, which is perhaps unsurprising given the similarities in the algorithm
-s themselves.
+ were found to be more similar to those found by DIRTLPAwb+ than QuanBiMo,
+ which is perhaps unsurprising given the similarities in the algorithms
+ themselves.
 \end_layout
 
 \begin_layout Standard
@@ -12244,7 +12456,7 @@ status open
 \backslash
 sethlcolor{lmagenta} 
 \backslash
-hl{Exhaustive LPAwb+}
+hl{DIRTLPAwb+}
 \end_layout
 
 \end_inset
@@ -12347,7 +12559,7 @@ status open
 \backslash
 sethlcolor{lmagenta} 
 \backslash
-hl{Exhaustive LPAwb+}
+hl{DIRTLPAwb+}
 \end_layout
 
 \end_inset
@@ -12783,7 +12995,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.493
+0.456
 \end_layout
 
 \end_inset
@@ -12816,7 +13028,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.490
+0.482
 \end_layout
 
 \end_inset
@@ -12849,7 +13061,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.539
+0.488
 \end_layout
 
 \end_inset
@@ -12882,7 +13094,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.464
+0.434
 \end_layout
 
 \end_inset
@@ -13153,7 +13365,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.354
+0.414
 \end_layout
 
 \end_inset
@@ -13186,7 +13398,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.442
+0.42
 \end_layout
 
 \end_inset
@@ -13219,7 +13431,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.539 - 0.548
+0.443 - 0.444
 \end_layout
 
 \end_inset
@@ -13252,7 +13464,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.484 - 0.485
+0.403 - 0.411
 \end_layout
 
 \end_inset
@@ -13285,7 +13497,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.658 - 0.666
+0.825 - 0.832
 \end_layout
 
 \end_inset
@@ -13318,7 +13530,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.825 - 0.841
+0.891 - 0.899
 \end_layout
 
 \end_inset
@@ -13362,7 +13574,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.698
+0.678
 \end_layout
 
 \end_inset
@@ -13395,7 +13607,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.616
+0.69
 \end_layout
 
 \end_inset
@@ -13428,7 +13640,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.649
+0.667
 \end_layout
 
 \end_inset
@@ -13461,7 +13673,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.666
+0.595
 \end_layout
 
 \end_inset
@@ -13494,7 +13706,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.707
+0.561
 \end_layout
 
 \end_inset
@@ -13527,7 +13739,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.765
+0.843
 \end_layout
 
 \end_inset
@@ -13571,7 +13783,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.163
+0.149
 \end_layout
 
 \end_inset
@@ -13637,7 +13849,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.194 - 0.197
+0.269 - 0.278
 \end_layout
 
 \end_inset
@@ -13670,7 +13882,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.162
+0.129
 \end_layout
 
 \end_inset
@@ -13703,7 +13915,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.786 - 0.799
+0.782 - 0.790
 \end_layout
 
 \end_inset
@@ -13736,7 +13948,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.834
+0.833
 \end_layout
 
 \end_inset
@@ -13780,7 +13992,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.049
+0.052
 \end_layout
 
 \end_inset
@@ -13813,7 +14025,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.103
+0.069
 \end_layout
 
 \end_inset
@@ -13879,7 +14091,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.108
+0.095
 \end_layout
 
 \end_inset
@@ -13912,7 +14124,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.800 - 0.806
+0.751 - 0.758
 \end_layout
 
 \end_inset
@@ -13945,7 +14157,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.875
+0.808
 \end_layout
 
 \end_inset
@@ -13989,7 +14201,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.595
+0.674
 \end_layout
 
 \end_inset
@@ -14022,7 +14234,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.513
+0.391
 \end_layout
 
 \end_inset
@@ -14055,7 +14267,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.632 - 0.649
+0.584 - 0.601
 \end_layout
 
 \end_inset
@@ -14088,7 +14300,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.474
+0.403
 \end_layout
 
 \end_inset
@@ -14121,7 +14333,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.616 - 0.631
+0.616 - 0.632
 \end_layout
 
 \end_inset
@@ -14198,7 +14410,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.588
+0.605
 \end_layout
 
 \end_inset
@@ -14231,7 +14443,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.608
+0.492
 \end_layout
 
 \end_inset
@@ -14264,7 +14476,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.532 - 0.536
+0.480 - 0.485
 \end_layout
 
 \end_inset
@@ -14297,7 +14509,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.569
+0.588
 \end_layout
 
 \end_inset
@@ -14363,7 +14575,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.802
+0.791
 \end_layout
 
 \end_inset
@@ -15442,7 +15654,7 @@ cellcolor{lcyan}
 
 \end_inset
 
-0.956
+0.973
 \end_layout
 
 \end_inset
@@ -15574,7 +15786,7 @@ cellcolor{lmagenta}
 
 \end_inset
 
-0.927
+0.881
 \end_layout
 
 \end_inset
@@ -16871,8 +17083,7 @@ Pairwise comparison of shared information between the detected community
  of 0 indicates no shared information.
  Cells are highlighted to show which of the two algorithms in each comparison
  found partitions resulting in the greatest modularity score (QuanBiMo in
- blue, Exhaustive LPAwb+ in pink and LPAwb+ in green) as shown in tables
- 
+ blue, DIRTLPAwb+ in pink and LPAwb+ in green) as shown in tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:binary-Mod"
@@ -16949,7 +17160,8 @@ b
 \begin_inset Formula $NMI=0.619$
 \end_inset
 
-, quantifying this difference.
+ indicating the identified partitions may share some similarities, but are
+ overall quite different from each other.
 \end_layout
 
 \begin_layout Standard
@@ -32676,14 +32888,14 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename papercode/olesen2002flores_mod_bin.eps
+	filename ../../weightedModResponseToReviewe/papercode/olesen2002flores_mod_bin.eps
 	width 47text%
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename papercode/olesen2002flores_mod_qua.eps
+	filename ../../weightedModResponseToReviewe/papercode/olesen2002flores_mod_qua.eps
 	width 47text%
 
 \end_inset
@@ -32754,7 +32966,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename papercode/changeQnorm_NMI.eps
+	filename ../../weightedModResponseToReviewe/papercode/changeQnorm_NMI.eps
 	width 60text%
 
 \end_inset
@@ -32802,14 +33014,14 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename papercode/ModRealisedModularity.eps
+	filename ../../weightedModResponseToReviewe/papercode/ModRealisedModularity.eps
 	width 50text%
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename papercode/NormQvsRealisedModularity.eps
+	filename ../../weightedModResponseToReviewe/papercode/NormQvsRealisedModularity.eps
 	width 50text%
 
 \end_inset
@@ -32878,12 +33090,34 @@ Discussion
 \end_layout
 
 \begin_layout Standard
-I tested the efficacy of three algorithms maximising Dormann's bipartite
- modularity in plant-pollinator networks.
- LPAwb+ and Exhaustive LPAwb+ gave more consistent modularity scores than
- those found by QuanBiMo across the test networks.
+I tested the efficacy of three algorithms maximising Dormann and Strauss's
+ weighted version of Barber's bipartite modularity in plant-pollinator networks.
+ One of the major results from this paper is that different modular structures
+ were found for each of the binary and weighted representations of plant-pollina
+tor networks.
+ In binary networks modules are formed by attempting to maximise the density
+ of edges; whilst in quantitative networks modules are formed that maximise
+ the density of edge weights.
+ In the former, strongly interacting nodes are just as important as nodes
+ that only rarely interact; whilst in the latter modules are likely to form
+ around the strongest node-node interactions.
+ It is unclear to me how to interpret these network structural differences,
+ but I hope that presenting this data will facilitate discussion to understand
+ what these differences mean.
+ Binary and weighted plant-pollinator modular structures for example may
+ both provide useful information that can be used to inform conservation
+ policy.
+\end_layout
+
+\begin_layout Standard
+It was also possible to compare and evaulate the performance of each of
+ the three algorithms.
+ LPAwb+ and DIRTLPAwb+ gave more consistent modularity scores than those
+ found by QuanBiMo across the test networks.
  The robustness of modularity maximisation algorithms is important when
- considering the reproducibility of results.
+ considering the reproducibility of results and how many times a community
+ detection algorithm should be applied to be able to report a representative
+ value for the maximum modularity of a network.
  QuanBiMo struggled to report 
 \begin_inset Quotes eld
 \end_inset
@@ -32906,51 +33140,7 @@ key "dormann2014method"
  network).
  But, QuanBiMo has the potential to fall into below par solutions and there
  is no diagnostic to show when this occurs.
-\end_layout
-
-\begin_layout Standard
-Different modular structures were found for each of the binary and weighted
- representations of plant-pollinator networks.
- In binary networks modules are formed by attempting the maximise the density
- of edges; whilst in quantitative networks modules are formed that maximise
- the density of edge weights.
- In the former, strongly interacting nodes are just as important as nodes
- that only rarely interact; whilst in the latter modules are likely to form
- around the strongest node-node interactions.
- 
-\end_layout
-
-\begin_layout Standard
-Normalised modularity measures the strength of assortative mixing and is
- a useful network index that can be used as a comparison indicator across
- different network studies.
- Modularity by itself is often used as a network indicator - but this is
- not appropriate when comparing different networks whose theoretical modularity
- maximums may differ.
-
-\color black
- I find normalised modularity is strongly correlated with the proportion
- of within module interactions (realised modularity) which is an intuitive
- way for understanding modularity.
-\end_layout
-
-\begin_layout Standard
-LPAwb+ was not able to maximise modularity so well as Exhaustive LPAwb+
- or QuanBiMo on the majority of datasets (though the modularity found was
- near the maximal value found here), but its fast performance makes it an
- ideal algorithm for exploratory research and for investigating modularity
- in larger networks, where parallelisation of the algorithm 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "liu2010efficient"
-
-\end_inset
-
- may become useful.
-\end_layout
-
-\begin_layout Standard
-There is no guarantee that the greatest possible modularity was found in
+ There is no guarantee that the greatest possible modularity was found in
  any of the test networks here; indeed maximising bipartite modularity is
  an NP-hard problem 
 \begin_inset CommandInset citation
@@ -32961,6 +33151,18 @@ key "miyauchi2013maximizing"
 
  and it may be difficult to find an algorithm which performs well on this
  problem for any possible network.
+ While LPAwb+ was not able to maximise modularity so well as DIRTLPAwb+
+ or QuanBiMo on the majority of datasets (though the modularity found was
+ near the maximal value found here), its fast performance makes it an ideal
+ algorithm for exploratory research and for investigating modularity in
+ larger networks, where parallelisation of the algorithm 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "liu2010efficient"
+
+\end_inset
+
+ may become useful.
 \end_layout
 
 \begin_layout Standard
@@ -32977,13 +33179,19 @@ The QuanBiMo algorithm takes two input values; the number of algorithmic
  of the returned modularity.
  On the other hand LPAwb+ takes no input parameters and was able to quickly
  find modularity scores near to the consensus maximum modularity.
- Exhaustive LPAwb+ has two input parameters; the minimum number of modules
- to search for and the number of times that LPAwb+ should be initialised
- for each module number.
- Unlike QuanBiMo, these parameters have physical meaning in the context
- of the network – and the time complexity of this algorithm can be estimated
- from the number of calls that will be made to the LPAwb+ algorithm (as
- LPAb+'s time complexity is known 
+ DIRTLPAwb+ has two input parameters; the minimum number of modules to search
+ for and the number of times that LPAwb+ should be initialised for each
+ module number.
+ By running the LPAwb+ algorithm multiple times with different initial module
+ labels DIRTLPAwb+ is able to explore more of the modularity landscape than
+ LPAwb+, which allowed it to find partitions with greater modularity.
+ Unlike LPAwb+ and QuanBiMo, DIRTLPAwb+ is allowed multiple attempts to
+ climb the modularity landscape, from many different initial points within
+ the modularity landscape.
+ Additionally and unlike QuanBiMo, the parameters used by DIRTLPAwb+ have
+ physical meaning in the context of the network – and the time complexity
+ of this algorithm can be estimated from the number of calls that will be
+ made to the LPAwb+ algorithm (as LPAb+'s time complexity is known 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "liu2010efficient"
@@ -33120,6 +33328,24 @@ The major advantage in a definition of weighted modularity is that it allows
 Other modularity definitions and their weighted extensions are also in need
  of further investigation to consider communities within each type of node
  and how these may overlap with the joint communities considered here.
+\end_layout
+
+\begin_layout Standard
+Additionally I looked at two alternative ways of reporting modularity; normalise
+d modularity and realised modularity.
+ Normalised modularity measures the strength of assortative mixing and is
+ a useful network index that can be used as a comparison indicator across
+ different network studies.
+ Modularity by itself is often used as a network indicator - but this is
+ not appropriate when comparing different networks whose theoretical modularity
+ maximums may differ.
+
+\color black
+ I find normalised modularity is strongly correlated with the proportion
+ of within module interactions (realised modularity) which is an intuitive
+ way for understanding modularity.
+ I recommend future studies investigating modularity to report one or both
+ of these measures.
 \end_layout
 
 \begin_layout Standard
@@ -33437,18 +33663,17 @@ LPAwb+ is an algorithm that would be well suited for exploratory analysis
  and use on large networks - as it is fast and, whilst it did not return
  the best modularity values of the methods tested here, the solutions it
  did find were consistently high.
- Care has to be taken with both QuanBiMo and Exhaustive LPAwb+ in setting
- appropriate input parameter settings such that the analysis is not computationa
-lly infeasible.
- I would recommend using Exhaustive LPAwb+ over QuanBiMo; as Exhaustive
- LPAwb+ has more meaningful input parameters, can perform no worse than
- LPAwb+ and its performance was less variable than QuanBiMo on the networks
- tested in this study.
+ Care has to be taken with both QuanBiMo and DIRTLPAwb+ in setting appropriate
+ input parameter settings such that the analysis is not computationally
+ infeasible.
+ I would recommend using DIRTLPAwb+ over QuanBiMo; as DIRTLPAwb+ has more
+ meaningful input parameters, can perform no worse than LPAwb+ and its performan
+ce was less variable than QuanBiMo on the networks tested in this study.
 \end_layout
 
 \begin_layout Standard
-I have made the code for the LPAwb+ and Exhaustive LPAwb+ algorithms; as
- well as the analysis performed in this paper available online 
+I have made the code for the LPAwb+ and DIRTLPAwb+ algorithms; as well as
+ the analysis performed in this paper available online 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "beckettZenodo"
@@ -33920,8 +34145,8 @@ Acknowledgements
 \begin_layout Standard
 I thank Xin Liu for the hints and nudges that helped me setup the LPAb+
  algorithm - leading to the weighted counterpart presented here.
- I thank Timothée Poisot and Hywel Williams and an anonymous reviewer for
- comments that improved the manuscript.
+ I thank Timothée Poisot, Hywel Williams, Matthew Spencer and an anonymous
+ reviewer for comments that have improved the manuscript.
 \end_layout
 
 \begin_layout Subsection*
