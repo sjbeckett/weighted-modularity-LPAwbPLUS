@@ -16,7 +16,7 @@ setEPS()
 postscript("MedianMaximum.eps",height=5.5,width=9)
 par(mfrow = c(1,2),oma=c(2.5,0,0,0))
 
-plot(0,0, type='n', ylab = expression("Median Q"[B]*" per algorithm"), xlab = expression("Consensus Maxmimum Q"[B]), xlim=c(0,0.7),ylim=c(0,0.7),bty="n")
+plot(0,0, type='n', ylab = expression("Median Q"[B]*" per algorithm"), xlab = expression("Consensus Maximum Q"[B]), xlim=c(0,0.7),ylim=c(0,0.7),bty="n")
 axis(1,col="grey",labels=FALSE,lwd=2)
 axis(2,col="grey",labels=FALSE,lwd=2)
 lines(0:1,0:1,lty=3,lwd=4,col="grey80")
@@ -38,7 +38,7 @@ points(MAX_QW,QE$MEDIAN_QW_QE,pch=4,col="grey65")
 
 par(fig=c(0,1,0,1),oma=c(0,0,0,0),mar=c(0,0,0,0),new=TRUE)
 plot(0,0,type="n",bty="n",xaxt="n",yaxt="n")
-legend("bottom",c("QuanBiMo","LPAwb+","Exhaustive LPAwb+"),pch=c(1,3,4),col=c("black","grey30","grey65"),bty="n",horiz=TRUE)
+legend("bottom",c("QuanBiMo","LPAwb+","DIRTLPAwb+"),pch=c(1,3,4),col=c("black","grey30","grey65"),bty="n",horiz=TRUE)
 
 #dev.copy2eps(file="Maximumvs.Median.eps")
 dev.off()
