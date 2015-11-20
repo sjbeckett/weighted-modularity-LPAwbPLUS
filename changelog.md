@@ -1,7 +1,7 @@
 Change notes
 ---------
 
-v1.1 (November 5th 2015) - Revision of code
+v1.1 (November 19th 2015) - Revision of code
 
 * Updated Stage Two of the LPAwb+ algorithm. Previously a block of code was not being called as it was checking the modularity against itself (within R and Julia). This has been updated for all langauges.
 * To test the importance of this code block an experiment to test the effect has been added to papercode/code/StageTwoExperiment
