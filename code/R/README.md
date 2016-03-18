@@ -30,5 +30,16 @@ MOD1modWeb = convert2moduleWeb(MAT,MOD1) # converts the configuration found in M
 plotModuleWeb(MOD1modWeb) # plot the corresponding moduleWeb object using plotModuleWeb in library bipartite
 
 
+source("GetModularInformation.R") #read in function for finding additional information
+
+MOD1information = GetModularInformation(MAT,MOD1)
+print(MOD1information$normalised_modularity)  # normalised modularity score for configuration found by MOD1 for MAT
+print(MOD1information$realized_modularity)  # realized modularity score for configuration found by MOD1 for MAT
+
+print(MOD1information$RowNodesInModules)  # Shows row nodes per module
+print(MOD1information$ColNodesInModules)  # Shows column nodes per module
+
+
+
 ```
 
