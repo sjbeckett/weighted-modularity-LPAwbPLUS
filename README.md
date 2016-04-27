@@ -7,11 +7,11 @@ Two algorithms for finding modularity in bipartite networks are presented: LPAwb
 
 These are based on the LPAb+ algorithm of Liu & Murata, 2010 for use on bipartite/two-mode networks. The algorithm has been modified such that the weighted modularity of a network can be found (note that the result is equivalent to that found by the LPAb+ algorithm if the network is binary). Code is currently available for Julia, MATLAB/Octave and R langauges.
 
-For details of the methods please [view the draft paper](https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS/blob/master/paper/weightedModularityDraft.pdf?raw=true) (in the 'paper' directory).
+For details of the methods please [view the draft paper](https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS/blob/master/paper/weightedModularityDraft.pdf?raw=true) (in the 'paper' directory), or in Beckett, 2016.
 
-This work is now published and can be found in :
 
-Beckett S.J. 2016. [Improved community detection in weighted bipartite networks](http://dx.doi.org/10.1098/rsos.140536). Royal Society Open Science 3: 140536.
+
+
 
 
 Usage
@@ -36,6 +36,11 @@ Code for plotting modular structure is also provided. Please view the REAME file
 
 Details
 ---------
+<br>
+The paper describing these algoirithms is now published:
+
+Beckett S.J. 2016. [Improved community detection in weighted bipartite networks](http://dx.doi.org/10.1098/rsos.140536). Royal Society Open Science 3: 140536.
+<br><br><br>
 
 For details of the LPAb+ algorithm please see [Liu & Murata, 2010](https://www.fujipress.jp/finder/xslt.php?mode=present&inputfile=JACII001400040010.xml) .
 
