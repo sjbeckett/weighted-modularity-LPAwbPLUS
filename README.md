@@ -9,6 +9,10 @@ These are based on the LPAb+ algorithm of Liu & Murata, 2010 for use on bipartit
 
 For details of the methods please [view the draft paper](https://github.com/sjbeckett/weighted-modularity-LPAwbPLUS/blob/master/paper/weightedModularityDraft.pdf?raw=true) (in the 'paper' directory).
 
+This work is now published and can be found in :
+
+Beckett S.J. 2016. [Improved community detection in weighted bipartite networks](http://dx.doi.org/10.1098/rsos.140536). Royal Society Open Science 3: 140536.
+
 
 Usage
 ---------
